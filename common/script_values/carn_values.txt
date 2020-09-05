@@ -1,0 +1,128 @@
+﻿# reverse engineered pregnancy effect based on comments in defines
+# requires scope:mother and scope:father to be provided
+carn_sex_pregnancy_chance = {
+	# get base fertility multiplier
+	value = 0
+	add = scope:mother.fertility
+	add = scope:father.fertility
+	divide = 2
+	multiply = define:NChildbirth|FERTILITY_CHANCE_MULTIPLIER
+
+	# apply modifiers based on defines
+	if = {
+		limit = {
+			OR = {
+				scope:mother = { any_consort = { this = scope:father } }
+				scope:father = { any_consort = { this = scope:mother } }
+			}
+		}
+		multiply = define:NChildbirth|CONCUBINE_FERTILITY_MULTIPLIER
+	}
+	else_if = {
+		limit = {
+			scope:mother.primary_spouse = scope:father
+		}
+		multiply = define:NChildbirth|PRIMARY_SPOUSE_FERTILITY_MULTIPLIER
+	}
+	else_if = {
+		limit = {
+			scope:mother = { any_spouse = { this = scope:father } }
+		}
+		multiply = define:NChildbirth|SECONDARY_SPOUSE_FERTILITY_MULTIPLIER
+	}
+	else = {
+		multiply = define:NChildbirth|NOT_SPOUSE_FERTILITY_MULTIPLIER
+	}
+
+	if = {
+		limit = {
+			scope:mother = { is_ruler = no }
+			scope:father = { is_ruler = no }
+		}
+		multiply = define:NChildbirth|NON_RULER_FERTILITY_MULTIPLIER
+	}
+	else_if = {
+		limit = {
+			scope:mother = {
+				any_child = {
+					OR = {
+						father = scope:father
+						mother = scope:father
+					}
+					count < 1
+				}
+			}
+		}
+		multiply = define:NChildbirth|EXTRA_FERTILITY_FOR_FIRST_RULER_CHILD
+	}
+
+	if = {
+		limit = {
+			scope:mother = {
+				any_child = {
+					OR = {
+						father = scope:father
+						mother = scope:father
+					}
+					count < 1
+				}
+			}
+		}
+		multiply = define:NChildbirth|EXTRA_FERTILITY_FOR_FIRST_CHILD
+	}
+	
+	if = {
+		limit = {
+			scope:mother = {
+					is_close_family_of = scope:father
+			}
+		}
+		if = {
+			limit = {
+				scope:mother.faith = { has_doctrine = tenet_divine_marriage }
+				scope:father.faith = { has_doctrine = tenet_divine_marriage }
+			}
+			multiply = define:NChildbirth|DIVINE_MARRIAGE_FERTILITY_MULTIPLIER
+		}
+		else = {
+			multiply = define:NChildbirth|CLOSE_FAMILY_FERTILITY_MULTIPLIER
+		}
+	}
+	else_if = {
+		limit = {
+			scope:mother = {
+					is_extended_family_of = scope:father
+			}
+		}
+		if = {
+			limit = {
+				NAND = {
+					scope:mother.faith = { has_doctrine = tenet_divine_marriage }
+					scope:father.faith = { has_doctrine = tenet_divine_marriage }
+				}
+			}
+			multiply = define:NChildbirth|EXTENDED_FAMILY_FERTILITY_MULTIPLIER
+		}
+	}
+
+	if = {
+		limit = {
+			scope:mother = {
+				OR = {
+					is_pool_guest = yes
+					is_pool_character = yes
+				}
+			}
+			scope:father = {
+				OR = {
+					is_pool_guest = yes
+					is_pool_character = yes
+				}
+			}
+		}
+		multiply = define:NChildbirth|FERTILITY_IN_POOL_MULTIPLIER
+	}
+
+	max = define:NChildbirth|MAX_FERTILITY_CHANCE
+	min = define:NChildbirth|MIN_FERTILITY_CHANCE
+}

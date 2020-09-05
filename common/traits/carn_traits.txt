@@ -1,0 +1,34 @@
+﻿futa = {
+	index = 6900
+
+	name = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					has_game_rule = carn_futa_trait_name_hermaphrodite
+				}
+				desc = trait_futa_hermaphrodite
+			}
+			desc = trait_futa
+		}
+	}
+
+	# child_inheritance_sex = female
+	# genetic = yes
+	physical = yes
+
+	# birth = 0.5
+	# random_creation = 0.5
+
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_futa_desc
+			}
+			desc = trait_futa_character_desc
+		}
+	}
+}

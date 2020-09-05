@@ -1,0 +1,44 @@
+﻿namespace = carn_futa
+
+#
+# 0001. Yearly pulse for futas to impregnate wives, concubines, lovers
+#
+
+###################################################################################
+# 0001. Yearly pulse for futas to impregnate wives, concubines, lovers
+###################################################################################
+
+carn_futa.0001 = {
+	# hidden = yes
+
+	trigger = {
+		has_trait = futa
+	}
+	
+	immediate = {
+		every_spouse = {
+			add_to_list = futa_sex_buddies
+		}
+		every_consort = {
+			add_to_list = futa_sex_buddies
+		}
+		every_relation = {
+			type = lover
+			add_to_list = futa_sex_buddies
+		}
+		save_scope_as = father
+		every_in_list = {
+			list = futa_sex_buddies
+			save_scope_as = mother
+			carn_had_sex_with_no_drama_effect = {
+				CHARACTER = scope:father
+				#PREGNANCY_CHANCE = carn_sex_pregnancy_chance
+				PREGNANCY_CHANCE = 100
+			}
+		}
+	}
+
+	option = {
+		name = OK
+	}
+}

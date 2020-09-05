@@ -1,0 +1,5 @@
+﻿l_english:
+ trait_futa:0 "Futanari"
+ trait_futa_hermaphrodite:0 "Hermaphrodite"
+ trait_futa_desc:0 "This character has the sexual organs of both a woman and a man."
+ trait_futa_character_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip] has the sexual organs of both a woman and a man."

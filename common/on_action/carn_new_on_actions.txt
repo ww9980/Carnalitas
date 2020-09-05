@@ -1,0 +1,24 @@
+﻿# Triggers whenever player has sex via event or decision
+# DOES NOT trigger off random passive pregnancy with spouse/consort
+carn_on_sex = {
+	events = {
+	}
+}
+
+# No functionality right now. Meant for mod authors to trigger from code.
+carn_on_vaginal_sex = {
+	events = {
+	}
+}
+
+# No functionality right now. Meant for mod authors to trigger from code.
+carn_on_anal_sex = {
+	events = {
+	}
+}
+
+# No functionality right now. Meant for mod authors to trigger from code.
+carn_on_oral_sex = {
+	events = {
+	}
+}

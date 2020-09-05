@@ -1,0 +1,13 @@
+﻿l_english:
+
+ rule_carn_std:0 "#X Carnalitas:#! STD Transmission"
+ setting_carn_std_enabled:0 "Default"
+ setting_carn_std_enabled_desc:0 "No changes will be made to Lover's Pox and the Great Pox."
+ setting_carn_std_disabled:1 "#high Never#!"
+ setting_carn_std_disabled_desc:0 "Characters will never contract Lover's Pox or the Great Pox."
+
+ rule_carn_futa_trait_name:0 "#X Carnalitas:#! Futanari Trait Name"
+ setting_carn_futa_trait_name_futa:0 "Default"
+ setting_carn_futa_trait_name_futa_desc:0 "Characters with both male and female sexual organs will be called 'futanari.'"
+ setting_carn_futa_trait_name_hermaphrodite:1 "#high Historical#!"
+ setting_carn_futa_trait_name_hermaphrodite_desc:0 "Characters with both male and female sexual organs will be called 'hermaphrodites.'"

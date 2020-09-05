@@ -1,0 +1,77 @@
+﻿# identical to the vanilla had_sex_with effect but without stress loss, etc.
+# this is meant for situations like passively impregnating spouse off screen
+carn_had_sex_with_no_drama_effect = {
+	save_temporary_scope_as = had_sex_root_character
+	$CHARACTER$ = { save_scope_as = had_sex_with_effect_partner }
+
+	if = {
+		limit = { this = root }
+		custom_tooltip = had_sex_with_effect.first_person.tt
+	}
+	else_if = {
+		limit = { root = scope:had_sex_with_effect_partner }
+		custom_tooltip = had_sex_with_effect.other_person.tt
+	}
+	else = {
+		custom_tooltip = had_sex_with_effect.third_person.tt
+	}
+	
+	#Pregnancy
+	hidden_effect = {
+		if = {
+			limit = {
+				is_female = yes
+				$CHARACTER$ = { carn_gender_can_impregnate_trigger = yes }
+			}
+			if = {
+				limit = {
+					is_pregnant = no
+					age < define:NChildbirth|MAX_FEMALE_REPRODUCTION_AGE
+				}
+				add_to_variable_list = {
+					name = potential_father_variable_list
+					target = $CHARACTER$
+				}
+				random = {
+					chance = $PREGNANCY_CHANCE$
+					make_pregnant = {
+						father = $CHARACTER$
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				carn_gender_can_impregnate_trigger = yes
+				$CHARACTER$ = { is_female = yes }
+			}
+			if = {
+				limit = {
+					NOT = { $CHARACTER$ = { has_trait = pregnant } }
+				}
+				$CHARACTER$ = {
+					add_to_variable_list = {
+						name = potential_father_variable_list
+						target = scope:had_sex_root_character
+					}
+				}
+				if = {
+					limit = {
+						$CHARACTER$ = {
+							is_pregnant = no
+							age < define:NChildbirth|MAX_FEMALE_REPRODUCTION_AGE
+						}
+					}
+					$CHARACTER$ = {
+						random = {
+							chance = $PREGNANCY_CHANCE$
+							make_pregnant = {
+								father = scope:had_sex_root_character
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

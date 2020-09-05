@@ -1,0 +1,11 @@
+﻿carn_std = {
+	default = carn_std_enabled
+	carn_std_enabled = {}
+	carn_std_disabled = {}
+}
+
+carn_futa_trait_name = {
+	default = carn_futa_trait_name_futa
+	carn_futa_trait_name_futa = {}
+	carn_futa_trait_name_hermaphrodite = {}
+}
