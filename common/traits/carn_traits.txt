@@ -62,7 +62,7 @@ dick_bad_1 = {
 	inherit_from_real_father = yes
 
 	compatibility = {
-		size_queen = @neg_compat_medium
+		size_queen = @neg_compat_low
 	}	
 
 }
@@ -95,7 +95,7 @@ dick_bad_2 = {
 	inherit_from_real_father = yes
 
 	compatibility = {
-		size_queen = @neg_compat_high
+		size_queen = @neg_compat_medium
 	}	
 
 }
@@ -246,10 +246,6 @@ tits_bad_1 = {
 	child_inheritance_sex = female
 	inherit_from_real_father = yes
 
-	compatibility = {
-		size_queen = @neg_compat_medium
-	}	
-
 }
 
 # Tiny Tits
@@ -278,10 +274,6 @@ tits_bad_2 = {
 	child_inheritance_sex = female
 	inherit_from_real_father = yes
 
-	compatibility = {
-		size_queen = @neg_compat_high
-	}	
-
 }
 
 # Flat Tits
@@ -309,10 +301,6 @@ tits_bad_3 = {
 	genetic = yes
 	child_inheritance_sex = female
 	inherit_from_real_father = yes
-
-	compatibility = {
-		size_queen = @neg_compat_high
-	}	
 
 }
 
@@ -397,5 +385,31 @@ tits_good_3 = {
 	genetic = yes
 	child_inheritance_sex = female
 	inherit_from_real_father = yes
+
+}
+
+size_queen = {
+	index = 6769
+
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_size_queen_desc
+			}
+			desc = trait_size_queen_character_desc
+		}
+	}
+
+	birth = 0.5
+	random_creation = 0.5
+
+	compatibility = {
+		dick_bad_1 = @neg_compat_low
+		dick_bad_2 = @neg_compat_medium
+		dick_bad_3 = @neg_compat_high
+	}	
 
 }
