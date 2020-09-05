@@ -1,0 +1,13 @@
+﻿l_french:
+
+ rule_carn_std:0 "#X Carnalitas:#! Transmission des MST"
+ setting_carn_std_enabled:0 "Par défaut"
+ setting_carn_std_enabled_desc:0 "Aucun changement ne sera effectué par rapport à la transmission de la $trait_lovers_pox$ ou la $trait_great_pox$."
+ setting_carn_std_disabled:1 "#high Jamais#!"
+ setting_carn_std_disabled_desc:0 "Les personnages n'attraperont jamais la $trait_lovers_pox$ ou la $trait_great_pox$."
+
+ rule_carn_futa_trait_name:0 "#X Carnalitas:#! $trait_futa$ Trait Name"
+ setting_carn_futa_trait_name_futa:0 "Par défaut"
+ setting_carn_futa_trait_name_futa_desc:0 "Les personnages ayant à la fois des organes sexuels féminin et masculin seront appelés '$trait_futa$'."
+ setting_carn_futa_trait_name_hermaphrodite:1 "#high Historique#!"
+ setting_carn_futa_trait_name_hermaphrodite_desc:0 "Les personnages ayant à la fois des organes sexuels féminin et masculin seront appelés '$trait_futa_hermaphrodite$'."
