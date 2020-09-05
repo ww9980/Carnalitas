@@ -5,6 +5,9 @@
 }
 
 on_game_start_after_lobby = {
+	trigger = {
+		years_from_game_start <= 1
+	}
     on_actions = {
         on_body_give
     }
