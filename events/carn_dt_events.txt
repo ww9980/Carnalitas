@@ -13,69 +13,53 @@ dt.0001 = {
 	}
 
 	immediate = {
-		random_list = {
-			820 = {
-
+		if = {
+			limit = { 
+				NOT = { has_trait = dick_good }
+				NOT = { has_trait = dick_bad } 
 			}
-			50 = {
-				trigger = { NOT = { has_trait = dick_bad_1 } }
-				add_trait = dick_bad_1
+			random_list = {
+				820 = {}
+				50 = { add_trait = dick_bad_1 }
+				25 = { add_trait = dick_bad_2 }
+				15 = { add_trait = dick_bad_3 }		
+				50 = { add_trait = dick_good_1 }
+				25 = { add_trait = dick_good_2 }
+				15 = { add_trait = dick_good_3 }			
 			}
-			25 = {
-				trigger = { NOT = { has_trait = dick_bad_2 } }
-				add_trait = dick_bad_2
-			}
-			15 = {
-				trigger = { NOT = { has_trait = dick_bad_3 } }
-				add_trait = dick_bad_3
-			}		
-			50 = {
-				trigger = { NOT = { has_trait = dick_good_1 } }
-				add_trait = dick_good_1
-			}
-			25 = {
-				trigger = { NOT = { has_trait = dick_good_2 } }
-				add_trait = dick_good_2
-			}
-			15 = {
-				trigger = { NOT = { has_trait = dick_good_3 } }
-				add_trait = dick_good_3
-			}			
 		}
-		random_list = {
-			820 = {
-
+		if = {	
+			limit = { 
+				NOT = { has_trait = tits_good }
+				NOT = { has_trait = tits_bad } 
 			}
-			50 = {
-				trigger = { NOT = { has_trait = tits_bad_1 } }
-				add_trait = tits_bad_1
-				make_trait_inactive = tits_bad_1
+			random_list = {
+				820 = { }
+				50 = {
+					add_trait = tits_bad_1
+					make_trait_inactive = tits_bad_1
+				}
+				25 = {
+					add_trait = tits_bad_2
+					make_trait_inactive = tits_bad_2
+				}
+				15 = {
+					add_trait = tits_bad_3
+					make_trait_inactive = tits_bad_3
+				}		
+				50 = {
+					add_trait = tits_good_1
+					make_trait_inactive = tits_good_1
+				}
+				25 = {
+					add_trait = tits_good_2
+					make_trait_inactive = tits_good_2
+				}
+				15 = {
+					add_trait = tits_good_3
+					make_trait_inactive = tits_good_3
+				}			
 			}
-			25 = {
-				trigger = { NOT = { has_trait = tits_bad_2 } }
-				add_trait = tits_bad_2
-				make_trait_inactive = tits_bad_2
-			}
-			15 = {
-				trigger = { NOT = { has_trait = tits_bad_3 } }
-				add_trait = tits_bad_3
-				make_trait_inactive = tits_bad_3
-			}		
-			50 = {
-				trigger = { NOT = { has_trait = tits_good_1 } }
-				add_trait = tits_good_1
-				make_trait_inactive = tits_good_1
-			}
-			25 = {
-				trigger = { NOT = { has_trait = tits_good_2 } }
-				add_trait = tits_good_2
-				make_trait_inactive = tits_good_2
-			}
-			15 = {
-				trigger = { NOT = { has_trait = tits_good_3 } }
-				add_trait = tits_good_3
-				make_trait_inactive = tits_good_3
-			}			
 		}
 	}
 }
@@ -93,71 +77,65 @@ dt.0002 = {
 	}
 
 	immediate = {
-		random_list = {
-			820 = {
-
+		if = {
+			limit = { 
+				NOT = { has_trait = dick_good }
+				NOT = { has_trait = dick_bad } 
 			}
-			50 = {
-				trigger = { NOT = { has_trait = dick_bad_1 } }
-				add_trait = dick_bad_1
-				make_trait_inactive = dick_bad_1
+			random_list = {
+				820 = {}
+				50 = { 
+					add_trait = dick_bad_1 
+					make_trait_inactive = dick_bad_1
+				}
+				25 = {
+					add_trait = dick_bad_2 
+					make_trait_inactive = dick_bad_2
+				}
+				15 = {
+					add_trait = dick_bad_3 
+					make_trait_inactive = dick_bad_3
+				}		
+				50 = {
+					add_trait = dick_good_1
+					make_trait_inactive = dick_good_1				
+				}
+				25 = {
+					add_trait = dick_good_2
+					make_trait_inactive = dick_good_2				
+				}
+				15 = {
+					add_trait = dick_good_3
+					make_trait_inactive = dick_good_3
+				}			
 			}
-			25 = {
-				trigger = { NOT = { has_trait = dick_bad_2 } }
-				add_trait = dick_bad_2
-				make_trait_inactive = dick_bad_2
-			}
-			15 = {
-				trigger = { NOT = { has_trait = dick_bad_3 } }
-				add_trait = dick_bad_3
-				make_trait_inactive = dick_bad_3
-			}		
-			50 = {
-				trigger = { NOT = { has_trait = dick_good_1 } }
-				add_trait = dick_good_1
-				make_trait_inactive = dick_good_1
-			}
-			25 = {
-				trigger = { NOT = { has_trait = dick_good_2 } }
-				add_trait = dick_good_2
-				make_trait_inactive = dick_good_2
-			}
-			15 = {
-				trigger = { NOT = { has_trait = dick_good_3 } }
-				add_trait = dick_good_3
-				make_trait_inactive = dick_good_3
-			}			
 		}
-		random_list = {
-			820 = {
-
+		if = {	
+			limit = { 
+				NOT = { has_trait = tits_good }
+				NOT = { has_trait = tits_bad } 
 			}
-			50 = {
-				trigger = { NOT = { has_trait = tits_bad_1 } }
-				add_trait = tits_bad_1
+			random_list = {
+				820 = { }
+				50 = {
+					add_trait = tits_bad_1
+				}
+				25 = {
+					add_trait = tits_bad_2
+				}
+				15 = {
+					add_trait = tits_bad_3
+				}		
+				50 = {
+					add_trait = tits_good_1
+				}
+				25 = {
+					add_trait = tits_good_2
+				}
+				15 = {
+					add_trait = tits_good_3
+				}			
 			}
-			25 = {
-				trigger = { NOT = { has_trait = tits_bad_2 } }
-				add_trait = tits_bad_2
-			}
-			15 = {
-				trigger = { NOT = { has_trait = tits_bad_3 } }
-				add_trait = tits_bad_3
-			}		
-			50 = {
-				trigger = { NOT = { has_trait = tits_good_1 } }
-				add_trait = tits_good_1
-			}
-			25 = {
-				trigger = { NOT = { has_trait = tits_good_2 } }
-				add_trait = tits_good_2
-			}
-			15 = {
-				trigger = { NOT = { has_trait = tits_good_3 } }
-				add_trait = tits_good_3
-			}			
 		}
 	}
 }
-
-

@@ -56,19 +56,9 @@ dick_bad_1 = {
 		}
 	}
 
-	triggered_opinion = {
-		has_trait = size_queen
-		opinion_modifier = -10
-	}
-
 	physical = yes
 	genetic = yes
-	child_inheritance_sex = male
 	inherit_from_real_father = yes
-
-	compatibility = {
-		size_queen = @neg_compat_low
-	}	
 
 }
 
@@ -94,19 +84,9 @@ dick_bad_2 = {
 		}
 	}
 
-	triggered_opinion = {
-		has_trait = size_queen
-		opinion_modifier = -10
-	}
-
 	physical = yes
 	genetic = yes
-	child_inheritance_sex = male
 	inherit_from_real_father = yes
-
-	compatibility = {
-		size_queen = @neg_compat_medium
-	}	
 
 }
 
@@ -132,19 +112,9 @@ dick_bad_3 = {
 		}
 	}
 
-	triggered_opinion = {
-		has_trait = size_queen
-		opinion_modifier = -10
-	}
-
 	physical = yes
 	genetic = yes
-	child_inheritance_sex = male
 	inherit_from_real_father = yes
-
-	compatibility = {
-		size_queen = @neg_compat_high
-	}	
 
 }
 
@@ -172,7 +142,6 @@ dick_good_1 = {
 
 	physical = yes
 	genetic = yes
-	child_inheritance_sex = male
 	inherit_from_real_father = yes
 
 }
@@ -201,7 +170,6 @@ dick_good_2 = {
 
 	physical = yes
 	genetic = yes
-	child_inheritance_sex = male
 	inherit_from_real_father = yes
 
 }
@@ -230,8 +198,8 @@ dick_good_3 = {
 
 	physical = yes
 	genetic = yes
-	child_inheritance_sex = male
 	inherit_from_real_father = yes
+	
 
 }
 
@@ -258,7 +226,6 @@ tits_bad_1 = {
 
 	physical = yes
 	genetic = yes
-	child_inheritance_sex = female
 	inherit_from_real_father = yes
 
 }
@@ -286,7 +253,6 @@ tits_bad_2 = {
 
 	physical = yes
 	genetic = yes
-	child_inheritance_sex = female
 	inherit_from_real_father = yes
 
 }
@@ -314,7 +280,6 @@ tits_bad_3 = {
 
 	physical = yes
 	genetic = yes
-	child_inheritance_sex = female
 	inherit_from_real_father = yes
 
 }
@@ -342,7 +307,6 @@ tits_good_1 = {
 
 	physical = yes
 	genetic = yes
-	child_inheritance_sex = female
 	inherit_from_real_father = yes
 
 }
@@ -370,7 +334,6 @@ tits_good_2 = {
 
 	physical = yes
 	genetic = yes
-	child_inheritance_sex = female
 	inherit_from_real_father = yes
 
 }
@@ -398,7 +361,6 @@ tits_good_3 = {
 
 	physical = yes
 	genetic = yes
-	child_inheritance_sex = female
 	inherit_from_real_father = yes
 
 }
