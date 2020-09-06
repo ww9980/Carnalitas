@@ -1,0 +1,27 @@
+﻿#
+# Carnalitas Decisions
+#
+
+# carn_spend_time_with_decision - Equivalent to the spend_time_with interaction with a random lover
+carn_spend_time_with_lover_decision = {
+    title = carn_spend_time_with_decision.t
+    desc = carn_spend_time_with_decision.d
+    selection_tooltip = carn_spend_time_with_decision.tt.root
+    confirm_text = carn_spend_time_with_decision.ct
+
+    is_shown = {
+        OR = {
+            num_of_relation_lover > 0
+            num_of_relation_soulmate > 0
+        }
+    }
+
+    
+    
+
+    effect = {
+
+    }
+
+    ai_will_do = 0
+}

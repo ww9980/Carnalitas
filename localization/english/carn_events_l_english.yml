@@ -1,0 +1,5 @@
+﻿l_english:
+ carn_sex.0100.t:0 "An Intimate Moment"
+ carn_sex.0100.d:0 "Spend an intimate moment together with your lover."
+ carn_sex.0100.d.debug:0 "\n\nThis event acts as a placeholder until more scenes can be added."
+ carn_sex.0100.tt:0 "What a lovely moment with my lover"

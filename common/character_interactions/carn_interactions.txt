@@ -1,0 +1,41 @@
+﻿# Carnalitas Character Interactions
+#
+# carn_spend_time_with_interaction. Basic Diplomatic Interaction for initiating sex
+#
+
+carn_spend_time_with_interaction = {
+    category = interaction_category_friendly
+    
+    desc = carn_spend_time_with_interaction_desc
+    interface_priority = 40
+
+    use_diplomatic_range = no
+
+    is_shown = {
+        scope:actor = {
+            has_relation_lover = scope:recipient
+        }
+    }
+
+    is_valid_showing_failures_only = {
+        scope:recipient = {
+            is_diplomatically_available = yes
+        }
+    }
+
+    on_accept = {
+        scope:actor = {
+            send_interface_message = {
+                type = event_generic_neutral
+                title = carn_spend_time_with_interaction_notification
+                right_icon = scope:recipient
+                carn_spend_time_with_effect = {
+                    INITIATOR = scope:actor
+                    TARGET = scope:recipient
+                }
+            }
+        }
+    }
+
+    auto_accept = yes
+}

@@ -1,0 +1,4 @@
+﻿l_english:
+ carn_spend_time_with_interaction:0 "#X Carnalitas:#! Spend Time With"
+ carn_spend_time_with_interaction_desc:0 "Spend an intimate moment with [recipient.GetShortUINameNoTooltip]"
+ carn_spend_time_with_interaction_notification:0 "Spent Time With Lover"

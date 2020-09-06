@@ -1,0 +1,27 @@
+﻿# Basic Interaction Effect
+carn_spend_time_with_effect = {
+    $INITIATOR$ = {
+        save_scope_as = initiator
+    }
+    $TARGET$ = {
+        save_scope_as = target
+    }
+
+    show_as_tooltip = {
+        $INITIATOR$ = {
+            add_opinion = {
+                target = $TARGET$
+                modifier = carn_initiated_sex_opinion
+            }
+        }
+        $TARGET$ = {
+            add_opinion = {
+                target = $INITIATOR$
+                modifier = carn_initiated_sex_opinion
+            }
+        }
+    }
+    hidden_effect = {
+        trigger_event = carn_sex.0100
+    }
+}
