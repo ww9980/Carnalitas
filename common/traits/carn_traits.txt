@@ -41,7 +41,7 @@ dick_bad_1 = {
 		dick_bad_2
 		dick_bad_3
 		dick_good
-		eunuch
+		
 	}
 
 	desc = {
@@ -69,7 +69,7 @@ dick_bad_2 = {
 		dick_bad_1
 		dick_bad_3
 		dick_good
-		eunuch
+		
 	}
 
 	desc = {
@@ -97,7 +97,7 @@ dick_bad_3 = {
 		dick_bad_1
 		dick_bad_2
 		dick_good
-		eunuch
+		
 	}
 
 	desc = {
@@ -125,7 +125,7 @@ dick_good_1 = {
 		dick_good_2
 		dick_good_3
 		dick_bad
-		eunuch
+		
 	}
 
 	desc = {
@@ -153,7 +153,7 @@ dick_good_2 = {
 		dick_good_1
 		dick_good_3
 		dick_bad
-		eunuch
+		
 	}
 
 	desc = {
@@ -181,7 +181,7 @@ dick_good_3 = {
 		dick_good_1
 		dick_good_2
 		dick_bad
-		eunuch
+		
 	}
 
 	desc = {
