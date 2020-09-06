@@ -6,7 +6,7 @@ flat_tits = {
 				mode = replace		#overwrite this gene in the dna with the specified template and value
 				gene = gene_bs_bust
 				template = bust_clothes
-				value = 0
+				value = -1.0
 			}
 		}
 		weight = {
