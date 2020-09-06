@@ -1,4 +1,14 @@
-﻿############### Physical ##############
+﻿#
+# Carnalitas reserves the 6900-6999 range of indices for traits
+# because haha funny sex number
+#
+# 6900: futa
+# 6901-6903: dick_small_1 to dick_small_3
+# 6904-6906: dick_big_1 to dick_big_3
+# 6907-6909: tits_small_1 to tits_small_3
+# 6910-6912: tits_big_1 to tits_big_3
+#
+
 futa = {
 	index = 6900
 
@@ -36,7 +46,7 @@ futa = {
 
 # Small dick
 dick_small_1 = {
-	index = 6759
+	index = 6901
 
 	name = {
 		first_valid = {
@@ -79,7 +89,7 @@ dick_small_1 = {
 
 # Tiny dick
 dick_small_2 = {
-	index = 6758
+	index = 6902
 
 	name = {
 		first_valid = {
@@ -122,7 +132,7 @@ dick_small_2 = {
 
 # Micro dick
 dick_small_3 = {
-	index = 6757
+	index = 6903
 
 	name = {
 		first_valid = {
@@ -165,7 +175,7 @@ dick_small_3 = {
 
 # Big dick
 dick_big_1 = {
-	index = 6760
+	index = 6904
 	opposites = {
 		dick_big_2
 		dick_big_3
@@ -207,7 +217,7 @@ dick_big_1 = {
 
 # Huge dick
 dick_big_2 = {
-	index = 6761
+	index = 6905
 	opposites = {
 		dick_big_1
 		dick_big_3
@@ -249,7 +259,7 @@ dick_big_2 = {
 
 # Gigantic dick
 dick_big_3 = {
-	index = 6762
+	index = 6906
 	opposites = {
 		dick_big_1
 		dick_big_2
@@ -291,7 +301,7 @@ dick_big_3 = {
 
 # Small Tits
 tits_small_1 = {
-	index = 6765
+	index = 6907
 	opposites = {
 		tits_small_2
 		tits_small_3
@@ -333,7 +343,7 @@ tits_small_1 = {
 
 # Tiny Tits
 tits_small_2 = {
-	index = 6764
+	index = 6908
 	opposites = {
 		tits_small_1
 		tits_small_3
@@ -375,7 +385,7 @@ tits_small_2 = {
 
 # Flat Tits
 tits_small_3 = {
-	index = 6763
+	index = 6909
 	opposites = {
 		tits_small_1
 		tits_small_2
@@ -417,7 +427,7 @@ tits_small_3 = {
 
 # Big Tits
 tits_big_1 = {
-	index = 6766
+	index = 6910
 	opposites = {
 		tits_big_2
 		tits_big_3
@@ -459,7 +469,7 @@ tits_big_1 = {
 
 # Huge Tits
 tits_big_2 = {
-	index = 6767
+	index = 6911
 	opposites = {
 		tits_big_1
 		tits_big_3
@@ -501,7 +511,7 @@ tits_big_2 = {
 
 # Gigantic Tits
 tits_big_3 = {
-	index = 6768
+	index = 6912
 	opposites = {
 		tits_big_1
 		tits_big_2
