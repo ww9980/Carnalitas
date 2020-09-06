@@ -2,11 +2,12 @@
 Features
 ------------------------
 
-* New congenital trait: Futanari
+* Game rule to remove all STDs
 * New congenital trait group: Small Tits (tits_small_1 to tits_small_3)
 * New congenital trait group: Big Tits (tits_big_1 to tits_big_3)
 * New congenital trait group: Small Dicks (dick_small_1 to dick_small_3)
 * New congenital trait group: Big Dicks (dick_big_1 to dick_big_3)
+* New congenital trait: Futanari
 
 ------------------------
 Info for Modders
@@ -20,6 +21,9 @@ Overwritten vanilla scripted triggers with new functionality:
 
 New scripted effects:
 * carn_had_sex_with_no_drama_effect
+* carn_seed_dt_traits_effect
+* carn_make_all_dt_traits_inactive_effect
+* carn_activate_gender_specific_dt_traits_effect
 
 New scripted triggers:
 * carn_has_any_dick_gene_trigger
