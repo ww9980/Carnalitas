@@ -3,3 +3,39 @@
 		carn_futa.0001 # futas have a chance to impregnate wives, concubines, lovers
 	}
 }
+
+on_game_start_after_lobby = {
+    on_actions = {
+        on_body_give
+    }
+}
+
+on_body_give = {
+    effect = {
+        every_living_character = {
+            trigger_event = {
+				id = carn_dt.0001
+			}
+			trigger_event = {
+				id = carn_dt.0002
+			}
+			trigger_event = {
+				id = carn_dt.0003
+			}
+			trigger_event = {
+				id = carn_dt.0004
+            }
+        }
+    }
+}
+
+on_16th_birthday = {
+	trigger = { age = 16 }
+
+	events = {
+		carn_dt.0001
+		carn_dt.0002		
+		carn_dt.0003
+		carn_dt.0004	
+	}
+}
