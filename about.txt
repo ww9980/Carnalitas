@@ -18,10 +18,20 @@ New scripted effects:
 * carn_had_sex_with_no_drama_effect
 
 New scripted triggers:
+* carn_has_any_dick_gene_trigger
+* carn_has_small_dick_trigger
+* carn_has_big_dick_trigger
+* carn_has_any_tits_gene_trigger
+* carn_has_small_tits_trigger
+* carn_has_big_tits_trigger
 * carn_gender_can_impregnate_trigger
 
 New on_actions:
 * carn_on_sex
+* carn_on_vaginal_sex
+* carn_on_anal_sex
+* carn_on_oral_sex
+* carn_on_dt_initialize
 
 New character flags:
 * immune_to_std

@@ -2,13 +2,15 @@
 
 # written by Luther Slade and Cheri
 
+# 0001. add active dick trait for men and futas
 carn_dt.0001 = {
 	hidden = yes
 	
 	trigger = { 
-		carn_gender_can_impregnate_trigger = yes
-		age >= 16
 		has_game_rule = carn_dt_enabled_true
+		carn_gender_can_impregnate_trigger = yes
+		carn_has_any_dick_gene_trigger = no
+		age >= 16
 	}
 	
 	weight_multiplier = {
@@ -28,13 +30,15 @@ carn_dt.0001 = {
 	}
 }
 
+# 0002. add inactive tits trait for men
 carn_dt.0002 = {
 	hidden = yes
 	
 	trigger = { 
-		is_female = no
-		age >= 16
 		has_game_rule = carn_dt_enabled_true
+		is_female = no
+		carn_has_any_tits_gene_trigger = no
+		age >= 16
 	}
 	
 	weight_multiplier = {
@@ -71,13 +75,15 @@ carn_dt.0002 = {
 	}
 }
 
+# 0003. add inactive dick trait for women
 carn_dt.0003 = {
 	hidden = yes
 	
 	trigger = { 
-		carn_gender_can_impregnate_trigger = no
-		age >= 16
 		has_game_rule = carn_dt_enabled_true
+		carn_gender_can_impregnate_trigger = no
+		carn_has_any_dick_gene_trigger = no
+		age >= 16
 	}
 	
 	weight_multiplier = {
@@ -115,13 +121,15 @@ carn_dt.0003 = {
 	}
 }
 
+# 0004. add active tits trait for women
 carn_dt.0004 = {
 	hidden = yes
 	
 	trigger = { 
-		is_female = yes
-		age >= 16
 		has_game_rule = carn_dt_enabled_true
+		is_female = yes
+		carn_has_any_tits_gene_trigger = no
+		age >= 16
 	}
 	
 	weight_multiplier = {

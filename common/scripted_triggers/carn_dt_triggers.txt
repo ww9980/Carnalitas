@@ -1,0 +1,55 @@
+﻿# returns true if this character has any congenital dick trait, active or inactive
+carn_has_any_dick_gene_trigger = {
+	OR = {
+		has_trait = dick_small_1
+		has_trait = dick_small_2
+		has_trait = dick_small_3
+		has_trait = dick_big_1
+		has_trait = dick_big_2
+		has_trait = dick_big_3
+		has_inactive_trait = dick_small_1
+		has_inactive_trait = dick_small_2
+		has_inactive_trait = dick_small_3
+		has_inactive_trait = dick_big_1
+		has_inactive_trait = dick_big_2
+		has_inactive_trait = dick_big_3
+	}
+}
+
+# returns true if this character has any active small dick trait
+carn_has_small_dick_trigger = {
+	has_trait = dick_small
+}
+
+# returns true if this character has any active big dick trait
+carn_has_big_dick_trigger = {
+	has_trait = dick_big
+}
+
+# returns true if this character has any congenital tits trait, active or inactive
+carn_has_any_tits_gene_trigger = {
+	OR = {
+		has_trait = tits_small_1
+		has_trait = tits_small_2
+		has_trait = tits_small_3
+		has_trait = tits_big_1
+		has_trait = tits_big_2
+		has_trait = tits_big_3
+		has_inactive_trait = tits_small_1
+		has_inactive_trait = tits_small_2
+		has_inactive_trait = tits_small_3
+		has_inactive_trait = tits_big_1
+		has_inactive_trait = tits_big_2
+		has_inactive_trait = tits_big_3
+	}
+}
+
+# returns true if this character has any active small tits trait
+carn_has_small_tits_trigger = {
+	has_trait = tits_small
+}
+
+# returns true if this character has any active big tits trait
+carn_has_big_tits_trigger = {
+	has_trait = tits_big
+}
