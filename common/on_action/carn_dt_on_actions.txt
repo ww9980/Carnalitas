@@ -1,16 +1,10 @@
-﻿random_yearly_everyone_pulse = {
-	events = {
-		carn_futa.0001 # futas have a chance to impregnate wives, concubines, lovers
-	}
-}
-
-on_game_start_after_lobby = {
+﻿on_game_start_after_lobby = {
     on_actions = {
-        on_body_give
+        carn_on_dt_initialize
     }
 }
 
-on_body_give = {
+carn_on_dt_initialize = {
     effect = {
         every_living_character = {
             trigger_event = {

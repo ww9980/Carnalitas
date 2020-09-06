@@ -8,7 +8,7 @@ futa = {
 				trigger = {
 					has_game_rule = carn_futa_trait_name_hermaphrodite
 				}
-				desc = trait_futa_hermaphrodite
+				desc = trait_futa_immersive
 			}
 			desc = trait_futa
 		}
@@ -35,14 +35,31 @@ futa = {
 }
 
 # Small dick
-dick_bad_1 = {
+dick_small_1 = {
 	index = 6759
-	opposites = {
-		dick_bad_2
-		dick_bad_3
-		dick_good
-		
+
+	name = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					has_game_rule = carn_dt_trait_names_immersive
+				}
+				desc = trait_dick_small_1_immersive
+			}
+			desc = trait_dick_small_1
+		}
 	}
+
+	opposites = {
+		dick_small_2
+		dick_small_3
+		dick_big
+	}
+
+	fertility = -0.01
+
+	group = dick_small
+	level = 1
 
 	desc = {
 		first_valid = {
@@ -50,27 +67,42 @@ dick_bad_1 = {
 				trigger = {
 					NOT = { exists = this }
 				}
-				desc = trait_dick_bad_1_desc
+				desc = trait_dick_small_1_desc
 			}
-			desc = trait_dick_bad_1_character_desc
+			desc = trait_dick_small_1_character_desc
 		}
 	}
 
 	physical = yes
 	genetic = yes
-	inherit_from_real_father = yes
-
 }
 
 # Tiny dick
-dick_bad_2 = {
+dick_small_2 = {
 	index = 6758
-	opposites = {
-		dick_bad_1
-		dick_bad_3
-		dick_good
-		
+
+	name = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					has_game_rule = carn_dt_trait_names_immersive
+				}
+				desc = trait_dick_small_2_immersive
+			}
+			desc = trait_dick_small_2
+		}
 	}
+
+	opposites = {
+		dick_small_1
+		dick_small_3
+		dick_big
+	}
+
+	fertility = -0.025
+
+	group = dick_small
+	level = 2
 
 	desc = {
 		first_valid = {
@@ -78,27 +110,42 @@ dick_bad_2 = {
 				trigger = {
 					NOT = { exists = this }
 				}
-				desc = trait_dick_bad_2_desc
+				desc = trait_dick_small_2_desc
 			}
-			desc = trait_dick_bad_2_character_desc
+			desc = trait_dick_small_2_character_desc
 		}
 	}
 
 	physical = yes
 	genetic = yes
-	inherit_from_real_father = yes
-
 }
 
 # Micro dick
-dick_bad_3 = {
+dick_small_3 = {
 	index = 6757
-	opposites = {
-		dick_bad_1
-		dick_bad_2
-		dick_good
-		
+
+	name = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					has_game_rule = carn_dt_trait_names_immersive
+				}
+				desc = trait_dick_small_3_immersive
+			}
+			desc = trait_dick_small_3
+		}
 	}
+
+	opposites = {
+		dick_small_1
+		dick_small_2
+		dick_big
+	}
+
+	fertility = -0.05
+
+	group = dick_small
+	level = 3
 
 	desc = {
 		first_valid = {
@@ -106,27 +153,41 @@ dick_bad_3 = {
 				trigger = {
 					NOT = { exists = this }
 				}
-				desc = trait_dick_bad_3_desc
+				desc = trait_dick_small_3_desc
 			}
-			desc = trait_dick_bad_3_character_desc
+			desc = trait_dick_small_3_character_desc
 		}
 	}
 
 	physical = yes
 	genetic = yes
-	inherit_from_real_father = yes
-
 }
 
 # Big dick
-dick_good_1 = {
+dick_big_1 = {
 	index = 6760
 	opposites = {
-		dick_good_2
-		dick_good_3
-		dick_bad
-		
+		dick_big_2
+		dick_big_3
+		dick_small
 	}
+
+	name = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					has_game_rule = carn_dt_trait_names_immersive
+				}
+				desc = trait_dick_big_1_immersive
+			}
+			desc = trait_dick_big_1
+		}
+	}
+
+	fertility = 0.01
+
+	group = dick_big
+	level = 1
 
 	desc = {
 		first_valid = {
@@ -134,27 +195,41 @@ dick_good_1 = {
 				trigger = {
 					NOT = { exists = this }
 				}
-				desc = trait_dick_good_1_desc
+				desc = trait_dick_big_1_desc
 			}
-			desc = trait_dick_good_1_character_desc
+			desc = trait_dick_big_1_character_desc
 		}
 	}
 
 	physical = yes
 	genetic = yes
-	inherit_from_real_father = yes
-
 }
 
 # Huge dick
-dick_good_2 = {
+dick_big_2 = {
 	index = 6761
 	opposites = {
-		dick_good_1
-		dick_good_3
-		dick_bad
-		
+		dick_big_1
+		dick_big_3
+		dick_small
 	}
+
+	name = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					has_game_rule = carn_dt_trait_names_immersive
+				}
+				desc = trait_dick_big_2_immersive
+			}
+			desc = trait_dick_big_2
+		}
+	}
+
+	fertility = 0.025
+
+	group = dick_big
+	level = 2
 
 	desc = {
 		first_valid = {
@@ -162,27 +237,41 @@ dick_good_2 = {
 				trigger = {
 					NOT = { exists = this }
 				}
-				desc = trait_dick_good_2_desc
+				desc = trait_dick_big_2_desc
 			}
-			desc = trait_dick_good_2_character_desc
+			desc = trait_dick_big_2_character_desc
 		}
 	}
 
 	physical = yes
 	genetic = yes
-	inherit_from_real_father = yes
-
 }
 
 # Gigantic dick
-dick_good_3 = {
+dick_big_3 = {
 	index = 6762
 	opposites = {
-		dick_good_1
-		dick_good_2
-		dick_bad
-		
+		dick_big_1
+		dick_big_2
+		dick_small
 	}
+
+	name = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					has_game_rule = carn_dt_trait_names_immersive
+				}
+				desc = trait_dick_big_3_immersive
+			}
+			desc = trait_dick_big_3
+		}
+	}
+
+	fertility = 0.05
+
+	group = dick_big
+	level = 3
 
 	desc = {
 		first_valid = {
@@ -190,27 +279,41 @@ dick_good_3 = {
 				trigger = {
 					NOT = { exists = this }
 				}
-				desc = trait_dick_good_3_desc
+				desc = trait_dick_big_3_desc
 			}
-			desc = trait_dick_good_3_character_desc
+			desc = trait_dick_big_3_character_desc
 		}
 	}
 
 	physical = yes
 	genetic = yes
-	inherit_from_real_father = yes
-	
-
 }
 
 # Small Tits
-tits_bad_1 = {
+tits_small_1 = {
 	index = 6765
 	opposites = {
-		tits_bad_2
-		tits_bad_3
-		tits_good
+		tits_small_2
+		tits_small_3
+		tits_big
 	}
+
+	name = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					has_game_rule = carn_dt_trait_names_immersive
+				}
+				desc = trait_tits_small_1_immersive
+			}
+			desc = trait_tits_small_1
+		}
+	}
+
+	fertility = -0.01
+
+	group = tits_small
+	level = 1
 
 	desc = {
 		first_valid = {
@@ -218,26 +321,41 @@ tits_bad_1 = {
 				trigger = {
 					NOT = { exists = this }
 				}
-				desc = trait_tits_bad_1_desc
+				desc = trait_tits_small_1_desc
 			}
-			desc = trait_tits_bad_1_character_desc
+			desc = trait_tits_small_1_character_desc
 		}
 	}
 
 	physical = yes
 	genetic = yes
-	inherit_from_real_father = yes
-
 }
 
 # Tiny Tits
-tits_bad_2 = {
+tits_small_2 = {
 	index = 6764
 	opposites = {
-		tits_bad_1
-		tits_bad_3
-		tits_good
+		tits_small_1
+		tits_small_3
+		tits_big
 	}
+
+	name = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					has_game_rule = carn_dt_trait_names_immersive
+				}
+				desc = trait_tits_small_2_immersive
+			}
+			desc = trait_tits_small_2
+		}
+	}
+
+	fertility = -0.025
+
+	group = tits_small
+	level = 2
 
 	desc = {
 		first_valid = {
@@ -245,26 +363,41 @@ tits_bad_2 = {
 				trigger = {
 					NOT = { exists = this }
 				}
-				desc = trait_tits_bad_2_desc
+				desc = trait_tits_small_2_desc
 			}
-			desc = trait_tits_bad_2_character_desc
+			desc = trait_tits_small_2_character_desc
 		}
 	}
 
 	physical = yes
 	genetic = yes
-	inherit_from_real_father = yes
-
 }
 
 # Flat Tits
-tits_bad_3 = {
+tits_small_3 = {
 	index = 6763
 	opposites = {
-		tits_bad_1
-		tits_bad_2
-		tits_good
+		tits_small_1
+		tits_small_2
+		tits_big
 	}
+
+	name = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					has_game_rule = carn_dt_trait_names_immersive
+				}
+				desc = trait_tits_small_3_immersive
+			}
+			desc = trait_tits_small_3
+		}
+	}
+
+	fertility = -0.05
+
+	group = tits_small
+	level = 3
 
 	desc = {
 		first_valid = {
@@ -272,26 +405,41 @@ tits_bad_3 = {
 				trigger = {
 					NOT = { exists = this }
 				}
-				desc = trait_tits_bad_3_desc
+				desc = trait_tits_small_3_desc
 			}
-			desc = trait_tits_bad_3_character_desc
+			desc = trait_tits_small_3_character_desc
 		}
 	}
 
 	physical = yes
 	genetic = yes
-	inherit_from_real_father = yes
-
 }
 
 # Big Tits
-tits_good_1 = {
+tits_big_1 = {
 	index = 6766
 	opposites = {
-		tits_good_2
-		tits_good_3
-		tits_bad
+		tits_big_2
+		tits_big_3
+		tits_small
 	}
+
+	name = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					has_game_rule = carn_dt_trait_names_immersive
+				}
+				desc = trait_tits_big_1_immersive
+			}
+			desc = trait_tits_big_1
+		}
+	}
+
+	fertility = 0.01
+
+	group = tits_big
+	level = 1
 
 	desc = {
 		first_valid = {
@@ -299,26 +447,41 @@ tits_good_1 = {
 				trigger = {
 					NOT = { exists = this }
 				}
-				desc = trait_tits_good_1_desc
+				desc = trait_tits_big_1_desc
 			}
-			desc = trait_tits_good_1_character_desc
+			desc = trait_tits_big_1_character_desc
 		}
 	}
 
 	physical = yes
 	genetic = yes
-	inherit_from_real_father = yes
-
 }
 
 # Huge Tits
-tits_good_2 = {
+tits_big_2 = {
 	index = 6767
 	opposites = {
-		tits_good_1
-		tits_good_3
-		tits_bad
+		tits_big_1
+		tits_big_3
+		tits_small
 	}
+
+	name = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					has_game_rule = carn_dt_trait_names_immersive
+				}
+				desc = trait_tits_big_2_immersive
+			}
+			desc = trait_tits_big_2
+		}
+	}
+
+	fertility = 0.025
+
+	group = tits_big
+	level = 2
 
 	desc = {
 		first_valid = {
@@ -326,26 +489,41 @@ tits_good_2 = {
 				trigger = {
 					NOT = { exists = this }
 				}
-				desc = trait_tits_good_2_desc
+				desc = trait_tits_big_2_desc
 			}
-			desc = trait_tits_good_2_character_desc
+			desc = trait_tits_big_2_character_desc
 		}
 	}
 
 	physical = yes
 	genetic = yes
-	inherit_from_real_father = yes
-
 }
 
 # Gigantic Tits
-tits_good_3 = {
+tits_big_3 = {
 	index = 6768
 	opposites = {
-		tits_good_1
-		tits_good_2
-		tits_bad
+		tits_big_1
+		tits_big_2
+		tits_small
 	}
+
+	name = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					has_game_rule = carn_dt_trait_names_immersive
+				}
+				desc = trait_tits_big_3_immersive
+			}
+			desc = trait_tits_big_3
+		}
+	}
+
+	fertility = 0.05
+
+	group = tits_big
+	level = 3
 
 	desc = {
 		first_valid = {
@@ -353,14 +531,12 @@ tits_good_3 = {
 				trigger = {
 					NOT = { exists = this }
 				}
-				desc = trait_tits_good_3_desc
+				desc = trait_tits_big_3_desc
 			}
-			desc = trait_tits_good_3_character_desc
+			desc = trait_tits_big_3_character_desc
 		}
 	}
 
 	physical = yes
 	genetic = yes
-	inherit_from_real_father = yes
-
 }

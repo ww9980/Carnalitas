@@ -1,11 +1,14 @@
 namespace = carn_dt
 
+# written by Luther Slade and Cheri
+
 carn_dt.0001 = {
 	hidden = yes
 	
 	trigger = { 
-		is_female = no
+		carn_gender_can_impregnate_trigger = yes
 		age >= 16
+		has_game_rule = carn_dt_enabled_true
 	}
 	
 	weight_multiplier = {
@@ -15,12 +18,12 @@ carn_dt.0001 = {
 	immediate = {
 		random_list = {
 			820 = { }
-			50 = { add_trait = dick_bad_1 }
-			25 = { add_trait = dick_bad_2 }
-			15 = { add_trait = dick_bad_3 }		
-			50 = { add_trait = dick_good_1 }
-			25 = { add_trait = dick_good_2 }
-			15 = { add_trait = dick_good_3 }			
+			50 = { add_trait = dick_small_1 }
+			25 = { add_trait = dick_small_2 }
+			15 = { add_trait = dick_small_3 }		
+			50 = { add_trait = dick_big_1 }
+			25 = { add_trait = dick_big_2 }
+			15 = { add_trait = dick_big_3 }			
 		}
 	}
 }
@@ -31,6 +34,7 @@ carn_dt.0002 = {
 	trigger = { 
 		is_female = no
 		age >= 16
+		has_game_rule = carn_dt_enabled_true
 	}
 	
 	weight_multiplier = {
@@ -40,28 +44,28 @@ carn_dt.0002 = {
 		random_list = {
 			820 = { }
 			50 = {
-				add_trait = tits_bad_1
-				make_trait_inactive = tits_bad_1
+				add_trait = tits_small_1
+				make_trait_inactive = tits_small_1
 			}
 			25 = {
-				add_trait = tits_bad_2
-				make_trait_inactive = tits_bad_2
+				add_trait = tits_small_2
+				make_trait_inactive = tits_small_2
 			}
 			15 = {
-				add_trait = tits_bad_3
-				make_trait_inactive = tits_bad_3
+				add_trait = tits_small_3
+				make_trait_inactive = tits_small_3
 			}		
 			50 = {
-				add_trait = tits_good_1
-				make_trait_inactive = tits_good_1
+				add_trait = tits_big_1
+				make_trait_inactive = tits_big_1
 			}
 			25 = {
-				add_trait = tits_good_2
-				make_trait_inactive = tits_good_2
+				add_trait = tits_big_2
+				make_trait_inactive = tits_big_2
 			}
 			15 = {
-				add_trait = tits_good_3
-				make_trait_inactive = tits_good_3
+				add_trait = tits_big_3
+				make_trait_inactive = tits_big_3
 			}			
 		}
 	}
@@ -71,8 +75,9 @@ carn_dt.0003 = {
 	hidden = yes
 	
 	trigger = { 
-		is_female = yes
+		carn_gender_can_impregnate_trigger = no
 		age >= 16
+		has_game_rule = carn_dt_enabled_true
 	}
 	
 	weight_multiplier = {
@@ -83,28 +88,28 @@ carn_dt.0003 = {
 		random_list = {
 			820 = {}
 			50 = { 
-				add_trait = dick_bad_1 
-				make_trait_inactive = dick_bad_1
+				add_trait = dick_small_1 
+				make_trait_inactive = dick_small_1
 			}
 			25 = {
-				add_trait = dick_bad_2 
-				make_trait_inactive = dick_bad_2
+				add_trait = dick_small_2 
+				make_trait_inactive = dick_small_2
 			}
 			15 = {
-				add_trait = dick_bad_3 
-				make_trait_inactive = dick_bad_3
+				add_trait = dick_small_3 
+				make_trait_inactive = dick_small_3
 			}		
 			50 = {
-				add_trait = dick_good_1
-				make_trait_inactive = dick_good_1				
+				add_trait = dick_big_1
+				make_trait_inactive = dick_big_1				
 			}
 			25 = {
-				add_trait = dick_good_2
-				make_trait_inactive = dick_good_2				
+				add_trait = dick_big_2
+				make_trait_inactive = dick_big_2				
 			}
 			15 = {
-				add_trait = dick_good_3
-				make_trait_inactive = dick_good_3
+				add_trait = dick_big_3
+				make_trait_inactive = dick_big_3
 			}			
 		}
 	}
@@ -116,6 +121,7 @@ carn_dt.0004 = {
 	trigger = { 
 		is_female = yes
 		age >= 16
+		has_game_rule = carn_dt_enabled_true
 	}
 	
 	weight_multiplier = {
@@ -126,37 +132,37 @@ carn_dt.0004 = {
 		random_list = {
 			820 = { }
 			50 = {
-				add_trait = tits_bad_1
+				add_trait = tits_small_1
 				add_character_flag = {
 					flag = small_tits
 				}
 			}
 			25 = {
-				add_trait = tits_bad_2
+				add_trait = tits_small_2
 				add_character_flag = {
 					flag = tiny_tits
 				}
 			}
 			15 = {
-				add_trait = tits_bad_3
+				add_trait = tits_small_3
 				add_character_flag = {
 					flag = flat_tits
 				}
 			}		
 			50 = {
-				add_trait = tits_good_1
+				add_trait = tits_big_1
 				add_character_flag = {
 					flag = big_tits
 				}
 			}
 			25 = {
-				add_trait = tits_good_2
+				add_trait = tits_big_2
 				add_character_flag = {
 					flag = huge_tits
 				}
 			}
 			15 = {
-				add_trait = tits_good_3
+				add_trait = tits_big_3
 				add_character_flag = {
 					flag = gigantic_tits
 				}
