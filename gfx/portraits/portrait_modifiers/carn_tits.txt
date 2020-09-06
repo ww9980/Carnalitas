@@ -1,0 +1,125 @@
+flat_tits = {
+	usage = game
+	flat_tits = {
+		dna_modifiers = {
+			morph = {
+				mode = replace		#overwrite this gene in the dna with the specified template and value
+				gene = gene_bs_bust
+				template = bust_clothes
+				value = 0
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 100
+				has_character_flag = flat_tits
+			}
+		}
+	}
+}
+
+tiny_tits = {
+	usage = game
+	tiny_tits = {
+		dna_modifiers = {
+			morph = {
+				mode = replace		#overwrite this gene in the dna with the specified template and value
+				gene = gene_bs_bust
+				template = bust_clothes
+				value = 0.3
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 100
+				has_character_flag = tiny_tits
+			}
+		}
+	}
+}
+
+small_tits = {
+	usage = game
+	small_tits = {
+		dna_modifiers = {
+			morph = {
+				mode = replace		#overwrite this gene in the dna with the specified template and value
+				gene = gene_bs_bust
+				template = bust_clothes
+				value = 0.5
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 100
+				has_character_flag = small_tits
+			}
+		}
+	}
+}
+
+big_tits = {
+	usage = game
+	big_tits = {
+		dna_modifiers = {
+			morph = {
+				mode = replace		#overwrite this gene in the dna with the specified template and value
+				gene = gene_bs_bust
+				template = bust_clothes
+				value = 0.8
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 100
+				has_character_flag = big_tits
+			}
+		}
+	}
+}
+
+huge_tits = {
+	usage = game
+	huge_tits = {
+		dna_modifiers = {
+			morph = {
+				mode = replace		#overwrite this gene in the dna with the specified template and value
+				gene = gene_bs_bust
+				template = bust_clothes
+				value = 1
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 100
+				has_character_flag = huge_tits
+			}
+		}
+	}
+}
+
+gigantic_tits = {
+	usage = game
+	gigantic_tits = {
+		dna_modifiers = {
+			morph = {
+				mode = replace		#overwrite this gene in the dna with the specified template and value
+				gene = gene_bs_bust
+				template = bust_clothes
+				value = 100
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 100
+				has_character_flag = gigantic_tits
+			}
+		}
+	}
+}
