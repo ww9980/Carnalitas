@@ -1,4 +1,4 @@
-﻿# Whether this character can impregnate female characters
+﻿# Whether this character has a cock and can impregnate female characters
 carn_gender_can_impregnate_trigger = {
 	OR = {
 		is_male = yes

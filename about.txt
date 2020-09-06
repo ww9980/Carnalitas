@@ -2,7 +2,11 @@
 Features
 ------------------------
 
-* New trait: Futanari / Hermaphrodite
+* New congenital trait: Futanari
+* New congenital trait group: Small Tits (tits_small_1 to tits_small_3)
+* New congenital trait group: Big Tits (tits_big_1 to tits_big_3)
+* New congenital trait group: Small Dicks (dick_small_1 to dick_small_3)
+* New congenital trait group: Big Dicks (dick_big_1 to dick_big_3)
 
 ------------------------
 Info for Modders
