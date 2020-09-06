@@ -1,4 +1,4 @@
-﻿# Triggers whenever player has sex via event or decision
+﻿# Triggers whenever a character has sex via event or decision, in the scope of that character
 # DOES NOT trigger off random passive pregnancy with spouse/consort
 carn_on_sex = {
 	events = {
