@@ -4,6 +4,18 @@
 	carn_std_disabled = {}
 }
 
+carn_dt_enabled = {
+	default = carn_dt_enabled_false
+	carn_dt_enabled_false = {}
+	carn_dt_enabled_true = {}
+}
+
+carn_dt_trait_names = {
+	default = carn_dt_trait_names_default
+	carn_dt_trait_names_default = {}
+	carn_dt_trait_names_immersive = {}
+}
+
 carn_futa_trait_name = {
 	default = carn_futa_trait_name_futa
 	carn_futa_trait_name_futa = {}

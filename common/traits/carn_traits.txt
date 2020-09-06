@@ -1,4 +1,15 @@
-﻿futa = {
+﻿#
+# Carnalitas reserves the 6900-6999 range of indices for traits
+# because haha funny sex number
+#
+# 6900: futa
+# 6901-6903: dick_small_1 to dick_small_3
+# 6904-6906: dick_big_1 to dick_big_3
+# 6907-6909: tits_small_1 to tits_small_3
+# 6910-6912: tits_big_1 to tits_big_3
+#
+
+futa = {
 	index = 6900
 
 	name = {
@@ -7,7 +18,7 @@
 				trigger = {
 					has_game_rule = carn_futa_trait_name_hermaphrodite
 				}
-				desc = trait_futa_hermaphrodite
+				desc = trait_futa_immersive
 			}
 			desc = trait_futa
 		}
@@ -31,4 +42,511 @@
 			desc = trait_futa_character_desc
 		}
 	}
+}
+
+# Small dick
+dick_small_1 = {
+	index = 6901
+
+	name = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					has_game_rule = carn_dt_trait_names_immersive
+				}
+				desc = trait_dick_small_1_immersive
+			}
+			desc = trait_dick_small_1
+		}
+	}
+
+	opposites = {
+		dick_small_2
+		dick_small_3
+		dick_big
+	}
+
+	fertility = -0.01
+
+	group = dick_small
+	level = 1
+
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_dick_small_1_desc
+			}
+			desc = trait_dick_small_1_character_desc
+		}
+	}
+
+	physical = yes
+	genetic = yes
+}
+
+# Tiny dick
+dick_small_2 = {
+	index = 6902
+
+	name = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					has_game_rule = carn_dt_trait_names_immersive
+				}
+				desc = trait_dick_small_2_immersive
+			}
+			desc = trait_dick_small_2
+		}
+	}
+
+	opposites = {
+		dick_small_1
+		dick_small_3
+		dick_big
+	}
+
+	fertility = -0.025
+
+	group = dick_small
+	level = 2
+
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_dick_small_2_desc
+			}
+			desc = trait_dick_small_2_character_desc
+		}
+	}
+
+	physical = yes
+	genetic = yes
+}
+
+# Micro dick
+dick_small_3 = {
+	index = 6903
+
+	name = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					has_game_rule = carn_dt_trait_names_immersive
+				}
+				desc = trait_dick_small_3_immersive
+			}
+			desc = trait_dick_small_3
+		}
+	}
+
+	opposites = {
+		dick_small_1
+		dick_small_2
+		dick_big
+	}
+
+	fertility = -0.05
+
+	group = dick_small
+	level = 3
+
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_dick_small_3_desc
+			}
+			desc = trait_dick_small_3_character_desc
+		}
+	}
+
+	physical = yes
+	genetic = yes
+}
+
+# Big dick
+dick_big_1 = {
+	index = 6904
+	opposites = {
+		dick_big_2
+		dick_big_3
+		dick_small
+	}
+
+	name = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					has_game_rule = carn_dt_trait_names_immersive
+				}
+				desc = trait_dick_big_1_immersive
+			}
+			desc = trait_dick_big_1
+		}
+	}
+
+	fertility = 0.01
+
+	group = dick_big
+	level = 1
+
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_dick_big_1_desc
+			}
+			desc = trait_dick_big_1_character_desc
+		}
+	}
+
+	physical = yes
+	genetic = yes
+}
+
+# Huge dick
+dick_big_2 = {
+	index = 6905
+	opposites = {
+		dick_big_1
+		dick_big_3
+		dick_small
+	}
+
+	name = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					has_game_rule = carn_dt_trait_names_immersive
+				}
+				desc = trait_dick_big_2_immersive
+			}
+			desc = trait_dick_big_2
+		}
+	}
+
+	fertility = 0.025
+
+	group = dick_big
+	level = 2
+
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_dick_big_2_desc
+			}
+			desc = trait_dick_big_2_character_desc
+		}
+	}
+
+	physical = yes
+	genetic = yes
+}
+
+# Gigantic dick
+dick_big_3 = {
+	index = 6906
+	opposites = {
+		dick_big_1
+		dick_big_2
+		dick_small
+	}
+
+	name = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					has_game_rule = carn_dt_trait_names_immersive
+				}
+				desc = trait_dick_big_3_immersive
+			}
+			desc = trait_dick_big_3
+		}
+	}
+
+	fertility = 0.05
+
+	group = dick_big
+	level = 3
+
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_dick_big_3_desc
+			}
+			desc = trait_dick_big_3_character_desc
+		}
+	}
+
+	physical = yes
+	genetic = yes
+}
+
+# Small Tits
+tits_small_1 = {
+	index = 6907
+	opposites = {
+		tits_small_2
+		tits_small_3
+		tits_big
+	}
+
+	name = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					has_game_rule = carn_dt_trait_names_immersive
+				}
+				desc = trait_tits_small_1_immersive
+			}
+			desc = trait_tits_small_1
+		}
+	}
+
+	fertility = -0.01
+
+	group = tits_small
+	level = 1
+
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_tits_small_1_desc
+			}
+			desc = trait_tits_small_1_character_desc
+		}
+	}
+
+	physical = yes
+	genetic = yes
+}
+
+# Tiny Tits
+tits_small_2 = {
+	index = 6908
+	opposites = {
+		tits_small_1
+		tits_small_3
+		tits_big
+	}
+
+	name = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					has_game_rule = carn_dt_trait_names_immersive
+				}
+				desc = trait_tits_small_2_immersive
+			}
+			desc = trait_tits_small_2
+		}
+	}
+
+	fertility = -0.025
+
+	group = tits_small
+	level = 2
+
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_tits_small_2_desc
+			}
+			desc = trait_tits_small_2_character_desc
+		}
+	}
+
+	physical = yes
+	genetic = yes
+}
+
+# Flat Tits
+tits_small_3 = {
+	index = 6909
+	opposites = {
+		tits_small_1
+		tits_small_2
+		tits_big
+	}
+
+	name = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					has_game_rule = carn_dt_trait_names_immersive
+				}
+				desc = trait_tits_small_3_immersive
+			}
+			desc = trait_tits_small_3
+		}
+	}
+
+	fertility = -0.05
+
+	group = tits_small
+	level = 3
+
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_tits_small_3_desc
+			}
+			desc = trait_tits_small_3_character_desc
+		}
+	}
+
+	physical = yes
+	genetic = yes
+}
+
+# Big Tits
+tits_big_1 = {
+	index = 6910
+	opposites = {
+		tits_big_2
+		tits_big_3
+		tits_small
+	}
+
+	name = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					has_game_rule = carn_dt_trait_names_immersive
+				}
+				desc = trait_tits_big_1_immersive
+			}
+			desc = trait_tits_big_1
+		}
+	}
+
+	fertility = 0.01
+
+	group = tits_big
+	level = 1
+
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_tits_big_1_desc
+			}
+			desc = trait_tits_big_1_character_desc
+		}
+	}
+
+	physical = yes
+	genetic = yes
+}
+
+# Huge Tits
+tits_big_2 = {
+	index = 6911
+	opposites = {
+		tits_big_1
+		tits_big_3
+		tits_small
+	}
+
+	name = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					has_game_rule = carn_dt_trait_names_immersive
+				}
+				desc = trait_tits_big_2_immersive
+			}
+			desc = trait_tits_big_2
+		}
+	}
+
+	fertility = 0.025
+
+	group = tits_big
+	level = 2
+
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_tits_big_2_desc
+			}
+			desc = trait_tits_big_2_character_desc
+		}
+	}
+
+	physical = yes
+	genetic = yes
+}
+
+# Gigantic Tits
+tits_big_3 = {
+	index = 6912
+	opposites = {
+		tits_big_1
+		tits_big_2
+		tits_small
+	}
+
+	name = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					has_game_rule = carn_dt_trait_names_immersive
+				}
+				desc = trait_tits_big_3_immersive
+			}
+			desc = trait_tits_big_3
+		}
+	}
+
+	fertility = 0.05
+
+	group = tits_big
+	level = 3
+
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_tits_big_3_desc
+			}
+			desc = trait_tits_big_3_character_desc
+		}
+	}
+
+	physical = yes
+	genetic = yes
 }

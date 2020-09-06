@@ -1,0 +1,23 @@
+﻿on_game_start_after_lobby = {
+    events = {
+		carn_dt.0001 # initialize all characters with dt traits
+	}
+}
+
+on_join_court = {
+	events = {
+		carn_dt.0002 # initialize this character with dt traits if necessary
+	}
+}
+
+on_birth_child = {
+	events = {
+		carn_dt.0003 # initialize children with dt traits and make them inactive
+	}
+}
+
+on_16th_birthday = {
+	events = {
+		carn_dt.0004 # activate dt traits for children coming of age
+	}
+}
