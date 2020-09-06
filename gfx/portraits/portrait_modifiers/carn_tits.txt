@@ -13,7 +13,7 @@
 			base = 0
 			modifier = {
 				add = 100
-				has_character_flag = flat_tits
+				has_trait = tits_small_3
 			}
 		}
 	}
@@ -34,7 +34,7 @@ tiny_tits = {
 			base = 0
 			modifier = {
 				add = 100
-				has_character_flag = tiny_tits
+				has_trait = tits_small_2
 			}
 		}
 	}
@@ -55,7 +55,7 @@ small_tits = {
 			base = 0
 			modifier = {
 				add = 100
-				has_character_flag = small_tits
+				has_trait = tits_small_1
 			}
 		}
 	}
@@ -76,7 +76,7 @@ big_tits = {
 			base = 0
 			modifier = {
 				add = 100
-				has_character_flag = big_tits
+				has_trait = tits_big_1
 			}
 		}
 	}
@@ -97,7 +97,7 @@ huge_tits = {
 			base = 0
 			modifier = {
 				add = 100
-				has_character_flag = huge_tits
+				has_trait = tits_big_2
 			}
 		}
 	}
@@ -118,7 +118,7 @@ gigantic_tits = {
 			base = 0
 			modifier = {
 				add = 100
-				has_character_flag = gigantic_tits
+				has_trait = tits_big_3
 			}
 		}
 	}

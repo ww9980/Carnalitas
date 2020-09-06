@@ -1,4 +1,4 @@
-namespace = carn_dt
+﻿namespace = carn_dt
 
 # written by Luther Slade and Cheri
 
@@ -131,42 +131,12 @@ carn_dt.0004 = {
 	immediate = {
 		random_list = {
 			820 = { }
-			50 = {
-				add_trait = tits_small_1
-				add_character_flag = {
-					flag = small_tits
-				}
-			}
-			25 = {
-				add_trait = tits_small_2
-				add_character_flag = {
-					flag = tiny_tits
-				}
-			}
-			15 = {
-				add_trait = tits_small_3
-				add_character_flag = {
-					flag = flat_tits
-				}
-			}		
-			50 = {
-				add_trait = tits_big_1
-				add_character_flag = {
-					flag = big_tits
-				}
-			}
-			25 = {
-				add_trait = tits_big_2
-				add_character_flag = {
-					flag = huge_tits
-				}
-			}
-			15 = {
-				add_trait = tits_big_3
-				add_character_flag = {
-					flag = gigantic_tits
-				}
-			}			
+			50 = { add_trait = tits_small_1 }
+			25 = { add_trait = tits_small_2 }
+			15 = { add_trait = tits_small_3 }		
+			50 = { add_trait = tits_big_1 }
+			25 = { add_trait = tits_big_2 }
+			15 = { add_trait = tits_big_3 }			
 		}
 	}
 }

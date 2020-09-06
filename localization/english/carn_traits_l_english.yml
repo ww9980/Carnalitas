@@ -5,6 +5,8 @@ trait_futa_immersive: "Hermaphrodite"
 trait_futa_desc: "This character has the sexual organs of both a woman and a man."
 trait_futa_character_desc: "[ROOT.GetCharacter.GetFirstNameNoTooltip] has the sexual organs of both a woman and a man."
 
+trait_dick_small: "Small Dicks"
+
 trait_dick_small_1: "Small Dick"
 trait_dick_small_1_immersive: "Stripling"
 trait_dick_small_1_desc: "This character has not been blessed with a sizable manhood."
@@ -19,6 +21,8 @@ trait_dick_small_3: "Micro Dick"
 trait_dick_small_3_immersive: "Emasculated"
 trait_dick_small_3_desc: "This character has such a small penis that it can scarcely be found."
 trait_dick_small_3_character_desc: "[ROOT.GetCharacter.GetFirstNameNoTooltip] has such a small penis that it can scarcely be found."
+
+trait_dick_big: "Big Dicks"
 
 trait_dick_big_1: "Big Dick"
 trait_dick_big_1_immersive: "Well-Endowed"
@@ -35,6 +39,8 @@ trait_dick_big_3_immersive: "Stallion"
 trait_dick_big_3_desc: "This character has such an impressive manhood that it is impossible to conceal beneath clothing."
 trait_dick_big_3_character_desc: "[ROOT.GetCharacter.GetFirstNameNoTooltip] has such an impressive manhood that it is impossible to conceal beneath clothing."
 
+trait_tits_small: "Small Tits"
+
 trait_tits_small_1: "Small Tits"
 trait_tits_small_1_immersive: "Petite"
 trait_tits_small_1_desc: "This character has a smaller bust than most."
@@ -50,6 +56,8 @@ trait_tits_small_3_immersive: "Flat-Chested"
 trait_tits_small_3_desc: "This character's bosom is as flat as a board."
 trait_tits_small_3_character_desc: "[ROOT.GetCharacter.GetFirstNameNoTooltip]'s bosom is as flat as a board."
 
+trait_tits_big: "Big Tits"
+
 trait_tits_big_1: "Big Tits"
 trait_tits_big_1_immersive: "Bosomy"
 trait_tits_big_1_desc: "This character has a larger bust than most."
@@ -62,5 +70,5 @@ trait_tits_big_2_character_desc: "[ROOT.GetCharacter.GetFirstNameNoTooltip] has 
 
 trait_tits_big_3: "Gigantic Tits"
 trait_tits_big_3_immersive: "Voluptuous"
-trait_tits_big_3_desc: "This character has a truly prodigious bosom that will be remembered in legend."
-trait_tits_big_3_character_desc: "[ROOT.GetCharacter.GetFirstNameNoTooltip] has a truly prodigious bosom that will be remembered in legend."
+trait_tits_big_3_desc: "This character's enormous bosom is the stuff of legends."
+trait_tits_big_3_character_desc: "[ROOT.GetCharacter.GetFirstNameNoTooltip]'s enormous bosom is the stuff of legends."
