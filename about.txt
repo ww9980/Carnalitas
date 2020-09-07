@@ -43,6 +43,18 @@ Other scripted effects:
 * carn_seed_dt_traits_effect
 * carn_seed_futa_trait_effect
 
+New scripted effects for sex scenes:
+* carn_sex_scene_effect (requires PLAYER - character, TARGET - character)
+* carn_sex_scene_set_dom_player
+* carn_sex_scene_set_sub_player
+* carn_sex_scene_set_oral
+* carn_sex_scene_set_vaginal
+* carn_sex_scene_set_anal
+* carn_sex_scene_set_noncon
+* carn_sex_scene_set_dubcon
+* carn_sex_scene_set_bdsm
+* carn_sex_scene_set_toy
+
 New scripted triggers:
 * carn_has_any_dick_gene_trigger
 * carn_has_small_dick_trigger
@@ -51,13 +63,26 @@ New scripted triggers:
 * carn_has_small_tits_trigger
 * carn_has_big_tits_trigger
 * carn_is_futa_trigger
+* carn_is_female_not_futa_trigger
 * carn_gender_can_impregnate_trigger
+
+New scripted triggers for sex scenes:
+* carn_sex_scene_is_dom_player
+* carn_sex_scene_is_sub_player
+* carn_sex_scene_is_oral
+* carn_sex_scene_is_vaginal
+* carn_sex_scene_is_anal
+* carn_sex_scene_is_noncon
+* carn_sex_scene_is_dubcon
+* carn_sex_scene_is_bdsm
+* carn_sex_scene_is_toy
 
 New on_actions:
 * carn_on_sex
 * carn_on_vaginal_sex
 * carn_on_anal_sex
 * carn_on_oral_sex
+* carn_sex_scene
 
 New character flags:
 * immune_to_std

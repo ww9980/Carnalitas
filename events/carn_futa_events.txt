@@ -1,7 +1,9 @@
 ﻿namespace = carn_futa
 
 #
-# 0010. Yearly pulse for futas to impregnate wives, concubines, lovers
+# 0001. Seed futa traits for all characters
+# 0002. Seed futa trait for this character
+# 0010. Yearly pulse for futas to impregnate wives, concubines, lovers (WIP, NOT TRIGGERED, UNTESTED)
 #
 
 #

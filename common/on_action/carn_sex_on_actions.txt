@@ -1,4 +1,18 @@
-﻿# Triggers whenever a character has sex via event or decision, in the scope of that character
+﻿# Empty list of sex interactions. Modders should add their own scenes to this as random_events
+carn_sex_scene = {
+	random_events = {
+		1 = carn_sex_scene.0001 # use a PDX sex scene
+	}
+	fallback = carn_sex_scene_fallback
+}
+
+carn_sex_scene_fallback = {
+	events = {
+		carn_sex_scene.0002 # fallback to PDX sex scene
+	}
+}
+
+# Triggers whenever a character has sex via event or decision, in the scope of that character
 # DOES NOT trigger off random passive pregnancy with spouse/consort
 carn_on_sex = {
 	events = {
