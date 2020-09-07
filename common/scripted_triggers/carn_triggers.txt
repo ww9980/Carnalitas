@@ -1,8 +1,0 @@
-﻿# Whether this character can impregnate female characters
-carn_gender_can_impregnate_trigger = {
-	OR = {
-		is_male = yes
-		has_trait = futa
-	}
-}
-

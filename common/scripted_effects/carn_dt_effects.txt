@@ -1,0 +1,204 @@
+﻿# randomly seed inactive dick and tits traits, regardless of age or gender
+carn_seed_dt_traits_effect = {
+	add_character_flag = carn_dt_traits_seeded
+	if = {
+		limit = {
+			carn_has_any_dick_gene_trigger = no
+		}
+		random_list = {
+			0 = {
+				modifier = {
+					always = yes
+					add = carn_dt_dick_average_weight
+				}
+			}
+			0 = {
+				modifier = {
+					always = yes
+					add = carn_dt_dick_small_1_weight
+				}
+				add_trait = dick_small_1
+				make_trait_inactive = dick_small_1
+			}
+			0 = {
+				modifier = {
+					always = yes
+					add = carn_dt_dick_small_2_weight
+				}
+				add_trait = dick_small_2
+				make_trait_inactive = dick_small_2
+			}
+			0 = {
+				modifier = {
+					always = yes
+					add = carn_dt_dick_small_3_weight
+				}
+				add_trait = dick_small_3
+				make_trait_inactive = dick_small_3
+			}		
+			0 = {
+				modifier = {
+					always = yes
+					add = carn_dt_dick_big_1_weight
+				}
+				add_trait = dick_big_1
+				make_trait_inactive = dick_big_1
+			}
+			0 = {
+				modifier = {
+					always = yes
+					add = carn_dt_dick_big_2_weight
+				}
+				add_trait = dick_big_2
+				make_trait_inactive = dick_big_2
+			}
+			0 = {
+				modifier = {
+					always = yes
+					add = carn_dt_dick_big_3_weight
+				}
+				add_trait = dick_big_3
+				make_trait_inactive = dick_big_3
+			}	
+		}
+	}
+	if = {
+		limit = {
+			carn_has_any_tits_gene_trigger = no
+		}
+		random_list = {
+			0 = {
+				modifier = {
+					always = yes
+					add = carn_dt_tits_average_weight
+				}
+			}
+			0 = {
+				modifier = {
+					always = yes
+					add = carn_dt_tits_small_1_weight
+				}
+				add_trait = tits_small_1
+				make_trait_inactive = tits_small_1
+			}
+			0 = {
+				modifier = {
+					always = yes
+					add = carn_dt_tits_small_2_weight
+				}
+				add_trait = tits_small_2
+				make_trait_inactive = tits_small_2
+			}
+			0 = {
+				modifier = {
+					always = yes
+					add = carn_dt_tits_small_3_weight
+				}
+				add_trait = tits_small_3
+				make_trait_inactive = tits_small_3
+			}		
+			0 = {
+				modifier = {
+					always = yes
+					add = carn_dt_tits_big_1_weight
+				}
+				add_trait = tits_big_1
+				make_trait_inactive = tits_big_1
+			}
+			0 = {
+				modifier = {
+					always = yes
+					add = carn_dt_tits_big_2_weight
+				}
+				add_trait = tits_big_2
+				make_trait_inactive = tits_big_2
+			}
+			0 = {
+				modifier = {
+					always = yes
+					add = carn_dt_tits_big_3_weight
+				}
+				add_trait = tits_big_3
+				make_trait_inactive = tits_big_3
+			}	
+		}
+	}
+}
+
+# makes all dt traits inactive for children
+carn_make_all_dt_traits_inactive_effect = {
+	make_trait_inactive = dick_small_1
+	make_trait_inactive = dick_small_2
+	make_trait_inactive = dick_small_3
+	make_trait_inactive = dick_big_1
+	make_trait_inactive = dick_big_2
+	make_trait_inactive = dick_big_3
+	make_trait_inactive = tits_small_1
+	make_trait_inactive = tits_small_2
+	make_trait_inactive = tits_small_3
+	make_trait_inactive = tits_big_1
+	make_trait_inactive = tits_big_2
+	make_trait_inactive = tits_big_3
+}
+
+# selectively enables dt traits based on character's gender
+carn_activate_gender_specific_dt_traits_effect = {
+
+	# dick
+	if = {
+		limit = { carn_gender_can_impregnate_trigger = yes }
+		if = {
+			limit = { has_inactive_trait = dick_small_1 }
+			make_trait_active = dick_small_1
+		}
+		else_if = {
+			limit = { has_inactive_trait = dick_small_2 }
+			make_trait_active = dick_small_2
+		}
+		else_if = {
+			limit = { has_inactive_trait = dick_small_3 }
+			make_trait_active = dick_small_3
+		}
+		else_if = {
+			limit = { has_inactive_trait = dick_big_1 }
+			make_trait_active = dick_big_1
+		}
+		else_if = {
+			limit = { has_inactive_trait = dick_big_2 }
+			make_trait_active = dick_big_2
+		}
+		else_if = {
+			limit = { has_inactive_trait = dick_big_3 }
+			make_trait_active = dick_big_3
+		}
+	}
+
+	# tits
+	if = {
+		limit = { is_female = yes } # has tits
+		if = {
+			limit = { has_inactive_trait = tits_small_1 }
+			make_trait_active = tits_small_1
+		}
+		else_if = {
+			limit = { has_inactive_trait = tits_small_2 }
+			make_trait_active = tits_small_2
+		}
+		else_if = {
+			limit = { has_inactive_trait = tits_small_3 }
+			make_trait_active = tits_small_3
+		}
+		else_if = {
+			limit = { has_inactive_trait = tits_big_1 }
+			make_trait_active = tits_big_1
+		}
+		else_if = {
+			limit = { has_inactive_trait = tits_big_2 }
+			make_trait_active = tits_big_2
+		}
+		else_if = {
+			limit = { has_inactive_trait = tits_big_3 }
+			make_trait_active = tits_big_3
+		}
+	}
+}

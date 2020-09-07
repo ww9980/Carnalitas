@@ -1,0 +1,85 @@
+﻿namespace = carn_dt
+
+# written by Luther Slade and Cheri
+
+#
+# 0001. seed dt traits for all characters
+# 0002. seed dt traits for this character
+# 0003. initialize newborn children with inactive dt traits
+# 0004. activate gender appropriate dt traits when a child comes of age
+#
+
+#
+# 0001. seed dt traits for all characters
+#
+
+carn_dt.0001 = {
+	type = empty
+	hidden = yes
+
+	trigger = {
+		has_game_rule = carn_dt_enabled_true
+	}
+
+	immediate = {
+		every_living_character = {
+			trigger_event = { id = carn_dt.0002 }
+		}
+	}
+}
+
+#
+# 0002. seed dt traits for this character
+#
+
+carn_dt.0002 = {
+	hidden = yes
+
+	trigger = {
+		has_game_rule = carn_dt_enabled_true
+		NOT = { has_character_flag = carn_dt_traits_seeded }
+	}
+
+	immediate = {
+		carn_seed_dt_traits_effect = yes
+		if = {
+			limit = { age >= 16 }
+			carn_activate_gender_specific_dt_traits_effect = yes
+		}
+	}
+}
+
+#
+# 0003. initialize newborn children with inactive dt traits
+#
+
+carn_dt.0003 = {
+	hidden = yes
+
+	trigger = {
+		has_game_rule = carn_dt_enabled_true
+	}
+
+	immediate = {
+		scope:child = {
+			carn_make_all_dt_traits_inactive_effect = yes
+			carn_seed_dt_traits_effect = yes
+		}
+	}
+}
+
+#
+# 0004. activate gender appropriate dt traits when a child comes of age
+#
+
+carn_dt.0004 = {
+	hidden = yes
+
+	trigger = {
+		has_game_rule = carn_dt_enabled_true
+	}
+
+	immediate = {
+		carn_activate_gender_specific_dt_traits_effect = yes
+	}
+}
