@@ -32,11 +32,15 @@ Overwritten vanilla scripted effects with new functionality:
 Overwritten vanilla scripted triggers with new functionality:
 * can_contract_disease_trigger
 
-New scripted effects:
-* carn_had_sex_with_no_drama_effect
-* carn_seed_dt_traits_effect
+New scripted effects for modders:
 * carn_make_all_dt_traits_inactive_effect
 * carn_activate_gender_specific_dt_traits_effect
+* carn_add_futa_effect
+* carn_remove_futa_effect
+
+Other scripted effects:
+* carn_had_sex_with_no_drama_effect
+* carn_seed_dt_traits_effect
 * carn_seed_futa_trait_effect
 
 New scripted triggers:
@@ -57,5 +61,5 @@ New on_actions:
 
 New character flags:
 * immune_to_std
-* carn_dt_traits_seeded
-* carn_futa_trait_seeded
+* carn_dt_traits_seeded (put on a character to prevent seeding of dick/tit traits)
+* carn_futa_trait_seeded (put on a character to prevent seeding of futa trait)
