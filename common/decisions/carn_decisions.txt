@@ -1,0 +1,43 @@
+﻿#
+# Carnalitas Decisions
+#
+
+# carn_spend_time_with_decision - Equivalent to the spend_time_with interaction with a random lover
+carn_spend_time_with_lover_decision = {
+    title = carn_spend_time_with_decision.t
+    desc = carn_spend_time_with_decision.d
+    selection_tooltip = carn_spend_time_with_decision.tt.root
+    confirm_text = carn_spend_time_with_decision.ct
+
+    is_shown = {
+        OR = {
+            num_of_relation_lover > 0
+            num_of_relation_soulmate > 0
+        }
+    }
+
+    
+    
+# At present the effect is not fetching the random lover.
+#
+#    effect = {
+#
+#        hidden_effect = {
+#            random_relation = {
+#                limit = {
+#                    OR = {
+#                        has_relation_lover = scope:character
+#                        has_relation_soulmate = scope:character
+#                    }
+#                }
+#                save_temporary_scope_as = chosen_target
+#            }
+#            carn_spend_time_with_effect = {
+#                INITIATOR = scope:character
+#                TARGET = chosen_target
+#            }
+#        }
+#    }
+
+    ai_will_do = 0
+}

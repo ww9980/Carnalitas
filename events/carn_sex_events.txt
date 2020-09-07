@@ -1,0 +1,28 @@
+﻿namespace = carn_sex
+
+#
+# 0100. Base event for initiating sex.
+#
+
+###################################################################################
+# 0100. Base event for initiating sex.
+###################################################################################
+carn_sex.0100 = {
+    type = character_event
+    theme = love
+    title = carn_sex.0100.t
+    desc = {
+        desc = carn_sex.0100.d
+        desc = carn_sex.0100.d.debug
+    }
+
+    left_portrait = {
+        character = root
+    }
+    right_portrait = scope:target
+
+    option = {
+        name = OK
+        custom_tooltip = carn_sex.0100.tt
+    }
+}
