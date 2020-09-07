@@ -1,4 +1,0 @@
-﻿carn_initiated_sex_opinion = {
-    opinion = 5
-    days = 30
-}
