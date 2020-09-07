@@ -63,9 +63,9 @@ carn_sex_scene.0001 = {
 		##########################################################################
 		# Remember to also include the following effects if applicable:
 		#
-		# carn_had_vaginal_sex_effect
-		# carn_had_anal_sex_effect
-		# carn_had_oral_sex_effect
+		# carn_had_vaginal_sex_effect = yes
+		# carn_had_anal_sex_effect = yes
+		# carn_had_oral_sex_effect = yes
 		#
 		# This is so that other mods can hook into them.
 		#

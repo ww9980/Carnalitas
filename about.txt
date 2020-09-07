@@ -123,16 +123,15 @@ Overwritten vanilla scripted effects with new functionality:
 * had_sex_with_effect
 
 New scripted effects:
-* carn_had_sex_with_effect
-* carn_had_sex_with_no_drama_effect
+* carn_had_sex_with_effect (better version of the above; requires CHARACTER_1 - character, CHARACTER_2 - character, PREGNANCY_CHANCE - random chance, DRAMA - boolean)
 
-If you set the character flag "carn_block_next_had_sex_with_effect" before running had_sex_with_effect, it will prevent had_sex_with_effect from firing.
+The character flag "carn_block_next_had_sex_with_effect" will prevent the next carn_had_sex_with_effect from firing in that character's scope.
 
 Overwritten vanilla scripted triggers with new functionality:
 * can_contract_disease_trigger
 
 New scripted triggers:
-* carn_can_have_sex_trigger
+* carn_can_have_sex_trigger (similar to Luxuria Fantasia's can_have_sex_trigger)
 
 New on_actions:
 * carn_on_sex
