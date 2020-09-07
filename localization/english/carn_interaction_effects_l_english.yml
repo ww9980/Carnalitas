@@ -1,3 +1,3 @@
 ﻿l_english:
-  carn_generic_initiate_sex_tooltip_init:0 "Spends an intimate moment with [TARGET.GetShortUINameNoTooltip]"
-  carn_generic_initiate_sex_tooltip_targ:0 "Spends an intimate moment with [INITATOR.GetShortUINameNoTooltip]"
+  carn_spend_time_with_effect.player:0 "Spends an intimate moment with [TARGET.GetShortUINameNoTooltip]"
+  carn_spend_time_with_effect.target:0 "Spends an intimate moment with [PLAYER.GetShortUINameNoTooltip]"

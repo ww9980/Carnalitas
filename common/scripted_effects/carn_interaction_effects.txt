@@ -1,6 +1,6 @@
 ﻿# Basic Interaction Effect
 carn_spend_time_with_effect = {
-    $INITIATOR$ = {
+    $PLAYER$ = {
         save_scope_as = initiator
     }
     $TARGET$ = {
@@ -8,20 +8,11 @@ carn_spend_time_with_effect = {
     }
 
     show_as_tooltip = {
-        $INITIATOR$ = {
-            add_opinion = {
-                target = $TARGET$
-                modifier = carn_initiated_sex_opinion
-            }
+        scope:initiator = {
+            custom_tooltip = carn_spend_time_with_effect.player
         }
-        $TARGET$ = {
-            add_opinion = {
-                target = $INITIATOR$
-                modifier = carn_initiated_sex_opinion
-            }
+        scope:target = {
+            custom_tooltip = carn_spend_time_with_effect.target
         }
-    }
-    hidden_effect = {
-        trigger_event = carn_sex.0100
     }
 }
