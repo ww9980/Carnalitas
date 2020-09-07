@@ -4,10 +4,12 @@
 # 0001. PDX sex scene implementation
 #
 # This is an example of how to define a sex scene event for Carnalitas.
-# The text is from the vanilla CK3 event "seduce_outcome.2309"
+# The localization is from the vanilla CK3 event "seduce_outcome.2309"
 #
 # scope:carn_sex_player ------ The PLAYER (the one receiving the event)
 # scope:carn_sex_target ------ The TARGET (the one the player is having sex with)
+#
+# Remember to add your sex scene to the carn_sex_scene on_action, or it won't appear!
 #################################################################################
 
 carn_sex_scene.0001 = {
@@ -24,17 +26,24 @@ carn_sex_scene.0001 = {
 		animation = flirtation_left
 	}
 
-	##############################################################################
-	# Use triggers to determine conditions where your sex scene should be selected.
-	#
-	# See scripted_triggers/carn_sex_scene_triggers.txt for a list of triggers. These check that your scene is appropriate for the situation.
-	#
-	# You should also check anything else that is relevant for the event.
-	# For example, if your event is from the perspective of a male character penetrating a female target, you should make sure that scope:carn_sex_player is male and scope:carn_sex_target is female.
-	##############################################################################
-
 	trigger = {
+
+		##########################################################################
+		# Use triggers to list flags for your sex scene. See scripted_triggers/carn_sex_scene_triggers.txt for a list of triggers.
+		##########################################################################
+
 		carn_sex_scene_is_consensual = yes
+
+		##########################################################################
+		# Once you are done listing flags, make sure you include this trigger
+		##########################################################################
+
+		carn_sex_scene_matches_requested_flags_trigger = yes
+
+		##########################################################################
+		# Finally, you should check anything else that is relevant for the event.
+		# For example, if your event is from the perspective of a male character penetrating a female target, you should make sure that scope:carn_sex_player is male and scope:carn_sex_target is female.
+		##########################################################################
 	}
 
 	immediate = {

@@ -75,6 +75,7 @@ carn_add_futa_effect = {
 		else = {
 			add_trait = futa
 		}
+		carn_activate_gender_specific_dt_traits_effect = yes
 	}
 }
 
@@ -92,5 +93,7 @@ carn_remove_futa_effect = {
 		else = {
 			remove_trait = futa
 		}
+		carn_make_all_dt_traits_inactive_effect = yes
+		carn_activate_gender_specific_dt_traits_effect = yes
 	}
 }

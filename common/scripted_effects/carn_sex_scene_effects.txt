@@ -6,14 +6,14 @@
 #
 # carn_sex_scene_effect is the general purpose scripted effect to trigger a sex scene event through Carnalitas.
 #
-# First, use the flag-setting scripted effects to set flags for the sex scene,
+# First, use the scripted effects to request flags for the sex scene,
 # such as "vaginal", "noncon", or "bdsm".
 #
 # Second, call carn_sex_scene_effect with the following arguments:
 # PLAYER is the character who the event will be shown to.
 # TARGET is the character that PLAYER is having sex with.
 #
-# The sex scene generator triggers an on_action with a list of random_events that has all the possible sex scenes that can be chosen.
+# The sex scene generator triggers an on_action with a list of random_events that match all of the requested tags.
 # The sex scene events themselves will define the triggers for those events to be shown, i.e. a consensual lesbian sex event should check that both participants are female and carn_sex_scene_is_consensual = yes
 #
 # If no event is eligible to be shown, the default paradox sex scene generator will be used.
@@ -21,9 +21,9 @@
 # An example of using carn_sex_scene_effect to trigger a dominant rape scene:
 #
 # effect = {
-# 	carn_sex_scene_set_dom_player = yes
-# 	carn_sex_scene_set_vaginal = yes
-# 	carn_sex_scene_set_noncon = yes
+# 	carn_sex_scene_request_dom_player = yes
+# 	carn_sex_scene_request_vaginal = yes
+# 	carn_sex_scene_request_noncon = yes
 # 	carn_sex_scene_effect = {
 # 		PLAYER = root
 #		TARGET = scope:target
@@ -39,7 +39,7 @@ carn_sex_scene_effect = {
 			on_action = carn_sex_scene
 		}
 	}
-	clear_variable_list = carn_sex_scene_flags
+	clear_variable_list = carn_sex_scene_requested_flags
 }
 
 #
@@ -76,140 +76,140 @@ carn_had_oral_sex_effect = {
 # Here is a list of supported sex scene flags.
 # It is possible for mods to add more flags, but these will not be supported and have no guarantee of working with other mods.
 #
-# carn_sex_scene_set_dom_player
-# carn_sex_scene_set_sub_player
-# carn_sex_scene_set_oral
-# carn_sex_scene_set_vaginal
-# carn_sex_scene_set_anal
-# carn_sex_scene_set_handjob
-# carn_sex_scene_set_masturbation
-# carn_sex_scene_set_consensual
-# carn_sex_scene_set_noncon
-# carn_sex_scene_set_dubcon
-# carn_sex_scene_set_painful
-# carn_sex_scene_set_bdsm
-# carn_sex_scene_set_bondage
-# carn_sex_scene_set_toy
-# carn_sex_scene_set_watersports
-# carn_sex_scene_set_scat
-# carn_sex_scene_set_gore
+# carn_sex_scene_request_dom_player
+# carn_sex_scene_request_sub_player
+# carn_sex_scene_request_oral
+# carn_sex_scene_request_vaginal
+# carn_sex_scene_request_anal
+# carn_sex_scene_request_handjob
+# carn_sex_scene_request_masturbation
+# carn_sex_scene_request_consensual
+# carn_sex_scene_request_noncon
+# carn_sex_scene_request_dubcon
+# carn_sex_scene_request_painful
+# carn_sex_scene_request_bdsm
+# carn_sex_scene_request_bondage
+# carn_sex_scene_request_toy
+# carn_sex_scene_request_watersports
+# carn_sex_scene_request_scat
+# carn_sex_scene_request_gore
 #
 
-carn_sex_scene_set_dom_player = {
+carn_sex_scene_request_dom_player = {
 	add_to_variable_list = {
-		name = carn_sex_scene_flags
+		name = carn_sex_scene_requested_flags
 		target = flag:dom_player
 	}
 }
 
-carn_sex_scene_set_sub_player = {
+carn_sex_scene_request_sub_player = {
 	add_to_variable_list = {
-		name = carn_sex_scene_flags
+		name = carn_sex_scene_requested_flags
 		target = flag:sub_player
 	}
 }
 
-carn_sex_scene_set_oral = {
+carn_sex_scene_request_oral = {
 	add_to_variable_list = {
-		name = carn_sex_scene_flags
+		name = carn_sex_scene_requested_flags
 		target = flag:oral
 	}
 }
 
-carn_sex_scene_set_vaginal = {
+carn_sex_scene_request_vaginal = {
 	add_to_variable_list = {
-		name = carn_sex_scene_flags
+		name = carn_sex_scene_requested_flags
 		target = flag:vaginal
 	}
 }
 
-carn_sex_scene_set_anal = {
+carn_sex_scene_request_anal = {
 	add_to_variable_list = {
-		name = carn_sex_scene_flags
+		name = carn_sex_scene_requested_flags
 		target = flag:anal
 	}
 }
 
-carn_sex_scene_set_handjob = {
+carn_sex_scene_request_handjob = {
 	add_to_variable_list = {
-		name = carn_sex_scene_flags
+		name = carn_sex_scene_requested_flags
 		target = flag:handjob
 	}
 }
 
-carn_sex_scene_set_masturbation = {
+carn_sex_scene_request_masturbation = {
 	add_to_variable_list = {
-		name = carn_sex_scene_flags
+		name = carn_sex_scene_requested_flags
 		target = flag:masturbation
 	}
 }
 
-carn_sex_scene_set_consensual = {
+carn_sex_scene_request_consensual = {
 	add_to_variable_list = {
-		name = carn_sex_scene_flags
+		name = carn_sex_scene_requested_flags
 		target = flag:consensual
 	}
 }
 
-carn_sex_scene_set_noncon = {
+carn_sex_scene_request_noncon = {
 	add_to_variable_list = {
-		name = carn_sex_scene_flags
+		name = carn_sex_scene_requested_flags
 		target = flag:noncon
 	}
 }
 
-carn_sex_scene_set_dubcon = {
+carn_sex_scene_request_dubcon = {
 	add_to_variable_list = {
-		name = carn_sex_scene_flags
+		name = carn_sex_scene_requested_flags
 		target = flag:dubcon
 	}
 }
 
-carn_sex_scene_set_painful = {
+carn_sex_scene_request_painful = {
 	add_to_variable_list = {
-		name = carn_sex_scene_flags
+		name = carn_sex_scene_requested_flags
 		target = flag:painful
 	}
 }
 
-carn_sex_scene_set_bdsm = {
+carn_sex_scene_request_bdsm = {
 	add_to_variable_list = {
-		name = carn_sex_scene_flags
+		name = carn_sex_scene_requested_flags
 		target = flag:bdsm
 	}
 }
 
-carn_sex_scene_set_bondage = {
+carn_sex_scene_request_bondage = {
 	add_to_variable_list = {
-		name = carn_sex_scene_flags
+		name = carn_sex_scene_requested_flags
 		target = flag:bondage
 	}
 }
 
-carn_sex_scene_set_toy = {
+carn_sex_scene_request_toy = {
 	add_to_variable_list = {
-		name = carn_sex_scene_flags
+		name = carn_sex_scene_requested_flags
 		target = flag:toy
 	}
 }
 
-carn_sex_scene_set_watersports = {
+carn_sex_scene_request_watersports = {
 	add_to_variable_list = {
-		name = carn_sex_scene_flags
+		name = carn_sex_scene_requested_flags
 		target = flag:watersports
 	}
 }
 
-carn_sex_scene_set_scat = {
+carn_sex_scene_request_scat = {
 	add_to_variable_list = {
-		name = carn_sex_scene_flags
+		name = carn_sex_scene_requested_flags
 		target = flag:scat
 	}
 }
 
-carn_sex_scene_set_gore = {
+carn_sex_scene_request_gore = {
 	add_to_variable_list = {
-		name = carn_sex_scene_flags
+		name = carn_sex_scene_requested_flags
 		target = flag:gore
 	}
 }

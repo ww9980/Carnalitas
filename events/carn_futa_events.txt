@@ -58,7 +58,7 @@ carn_futa.0010 = {
 	hidden = yes
 
 	trigger = {
-		has_trait = futa
+		carn_is_futa_trigger = yes
 	}
 	
 	immediate = {

@@ -5,7 +5,21 @@
 #
 # These scripted triggers are meant for sex scene events to check which flags have been set for the sex scene. For instance, a noncon sex scene shouldn't play if the sex scene is consensual.
 #
+# After including every flag in the temporary list, the sex scene should check carn_sex_scene_matches_requested_flags_trigger.
+#
 # A sex scene event can of course have other triggers, such as checking the gender of the participants.
+#
+
+carn_sex_scene_matches_requested_flags_trigger = {
+	NOT = {
+		any_in_list = {
+			list = carn_sex_scene_flags
+			NOT = { is_in_list = carn_sex_scene_requested_flags }
+			}
+		}
+	}
+}
+
 #
 # Here is a list of supported sex scene flags.
 # It is possible for mods to add more flags, but these will not be supported and have no guarantee of working with other mods.
@@ -30,119 +44,119 @@
 #
 
 carn_sex_scene_is_dom_player = {
-	is_target_in_variable_list = {
+	add_to_temporary_list = {
 		name = carn_sex_scene_flags
 		target = flag:dom_player
 	}
 }
 
 carn_sex_scene_is_sub_player = {
-	is_target_in_variable_list = {
+	add_to_temporary_list = {
 		name = carn_sex_scene_flags
 		target = flag:sub_player
 	}
 }
 
 carn_sex_scene_is_oral = {
-	is_target_in_variable_list = {
+	add_to_temporary_list = {
 		name = carn_sex_scene_flags
 		target = flag:oral
 	}
 }
 
 carn_sex_scene_is_vaginal = {
-	is_target_in_variable_list = {
+	add_to_temporary_list = {
 		name = carn_sex_scene_flags
 		target = flag:vaginal
 	}
 }
 
 carn_sex_scene_is_anal = {
-	is_target_in_variable_list = {
+	add_to_temporary_list = {
 		name = carn_sex_scene_flags
 		target = flag:anal
 	}
 }
 
 carn_sex_scene_is_handjob = {
-	is_target_in_variable_list = {
+	add_to_temporary_list = {
 		name = carn_sex_scene_flags
 		target = flag:handjob
 	}
 }
 
 carn_sex_scene_is_masturbation = {
-	is_target_in_variable_list = {
+	add_to_temporary_list = {
 		name = carn_sex_scene_flags
 		target = flag:masturbation
 	}
 }
 
 carn_sex_scene_is_consensual = {
-	is_target_in_variable_list = {
+	add_to_temporary_list = {
 		name = carn_sex_scene_flags
 		target = flag:consensual
 	}
 }
 
 carn_sex_scene_is_noncon = {
-	is_target_in_variable_list = {
+	add_to_temporary_list = {
 		name = carn_sex_scene_flags
 		target = flag:noncon
 	}
 }
 
 carn_sex_scene_is_dubcon = {
-	is_target_in_variable_list = {
+	add_to_temporary_list = {
 		name = carn_sex_scene_flags
 		target = flag:dubcon
 	}
 }
 
 carn_sex_scene_is_painful = {
-	is_target_in_variable_list = {
+	add_to_temporary_list = {
 		name = carn_sex_scene_flags
 		target = flag:painful
 	}
 }
 
 carn_sex_scene_is_bdsm = {
-	is_target_in_variable_list = {
+	add_to_temporary_list = {
 		name = carn_sex_scene_flags
 		target = flag:bdsm
 	}
 }
 
 carn_sex_scene_is_bondage = {
-	is_target_in_variable_list = {
+	add_to_temporary_list = {
 		name = carn_sex_scene_flags
 		target = flag:bondage
 	}
 }
 
 carn_sex_scene_is_toy = {
-	is_target_in_variable_list = {
+	add_to_temporary_list = {
 		name = carn_sex_scene_flags
 		target = flag:toy
 	}
 }
 
 carn_sex_scene_is_watersports = {
-	is_target_in_variable_list = {
+	add_to_temporary_list = {
 		name = carn_sex_scene_flags
 		target = flag:watersports
 	}
 }
 
 carn_sex_scene_is_scat = {
-	is_target_in_variable_list = {
+	add_to_temporary_list = {
 		name = carn_sex_scene_flags
 		target = flag:scat
 	}
 }
 
 carn_sex_scene_is_gore = {
-	is_target_in_variable_list = {
+	add_to_temporary_list = {
 		name = carn_sex_scene_flags
 		target = flag:gore
 	}
