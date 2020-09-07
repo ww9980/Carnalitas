@@ -1,13 +1,26 @@
 ------------------------
+Instructions
+------------------------
+
+Load order:
+* total conversion mods
+* all mods not related to Carnalitas
+* Carnalitas
+* mods that list Carnalitas as a prerequisite
+
+------------------------
 Features
 ------------------------
 
 * Game rule to remove all STDs
-* New congenital trait group: Small Tits (tits_small_1 to tits_small_3)
-* New congenital trait group: Big Tits (tits_big_1 to tits_big_3)
+
 * New congenital trait group: Small Dicks (dick_small_1 to dick_small_3)
 * New congenital trait group: Big Dicks (dick_big_1 to dick_big_3)
-* New congenital trait: Futanari
+* New congenital trait group: Small Tits (tits_small_1 to tits_small_3)
+* New congenital trait group: Big Tits (tits_big_1 to tits_big_3)
+
+* New traits: futa, futa_genetic (names differ depending on game rule)
+Futas currently can't father children or marry other women.
 
 ------------------------
 Info for Modders
@@ -19,11 +32,16 @@ Overwritten vanilla scripted effects with new functionality:
 Overwritten vanilla scripted triggers with new functionality:
 * can_contract_disease_trigger
 
-New scripted effects:
-* carn_had_sex_with_no_drama_effect
-* carn_seed_dt_traits_effect
+New scripted effects for modders:
 * carn_make_all_dt_traits_inactive_effect
 * carn_activate_gender_specific_dt_traits_effect
+* carn_add_futa_effect
+* carn_remove_futa_effect
+
+Other scripted effects:
+* carn_had_sex_with_no_drama_effect
+* carn_seed_dt_traits_effect
+* carn_seed_futa_trait_effect
 
 New scripted triggers:
 * carn_has_any_dick_gene_trigger
@@ -32,6 +50,7 @@ New scripted triggers:
 * carn_has_any_tits_gene_trigger
 * carn_has_small_tits_trigger
 * carn_has_big_tits_trigger
+* carn_is_futa_trigger
 * carn_gender_can_impregnate_trigger
 
 New on_actions:
@@ -39,7 +58,8 @@ New on_actions:
 * carn_on_vaginal_sex
 * carn_on_anal_sex
 * carn_on_oral_sex
-* carn_on_dt_initialize
 
 New character flags:
 * immune_to_std
+* carn_dt_traits_seeded (put on a character to prevent seeding of dick/tit traits)
+* carn_futa_trait_seeded (put on a character to prevent seeding of futa trait)

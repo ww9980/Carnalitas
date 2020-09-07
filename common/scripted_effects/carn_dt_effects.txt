@@ -6,28 +6,57 @@ carn_seed_dt_traits_effect = {
 			carn_has_any_dick_gene_trigger = no
 		}
 		random_list = {
-			820 = { }
-			50 = {
+			0 = {
+				modifier = {
+					always = yes
+					add = carn_dt_dick_average_weight
+				}
+			}
+			0 = {
+				modifier = {
+					always = yes
+					add = carn_dt_dick_small_1_weight
+				}
 				add_trait = dick_small_1
 				make_trait_inactive = dick_small_1
 			}
-			25 = {
+			0 = {
+				modifier = {
+					always = yes
+					add = carn_dt_dick_small_2_weight
+				}
 				add_trait = dick_small_2
 				make_trait_inactive = dick_small_2
 			}
-			15 = {
+			0 = {
+				modifier = {
+					always = yes
+					add = carn_dt_dick_small_3_weight
+				}
 				add_trait = dick_small_3
 				make_trait_inactive = dick_small_3
 			}		
-			50 = {
+			0 = {
+				modifier = {
+					always = yes
+					add = carn_dt_dick_big_1_weight
+				}
 				add_trait = dick_big_1
 				make_trait_inactive = dick_big_1
 			}
-			25 = {
+			0 = {
+				modifier = {
+					always = yes
+					add = carn_dt_dick_big_2_weight
+				}
 				add_trait = dick_big_2
 				make_trait_inactive = dick_big_2
 			}
-			15 = {
+			0 = {
+				modifier = {
+					always = yes
+					add = carn_dt_dick_big_3_weight
+				}
 				add_trait = dick_big_3
 				make_trait_inactive = dick_big_3
 			}	
@@ -38,28 +67,57 @@ carn_seed_dt_traits_effect = {
 			carn_has_any_tits_gene_trigger = no
 		}
 		random_list = {
-			820 = { }
-			50 = {
+			0 = {
+				modifier = {
+					always = yes
+					add = carn_dt_tits_average_weight
+				}
+			}
+			0 = {
+				modifier = {
+					always = yes
+					add = carn_dt_tits_small_1_weight
+				}
 				add_trait = tits_small_1
 				make_trait_inactive = tits_small_1
 			}
-			25 = {
+			0 = {
+				modifier = {
+					always = yes
+					add = carn_dt_tits_small_2_weight
+				}
 				add_trait = tits_small_2
 				make_trait_inactive = tits_small_2
 			}
-			15 = {
+			0 = {
+				modifier = {
+					always = yes
+					add = carn_dt_tits_small_3_weight
+				}
 				add_trait = tits_small_3
 				make_trait_inactive = tits_small_3
 			}		
-			50 = {
+			0 = {
+				modifier = {
+					always = yes
+					add = carn_dt_tits_big_1_weight
+				}
 				add_trait = tits_big_1
 				make_trait_inactive = tits_big_1
 			}
-			25 = {
+			0 = {
+				modifier = {
+					always = yes
+					add = carn_dt_tits_big_2_weight
+				}
 				add_trait = tits_big_2
 				make_trait_inactive = tits_big_2
 			}
-			15 = {
+			0 = {
+				modifier = {
+					always = yes
+					add = carn_dt_tits_big_3_weight
+				}
 				add_trait = tits_big_3
 				make_trait_inactive = tits_big_3
 			}	

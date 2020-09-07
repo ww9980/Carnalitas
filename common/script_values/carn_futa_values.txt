@@ -1,0 +1,5 @@
+﻿carn_futa_very_rare_chance = 0.1
+carn_futa_rare_chance = 0.5
+carn_futa_uncommon_chance = 2.5
+carn_futa_common_chance = 10
+carn_futa_very_common_chance = 25

@@ -1,5 +1,6 @@
 ﻿# reverse engineered pregnancy effect based on comments in defines
 # requires scope:mother and scope:father to be provided
+# MAY NOT WORK, DO NOT USE FOR NOW
 carn_sex_pregnancy_chance = {
 	# get base fertility multiplier
 	value = 0

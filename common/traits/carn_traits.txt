@@ -3,10 +3,11 @@
 # because haha funny sex number
 #
 # 6900: futa
-# 6901-6903: dick_small_1 to dick_small_3
-# 6904-6906: dick_big_1 to dick_big_3
-# 6907-6909: tits_small_1 to tits_small_3
-# 6910-6912: tits_big_1 to tits_big_3
+# 6901: futa_genetic
+# 6902-6904: dick_small_1 to dick_small_3
+# 6905-6907: dick_big_1 to dick_big_3
+# 6908-6910: tits_small_1 to tits_small_3
+# 6911-6913: tits_big_1 to tits_big_3
 #
 
 futa = {
@@ -44,9 +45,44 @@ futa = {
 	}
 }
 
+futa_genetic = {
+	index = 6901
+
+	name = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					has_game_rule = carn_futa_trait_name_hermaphrodite
+				}
+				desc = trait_futa_immersive
+			}
+			desc = trait_futa
+		}
+	}
+
+	# child_inheritance_sex = female
+	genetic = yes
+	physical = yes
+
+	# birth = 0.5
+	# random_creation = 0.5
+
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_futa_desc
+			}
+			desc = trait_futa_character_desc
+		}
+	}
+}
+
 # Small dick
 dick_small_1 = {
-	index = 6901
+	index = 6902
 
 	name = {
 		first_valid = {
@@ -89,7 +125,7 @@ dick_small_1 = {
 
 # Tiny dick
 dick_small_2 = {
-	index = 6902
+	index = 6903
 
 	name = {
 		first_valid = {
@@ -132,7 +168,7 @@ dick_small_2 = {
 
 # Micro dick
 dick_small_3 = {
-	index = 6903
+	index = 6904
 
 	name = {
 		first_valid = {
@@ -175,7 +211,7 @@ dick_small_3 = {
 
 # Big dick
 dick_big_1 = {
-	index = 6904
+	index = 6905
 	opposites = {
 		dick_big_2
 		dick_big_3
@@ -217,7 +253,7 @@ dick_big_1 = {
 
 # Huge dick
 dick_big_2 = {
-	index = 6905
+	index = 6906
 	opposites = {
 		dick_big_1
 		dick_big_3
@@ -259,7 +295,7 @@ dick_big_2 = {
 
 # Gigantic dick
 dick_big_3 = {
-	index = 6906
+	index = 6907
 	opposites = {
 		dick_big_1
 		dick_big_2
@@ -301,7 +337,7 @@ dick_big_3 = {
 
 # Small Tits
 tits_small_1 = {
-	index = 6907
+	index = 6908
 	opposites = {
 		tits_small_2
 		tits_small_3
@@ -343,7 +379,7 @@ tits_small_1 = {
 
 # Tiny Tits
 tits_small_2 = {
-	index = 6908
+	index = 6909
 	opposites = {
 		tits_small_1
 		tits_small_3
@@ -385,7 +421,7 @@ tits_small_2 = {
 
 # Flat Tits
 tits_small_3 = {
-	index = 6909
+	index = 6910
 	opposites = {
 		tits_small_1
 		tits_small_2
@@ -427,7 +463,7 @@ tits_small_3 = {
 
 # Big Tits
 tits_big_1 = {
-	index = 6910
+	index = 6911
 	opposites = {
 		tits_big_2
 		tits_big_3
@@ -469,7 +505,7 @@ tits_big_1 = {
 
 # Huge Tits
 tits_big_2 = {
-	index = 6911
+	index = 6912
 	opposites = {
 		tits_big_1
 		tits_big_3
@@ -511,7 +547,7 @@ tits_big_2 = {
 
 # Gigantic Tits
 tits_big_3 = {
-	index = 6912
+	index = 6913
 	opposites = {
 		tits_big_1
 		tits_big_2
