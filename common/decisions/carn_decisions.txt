@@ -4,6 +4,9 @@
 
 # carn_spend_time_with_decision - Equivalent to the spend_time_with interaction with a random lover
 carn_spend_time_with_lover_decision = {
+
+	ai_check_interval = 0
+
     title = carn_spend_time_with_decision.t
     desc = carn_spend_time_with_decision.d
     selection_tooltip = carn_spend_time_with_decision.tt.root
@@ -16,8 +19,6 @@ carn_spend_time_with_lover_decision = {
         }
     }
 
-    
-    
 # At present the effect is not fetching the random lover.
 #
 #    effect = {
@@ -39,5 +40,11 @@ carn_spend_time_with_lover_decision = {
 #        }
 #    }
 
-    ai_will_do = 0
+	ai_potential = {
+		always = no
+	}
+
+	ai_will_do = {
+		base = 0
+	}
 }

@@ -8,7 +8,6 @@ carn_spend_time_with_interaction = {
     
     desc = carn_spend_time_with_interaction_desc
     interface_priority = 40
-
     use_diplomatic_range = no
 
     is_shown = {
@@ -20,6 +19,17 @@ carn_spend_time_with_interaction = {
     is_valid_showing_failures_only = {
         scope:recipient = {
             is_diplomatically_available = yes
+            carn_can_have_sex_trigger = yes
+        }
+    }
+
+    on_accept = {
+        scope:actor = {
+            carn_sex_scene_request_consensual = yes
+            carn_sex_scene_effect = {
+                PLAYER = scope:actor
+                TARGET = scope:recipient
+            }
         }
     }
 
