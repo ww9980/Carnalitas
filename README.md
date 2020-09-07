@@ -3,6 +3,7 @@
 When forking Carnalitas, please create new files rather than writing into existing ones. Makes it easier to merge.
 
 [Carnalitas Wiki for Modders](https://github.com/cherisong/Carnalitas/wiki)
+
 [Carnalitas Development Discord Channel](https://discord.gg/fYWeGVd)
 
 ## Carnalitas Succession Law
