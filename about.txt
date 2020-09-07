@@ -19,8 +19,7 @@ Features
 * New congenital trait group: Small Tits (tits_small_1 to tits_small_3)
 * New congenital trait group: Big Tits (tits_big_1 to tits_big_3)
 
-* New trait: Futanari (not congenital)
-* New trait: Futanari (congenital)
+* New traits: futa, futa_genetic (names differ depending on game rule)
 Futas currently can't father children or marry other women.
 
 ------------------------

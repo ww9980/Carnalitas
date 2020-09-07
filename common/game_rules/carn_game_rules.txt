@@ -16,6 +16,12 @@ carn_dt_trait_names = {
 	carn_dt_trait_names_immersive = {}
 }
 
+carn_futa_trait_name = {
+	default = carn_futa_trait_name_futa
+	carn_futa_trait_name_futa = {}
+	carn_futa_trait_name_hermaphrodite = {}
+}
+
 carn_futa_content = {
 	default = carn_futa_content_disabled
 	carn_futa_content_disabled = {}
@@ -32,10 +38,4 @@ carn_futa_trait_inheritance = {
 	default = carn_futa_trait_inheritance_off
 	carn_futa_trait_inheritance_off = {}
 	carn_futa_trait_inheritance_on = {}
-}
-
-carn_futa_trait_name = {
-	default = carn_futa_trait_name_futa
-	carn_futa_trait_name_futa = {}
-	carn_futa_trait_name_hermaphrodite = {}
 }
