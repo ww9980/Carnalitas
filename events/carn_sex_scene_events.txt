@@ -1,11 +1,11 @@
 ﻿namespace = carn_sex_scene
 
 #
-# 9999. Fallback event for when no scene matches the provided parameters.
+# 0002. Fallback event for when no scene matches the provided parameters.
 # This simply adds the consensual flag and fires the paradox sex scene
 #
 
-carn_sex_scene.9999 = {
+carn_sex_scene.0002 = {
 	type = empty
 	hidden = yes
 

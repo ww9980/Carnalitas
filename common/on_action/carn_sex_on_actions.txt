@@ -1,7 +1,7 @@
 ﻿# Empty list of sex interactions. Modders should add their own scenes to this as random_events
 carn_sex_scene = {
 	random_events = {
-		1 = carn_sex_scene.0001 # use a PDX sex scene
+		100 = carn_sex_scene.0001 # use the PDX sex scene generator
 	}
 	fallback = carn_sex_scene_fallback
 }

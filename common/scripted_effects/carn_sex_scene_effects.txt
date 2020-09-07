@@ -86,8 +86,13 @@ carn_had_oral_sex_effect = {
 # carn_sex_scene_set_consensual
 # carn_sex_scene_set_noncon
 # carn_sex_scene_set_dubcon
+# carn_sex_scene_set_painful
 # carn_sex_scene_set_bdsm
+# carn_sex_scene_set_bondage
 # carn_sex_scene_set_toy
+# carn_sex_scene_set_watersports
+# carn_sex_scene_set_scat
+# carn_sex_scene_set_gore
 #
 
 carn_sex_scene_set_dom_player = {
@@ -160,6 +165,13 @@ carn_sex_scene_set_dubcon = {
 	}
 }
 
+carn_sex_scene_set_painful = {
+	add_to_variable_list = {
+		name = carn_sex_scene_flags
+		target = flag:painful
+	}
+}
+
 carn_sex_scene_set_bdsm = {
 	add_to_variable_list = {
 		name = carn_sex_scene_flags
@@ -167,9 +179,37 @@ carn_sex_scene_set_bdsm = {
 	}
 }
 
+carn_sex_scene_set_bondage = {
+	add_to_variable_list = {
+		name = carn_sex_scene_flags
+		target = flag:bondage
+	}
+}
+
 carn_sex_scene_set_toy = {
 	add_to_variable_list = {
 		name = carn_sex_scene_flags
 		target = flag:toy
+	}
+}
+
+carn_sex_scene_set_watersports = {
+	add_to_variable_list = {
+		name = carn_sex_scene_flags
+		target = flag:watersports
+	}
+}
+
+carn_sex_scene_set_scat = {
+	add_to_variable_list = {
+		name = carn_sex_scene_flags
+		target = flag:scat
+	}
+}
+
+carn_sex_scene_set_gore = {
+	add_to_variable_list = {
+		name = carn_sex_scene_flags
+		target = flag:gore
 	}
 }
