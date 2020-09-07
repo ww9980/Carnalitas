@@ -23,10 +23,6 @@ carn_sex_scene.0001 = {
 		character = scope:carn_sex_target
 		animation = flirtation_left
 	}
-	widget = {
-		gui = "event_window_widget_scheme"
-		container = "custom_widgets_container"
-	}
 
 	##############################################################################
 	# Use triggers to determine conditions where your sex scene should be selected.
