@@ -49,12 +49,14 @@ carn_sex_scene.0001 = {
 	immediate = {
 
 		##########################################################################
-		# Don't forget to include had_sex_with effect
+		# Don't forget to include carn_had_sex_with_effect
 		##########################################################################
 		scope:carn_sex_player  = {
-			had_sex_with_effect = {
-				CHARACTER = scope:carn_sex_target
-				PREGNANCY_CHANCE = 0
+			carn_had_sex_with_effect = {
+				CHARACTER_1 = scope:carn_sex_player
+				CHARACTER_2 = scope:carn_sex_target
+				PREGNANCY_CHANCE = pregnancy_chance
+				DRAMA = yes
 			}
 		}
 

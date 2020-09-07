@@ -6,7 +6,7 @@
 #
 
 carn_sex_scene.0002 = {
-
+	hidden = yes
 	immediate = {
 		clear_variable_list = carn_sex_scene_requested_flags
 		carn_sex_scene_request_consensual = yes

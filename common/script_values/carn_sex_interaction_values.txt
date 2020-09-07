@@ -1,0 +1,7 @@
+﻿carn_sex_interaction_cooldown = {
+	value = 5
+	if = {
+		limit = { has_game_rule = carn_sex_interaction_no_cd }
+		multiply = 0
+	}
+}

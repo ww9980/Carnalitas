@@ -76,10 +76,12 @@ carn_futa.0010 = {
 		every_in_list = {
 			list = futa_sex_buddies
 			save_scope_as = mother
-			carn_had_sex_with_no_drama_effect = {
-				CHARACTER = scope:father
+			carn_had_sex_with_effect = {
+				CHARACTER_1 = scope:father
+				CHARACTER_2 = scope:father
 				#PREGNANCY_CHANCE = carn_sex_pregnancy_chance
 				PREGNANCY_CHANCE = 100
+				DRAMA = no
 			}
 		}
 	}

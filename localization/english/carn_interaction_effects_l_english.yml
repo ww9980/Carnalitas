@@ -1,3 +1,0 @@
-﻿l_english:
-  carn_spend_time_with_effect.player:0 "Spends an intimate moment with [TARGET.GetShortUINameNoTooltip]"
-  carn_spend_time_with_effect.target:0 "Spends an intimate moment with [PLAYER.GetShortUINameNoTooltip]"

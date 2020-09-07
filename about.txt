@@ -59,7 +59,15 @@ watersports
 scat
 gore
 
+There are game rules to turn off anal, noncon, dubcon, painful, watersports, scat, and gore.
+
 An example sex scene can be found in common/events/sex_scenes/carn_example_sex_scene_events.txt
+
+------------------------
+Lay With Lover
+------------------------
+
+Adds a basic decision to have sex with a spouse, concubine, lover, or soulmate. This is also a demonstration of the sex scene system.
 
 ------------------------
 Dicks & Tits
@@ -114,11 +122,17 @@ Other Info for Modders
 Overwritten vanilla scripted effects with new functionality:
 * had_sex_with_effect
 
+New scripted effects:
+* carn_had_sex_with_effect
+* carn_had_sex_with_no_drama_effect
+
+If you set the character flag "carn_block_next_had_sex_with_effect" before running had_sex_with_effect, it will prevent had_sex_with_effect from firing.
+
 Overwritten vanilla scripted triggers with new functionality:
 * can_contract_disease_trigger
 
-New scripted effects:
-* carn_had_sex_with_no_drama_effect
+New scripted triggers:
+* carn_can_have_sex_trigger
 
 New on_actions:
 * carn_on_sex

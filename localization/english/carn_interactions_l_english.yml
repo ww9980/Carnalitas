@@ -1,4 +1,7 @@
 ﻿l_english:
- carn_spend_time_with_interaction:0 "#X Carnalitas:#! Spend Time With"
- carn_spend_time_with_interaction_desc:0 "Spend an intimate moment with [recipient.GetShortUINameNoTooltip]"
- carn_spend_time_with_interaction_notification:0 "Spent Time With Lover"
+ carn_sex_interaction: "Lay With Lover"
+ carn_sex_interaction_desc: "Spend an intimate moment with [recipient.GetShortUINameNoTooltip]."
+ carn_sex_send: "Lay With [recipient.GetShortUINameNoTooltip]"
+ carn_sex_interaction_notification: "Lay With Lover"
+ 
+ carn_sex_interaction_effect_cd_tt: "#weak No game effects will happen because you have taken this decision in the last 5 years #!"

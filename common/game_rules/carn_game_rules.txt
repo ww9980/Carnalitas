@@ -4,6 +4,13 @@
 	carn_std_disabled = {}
 }
 
+carn_sex_interaction = {
+	default = carn_sex_interaction_disabled
+	carn_sex_interaction_disabled = {}
+	carn_sex_interaction_enabled = {}
+	carn_sex_interaction_no_cd = {}
+}
+
 carn_dt_enabled = {
 	default = carn_dt_enabled_false
 	carn_dt_enabled_false = {}
@@ -38,4 +45,41 @@ carn_futa_trait_inheritance = {
 	default = carn_futa_trait_inheritance_off
 	carn_futa_trait_inheritance_off = {}
 	carn_futa_trait_inheritance_on = {}
+}
+
+carn_content_anal = {
+	default = carn_content_anal_on
+	carn_content_anal_on = {}
+	carn_content_anal_off = {}
+}
+
+carn_content_consent = {
+	default = carn_content_consent_dubcon
+	carn_content_consent_dubcon = {}
+	carn_content_consent_noncon = {}
+	carn_content_consent_always = {}
+}
+
+carn_content_painful = {
+	default = carn_content_painful_off
+	carn_content_painful_off = {}
+	carn_content_painful_on = {}
+}
+
+carn_content_watersports = {
+	default = carn_content_watersports_off
+	carn_content_watersports_off = {}
+	carn_content_watersports_on = {}
+}
+
+carn_content_scat = {
+	default = carn_content_scat_off
+	carn_content_scat_off = {}
+	carn_content_scat_on = {}
+}
+
+carn_content_gore = {
+	default = carn_content_gore_off
+	carn_content_gore_off = {}
+	carn_content_gore_on = {}
 }

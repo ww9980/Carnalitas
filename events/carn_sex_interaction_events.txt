@@ -1,0 +1,16 @@
+﻿namespace = carn_sex_interaction
+
+#
+# 0001. Dummy event to fire had_sex_with_effect. We need to use an event because had_sex_with_effect doesn't work in decisions, good job paradox
+#
+
+carn_sex_interaction.0001 = {
+	hidden = yes
+	immediate = {
+		carn_sex_scene_request_consensual = yes
+		carn_sex_scene_effect = {
+			PLAYER = scope:actor
+			TARGET = scope:recipient
+		}
+	}
+}

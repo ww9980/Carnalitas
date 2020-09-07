@@ -1,0 +1,69 @@
+﻿# carn_sex_interaction. Basic Diplomatic Interaction for initiating sex
+
+carn_sex_interaction = {
+    category = interaction_category_friendly
+    
+    desc = carn_sex_interaction_desc
+    interface_priority = 40
+    use_diplomatic_range = no
+
+    is_shown = {
+        NOT = { has_game_rule = carn_sex_interaction_disabled }
+        scope:actor = {
+            OR = {
+                is_consort_of = scope:recipient
+                has_relation_lover = scope:recipient
+                has_relation_soulmate = scope:recipient
+            }
+        }
+    }
+
+	cooldown = { years = carn_sex_interaction_cooldown }
+
+    is_valid_showing_failures_only = {
+        scope:actor = {
+            carn_can_have_sex_trigger = yes
+        }
+        scope:recipient = {
+            is_diplomatically_available = yes
+            carn_can_have_sex_trigger = yes
+        }
+    }
+
+    on_accept = {
+        scope:actor = {
+            if = {
+                limit = {
+                    NOT = { has_character_flag = carn_sex_interaction_effect_cd }
+                }
+                show_as_tooltip = {
+                    carn_had_sex_with_effect = {
+                        CHARACTER_1 = scope:actor
+                        CHARACTER_2 = scope:recipient
+                        PREGNANCY_CHANCE = pregnancy_chance
+                        DRAMA = yes
+                    }
+                }
+                stress_impact = {
+                    base = medium_stress_loss
+                    chaste = activity_stress_gain_impact
+                }
+                add_character_flag = {
+                    flag = carn_sex_interaction_effect_cd
+                    years = 5
+                }
+            }
+            else = {
+                custom_tooltip = carn_sex_interaction_effect_cd_tt
+                hidden_effect = { 
+                    add_character_flag = carn_block_next_had_sex_with_effect
+                }
+            }
+            hidden_effect = {
+                trigger_event = { id = carn_sex_interaction.0001 }
+            }
+        }
+    }
+
+    auto_accept = yes
+}
