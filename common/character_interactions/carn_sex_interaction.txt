@@ -60,7 +60,11 @@ carn_sex_interaction = {
                 }
             }
             hidden_effect = {
-                trigger_event = { id = carn_sex_interaction.0001 }
+                carn_sex_scene_request_consensual = yes
+                carn_sex_scene_effect = {
+                    PLAYER = scope:actor
+                    TARGET = scope:recipient
+                }
             }
         }
     }
