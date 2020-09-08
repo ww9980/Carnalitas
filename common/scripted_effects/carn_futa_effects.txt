@@ -3,13 +3,6 @@ carn_seed_futa_trait_effect = {
 	add_character_flag = carn_futa_trait_seeded
 	if = {
 		limit = {
-			has_inactive_trait = futa_genetic
-			is_female = yes
-		}
-		make_trait_active = futa_genetic
-	}
-	else_if = {
-		limit = {
 			has_trait = futa_genetic
 			is_female = no
 		}
@@ -18,6 +11,7 @@ carn_seed_futa_trait_effect = {
 	else_if = {
 		limit = {
 			carn_is_futa_trigger = no
+			NOT = { has_inactive_trait = futa_genetic }
 		}
 		random = {
 			chance = 0
