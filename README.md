@@ -29,6 +29,15 @@ path="mod/Carnalitas"
 ## Carnalitas Succession Law
 By contributing material for Carnalitas you are agreeing to distribute it under the [GNU General Public License 3.0](https://www.gnu.org/licenses/gpl-3.0.en.html).
 
-This essentially means that anyone can use, modify, and redistribute it, provided that the source code is available and there is a copyright notice crediting the original authors.
+This basically means that:
+1. Anyone can copy, modify and distribute this software.
+2. You have to include the license and copyright notice with each and every distribution.
+3. You can use this software privately.
+4. You can use this software for commercial purposes.
+5. Source code must be made available when the software is distributed.
+6. If you modify it, you have to indicate changes made to the code.
+7. Any modifications of this code base MUST be distributed with the same license, GPLv3.
+8. This software is provided without warranty.
+9. The software author or license can not be held liable for any damages inflicted by the software.
 
 Carnalitas is (c) its contributors, who are listed [here](https://github.com/cherisong/Carnalitas/wiki/Credits).
