@@ -1,0 +1,93 @@
+# This is the build script for the Carnalitas mod
+# It creates the Carnalitas.mod file based on the descriptor.mod, and compresses it alongside the mod folder into a properly named archive
+
+name: Build and draft release
+
+# Controls when the action will run. Workflow runs when manually triggered using the UI
+# or API.
+on:
+  workflow_dispatch:
+    # Inputs the workflow accepts.
+    inputs:
+      version:
+        description: 'Version'
+        default: '*.*'
+        required: true
+
+jobs:
+
+  build:
+    runs-on: ubuntu-latest
+    steps:
+
+    # Checkout the repository into the building environment
+    - name: Checkout code
+      uses: actions/checkout@v2
+      with:
+        path: Carnalitas
+    
+    # Create the Carnalitas.mod file
+    - name: Copy descriptor.mod content
+      run: cp ${{ github.workspace }}/Carnalitas/descriptor.mod ${{ github.workspace }}/Carnalitas.mod
+      
+    - name: Create Carnalitas.mod file
+      run: echo -e '\npath="mod/Carnalitas"' >> Carnalitas.mod  
+    
+    # Build the mod and upload it as an artifact to be used later (the paths starting with ! are excluded)
+    # Note: the artifact is basically the mod, but unzipped
+    - name: Build artifact
+      uses: actions/upload-artifact@v2
+      with:
+        name: Carnalitas.${{ github.event.inputs.version }}
+        path: |
+          ${{ github.workspace }}
+          !${{ github.workspace }}/Carnalitas/.git
+          !${{ github.workspace }}/Carnalitas/.github
+          !${{ github.workspace }}/Carnalitas/*.md
+          !${{ github.workspace }}/Carnalitas/*.txt
+
+    # Download the artifact for compression
+    - name: Download the artifact
+      uses: actions/download-artifact@v2
+      id: download
+      with:
+        name: Carnalitas.${{ github.event.inputs.version }}
+        path: ./Release/
+        
+    # Compress the artifact into a zip
+    - name: Compress artifact to zip
+      run: zip -r ./Carnalitas.${{ github.event.inputs.version }}.zip ./Release/*
+
+    # Create the release on github 
+    - name: Create Release
+      id: create_release
+      uses: actions/create-release@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # This token is provided by Actions, you do not need to create your own token
+      with:
+        tag_name: ${{ github.event.inputs.version }}
+        release_name: Carnalitas ${{ github.event.inputs.version }}
+        body: |
+          ## Changes
+          <!--- Add the changes made for this version (new features, changes, fixes) -->
+
+          ## Installation Instructions
+          - Download the archive "Carnalitas.${{ github.event.inputs.version }}.zip" and extract it somewhere
+          - Go to your mod folder. On Windows this is in C:\Users\[your username]\Documents\Paradox Interactive\Crusader Kings III\mod\
+          - Copy the content of the archive ("Carnalitas" folder and "Carnalitas.mod" file) into this folder
+          - In your CK3 launcher go to Mods > Manage Mods > Add More Mods (in bottom right corner) > Select this mod and add it.
+          - Restart your launcher if it doesn't show up in the list when you try to add it.
+        draft: true
+        prerelease: false
+
+    # Upload the compressed archive to the github release
+    - name: Upload Release Asset
+      id: upload-release-asset 
+      uses: actions/upload-release-asset@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        upload_url: ${{ steps.create_release.outputs.upload_url }} # This pulls from the CREATE RELEASE step above, referencing it's ID to get its outputs object, which include a `upload_url`. See this blog post for more info: https://jasonet.co/posts/new-features-of-github-actions/#passing-data-to-future-steps 
+        asset_path: ./Carnalitas.${{ github.event.inputs.version }}.zip
+        asset_name: Carnalitas.${{ github.event.inputs.version }}.zip
+        asset_content_type: application/zip
