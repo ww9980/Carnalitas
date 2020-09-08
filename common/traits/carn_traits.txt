@@ -8,6 +8,8 @@
 # 6905-6907: dick_big_1 to dick_big_3
 # 6908-6910: tits_small_1 to tits_small_3
 # 6911-6913: tits_big_1 to tits_big_3
+# 6914: slave
+# 6915: former_slave
 #
 
 futa = {
@@ -585,4 +587,81 @@ tits_big_3 = {
 
 	physical = yes
 	genetic = yes
+}
+
+slave = { # Chattel Slave
+	index = 6914
+
+	opposites = {
+		former_slave
+	}
+	
+	general_opinion = -10
+	same_opinion = 10
+	monthly_prestige_gain_mult = -0.75
+	hostile_scheme_power_mult = -0.75
+
+	can_inherit = no
+	flag = can_not_be_granted_titles
+	flag = can_not_leave_court_voluntarily
+	
+	inherit_chance = 100
+	parent_inheritance_sex = female
+
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_slave_desc
+			}
+			desc = trait_slave_character_desc
+		}
+	}
+	compatibility = {
+		slave = @pos_compat_medium
+		former_slave = @pos_compat_medium
+	}
+}
+
+former_slave = { # Freedman/Freedwoman
+	index = 6915
+
+	opposites = {
+		slave
+	}
+
+	name = {
+		first_valid = {
+			triggered_desc = {
+				trigger = { NOT = { exists = this } }
+				desc = trait_former_slave_neutral
+			}
+			triggered_desc = {
+				trigger = { is_female = yes }
+				desc = trait_former_slave_female
+			}
+			desc = trait_former_slave_male
+		}
+	}
+
+	diplomacy = -1
+
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_former_slave_desc
+			}
+			desc = trait_former_slave_character_desc
+		}
+	}
+
+	compatibility = {
+		slave = @pos_compat_medium
+		former_slave = @pos_compat_medium
+	}
 }
