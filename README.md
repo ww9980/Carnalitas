@@ -28,4 +28,3 @@ path="mod/Carnalitas"
 
 ## Carnalitas Succession Law
 By contributing material for Carnalitas you are agreeing to distribute it under the [GNU General Public License 3.0](https://www.gnu.org/licenses/gpl-3.0.en.html).
-This means you are giving anyone permission to copy, modify, and redistribute it, as long as you're given credit.
