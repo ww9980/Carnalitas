@@ -599,7 +599,7 @@ slave = { # Chattel Slave
 	general_opinion = -10
 	same_opinion = 10
 	monthly_prestige_gain_mult = -0.75
-	hostile_scheme_power_mult = -0.75
+	hostile_scheme_power_mult = -0.2
 
 	can_inherit = no
 	flag = can_not_be_granted_titles
