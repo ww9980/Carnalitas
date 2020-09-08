@@ -1,9 +1,9 @@
 ﻿l_french:
 
- trait_futa:0 "Futanari"
- trait_futa_hermaphrodite:0 "Hermaphrodite"
- trait_futa_desc:0 "Ce personnage a les organes sexuels féminins et masculins."
- trait_futa_character_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip] a les organes sexuels féminins et masculins."
+ trait_futa: "Futanari"
+ trait_futa_hermaphrodite: "Hermaphrodite"
+ trait_futa_desc: "Ce personnage a les organes sexuels féminins et masculins."
+ trait_futa_character_desc: "[ROOT.GetCharacter.GetFirstNameNoTooltip] a les organes sexuels féminins et masculins."
 
  trait_dick_small: "Petites Bites"
 
