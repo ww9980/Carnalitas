@@ -1,0 +1,59 @@
+﻿courtier_allowed_to_leave_trigger = {
+	save_temporary_scope_as = leaving_courtier
+	NOR = {
+		# Not blocked by script
+		has_character_flag = blocked_from_leaving
+		# Carnalitas: does not have slave trait, or any other similar trait
+		has_trait_with_flag = can_not_leave_court_voluntarily
+		is_councillor_of = scope:liege
+		is_consort_of = scope:liege
+		scope:liege = {
+			player_heir_position = {
+				target = prev
+				position <= 2 #Not 1st, 2nd or 3rd player heir (0,1,2)
+			}
+		}
+		scope:liege = { has_relation_court_physician = scope:leaving_courtier }
+		has_relation_lover = scope:liege
+		is_knight_of = scope:liege
+		has_epidemic_disease_trigger = yes
+		#Keep daughters/sons for marriages
+		AND = {
+			is_child_of = scope:liege
+			NOT = { has_trait = bastard }
+			ai_boldness < high_positive_ai_value
+			trigger_if = { #Daughters
+				limit = { is_female = yes }
+				scope:liege = {
+					OR = {
+						has_realm_law = male_only_law
+						has_realm_law = male_preference_law
+					}
+				}
+			}
+			trigger_else = { #Sonds
+				scope:liege = {
+					OR = {
+						has_realm_law = female_only_law
+						has_realm_law = female_preference_law
+					}
+				}
+			}
+		}
+		#No children of liege can leave court while children
+		AND = {
+			is_child_of = scope:liege
+			is_adult = no
+		}
+		#Claimant won't leave while claim is pressed...
+		scope:liege = { pressing_claim_of_character_trigger = { CHARACTER = scope:leaving_courtier } }
+		#Would be leaving without a child or consort
+		any_child_not_in_traveling_family_trigger = yes
+		any_consort_not_in_traveling_family_trigger = yes
+		#...Or while they have a promise for a claim getting pressed
+		has_character_flag = courtier_staying_for_claim
+
+		#...Or if they're involved in an ongoing event
+		has_variable = stewardship_duty_1062_employer
+	}
+}
