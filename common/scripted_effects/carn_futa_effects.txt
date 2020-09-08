@@ -60,8 +60,37 @@ carn_seed_futa_trait_effect = {
 	}
 }
 
-# adds non-inheritable futa trait if the character doesn't have futa gene, or activates inactive futa_genetic trait if the character has it
+# adds either futa or futa_genetic depending on game rule
 carn_add_futa_effect = {
+	if = {
+		limit = {
+			NOT = { has_game_rule = setting_carn_futa_content_disabled }
+			is_female = yes
+			carn_is_futa_trigger = no
+		}
+		if = {
+			limit = { has_game_rule = carn_futa_trait_inheritance_on }
+			add_trait = futa_genetic
+		}
+		else = {
+			add_trait = futa
+		}
+		carn_activate_gender_specific_dt_traits_effect = yes
+	}
+}
+
+# removes all futa traits
+carn_remove_futa_effect = {
+	remove_trait = futa_genetic
+	remove_trait = futa
+	hidden_effect = {
+		carn_make_all_dt_traits_inactive_effect = yes
+		carn_activate_gender_specific_dt_traits_effect = yes
+	}
+}
+
+# adds non-inheritable futa trait if the character doesn't have futa gene, or activates inactive futa_genetic trait if the character has it
+carn_add_futa_transformation_effect = {
 	if = {
 		limit = {
 			NOT = { has_game_rule = setting_carn_futa_content_disabled }
@@ -80,7 +109,7 @@ carn_add_futa_effect = {
 }
 
 # removes non-inheritable futa trait, or deactivates futa_genetic trait if the character has it
-carn_remove_futa_effect = {
+carn_remove_futa_transformation_effect = {
 	if = {
 		limit = {
 			NOT = { has_game_rule = setting_carn_futa_content_disabled }
@@ -93,7 +122,9 @@ carn_remove_futa_effect = {
 		else = {
 			remove_trait = futa
 		}
-		carn_make_all_dt_traits_inactive_effect = yes
-		carn_activate_gender_specific_dt_traits_effect = yes
+		hidden_effect = {
+			carn_make_all_dt_traits_inactive_effect = yes
+			carn_activate_gender_specific_dt_traits_effect = yes
+		}
 	}
 }
