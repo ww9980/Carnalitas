@@ -1,0 +1,10 @@
+# a dominant has a submissive, and vice-versa
+dominant = {
+  corresponding = submissive
+  opinion = 20
+}
+
+submissive = {
+  corresponding = dominant
+  opinion = 20
+}

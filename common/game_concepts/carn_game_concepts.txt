@@ -1,0 +1,9 @@
+﻿dominant = {
+	alias = { dominants dominant_possessive dominants_possessive }
+	parent = relation
+}
+
+submissive = {
+	alias = { submissives submissive_possessive submissives_possessive }
+	parent = relation
+}
