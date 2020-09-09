@@ -1,5 +1,7 @@
 # This is the build script for the Carnalitas mod
 # It creates the Carnalitas.mod file based on the descriptor.mod, and compresses it alongside the mod folder into a properly named archive
+# It then create a draft release prefilled with the content of "changelog.txt" and installation instructions
+# Note: All changes to files made by this script are done on a building environment hosted by github, not on the actual Carnalitas repository (except the draft release of course)
 
 name: Build and draft release
 
@@ -57,6 +59,10 @@ jobs:
     # Compress the artifact into a zip
     - name: Compress artifact to zip
       run: zip -r ./Carnalitas.${{ github.event.inputs.version }}.zip ./Release/*
+    
+    # Append Installation Instructions to the release message
+    - name: Append Installation Instructions to the release message
+      run:  cat ${{ github.workspace }}/Carnalitas/.github/install-instructions-template.md >> ${{ github.workspace }}/Carnalitas/changelog.txt
 
     # Create the release on github 
     - name: Create Release
@@ -67,17 +73,7 @@ jobs:
       with:
         tag_name: ${{ github.event.inputs.version }}
         release_name: Carnalitas ${{ github.event.inputs.version }}
-        body: |
-          ## Changes
-          <!--- Add the changes made for this version (new features, changes, fixes) -->
-
-          ## Installation Instructions
-          - Download the archive "Carnalitas.${{ github.event.inputs.version }}.zip" and extract it somewhere
-          - Go to your mod folder. On Windows this is in C:\Users\[your username]\Documents\Paradox Interactive\Crusader Kings III\mod\
-          - Copy the content of the archive ("Carnalitas" folder and "Carnalitas.mod" file) into the mod folder.
-            > If you are updating the mod, delete the old "Carnalitas" folder present in the mod folder before copying.
-          - In your CK3 launcher go to Mods > Manage Mods > Add More Mods (in bottom right corner) > Select this mod and add it.
-          - Restart your launcher if it doesn't show up in the list when you try to add it.
+        body_path: ${{ github.workspace }}/Carnalitas/changelog.txt
         draft: true
         prerelease: false
 
