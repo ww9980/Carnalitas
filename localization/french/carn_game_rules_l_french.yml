@@ -51,9 +51,9 @@
  setting_carn_futa_content_no_seeding_desc: "Aucun personnage $trait_futa$ n'apparaitra aléatoirement. Les événements $trait_futa$ et personnages sur mesure apparaitront encore."
 
  rule_carn_futa_trait_inheritance: "#X Carnalitas:#! Héritage du trait $trait_futa$"
- setting_carn_futa_trait_inheritance_off: "Activé"
+ setting_carn_futa_trait_inheritance_off: "Désactivé"
  setting_carn_futa_trait_inheritance_off_desc: "Les enfants des $trait_futa$ n'ont pas plus de chance d'être eux-mêmes des $trait_futa$."
- setting_carn_futa_trait_inheritance_on: "#high Désactivé#!"
+ setting_carn_futa_trait_inheritance_on: "#high Activé#!"
  setting_carn_futa_trait_inheritance_on_desc: "Le trait $trait_futa$ est congénital, les enfant des $trait_futa$ ont donc plus de chance d'être eux-mêmes des $trait_futa$."
  
  rule_carn_content_anal: "#X Carnalitas:#! Scènes anales"
