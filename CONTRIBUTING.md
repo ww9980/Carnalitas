@@ -6,7 +6,6 @@ In order to keep the development branch stable, you should not commit directly t
 If you are an official contributor to this project, **create a new branch** from the "developing" branch (you can do it from github or directly from your local git repository)
   > If you are not an official contributor, you can fork this project and work on your feature there
   - It is recommended to name your branch "**feature/concise-name-of-the-feature**" for a new feature or "**fix/concise-name-of-the-bugfix**" for a bugfix.
-  - If your feature or bugfixe is related to an existing issue, you can add its number (ie. #42) to the branch name
 
 ### Work on your branch
 You can now start working on your feature by pushing your modification to your feature branch.
@@ -17,5 +16,5 @@ Once your feature is done, or at least stable and fuctionning (doesn't cause cra
   - Follow the template instructions
   - Add a reviewer to the pull request (cherisong and potentially another contributor who already worked on the code you are modifying)
   - Add the label "enhancement" and any other relevant label, like "visual" if you made some graphical modification
-  - If your feature is related to an existing issue, please link it in the pull request (the option is also in the right-hand column)
+  - If your feature or bugfix is supposed to close or fix an existing issue, please link it in the pull request (the option is also in the right-hand column)
     
