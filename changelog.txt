@@ -13,3 +13,5 @@
 ## Stress From Arousal
 
 * Characters can now optionally gain stress over time based on how perverted they are.
+
+* Fixed some error in french localization
