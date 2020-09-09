@@ -1,13 +1,15 @@
 ﻿l_english:
 
  game_concept_dominant: "Dominant"
+ game_concept_dominant_short: "Dom"
  game_concept_dominants: "Dominants"
  game_concept_dominant_possessive: "Dominant's"
  game_concept_dominants_possessive: "Dominants'"
- game_concept_dominant_desc: "Often shortened to Dom, a $game_concept_dominant$ is a $game_concept_character$ with a $game_concept_relation$ to a corresponding $game_concept_submissive$. While specifics vary, the role of [dominant|E] typically involves in some way commanding or assuming control over the [submissive|E]."
+ game_concept_dominant_desc: "Often shortened to $game_concept_dominant_short$, a $game_concept_dominant$ is a $game_concept_character$ with a $game_concept_relation$ to a corresponding [submissive|E]. While specifics vary, the role of $game_concept_dominant$ typically involves in some way commanding or assuming control over the $game_concept_submissive$."
 
  game_concept_submissive: "Submissive"
+ game_concept_submissive_short: "Sub"
  game_concept_submissives: "Submissives"
  game_concept_submissive_possessive: "Submissive's"
  game_concept_submissives_possessive: "Submissives'"
- game_concept_submissive_desc: "Often shortened to Sub, a $game_concept_submissive$ is a $game_concept_character$ with a $game_concept_relation$ to a corresponding $game_concept_dominant$. While specifics vary, the role of [submissive|E] typically involves in some way obeying or surrendering control to the [dominant|E]."
+ game_concept_submissive_desc: "Often shortened to $game_concept_submissive_short$, a $game_concept_submissive$ is a $game_concept_character$ with a $game_concept_relation$ to a corresponding [dominant|E]. While specifics vary, the role of $game_concept_submissive$ typically involves in some way obeying or surrendering control to the $game_concept_dominant$."
