@@ -6,6 +6,7 @@
 - [ ] Bug fix (non-breaking change which fixes an issue)
 - [ ] New feature (non-breaking change which adds functionality)
 - [ ] Breaking change (fix or feature that would cause existing functionality to change. Likely not save-compatible)
+- [ ] I have added a summary of the change to the changelog.txt file
 - [ ] My change requires a change to the documentation/wiki.
 - [ ] I have updated the documentation accordingly.
 
