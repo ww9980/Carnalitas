@@ -4,7 +4,7 @@ carn_seed_futa_trait_effect = {
 	if = {
 		limit = {
 			has_trait = futa_genetic
-			is_female = no
+			is_male = yes
 		}
 		make_trait_inactive = futa_genetic
 	}
@@ -40,13 +40,18 @@ carn_seed_futa_trait_effect = {
 				has_game_rule = carn_futa_content_always
 			}
 			if = {
-				limit = { has_game_rule = carn_futa_trait_inheritance_off }
-				add_trait = futa
+				limit = {
+					has_game_rule = carn_futa_trait_inheritance_off
+				}
+				if = {
+					limit = { is_female = yes }
+					add_trait = futa
+				}
 			}
 			else = {
 				add_trait = futa_genetic
 				if = {
-					limit = { is_female = no }
+					limit = { is_male = yes }
 					make_trait_inactive = futa_genetic
 				}
 			}

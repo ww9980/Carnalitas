@@ -5,7 +5,6 @@ namespace = carn_arousal
 #
 
 carn_arousal.0001 = {
-	type = character
 	hidden = yes
 
 	trigger = {
@@ -14,6 +13,7 @@ carn_arousal.0001 = {
 			has_trait = chaste
 		}
 	}
+	
 	immediate = {
 		send_interface_message = {
 			title = carn_arousal.0001.t

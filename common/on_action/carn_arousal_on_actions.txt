@@ -1,4 +1,4 @@
-# Increase stress every five years
+﻿# Increase stress every five years
 five_year_playable_pulse = {
 	events = {
 		carn_arousal.0001

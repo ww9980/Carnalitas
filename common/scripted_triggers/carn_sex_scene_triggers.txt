@@ -43,71 +43,71 @@ carn_sex_scene_matches_requested_flags_trigger = {
 #
 
 carn_sex_scene_is_dom_player = {
-	flag:dom_player = { add_to_list = carn_sex_scene_flags }
+	flag:dom_player = { add_to_temporary_list = carn_sex_scene_flags }
 }
 
 carn_sex_scene_is_sub_player = {
-	flag:sub_player = { add_to_list = carn_sex_scene_flags }
+	flag:sub_player = { add_to_temporary_list = carn_sex_scene_flags }
 }
 
 carn_sex_scene_is_oral = {
-	flag:oral = { add_to_list = carn_sex_scene_flags }
+	flag:oral = { add_to_temporary_list = carn_sex_scene_flags }
 }
 
 carn_sex_scene_is_vaginal = {
-	flag:vaginal = { add_to_list = carn_sex_scene_flags }
+	flag:vaginal = { add_to_temporary_list = carn_sex_scene_flags }
 }
 
 carn_sex_scene_is_anal = {
-	flag:anal = { add_to_list = carn_sex_scene_flags }
+	flag:anal = { add_to_temporary_list = carn_sex_scene_flags }
 }
 
 carn_sex_scene_is_handjob = {
-	flag:handjob = { add_to_list = carn_sex_scene_flags }
+	flag:handjob = { add_to_temporary_list = carn_sex_scene_flags }
 }
 
 carn_sex_scene_is_masturbation = {
-	flag:masturbation = { add_to_list = carn_sex_scene_flags }
+	flag:masturbation = { add_to_temporary_list = carn_sex_scene_flags }
 }
 
 carn_sex_scene_is_consensual = {
-	flag:consensual = { add_to_list = carn_sex_scene_flags }
+	flag:consensual = { add_to_temporary_list = carn_sex_scene_flags }
 }
 
 carn_sex_scene_is_noncon = {
-	flag:noncon = { add_to_list = carn_sex_scene_flags }
+	flag:noncon = { add_to_temporary_list = carn_sex_scene_flags }
 }
 
 carn_sex_scene_is_dubcon = {
-	flag:dubcon = { add_to_list = carn_sex_scene_flags }
+	flag:dubcon = { add_to_temporary_list = carn_sex_scene_flags }
 }
 
 carn_sex_scene_is_painful = {
-	flag:painful = { add_to_list = carn_sex_scene_flags }
+	flag:painful = { add_to_temporary_list = carn_sex_scene_flags }
 }
 
 carn_sex_scene_is_bdsm = {
-	flag:bdsm = { add_to_list = carn_sex_scene_flags }
+	flag:bdsm = { add_to_temporary_list = carn_sex_scene_flags }
 }
 
 carn_sex_scene_is_bondage = {
-	flag:bondage = { add_to_list = carn_sex_scene_flags }
+	flag:bondage = { add_to_temporary_list = carn_sex_scene_flags }
 }
 
 carn_sex_scene_is_toy = {
-	flag:toy = { add_to_list = carn_sex_scene_flags }
+	flag:toy = { add_to_temporary_list = carn_sex_scene_flags }
 }
 
 carn_sex_scene_is_watersports = {
-	flag:watersports = { add_to_list = carn_sex_scene_flags }
+	flag:watersports = { add_to_temporary_list = carn_sex_scene_flags }
 }
 
 carn_sex_scene_is_scat = {
-	flag:scat = { add_to_list = carn_sex_scene_flags }
+	flag:scat = { add_to_temporary_list = carn_sex_scene_flags }
 }
 
 carn_sex_scene_is_gore = {
-	flag:gore = { add_to_list = carn_sex_scene_flags }
+	flag:gore = { add_to_temporary_list = carn_sex_scene_flags }
 }
 
 #
