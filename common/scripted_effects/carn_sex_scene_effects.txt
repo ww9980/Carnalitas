@@ -59,6 +59,8 @@ carn_sex_scene_effect = {
 # carn_sex_scene_request_dubcon
 # carn_sex_scene_request_painful
 # carn_sex_scene_request_bdsm
+# carn_sex_scene_request_bestiality
+# carn_sex_scene_request_petplay
 # carn_sex_scene_request_bondage
 # carn_sex_scene_request_toy
 # carn_sex_scene_request_watersports
@@ -126,6 +128,14 @@ carn_sex_scene_request_bdsm = {
 	flag:bdsm = { add_to_list = carn_sex_scene_requested_flags }
 }
 
+carn_sex_scene_request_bestiality = {
+	flag:bestiality = { add_to_list = carn_sex_scene_requested_flags }
+}
+
+carn_sex_scene_request_petplay = {
+	flag:petplay = { add_to_list = carn_sex_scene_requested_flags }
+}
+
 carn_sex_scene_request_bondage = {
 	flag:bondage = { add_to_list = carn_sex_scene_requested_flags }
 }
@@ -170,6 +180,8 @@ carn_sex_scene_request_gore = {
 # carn_sex_scene_is_dubcon
 # carn_sex_scene_is_painful
 # carn_sex_scene_is_bdsm
+# carn_sex_scene_is_bestiality
+# carn_sex_scene_is_petplay
 # carn_sex_scene_is_bondage
 # carn_sex_scene_is_toy
 # carn_sex_scene_is_watersports
@@ -223,6 +235,14 @@ carn_sex_scene_is_painful = {
 
 carn_sex_scene_is_bdsm = {
 	flag:bdsm = { add_to_list = carn_sex_scene_flags }
+}
+
+carn_sex_scene_is_bestiality = {
+	flag:bestiality = { add_to_list = carn_sex_scene_flags }
+}
+
+carn_sex_scene_is_petplay = {
+	flag:petplay = { add_to_list = carn_sex_scene_flags }
 }
 
 carn_sex_scene_is_bondage = {
