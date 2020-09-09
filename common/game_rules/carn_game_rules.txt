@@ -11,6 +11,12 @@ carn_sex_interaction = {
 	carn_sex_interaction_no_cd = {}
 }
 
+carn_arousal_stress = {
+	default = carn_arousal_stress_disabled
+	carn_arousal_stress_enabled = {}
+	carn_arousal_stress_disabled = {}
+}
+
 carn_dt_enabled = {
 	default = carn_dt_enabled_false
 	carn_dt_enabled_false = {}

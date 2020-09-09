@@ -14,6 +14,12 @@
  setting_carn_sex_interaction_no_cd: "#high No Cooldown#!"
  setting_carn_sex_interaction_no_cd_desc: "You can lay with a spouse, lover, or soulmate through a Character Interaction. Every five years, this has the additional effect of reducing Stress."
 
+ rule_carn_arousal_stress: "#X Carnalitas:#! Arousal Causes Stress"
+ setting_carn_arousal_stress_enabled: "Enabled"
+ setting_carn_arousal_stress_enabled_desc: "Characters naturally gain stress over time based on based on traits such as rakish, chaste, etc."
+ setting_carn_arousal_stress_disabled: "#high Disabled#!"
+ setting_carn_arousal_stress_disabled_desc: "Characters will not naturally gain stress over time. This may cause slight balance issues if you frequently lay with your lovers."
+
  rule_carn_dt_enabled: "#X Carnalitas:#! Body Part Traits"
  setting_carn_dt_enabled_false: "Disabled"
  setting_carn_dt_enabled_false_desc: "Characters will not spawn with congenital breast and penis size traits."
