@@ -30,7 +30,7 @@
  setting_carn_futa_trait_name_futa: "Par défaut"
  setting_carn_futa_trait_name_futa_desc: "Les personnages ayant à la fois des organes sexuels féminin et masculin seront appelés '$trait_futa$'."
  setting_carn_futa_trait_name_hermaphrodite:1 "#high Historique#!"
- setting_carn_futa_trait_name_hermaphrodite_desc: "Les personnages ayant à la fois des organes sexuels féminin et masculin seront appelés '$trait_futa_hermaphrodite$'."
+ setting_carn_futa_trait_name_hermaphrodite_desc: "Les personnages ayant à la fois des organes sexuels féminin et masculin seront appelés '$trait_futa_immersive$'."
  
  rule_carn_futa_content: "#X Carnalitas:#! Contenu $trait_futa$"
  setting_carn_futa_content_disabled: "Désactivé"
