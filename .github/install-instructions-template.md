@@ -1,6 +1,6 @@
 
 # Installation Instructions
-- Download the archive "Carnalitas.${{ github.event.inputs.version }}.zip" and extract it somewhere
+- Download the archive "Carnalitas.VAR_VERSION.zip" and extract it somewhere
 - Go to your mod folder. On Windows this is in C:\Users\[your username]\Documents\Paradox Interactive\Crusader Kings III\mod\
 - Copy the content of the archive ("Carnalitas" folder and "Carnalitas.mod" file) into the mod folder.
   > If you are updating the mod, delete the old "Carnalitas" folder present in the mod folder before copying.

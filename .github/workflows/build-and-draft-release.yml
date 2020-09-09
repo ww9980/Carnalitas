@@ -5,8 +5,14 @@
 
 name: Build and draft release
 
-# Controls when the action will run. Workflow runs when manually triggered using the UI
-# or API.
+# Environment variables
+env:
+  # Paths are relative to the root folder of the repository
+  changelog_path: changelog.txt
+  install_instructions_path: .github/install-instructions-template.md
+  
+
+# Controls when the action will run. Workflow runs when manually triggered using the UI or API.
 on:
   workflow_dispatch:
     # Inputs the workflow accepts.
@@ -22,18 +28,17 @@ jobs:
     runs-on: ubuntu-latest
     steps:
 
-    # Checkout the repository into the building environment
+    # Checkout the repository to the building environment, into a "Carnalitas" folder
     - name: Checkout code
       uses: actions/checkout@v2
       with:
         path: Carnalitas
     
     # Create the Carnalitas.mod file
-    - name: Copy descriptor.mod content
-      run: cp ${{ github.workspace }}/Carnalitas/descriptor.mod ${{ github.workspace }}/Carnalitas.mod
-      
     - name: Create Carnalitas.mod file
-      run: echo -e '\npath="mod/Carnalitas"' >> Carnalitas.mod  
+      run: |
+        cp ${{ github.workspace }}/Carnalitas/descriptor.mod ${{ github.workspace }}/Carnalitas.mod
+        echo -e '\npath="mod/Carnalitas"' >> Carnalitas.mod  
     
     # Build the mod and upload it as an artifact to be used later (the paths starting with ! are excluded)
     # Note: the artifact is basically the mod, but unzipped
@@ -54,15 +59,19 @@ jobs:
       id: download
       with:
         name: Carnalitas.${{ github.event.inputs.version }}
-        path: ./Release/
+        path: ${{ github.workspace }}/Release/
         
     # Compress the artifact into a zip
     - name: Compress artifact to zip
-      run: zip -r ./Carnalitas.${{ github.event.inputs.version }}.zip ./Release/*
+      run: |
+        cd ${{ github.workspace }}/Release/
+        zip -r ${{ github.workspace }}/Carnalitas.${{ github.event.inputs.version }}.zip *
     
     # Append Installation Instructions to the release message
     - name: Append Installation Instructions to the release message
-      run:  cat ${{ github.workspace }}/Carnalitas/.github/install-instructions-template.md >> ${{ github.workspace }}/Carnalitas/changelog.txt
+      run:  cat ${{ github.workspace }}/Carnalitas/${{env.install_instructions_path}} >> ${{ github.workspace }}/Carnalitas/${{env.changelog_path}}  
+    - name: change the variable VAR_VERSION to the actual version in the release notes
+      run: sed -i 's/VAR_VERSION/${{ github.event.inputs.version }}/g' ${{ github.workspace }}/Carnalitas/${{env.changelog_path}}
 
     # Create the release on github 
     - name: Create Release
@@ -73,7 +82,7 @@ jobs:
       with:
         tag_name: ${{ github.event.inputs.version }}
         release_name: Carnalitas ${{ github.event.inputs.version }}
-        body_path: ${{ github.workspace }}/Carnalitas/changelog.txt
+        body_path: ${{ github.workspace }}/Carnalitas/${{env.changelog_path}}
         draft: true
         prerelease: false
 
@@ -85,6 +94,6 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
         upload_url: ${{ steps.create_release.outputs.upload_url }} # This pulls from the CREATE RELEASE step above, referencing it's ID to get its outputs object, which include a `upload_url`. See this blog post for more info: https://jasonet.co/posts/new-features-of-github-actions/#passing-data-to-future-steps 
-        asset_path: ./Carnalitas.${{ github.event.inputs.version }}.zip
+        asset_path: ${{ github.workspace }}/Carnalitas.${{ github.event.inputs.version }}.zip
         asset_name: Carnalitas.${{ github.event.inputs.version }}.zip
         asset_content_type: application/zip
