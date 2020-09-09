@@ -43,38 +43,9 @@ carn_sex_scene_effect = {
 }
 
 #
-# Remember to trigger the following effects from your event if applicable:
-#
-# carn_had_vaginal_sex_effect
-# carn_had_anal_sex_effect
-# carn_had_oral_sex_effect
-#
-# This is so that other mods can hook into them.
-#
-# Note that had_sex_with_effect handles the pregnancy chance, not carn_had_vaginal_sex_effect
-#
-
-carn_had_vaginal_sex_effect = {
-	trigger_event = {
-		on_action = carn_on_vaginal_sex
-	}
-}
-
-carn_had_anal_sex_effect = {
-	trigger_event = {
-		on_action = carn_on_anal_sex
-	}
-}
-
-carn_had_oral_sex_effect = {
-	trigger_event = {
-		on_action = carn_on_oral_sex
-	}
-}
-
-#
 # Here is a list of supported sex scene flags.
 # It is possible for mods to add more flags, but these will not be supported and have no guarantee of working with other mods.
+# Use these to REQUEST a sex scene with the appropriate flag.
 #
 # carn_sex_scene_request_dom_player
 # carn_sex_scene_request_sub_player
@@ -182,4 +153,94 @@ carn_sex_scene_request_gore = {
 		limit = { has_game_rule = carn_content_gore_on }
 		flag:gore = { add_to_list = carn_sex_scene_requested_flags }
 	}
+}
+
+#
+# Use these to DEFINE a sex scene event in the immediate block, so that events triggering from carn_on_sex will know what flags the event has.
+#
+# carn_sex_scene_is_dom_player
+# carn_sex_scene_is_sub_player
+# carn_sex_scene_is_oral
+# carn_sex_scene_is_vaginal
+# carn_sex_scene_is_anal
+# carn_sex_scene_is_handjob
+# carn_sex_scene_is_masturbation
+# carn_sex_scene_is_consensual
+# carn_sex_scene_is_noncon
+# carn_sex_scene_is_dubcon
+# carn_sex_scene_is_painful
+# carn_sex_scene_is_bdsm
+# carn_sex_scene_is_bondage
+# carn_sex_scene_is_toy
+# carn_sex_scene_is_watersports
+# carn_sex_scene_is_scat
+# carn_sex_scene_is_gore
+#
+
+carn_sex_scene_is_dom_player = {
+	flag:dom_player = { add_to_list = carn_sex_scene_flags }
+}
+
+carn_sex_scene_is_sub_player = {
+	flag:sub_player = { add_to_list = carn_sex_scene_flags }
+}
+
+carn_sex_scene_is_oral = {
+	flag:oral = { add_to_list = carn_sex_scene_flags }
+}
+
+carn_sex_scene_is_vaginal = {
+	flag:vaginal = { add_to_list = carn_sex_scene_flags }
+}
+
+carn_sex_scene_is_anal = {
+	flag:anal = { add_to_list = carn_sex_scene_flags }
+}
+
+carn_sex_scene_is_handjob = {
+	flag:handjob = { add_to_list = carn_sex_scene_flags }
+}
+
+carn_sex_scene_is_masturbation = {
+	flag:masturbation = { add_to_list = carn_sex_scene_flags }
+}
+
+carn_sex_scene_is_consensual = {
+	flag:consensual = { add_to_list = carn_sex_scene_flags }
+}
+
+carn_sex_scene_is_noncon = {
+	flag:noncon = { add_to_list = carn_sex_scene_flags }
+}
+
+carn_sex_scene_is_dubcon = {
+	flag:dubcon = { add_to_list = carn_sex_scene_flags }
+}
+
+carn_sex_scene_is_painful = {
+	flag:painful = { add_to_list = carn_sex_scene_flags }
+}
+
+carn_sex_scene_is_bdsm = {
+	flag:bdsm = { add_to_list = carn_sex_scene_flags }
+}
+
+carn_sex_scene_is_bondage = {
+	flag:bondage = { add_to_list = carn_sex_scene_flags }
+}
+
+carn_sex_scene_is_toy = {
+	flag:toy = { add_to_list = carn_sex_scene_flags }
+}
+
+carn_sex_scene_is_watersports = {
+	flag:watersports = { add_to_list = carn_sex_scene_flags }
+}
+
+carn_sex_scene_is_scat = {
+	flag:scat = { add_to_list = carn_sex_scene_flags }
+}
+
+carn_sex_scene_is_gore = {
+	flag:gore = { add_to_list = carn_sex_scene_flags }
 }

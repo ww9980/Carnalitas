@@ -49,6 +49,13 @@ carn_sex_scene.0001 = {
 	immediate = {
 
 		##########################################################################
+		# Copy and paste the flags for your event in the immediate block as well.
+		# This will let carn_on_sex events firing from this event know what flags it had.
+		##########################################################################
+
+		carn_sex_scene_is_consensual = yes
+
+		##########################################################################
 		# Don't forget to include carn_had_sex_with_effect
 		##########################################################################
 		

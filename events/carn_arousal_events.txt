@@ -1,4 +1,4 @@
-namespace = carn_arousal
+﻿namespace = carn_arousal
 
 #
 # 0001. Character stress increases due to arousal
