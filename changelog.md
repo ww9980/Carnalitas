@@ -1,4 +1,4 @@
-﻿# Carnalitas v1.1
+# Carnalitas v1.0.2
 
 ## Slavery System (WIP)
 
