@@ -18,7 +18,7 @@
  setting_carn_arousal_stress_disabled: "Disabled"
  setting_carn_arousal_stress_disabled_desc: "Characters will not naturally gain stress over time. This may cause slight balance issues if you frequently lay with your lovers."
  setting_carn_arousal_stress_enabled: "#high Enabled#!"
- setting_carn_arousal_stress_enabled_desc: "Characters naturally gain stress over time based on traits such as $trait_rakish$, $trait_chaste$, etc."
+ setting_carn_arousal_stress_enabled_desc: "Characters naturally gain stress over time. Stress gain is increased if $trait_lustful$ or $trait_rakish$, and absent if $trait_chaste$."
 
  rule_carn_dt_enabled: "#X Carnalitas:#! Body Part Traits"
  setting_carn_dt_enabled_false: "Disabled"

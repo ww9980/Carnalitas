@@ -4,4 +4,4 @@
  carn_sex_send: "Lay With [recipient.GetShortUINameNoTooltip]"
  carn_sex_interaction_notification: "Lay With Lover"
  
- carn_sex_interaction_effect_cd_tt: "#weak No game effects will happen because you have taken this decision in the last 5 years #!"
+ carn_sex_interaction_effect_cd_tt: "#weak No game effects will happen because you have used this interaction in the last 5 years #!"
