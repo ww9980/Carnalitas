@@ -1,6 +1,6 @@
 ﻿# Carnalitas v1.1
 
-## Slavery System
+## Slavery System (WIP)
 
 * Added new traits: Chattel Slave (`slave`), Freedman/Freedwoman (`former_slave`)
 * New overwrites prevent Chattel Slaves from being granted titles, or from leaving court.
