@@ -92,6 +92,12 @@
  setting_carn_content_painful_on: "#high On#!"
  setting_carn_content_painful_on_desc: "Sex scenes that have been given the 'painful' flag by their creator will be displayed."
 
+ rule_carn_content_bestiality: "#X Carnalitas:#! Bestiality Scenes"
+ setting_carn_content_bestiality_off: "Off"
+ setting_carn_content_bestiality_off_desc: "Sex scenes that have been given the 'bestiality' flag by their creator will not be displayed."
+ setting_carn_content_bestiality_on: "#high On#!"
+ setting_carn_content_bestiality_on_desc: "Sex scenes that have been given the 'bestiality' flag by their creator will be displayed."
+
  rule_carn_content_watersports: "#X Carnalitas:#! Watersports (Pee) Scenes"
  setting_carn_content_watersports_off: "Off"
  setting_carn_content_watersports_off_desc: "Sex scenes that have been given the 'watersports' flag by their creator will not be displayed."

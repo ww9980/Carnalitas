@@ -129,7 +129,10 @@ carn_sex_scene_request_bdsm = {
 }
 
 carn_sex_scene_request_bestiality = {
-	flag:bestiality = { add_to_list = carn_sex_scene_requested_flags }
+	if = {
+		limit = { has_game_rule = carn_content_bestiality_on }
+		flag:bestiality = { add_to_list = carn_sex_scene_requested_flags }
+	}
 }
 
 carn_sex_scene_request_petplay = {
