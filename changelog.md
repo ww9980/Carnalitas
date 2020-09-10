@@ -18,3 +18,4 @@
 
 * Fixed arousal event not triggering properly
 * Fixed tooltip not displaying for carn_can_grant_titles_trigger
+* Fixed sex scenes being possible to display even if their tags are turned off in game rules
