@@ -18,7 +18,7 @@
  setting_carn_arousal_stress_disabled: "Désactivé"
  setting_carn_arousal_stress_disabled_desc: "Les personnages ne gagneront pas naturellement du stress avec le temps. Cela pourrait causer quelques problèmes d'équilibrage si vous couchez souvent avec vos partenaires."
  setting_carn_arousal_stress_enabled: "#high Activé#!"
- setting_carn_arousal_stress_enabled_desc: "Les personnages gagneront naturellement du stress avec le temps, en fonction de certains traits comme $trait_rakish$, $trait_chaste$, etc."
+ setting_carn_arousal_stress_enabled_desc: "Les personnages gagneront naturellement du stress avec le temps. Le gain de stress est d'autant plus important avec les traits $trait_rakish$ ou $trait_chaste$, et absent avec le trait $trait_chaste$."
 
  rule_carn_dt_enabled: "#X Carnalitas:#! Traits des caractéristiques sexuelles"
  setting_carn_dt_enabled_false: "Désactivé"
