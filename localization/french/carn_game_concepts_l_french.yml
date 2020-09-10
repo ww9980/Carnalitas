@@ -1,0 +1,23 @@
+﻿l_french:
+
+ game_concept_dominant: "Dominant"
+ game_concept_dominant_short: "Dom"
+ game_concept_dominants: "Dominants"
+ game_concept_dominant_possessive: "du Dominant"
+ game_concept_dominants_possessive: "des Dominants'"
+ game_concept_dominant_male:0 "dominant"
+ game_concept_dominant_female:0 "dominante"
+ game_concept_dominants_male:0 "dominants"
+ game_concept_dominants_female:0 "dominantes"
+ game_concept_dominant_desc: "Souvent racourci par $game_concept_dominant_short$, un $game_concept_dominant$ est un [character|El] ayant une [relation|El] avec un [submissive|El] (ou $game_concept_submissive_female$). Bien que pouvant varier, le rôle de $game_concept_dominant$ implique généralement de commander et prendre le contrôle du $game_concept_submissive$."
+
+ game_concept_submissive: "Soumis"
+ game_concept_submissive_short: "Sub"
+ game_concept_submissives: "Soumis"
+ game_concept_submissive_possessive: "du Soumis"
+ game_concept_submissives_possessive: "des Soumis"
+ game_concept_submissive_male:0 "soumis"
+ game_concept_submissive_female:0 "soumise"
+ game_concept_submissives_male:0 "soumis"
+ game_concept_submissives_female:0 "soumises"
+ game_concept_submissive_desc: "Souvent racourci par $game_concept_submissive_short$, un $game_concept_submissive$ est un [character|El] ayant une [relation|El] avec un [dominant|El] (ou $game_concept_dominant_female$). Bien que pouvant varier, le rôle de $game_concept_submissive$ implique généralement d'obéir et d'offrir le contôle sur sa personne au $game_concept_dominant$."

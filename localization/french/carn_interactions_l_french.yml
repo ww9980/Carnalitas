@@ -5,4 +5,4 @@
  carn_sex_send: "Coucher avec [recipient.GetShortUINameNoTooltip]"
  carn_sex_interaction_notification: "Coucher avec mon amant"
  
- carn_sex_interaction_effect_cd_tt: "#weak Cette action n'aura aucun effet en jeu, car vous avez déjà pris cette décision durant les cinq dernières années#!"
+ carn_sex_interaction_effect_cd_tt: "#weak Cette action n'aura aucun effet en jeu, car vous avez déjà utilisé cette intéraction durant les cinq dernières années#!"
