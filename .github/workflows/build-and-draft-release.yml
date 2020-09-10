@@ -8,7 +8,7 @@ name: Build and draft release
 # Environment variables
 env:
   # Paths are relative to the root folder of the repository
-  changelog_path: changelog.txt
+  changelog_path: changelog.md
   install_instructions_path: .github/install-instructions-template.md
   
 
