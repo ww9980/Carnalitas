@@ -49,8 +49,16 @@ carn_sex_scene.0001 = {
 	immediate = {
 
 		##########################################################################
+		# Copy and paste the flags for your event in the immediate block as well.
+		# This will let carn_on_sex events firing from this event know what flags it had.
+		##########################################################################
+
+		carn_sex_scene_is_consensual = yes
+
+		##########################################################################
 		# Don't forget to include carn_had_sex_with_effect
 		##########################################################################
+		
 		scope:carn_sex_player  = {
 			carn_had_sex_with_effect = {
 				CHARACTER_1 = scope:carn_sex_player
@@ -61,15 +69,8 @@ carn_sex_scene.0001 = {
 		}
 
 		##########################################################################
-		# Remember to also include the following effects if applicable:
-		#
-		# carn_had_vaginal_sex_effect = yes
-		# carn_had_anal_sex_effect = yes
-		# carn_had_oral_sex_effect = yes
-		#
-		# This is so that other mods can hook into them.
-		#
-		# Note that had_sex_with_effect handles the pregnancy chance, not carn_had_vaginal_sex_effect
+		# carn_had_sex_with_effect will trigger the on_action "carn_on_sex," where you can add events to fire.
+		# To check the flags of the sex scene, you can use triggers such as "carn_sex_scene_was_vaginal = yes"
 		##########################################################################
 	}
 

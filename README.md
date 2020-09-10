@@ -4,20 +4,9 @@ When forking Carnalitas, please create new files rather than writing into existi
 
 [Carnalitas Wiki](https://github.com/cherisong/Carnalitas/wiki)
 
+[Development Board](https://github.com/cherisong/Carnalitas/projects/1)
+
 [Carnalitas Discord Channel](https://discord.gg/fYWeGVd)
-
-## Installation Instructions
-
-* Go to your mod folder. On Windows this is in `C:\Users\[your username]\Documents\Paradox Interactive\Crusader Kings III\mod\`
-* Create a new text file. Rename it to `Carnalitas.mod` and paste the following inside:
-```
-version="1"
-name="Carnalitas"
-supported_version="1.0.*"
-path="mod/Carnalitas"
-```
-* Create a folder called `Carnalitas`. Drag the contents of this repository to it.
-* Open Crusader Kings 3, select Carnalitas from the mod manager, and play.
 
 ## Load Order
 

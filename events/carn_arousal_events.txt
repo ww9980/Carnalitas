@@ -1,0 +1,39 @@
+﻿namespace = carn_arousal
+
+#
+# 0001. Character stress increases due to arousal
+#
+
+carn_arousal.0001 = {
+	hidden = yes
+	is_ai = no
+
+	trigger = {
+		has_game_rule = carn_arousal_stress_enabled
+		NOT = {
+			has_trait = chaste
+		}
+	}
+	
+	immediate = {
+		send_interface_message = {
+			title = carn_arousal.0001.t
+			#desc = carn_arousal.0001.desc
+
+			add_stress = {
+				# Using -1 * medium_stress_loss as the base value instead of something more straightforward so as to balance the effect of carn_sex_interaction.
+				value = medium_stress_loss 	
+				multiply = -1
+				if = {
+					limit = {
+						OR = { 
+							has_trait = lustful
+							has_trait = rakish
+						}
+					}
+					multiply = 1.5
+				}
+			}
+		}
+	}
+}

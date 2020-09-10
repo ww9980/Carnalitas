@@ -35,6 +35,8 @@ carn_sex_scene_matches_requested_flags_trigger = {
 # carn_sex_scene_is_dubcon
 # carn_sex_scene_is_painful
 # carn_sex_scene_is_bdsm
+# carn_sex_scene_is_bestiality
+# carn_sex_scene_is_petplay
 # carn_sex_scene_is_bondage
 # carn_sex_scene_is_toy
 # carn_sex_scene_is_watersports
@@ -90,6 +92,14 @@ carn_sex_scene_is_bdsm = {
 	flag:bdsm = { add_to_temporary_list = carn_sex_scene_flags }
 }
 
+carn_sex_scene_is_bestiality = {
+	flag:bestiality = { add_to_temporary_list = carn_sex_scene_flags }
+}
+
+carn_sex_scene_is_petplay = {
+	flag:petplay = { add_to_temporary_list = carn_sex_scene_flags }
+}
+
 carn_sex_scene_is_bondage = {
 	flag:bondage = { add_to_temporary_list = carn_sex_scene_flags }
 }
@@ -108,4 +118,104 @@ carn_sex_scene_is_scat = {
 
 carn_sex_scene_is_gore = {
 	flag:gore = { add_to_temporary_list = carn_sex_scene_flags }
+}
+
+#
+# These triggers are for events in carn_on_sex to check the flags of the sex scene from which it was called.
+#
+# carn_sex_scene_was_dom_player
+# carn_sex_scene_was_sub_player
+# carn_sex_scene_was_oral
+# carn_sex_scene_was_vaginal
+# carn_sex_scene_was_anal
+# carn_sex_scene_was_handjob
+# carn_sex_scene_was_masturbation
+# carn_sex_scene_was_consensual
+# carn_sex_scene_was_noncon
+# carn_sex_scene_was_dubcon
+# carn_sex_scene_was_painful
+# carn_sex_scene_was_bdsm
+# carn_sex_scene_was_bestiality
+# carn_sex_scene_was_petplay
+# carn_sex_scene_was_bondage
+# carn_sex_scene_was_toy
+# carn_sex_scene_was_watersports
+# carn_sex_scene_was_scat
+# carn_sex_scene_was_gore
+#
+
+carn_sex_scene_was_dom_player = {
+	flag:dom_player = { is_in_list = carn_sex_scene_flags }
+}
+
+carn_sex_scene_was_sub_player = {
+	flag:sub_player = { is_in_list = carn_sex_scene_flags }
+}
+
+carn_sex_scene_was_oral = {
+	flag:oral = { is_in_list = carn_sex_scene_flags }
+}
+
+carn_sex_scene_was_vaginal = {
+	flag:vaginal = { is_in_list = carn_sex_scene_flags }
+}
+
+carn_sex_scene_was_anal = {
+	flag:anal = { is_in_list = carn_sex_scene_flags }
+}
+
+carn_sex_scene_was_handjob = {
+	flag:handjob = { is_in_list = carn_sex_scene_flags }
+}
+
+carn_sex_scene_was_masturbation = {
+	flag:masturbation = { is_in_list = carn_sex_scene_flags }
+}
+
+carn_sex_scene_was_consensual = {
+	flag:consensual = { is_in_list = carn_sex_scene_flags }
+}
+
+carn_sex_scene_was_noncon = {
+	flag:noncon = { is_in_list = carn_sex_scene_flags }
+}
+
+carn_sex_scene_was_dubcon = {
+	flag:dubcon = { is_in_list = carn_sex_scene_flags }
+}
+
+carn_sex_scene_was_painful = {
+	flag:painful = { is_in_list = carn_sex_scene_flags }
+}
+
+carn_sex_scene_was_bdsm = {
+	flag:bdsm = { is_in_list = carn_sex_scene_flags }
+}
+
+carn_sex_scene_was_bestiality = {
+	flag:bestiality = { is_in_list = carn_sex_scene_flags }
+}
+
+carn_sex_scene_was_petplay = {
+	flag:petplay = { is_in_list = carn_sex_scene_flags }
+}
+
+carn_sex_scene_was_bondage = {
+	flag:bondage = { is_in_list = carn_sex_scene_flags }
+}
+
+carn_sex_scene_was_toy = {
+	flag:toy = { is_in_list = carn_sex_scene_flags }
+}
+
+carn_sex_scene_was_watersports = {
+	flag:watersports = { is_in_list = carn_sex_scene_flags }
+}
+
+carn_sex_scene_was_scat = {
+	flag:scat = { is_in_list = carn_sex_scene_flags }
+}
+
+carn_sex_scene_was_gore = {
+	flag:gore = { is_in_list = carn_sex_scene_flags }
 }

@@ -11,6 +11,12 @@ carn_sex_interaction = {
 	carn_sex_interaction_no_cd = {}
 }
 
+carn_arousal_stress = {
+	default = carn_arousal_stress_disabled
+	carn_arousal_stress_disabled = {}
+	carn_arousal_stress_enabled = {}
+}
+
 carn_dt_enabled = {
 	default = carn_dt_enabled_false
 	carn_dt_enabled_false = {}
@@ -48,9 +54,9 @@ carn_futa_trait_inheritance = {
 }
 
 carn_content_anal = {
-	default = carn_content_anal_on
-	carn_content_anal_on = {}
+	default = carn_content_anal_off
 	carn_content_anal_off = {}
+	carn_content_anal_on = {}
 }
 
 carn_content_consent = {

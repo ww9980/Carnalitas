@@ -8,6 +8,8 @@
 # 6905-6907: dick_big_1 to dick_big_3
 # 6908-6910: tits_small_1 to tits_small_3
 # 6911-6913: tits_big_1 to tits_big_3
+# 6914: slave
+# 6915: former_slave
 #
 
 futa = {
@@ -64,6 +66,9 @@ futa_genetic = {
 	genetic = yes
 	physical = yes
 
+	birth = 0
+	random_creation = 0
+
 	# birth = 0.5
 	# random_creation = 0.5
 
@@ -97,8 +102,6 @@ dick_small_1 = {
 	}
 
 	opposites = {
-		dick_small_2
-		dick_small_3
 		dick_big
 	}
 
@@ -106,6 +109,12 @@ dick_small_1 = {
 
 	group = dick_small
 	level = 1
+
+	genetic = yes
+	physical = yes
+
+	birth = 0 # handled through script
+	random_creation = 0
 
 	desc = {
 		first_valid = {
@@ -118,9 +127,6 @@ dick_small_1 = {
 			desc = trait_dick_small_1_character_desc
 		}
 	}
-
-	physical = yes
-	genetic = yes
 }
 
 # Tiny dick
@@ -140,8 +146,6 @@ dick_small_2 = {
 	}
 
 	opposites = {
-		dick_small_1
-		dick_small_3
 		dick_big
 	}
 
@@ -149,6 +153,12 @@ dick_small_2 = {
 
 	group = dick_small
 	level = 2
+
+	genetic = yes
+	physical = yes
+
+	birth = 0 # handled through script
+	random_creation = 0
 
 	desc = {
 		first_valid = {
@@ -161,9 +171,6 @@ dick_small_2 = {
 			desc = trait_dick_small_2_character_desc
 		}
 	}
-
-	physical = yes
-	genetic = yes
 }
 
 # Micro dick
@@ -183,8 +190,6 @@ dick_small_3 = {
 	}
 
 	opposites = {
-		dick_small_1
-		dick_small_2
 		dick_big
 	}
 
@@ -192,6 +197,12 @@ dick_small_3 = {
 
 	group = dick_small
 	level = 3
+
+	genetic = yes
+	physical = yes
+
+	birth = 0 # handled through script
+	random_creation = 0
 
 	desc = {
 		first_valid = {
@@ -204,19 +215,11 @@ dick_small_3 = {
 			desc = trait_dick_small_3_character_desc
 		}
 	}
-
-	physical = yes
-	genetic = yes
 }
 
 # Big dick
 dick_big_1 = {
 	index = 6905
-	opposites = {
-		dick_big_2
-		dick_big_3
-		dick_small
-	}
 
 	name = {
 		first_valid = {
@@ -230,10 +233,20 @@ dick_big_1 = {
 		}
 	}
 
+	opposites = {
+		dick_small
+	}
+
 	fertility = 0.01
 
 	group = dick_big
 	level = 1
+
+	genetic = yes
+	physical = yes
+
+	birth = 0 # handled through script
+	random_creation = 0
 
 	desc = {
 		first_valid = {
@@ -246,19 +259,11 @@ dick_big_1 = {
 			desc = trait_dick_big_1_character_desc
 		}
 	}
-
-	physical = yes
-	genetic = yes
 }
 
 # Huge dick
 dick_big_2 = {
 	index = 6906
-	opposites = {
-		dick_big_1
-		dick_big_3
-		dick_small
-	}
 
 	name = {
 		first_valid = {
@@ -272,10 +277,20 @@ dick_big_2 = {
 		}
 	}
 
+	opposites = {
+		dick_small
+	}
+
 	fertility = 0.025
 
 	group = dick_big
 	level = 2
+
+	genetic = yes
+	physical = yes
+
+	birth = 0 # handled through script
+	random_creation = 0
 
 	desc = {
 		first_valid = {
@@ -288,19 +303,11 @@ dick_big_2 = {
 			desc = trait_dick_big_2_character_desc
 		}
 	}
-
-	physical = yes
-	genetic = yes
 }
 
 # Gigantic dick
 dick_big_3 = {
 	index = 6907
-	opposites = {
-		dick_big_1
-		dick_big_2
-		dick_small
-	}
 
 	name = {
 		first_valid = {
@@ -313,11 +320,21 @@ dick_big_3 = {
 			desc = trait_dick_big_3
 		}
 	}
+	
+	opposites = {
+		dick_small
+	}
 
 	fertility = 0.05
 
 	group = dick_big
 	level = 3
+
+	genetic = yes
+	physical = yes
+
+	birth = 0 # handled through script
+	random_creation = 0
 
 	desc = {
 		first_valid = {
@@ -330,19 +347,11 @@ dick_big_3 = {
 			desc = trait_dick_big_3_character_desc
 		}
 	}
-
-	physical = yes
-	genetic = yes
 }
 
 # Small Tits
 tits_small_1 = {
 	index = 6908
-	opposites = {
-		tits_small_2
-		tits_small_3
-		tits_big
-	}
 
 	name = {
 		first_valid = {
@@ -355,11 +364,21 @@ tits_small_1 = {
 			desc = trait_tits_small_1
 		}
 	}
+	
+	opposites = {
+		tits_big
+	}
 
 	fertility = -0.01
 
 	group = tits_small
 	level = 1
+
+	genetic = yes
+	physical = yes
+
+	birth = 0 # handled through script
+	random_creation = 0
 
 	desc = {
 		first_valid = {
@@ -372,19 +391,11 @@ tits_small_1 = {
 			desc = trait_tits_small_1_character_desc
 		}
 	}
-
-	physical = yes
-	genetic = yes
 }
 
 # Tiny Tits
 tits_small_2 = {
 	index = 6909
-	opposites = {
-		tits_small_1
-		tits_small_3
-		tits_big
-	}
 
 	name = {
 		first_valid = {
@@ -397,11 +408,20 @@ tits_small_2 = {
 			desc = trait_tits_small_2
 		}
 	}
+	opposites = {
+		tits_big
+	}
 
 	fertility = -0.025
 
 	group = tits_small
 	level = 2
+
+	genetic = yes
+	physical = yes
+
+	birth = 0 # handled through script
+	random_creation = 0
 
 	desc = {
 		first_valid = {
@@ -414,19 +434,11 @@ tits_small_2 = {
 			desc = trait_tits_small_2_character_desc
 		}
 	}
-
-	physical = yes
-	genetic = yes
 }
 
 # Flat Tits
 tits_small_3 = {
 	index = 6910
-	opposites = {
-		tits_small_1
-		tits_small_2
-		tits_big
-	}
 
 	name = {
 		first_valid = {
@@ -439,11 +451,21 @@ tits_small_3 = {
 			desc = trait_tits_small_3
 		}
 	}
+	
+	opposites = {
+		tits_big
+	}
 
 	fertility = -0.05
 
 	group = tits_small
 	level = 3
+
+	genetic = yes
+	physical = yes
+
+	birth = 0 # handled through script
+	random_creation = 0
 
 	desc = {
 		first_valid = {
@@ -456,19 +478,11 @@ tits_small_3 = {
 			desc = trait_tits_small_3_character_desc
 		}
 	}
-
-	physical = yes
-	genetic = yes
 }
 
 # Big Tits
 tits_big_1 = {
 	index = 6911
-	opposites = {
-		tits_big_2
-		tits_big_3
-		tits_small
-	}
 
 	name = {
 		first_valid = {
@@ -481,11 +495,21 @@ tits_big_1 = {
 			desc = trait_tits_big_1
 		}
 	}
+	
+	opposites = {
+		tits_small
+	}
 
 	fertility = 0.01
 
 	group = tits_big
 	level = 1
+
+	genetic = yes
+	physical = yes
+
+	birth = 0 # handled through script
+	random_creation = 0
 
 	desc = {
 		first_valid = {
@@ -498,19 +522,11 @@ tits_big_1 = {
 			desc = trait_tits_big_1_character_desc
 		}
 	}
-
-	physical = yes
-	genetic = yes
 }
 
 # Huge Tits
 tits_big_2 = {
 	index = 6912
-	opposites = {
-		tits_big_1
-		tits_big_3
-		tits_small
-	}
 
 	name = {
 		first_valid = {
@@ -523,11 +539,21 @@ tits_big_2 = {
 			desc = trait_tits_big_2
 		}
 	}
+	
+	opposites = {
+		tits_small
+	}
 
 	fertility = 0.025
 
 	group = tits_big
 	level = 2
+
+	genetic = yes
+	physical = yes
+
+	birth = 0 # handled through script
+	random_creation = 0
 
 	desc = {
 		first_valid = {
@@ -540,19 +566,11 @@ tits_big_2 = {
 			desc = trait_tits_big_2_character_desc
 		}
 	}
-
-	physical = yes
-	genetic = yes
 }
 
 # Gigantic Tits
 tits_big_3 = {
 	index = 6913
-	opposites = {
-		tits_big_1
-		tits_big_2
-		tits_small
-	}
 
 	name = {
 		first_valid = {
@@ -566,10 +584,20 @@ tits_big_3 = {
 		}
 	}
 
+	opposites = {
+		tits_small
+	}
+
 	fertility = 0.05
 
 	group = tits_big
 	level = 3
+
+	genetic = yes
+	physical = yes
+
+	birth = 0 # handled through script
+	random_creation = 0
 
 	desc = {
 		first_valid = {
@@ -582,7 +610,82 @@ tits_big_3 = {
 			desc = trait_tits_big_3_character_desc
 		}
 	}
+}
 
-	physical = yes
-	genetic = yes
+slave = { # Chattel Slave
+	index = 6914
+
+	opposites = {
+		former_slave
+	}
+	
+	diplomacy = -3
+	general_opinion = -10
+	same_opinion = 10
+	monthly_prestige_gain_mult = -0.75
+	hostile_scheme_power_mult = -0.2
+
+	can_inherit = no
+	flag = can_not_be_granted_titles
+	flag = can_not_leave_court_voluntarily
+	
+	inherit_chance = 100
+	parent_inheritance_sex = female
+
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_slave_desc
+			}
+			desc = trait_slave_character_desc
+		}
+	}
+	compatibility = {
+		slave = @pos_compat_medium
+		former_slave = @pos_compat_medium
+	}
+}
+
+former_slave = { # Freedman/Freedwoman
+	index = 6915
+
+	opposites = {
+		slave
+	}
+
+	name = {
+		first_valid = {
+			triggered_desc = {
+				trigger = { NOT = { exists = this } }
+				desc = trait_former_slave_neutral
+			}
+			triggered_desc = {
+				trigger = { is_female = yes }
+				desc = trait_former_slave_female
+			}
+			desc = trait_former_slave_male
+		}
+	}
+
+	diplomacy = -1
+
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_former_slave_desc
+			}
+			desc = trait_former_slave_character_desc
+		}
+	}
+
+	compatibility = {
+		slave = @pos_compat_medium
+		former_slave = @pos_compat_medium
+	}
 }
