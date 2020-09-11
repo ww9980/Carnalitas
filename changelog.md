@@ -3,10 +3,10 @@
 ## Slavery System (WIP)
 
 * New relation: Slave (`slave`) and Owner (`slave_owner`). Owners automatically get hooks on their Slaves, and transfer ownership to their primary heir if they die.
-* New effect: `carn_enslave_effect`. Takes arguments `SLAVE`, `OWNER`, `DRAMA`
-* New effect: `carn_free_slave_effect`
-* Character interaction to enslave prisoners, incurring tyranny and opinion penalties if the enslavement is unjust
-* Encyclopedia entries for Slaves, Owners, and the Slave Market
+* New scripted effect: `carn_enslave_effect`. This gives the Slave trait to a character, forces them to abdicate, and makes them the Slave (relation) of another character. Takes arguments `SLAVE`, `OWNER`, `DRAMA`
+* New scripted effect: `carn_free_slave_effect`. Changes the Slave trait to Former Slave and removes their Owner (which will also remove the hook their Owner has on them).
+* Character interaction to enslave prisoners, incurring tyranny and opinion penalties if the enslavement is unjust.
+* Encyclopedia entries for Slaves, Owners, and the Slave Market.
 
 ## Misc Features
 
