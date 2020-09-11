@@ -1,0 +1,7 @@
+﻿l_french:
+ carn_i_can_be_granted_titles: "Vous pouvez vous voir attribuer des [titles|El]"
+ carn_not_i_can_be_granted_titles: "Vous ne pouvez pas vous voir attribuer de [titles|El]"
+ carn_they_can_be_granted_titles: "[CHARACTER.Custom('FR_only_le_GetShortUIName')|U][CHARACTER.GetShortUIName|V] peut se voir attribuer des [titles|El]"
+ carn_not_they_can_be_granted_titles: "[CHARACTER.Custom('FR_only_le_GetShortUIName')|U][CHARACTER.GetShortUIName|V] ne peut pas se voir attribuer de [titles|El]
+ carn_can_be_granted_titles: "Peut se voir attribuer des [titles|El]"
+ carn_not_can_be_granted_titles: "Ne peut pas se voir attribuer de [titles|El]"

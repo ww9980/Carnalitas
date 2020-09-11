@@ -61,6 +61,16 @@
  setting_carn_futa_trait_inheritance_off_desc: "Les enfants de $trait_futa$ n'ont pas plus de chance d'être eux-mêmes des $trait_futa$."
  setting_carn_futa_trait_inheritance_on: "#high Activé#!"
  setting_carn_futa_trait_inheritance_on_desc: "Le trait $trait_futa$ est congénital, les enfant de $trait_futa$ ont donc plus de chance d'être eux-mêmes des $trait_futa$."
+
+ rule_carn_slavery_content: "#X Carnalitas:#! Système d'esclavage"
+ setting_carn_slavery_content_disabled: "Désactivé"
+ setting_carn_slavery_content_disabled_desc: "Les $game_concept_character_interaction$ de Carnalitas liées à l'esclavage n'apparaitront pas."
+ setting_carn_slavery_content_enabled: "#high Activé#!"
+ setting_carn_slavery_content_enabled_desc: "Les personnages peuvent être asservis contre leur gré, faisant d'eux des propriétés pouvant être utilisé, acheté, ou vendu."
+ setting_carn_slavery_content_require_acceptance: "#high Nécéssite acceptation#!"
+ setting_carn_slavery_content_require_acceptance_desc: "Les personnages peuvent être asservis, mais seulement s'ils acceptent une $game_concept_character_interaction$. Il pourrait cependant être forcé à accepter."
+ setting_carn_slavery_content_consensual_only: "#high Consensual Only#!"
+ setting_carn_slavery_content_consensual_only_desc: "Les personnages peuvent être asservis, mais seulement s'ils acceptent une $game_concept_character_interaction$ sans aucune pression ou contrainte."
  
  rule_carn_content_anal: "#X Carnalitas:#! Scènes anales"
  setting_carn_content_anal_off: "Off"
@@ -81,6 +91,12 @@
  setting_carn_content_painful_off_desc: "Les scènes sexuelles placées dans la catégorie 'douloureuse' par leur créateur ne seront pas affichées."
  setting_carn_content_painful_on: "#high On#!"
  setting_carn_content_painful_on_desc: "Les scènes sexuelles placées dans la catégorie 'douloureuse' par leur créateur pourront être affichées."
+
+ rule_carn_content_bestiality: "#X Carnalitas:#! Scènes de bestialité"
+ setting_carn_content_bestiality_off: "Off"
+ setting_carn_content_bestiality_off_desc: "Les scènes sexuelles placées dans la catégorie 'bestialité' par leur créateur ne seront pas affichées."
+ setting_carn_content_bestiality_on: "#high On#!"
+ setting_carn_content_bestiality_on_desc: "Les scènes sexuelles placées dans la catégorie 'bestialité' par leur créateur pourront être affichées."
 
  rule_carn_content_watersports: "#X Carnalitas:#! Sènes avec ondinisme (urine)"
  setting_carn_content_watersports_off: "Off"
