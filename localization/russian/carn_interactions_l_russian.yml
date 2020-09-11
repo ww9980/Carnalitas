@@ -1,0 +1,7 @@
+﻿l_russian:
+ carn_sex_interaction: "Переспать с любовни[Select_CString(recipient.IsFemale, 'цей', 'ком' )]"
+ carn_sex_interaction_desc: "Быть близким к [recipient.GetShortUINameNoTooltip]."
+ carn_sex_send: "Переспать с [recipient.GetShortUINameNoTooltip]"
+ carn_sex_interaction_notification: "Переспать с любовницей"
+ 
+ carn_sex_interaction_effect_cd_tt: "Никаких эффектов от занятий любовью не будет так как вы уже использовали это взаимодействие менее чем пять лет назад!"
