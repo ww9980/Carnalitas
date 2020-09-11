@@ -61,6 +61,12 @@ carn_slavery_content = {
 	carn_slavery_content_consensual_only = {}
 }
 
+carn_slavery_religious_acceptance = {
+	default = carn_slavery_religious_doctrines_off
+	carn_slavery_religious_doctrines_on = {}
+	carn_slavery_religious_doctrines_off = {}
+}
+
 carn_content_anal = {
 	default = carn_content_anal_off
 	carn_content_anal_off = {}
