@@ -244,6 +244,7 @@ dick_big_1 = {
 
 	genetic = yes
 	physical = yes
+	good = yes
 
 	birth = 0 # handled through script
 	random_creation = 0
@@ -288,6 +289,7 @@ dick_big_2 = {
 
 	genetic = yes
 	physical = yes
+	good = yes
 
 	birth = 0 # handled through script
 	random_creation = 0
@@ -332,6 +334,7 @@ dick_big_3 = {
 
 	genetic = yes
 	physical = yes
+	good = yes
 
 	birth = 0 # handled through script
 	random_creation = 0
@@ -507,6 +510,7 @@ tits_big_1 = {
 
 	genetic = yes
 	physical = yes
+	good = yes
 
 	birth = 0 # handled through script
 	random_creation = 0
@@ -551,6 +555,7 @@ tits_big_2 = {
 
 	genetic = yes
 	physical = yes
+	good = yes
 
 	birth = 0 # handled through script
 	random_creation = 0
@@ -595,6 +600,7 @@ tits_big_3 = {
 
 	genetic = yes
 	physical = yes
+	good = yes
 
 	birth = 0 # handled through script
 	random_creation = 0
