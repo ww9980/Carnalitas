@@ -2,11 +2,9 @@
 
 ## Slavery System (WIP)
 
-* New relation: `slave` and `slave_owner`
+* New relation: Slave (`slave`) and Owner (`slave_owner`). Owners automatically get hooks on their Slaves, and transfer ownership to their primary heir if they die.
 * New effect: `carn_enslave_effect`. Takes arguments `SLAVE`, `OWNER`, `DRAMA`
 * New effect: `carn_free_slave_effect`
-* Automatically assigning Owners hooks on Slaves
-* Automatically inheriting slaves from previous title holder
 * Character interaction to enslave prisoners, incurring tyranny and opinion penalties if the enslavement is unjust
 * Encyclopedia entries for Slaves, Owners, and the Slave Market
 
