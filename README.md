@@ -2,6 +2,8 @@
 
 When forking Carnalitas, please create new files rather than writing into existing ones. Makes it easier to merge.
 
+[LoversLab download page](https://www.loverslab.com/files/file/14207-carnalitas/)
+
 [Carnalitas Wiki](https://github.com/cherisong/Carnalitas/wiki)
 
 [Development Board](https://github.com/cherisong/Carnalitas/projects/1)
