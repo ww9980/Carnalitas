@@ -1,4 +1,0 @@
-﻿l_french:
- carn_arousal.0001.t:0 "Stress gagné dû à l'excitation"
- # Why won't this work? D:
- carn_arousal.0001.desc:0 "Un manque de satisfaction sexuelle fait augmenter votre [stress_gain_i] [stress|E]."
