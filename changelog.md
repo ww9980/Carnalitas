@@ -19,6 +19,7 @@
 ## Tweaks
 
 * Removed fertility bonuses and penalties from dick and tit traits.
+* Updated dick trait icons
 * Made arousal event message more visible.
 
 ## Bug Fixes
