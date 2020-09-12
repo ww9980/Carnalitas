@@ -3,8 +3,6 @@
 ## Slavery System (WIP)
 
 * New relation: Slave (`slave`) and Owner (`slave_owner`). Owners automatically get hooks on their Slaves, and transfer ownership to their primary heir if they die.
-* New scripted effect: `carn_enslave_effect`. This gives the Slave trait to a character, forces them to abdicate, and makes them the Slave (relation) of another character. Takes arguments `SLAVE`, `OWNER`, `DRAMA`
-* New scripted effect: `carn_free_slave_effect`. Changes the Slave trait to Former Slave and removes their Owner (which will also remove the hook their Owner has on them).
 * Character interaction to enslave prisoners, incurring tyranny and opinion penalties if the enslavement is unjust.
 * Encyclopedia entries for Slaves, Owners, and the Slave Market.
 
@@ -12,10 +10,19 @@
 
 * Added a game rule to toggle bestiality events (off by default)
 
+# For Modders
+* New scripted effect: `carn_enslave_effect`. This gives the Slave trait to a character, forces them to abdicate, and makes them the Slave (relation) of another character. Takes arguments `SLAVE`, `OWNER`, `DRAMA`
+* New scripted effect: `carn_free_slave_effect`. Changes the Slave trait to Former Slave and removes their Owner (which will also remove the hook their Owner has on them).
+* Added trait and character flags `carn_has_high_arousal` and `carn_has_low_arousal`, influencing a character's stress gain from arousal.
+* Added trait and character flags `carn_can_always_have_sex` and `carn_cannot_have_sex`, influencing whether a character is available for sex interactions.
+
+## Tweaks
+
+* Made arousal event message more visible
+
 ## Bug Fixes
 
-* Fixed arousal event not triggering properly
-* Made arousal event message more visible
-* Fixed tooltip not displaying for carn_can_grant_titles_trigger
-* Fixed sex scenes being possible to display even if their tags are turned off in game rules
-* Fixed tits_big and dick_big traits not being flagged as good trait
+* Fixed arousal event not triggering properly.
+* Fixed tooltip not displaying for `carn_can_grant_titles_trigger`.
+* Fixed sex scenes being possible to display even if their tags are turned off in game rules.
+* Fixed tits_big and dick_big traits being flagged as bad traits.

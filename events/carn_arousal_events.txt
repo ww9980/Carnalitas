@@ -10,7 +10,7 @@ carn_arousal.0001 = {
 	trigger = {
 		is_ai = no
 		has_game_rule = carn_arousal_stress_enabled
-		carn_is_prude = no
+		carn_has_low_arousal_trigger = no
 	}
 	
 	immediate = {
@@ -25,7 +25,7 @@ carn_arousal.0001 = {
 				multiply = -1
 				if = {
 					limit = {
-						carn_is_perv = yes
+						carn_has_high_arousal_trigger = yes
 					}
 					multiply = 1.5
 				}
