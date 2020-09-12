@@ -10,16 +10,13 @@ carn_arousal.0001 = {
 	trigger = {
 		is_ai = no
 		has_game_rule = carn_arousal_stress_enabled
-		NOT = {
-			has_trait = chaste
-		}
+		carn_is_prude = no
 	}
 	
 	immediate = {
 
 		send_interface_message = {
-			type = event_generic_neutral
-			title = carn_msg_arousal
+			type = carn_event_arousal
 			right_icon = this
 			# custom_tooltip = carn_msg_arousal_desc
 			add_stress = {
@@ -28,10 +25,7 @@ carn_arousal.0001 = {
 				multiply = -1
 				if = {
 					limit = {
-						OR = { 
-							has_trait = lustful
-							has_trait = rakish
-						}
+						carn_is_perv = yes
 					}
 					multiply = 1.5
 				}

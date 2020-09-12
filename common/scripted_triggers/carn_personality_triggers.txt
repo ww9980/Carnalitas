@@ -1,0 +1,17 @@
+# The two triggers below are intended as an extensible means of checking for libido-altering traits, either
+# originating in the base game or introduced by submods (something like "insatiable" in CK2)
+carn_is_perv_trigger = {
+	OR = {
+		has_trait = lustful
+		has_trait = rakish
+		has_trait_with_flag = carn_pervert_flag
+	}
+}
+
+carn_is_prude_trigger = {
+	OR = {
+		has_trait = chaste
+		has_trait = celibate
+		has_trait_with_flag = carn_prude_flag
+	}
+}
