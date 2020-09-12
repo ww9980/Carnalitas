@@ -1,4 +1,4 @@
-carn_demand_free_illegal_slaves_interaction = {
+﻿carn_demand_free_illegal_slaves_interaction = {
 	category = interaction_category_religion
 
 	ai_maybe = yes
@@ -17,7 +17,7 @@ carn_demand_free_illegal_slaves_interaction = {
 	ai_frequency = 12
 
 	desc = {
-		desc = demand_free_slaves_interaction_desc
+		desc = carn_demand_free_slaves_interaction_desc
 		desc = line_break
 		triggered_desc = {
 			trigger = {

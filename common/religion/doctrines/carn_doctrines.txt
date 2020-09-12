@@ -1,4 +1,4 @@
-carn_doctrine_same_slavery = {
+﻿carn_doctrine_same_slavery = {
 	group = "crimes"
 
 	is_available_on_create = {

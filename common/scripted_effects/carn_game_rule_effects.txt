@@ -1,4 +1,4 @@
-carn_game_rule_religious_doctrines_effect = {
+﻿carn_game_rule_religious_doctrines_effect = {
 	every_religion_global = {
 		every_faith = {
 			if = {
