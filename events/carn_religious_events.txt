@@ -1,15 +1,12 @@
-﻿namespace = carn_religion
+﻿namespace = carn_religious_interaction
 
-# Events relating to religions and religions interactions in Carnalitas
-# 0001. seed dt traits for all characters
-#
-
-#
+# Events related to slavery religious doctrines
 # 0001. A vassal agrees to emancipate illegal slaves they may hold.
-# 0002. Add default slavery religious doctrines to newly created religions if they don't have them
-#
+# 0002. A vassal agrees to emancipate illegal slaves they may hold in exchange for gold.
+# 0003. A vassal agrees to emancipate illegal slaves they may hold in exchange for a weak hook.
+# 0004. A vassal refuses to emancipate illegal slaves.
 
-carn_religion.0001 = {
+carn_religious_interaction.0001 = {
 	type = letter_event
 	opening = {
 		desc = religious_interaction.1.opening
@@ -26,38 +23,192 @@ carn_religion.0001 = {
 	}
 }
 
-carn_religion.0002 = {
-	type = empty
-	hidden = yes
-
-	trigger = {
-		has_game_rule = carn_slavery_religious_doctrines_on
+carn_religious_interaction.2011 = {
+	type = letter_event
+	opening = {
+		desc = religious_interaction.1.opening
 	}
+	desc = religious_interaction.2011.desc
+	sender = scope:recipient
 
 	immediate = {
+		scope:recipient = {
+			add_opinion = {
+				modifier = demanded_manumission
+				target = root
+				opinion = -10
+			}
+		}
+	}
+
+	#Accept
+	option = {
+		name = religious_interaction.2011.a
+		pay_short_term_gold = {
+			target = scope:recipient
+			gold = demand_conversion_bribe_size
+		}
+
+		demand_conversion_interaction_effect = yes
+		stress_impact = {
+			greedy = medium_stress_impact_gain
+		}
+		ai_chance = {
+			base = 100
+			ai_value_modifier = {
+				ai_greed = -1
+				ai_zeal = 0.5
+			}
+			modifier = {
+				factor = 0.2
+				gold <= 0
+			}
+		}
+	}
+
+	#Refuse
+	option = {
+		name = religious_interaction.2011.b
 		if = {
-			limit = { has_game_rule = carn_slavery_religious_doctrines_on }
-			root.faith = {
-				if = {
-					limit = {
-						NAND = {
-							has_doctrine = carn_doctrine_same_slavery_crime
-							has_doctrine = carn_doctrine_same_slavery_shunned
-							has_doctrine = carn_doctrine_same_slavery_accepted
-						}
-					}
-					add_doctrine = carn_doctrine_same_slavery_crime
+			limit = {
+				refusing_conversion_is_crime_trigger = {
+					CHARACTER = scope:recipient
 				}
-				if = {
-					limit = {
-						NAND = {
-							has_doctrine = carn_doctrine_other_slavery_crime
-							has_doctrine = carn_doctrine_other_slavery_shunned
-							has_doctrine = carn_doctrine_other_slavery_accepted
-						}
-					}
-					add_doctrine = carn_doctrine_other_slavery_accepted
+			}
+			add_opinion = {
+				target = scope:recipient
+				modifier = illegal_resisted_conversion_opinion
+				years = 15
+			}
+		}
+		else = {
+			hidden_effect = {
+				add_opinion = {
+					target = scope:recipient
+					modifier = resisted_conversion_opinion
+					years = 15
 				}
+			}
+		}
+		ai_chance = {
+			base = 25
+			modifier = {
+				add = 100
+				gold < demand_conversion_bribe_size
+			}
+		}
+	}
+
+	#Use a Hook to force it through
+	option = {
+		name = religious_interaction.2011.c
+		trigger = {
+			has_strong_usable_hook = scope:recipient
+		}
+		use_hook = scope:recipient
+
+		demand_conversion_interaction_effect = yes
+		ai_chance = {
+			base = 100
+			ai_value_modifier = {
+				ai_rationality = 1
+			}
+		}
+	}
+}
+
+
+carn_religious_interaction.2012 = {
+	type = letter_event
+	opening = {
+		desc = religious_interaction.1.opening
+	}
+	desc = religious_interaction.2012.desc
+	sender = scope:recipient
+
+	immediate = {
+		hidden_effect = {
+			if = {
+				limit = {
+					exists = scope:recipient.capital_county
+					scope:recipient.capital_county.faith = scope:recipient.faith
+				}
+				save_scope_value_as = {
+					name = convert_capital
+					value = yes
+				}
+			}
+		}
+		scope:recipient = {
+			add_opinion = {
+				modifier = demanded_my_conversion_opinion
+				target = root
+				opinion = -10
+			}
+		}
+	}
+
+	#Accept
+	option = {
+		name = religious_interaction.2012.a
+		scope:recipient = {
+			add_hook = {
+				target = root
+				type = favor_hook
+			}
+		}
+		demand_conversion_interaction_effect = yes
+
+		stress_impact = {
+			greedy = medium_stress_impact_gain
+		}
+		ai_chance = {
+			base = 100
+		}
+	}
+
+	#Refuse
+	option = {
+		name = religious_interaction.2012.b
+		if = {
+			limit = {
+				refusing_conversion_is_crime_trigger = {
+					CHARACTER = scope:recipient
+				}
+			}
+			add_opinion = {
+				target = scope:recipient
+				modifier = illegal_resisted_conversion_opinion
+				years = 15
+			}
+		}
+		else = {
+			hidden_effect = {
+				add_opinion = {
+					target = scope:recipient
+					modifier = resisted_conversion_opinion
+					years = 15
+				}
+			}
+		}
+
+		ai_chance = {
+			base = 25
+		}
+	}
+
+	#Use a Hook to force it through
+	option = {
+		name = religious_interaction.2012.c
+		trigger = {
+			has_strong_usable_hook = scope:recipient
+		}
+		use_hook = scope:recipient
+		demand_conversion_interaction_effect = yes
+		ai_chance = {
+			base = 100
+			ai_value_modifier = {
+				ai_rationality = 1
 			}
 		}
 	}
