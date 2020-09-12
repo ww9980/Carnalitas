@@ -7,7 +7,7 @@
 - [ ] New feature (non-breaking change which adds functionality)
 - [ ] Localization change (Your changes mainly concern localization)
 - [ ] Breaking change (fix or feature that would cause existing functionality to change. Likely not save-compatible)
-- [ ] I have added a summary of the change to the changelog.txt file
+- [ ] I have added a summary of the change to the changelog.md file
 - [ ] My change requires a change to the documentation/wiki.
 - [ ] I have updated the documentation accordingly.
 
