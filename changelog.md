@@ -19,6 +19,7 @@
 ## Tweaks
 
 * Made arousal event message more visible
+* Updated dick trait icons
 
 ## Bug Fixes
 
