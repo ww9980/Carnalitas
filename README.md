@@ -10,6 +10,8 @@ When forking Carnalitas, please create new files rather than writing into existi
 
 [Carnalitas Discord Channel](https://discord.gg/fYWeGVd)
 
+[Credits](https://github.com/cherisong/Carnalitas/wiki/Credits)
+
 ## Load Order
 
 * total conversion mods
