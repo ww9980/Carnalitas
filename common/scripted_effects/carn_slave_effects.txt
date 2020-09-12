@@ -9,7 +9,7 @@ carn_enslave_effect = {
 			limit = { is_landed = yes }
 			depose = yes
 		}
-		add_trait = slave
+		hidden_effect = { add_trait = slave }
 	}
 
 	scope:new_owner = {
@@ -316,10 +316,12 @@ carn_enslave_effect = {
 # frees the scoped character if they are a slave
 # does not have any opinion effects, this is just for unsetting the relation and doing the busywork only.
 carn_free_slave_effect = {
-	remove_trait = slave
-	add_trait = former_slave
 	every_relation = {
 		type = slave_owner
 		remove_relation_slave = prev
+	}
+	hidden_effect = {
+		remove_trait = slave
+		add_trait = former_slave
 	}
 }
