@@ -10,7 +10,7 @@ carn_doctrine.0001 = {
 	hidden = yes
 
 	trigger = {
-		has_game_rule = carn_slavery_religious_doctrines_on
+		NOT = { has_game_rule = carn_slavery_content_disabled }
 	}
 
 	immediate = {
@@ -23,33 +23,30 @@ carn_doctrine.0002 = {
 	hidden = yes
 
 	trigger = {
-		has_game_rule = carn_slavery_religious_doctrines_on
+		NOT = { has_game_rule = carn_slavery_content_disabled }
 	}
 
 	immediate = {
-		if = {
-			limit = { has_game_rule = carn_slavery_religious_doctrines_on }
-			root.faith = {
-				if = {
-					limit = {
-						NOR = {
-							has_doctrine = carn_doctrine_same_slavery_crime
-							has_doctrine = carn_doctrine_same_slavery_shunned
-							has_doctrine = carn_doctrine_same_slavery_accepted
-						}
+		root.faith = {
+			if = {
+				limit = {
+					NOR = {
+						has_doctrine = carn_doctrine_same_slavery_crime
+						has_doctrine = carn_doctrine_same_slavery_shunned
+						has_doctrine = carn_doctrine_same_slavery_accepted
 					}
-					add_doctrine = carn_doctrine_same_slavery_crime
 				}
-				if = {
-					limit = {
-						NOR = {
-							has_doctrine = carn_doctrine_other_slavery_crime
-							has_doctrine = carn_doctrine_other_slavery_shunned
-							has_doctrine = carn_doctrine_other_slavery_accepted
-						}
+				add_doctrine = carn_doctrine_same_slavery_crime
+			}
+			if = {
+				limit = {
+					NOR = {
+						has_doctrine = carn_doctrine_other_slavery_crime
+						has_doctrine = carn_doctrine_other_slavery_shunned
+						has_doctrine = carn_doctrine_other_slavery_accepted
 					}
-					add_doctrine = carn_doctrine_other_slavery_accepted
 				}
+				add_doctrine = carn_doctrine_other_slavery_accepted
 			}
 		}
 	}

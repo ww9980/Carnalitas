@@ -1,8 +1,8 @@
-﻿carn_doctrine_same_slavery = {
+carn_doctrine_same_slavery = {
 	group = "crimes"
 
 	is_available_on_create = {
-		NOT = { has_game_rule = carn_slavery_religious_doctrines_off }
+		NOT = { has_game_rule = carn_slavery_content_disabled }
 	}
 
 	carn_doctrine_same_slavery_crime = {
@@ -55,7 +55,7 @@ carn_doctrine_other_slavery = {
 	group = "crimes"
 
 	is_available_on_create = {
-		NOT = { has_game_rule = carn_slavery_religious_doctrines_off }
+		NOT = { has_game_rule = carn_slavery_content_disabled }
 	}
 
 	carn_doctrine_other_slavery_crime = {
