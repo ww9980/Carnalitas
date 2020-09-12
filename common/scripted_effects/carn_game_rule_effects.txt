@@ -3,7 +3,7 @@ carn_game_rule_religious_doctrines_effect = {
 		every_faith = {
 			if = {
 				limit = {
-          NAND = {
+          NOR = {
             has_doctrine = carn_doctrine_same_slavery_crime
             has_doctrine = carn_doctrine_same_slavery_shunned
             has_doctrine = carn_doctrine_same_slavery_accepted
@@ -13,7 +13,7 @@ carn_game_rule_religious_doctrines_effect = {
 			}
       if = {
 				limit = {
-          NAND = {
+          NOR = {
             has_doctrine = carn_doctrine_other_slavery_crime
             has_doctrine = carn_doctrine_other_slavery_shunned
             has_doctrine = carn_doctrine_other_slavery_accepted

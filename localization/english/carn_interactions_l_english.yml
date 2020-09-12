@@ -12,3 +12,6 @@
 
  carn_is_allowed_to_enslave_desc: "[recipient.GetShortUIName|U] is a known [criminal|E] #weak ([recipient.GetExecuteReasons])#!, allowing me to enslave [recipient.GetHerHim] without being viewed as a [tyrant|E]"
  carn_is_allowed_to_enslave_hostile_religion_desc: "[recipient.GetShortUINamePossessive|U] faith, [recipient.GetFaith.GetName], is considered to be either #V Hostile#! or #V Evil#! by my faith, allowing me to enslave [recipient.GetHerHim] without being viewed as a [tyrant|E]."
+
+ carn_demand_free_illegal_slaves_interaction:0 "Demand that [recipient.GetShortUINameNoTooltip] free any illegally held slaves they have."
+ carn_demand_free_illegal_slaves_is_crime:0 "\nRefusing to free illegal slaves is a [crime|E]"

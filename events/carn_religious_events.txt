@@ -1,24 +1,32 @@
-﻿namespace = carn_doctrine
+﻿namespace = carn_religion
 
-# Event chain for seeding default religions with slavery doctrines
-# 0001. Activate the game rule effect for default slavery religious doctrines
+# Events relating to religions and religions interactions in Carnalitas
+# 0001. seed dt traits for all characters
+#
+
+#
+# 0001. A vassal agrees to emancipate illegal slaves they may hold.
 # 0002. Add default slavery religious doctrines to newly created religions if they don't have them
 #
 
-carn_doctrine.0001 = {
-	type = empty
-	hidden = yes
-
-	trigger = {
-		has_game_rule = carn_slavery_religious_doctrines_on
+carn_religion.0001 = {
+	type = letter_event
+	opening = {
+		desc = religious_interaction.1.opening
 	}
+	desc = religious_interaction.2002.desc
+	sender = scope:recipient
 
 	immediate = {
-		carn_game_rule_religious_doctrines_effect = yes
+		show_as_tooltip = { carn_free_illegal_slaves_effect = yes }
+	}
+
+	option = {
+		name = religious_interaction.2002.a
 	}
 }
 
-carn_doctrine.0002 = {
+carn_religion.0002 = {
 	type = empty
 	hidden = yes
 
@@ -32,7 +40,7 @@ carn_doctrine.0002 = {
 			root.faith = {
 				if = {
 					limit = {
-						NOR = {
+						NAND = {
 							has_doctrine = carn_doctrine_same_slavery_crime
 							has_doctrine = carn_doctrine_same_slavery_shunned
 							has_doctrine = carn_doctrine_same_slavery_accepted
@@ -42,7 +50,7 @@ carn_doctrine.0002 = {
 				}
 				if = {
 					limit = {
-						NOR = {
+						NAND = {
 							has_doctrine = carn_doctrine_other_slavery_crime
 							has_doctrine = carn_doctrine_other_slavery_shunned
 							has_doctrine = carn_doctrine_other_slavery_accepted
