@@ -110,6 +110,7 @@ carn_sex_interaction = {
                 carn_sex_scene_effect = {
                     PLAYER = scope:actor
                     TARGET = scope:recipient
+                    DRAMA = yes
                 }
             }
         }
