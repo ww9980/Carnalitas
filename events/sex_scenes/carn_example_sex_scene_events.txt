@@ -58,6 +58,7 @@ carn_sex_scene.0001 = {
 
 		##########################################################################
 		# Don't forget to include carn_had_sex_with_effect
+		# DO NOT CHANGE ANY OF THESE PARAMETERS UNLESS YOU KNOW WHAT YOU'RE DOING
 		##########################################################################
 		
 		scope:carn_sex_player  = {
