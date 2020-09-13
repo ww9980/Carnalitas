@@ -30,6 +30,7 @@ carn_sex_scene_matches_requested_flags_trigger = {
 # carn_sex_scene_is_anal
 # carn_sex_scene_is_handjob
 # carn_sex_scene_is_masturbation
+# carn_sex_scene_is_orgy
 # carn_sex_scene_is_consensual
 # carn_sex_scene_is_noncon
 # carn_sex_scene_is_dubcon
@@ -71,6 +72,10 @@ carn_sex_scene_is_handjob = {
 
 carn_sex_scene_is_masturbation = {
 	flag:masturbation = { add_to_temporary_list = carn_sex_scene_flags }
+}
+
+carn_sex_scene_is_orgy = {
+	flag:orgy = { add_to_temporary_list = carn_sex_scene_flags }
 }
 
 carn_sex_scene_is_consensual = {
@@ -138,6 +143,7 @@ carn_sex_scene_is_gore = {
 # carn_sex_scene_was_anal
 # carn_sex_scene_was_handjob
 # carn_sex_scene_was_masturbation
+# carn_sex_scene_was_orgy
 # carn_sex_scene_was_consensual
 # carn_sex_scene_was_noncon
 # carn_sex_scene_was_dubcon
@@ -178,6 +184,10 @@ carn_sex_scene_was_handjob = {
 
 carn_sex_scene_was_masturbation = {
 	flag:masturbation = { is_in_list = carn_sex_scene_flags }
+}
+
+carn_sex_scene_was_orgy = {
+	flag:orgy = { is_in_list = carn_sex_scene_flags }
 }
 
 carn_sex_scene_was_consensual = {

@@ -16,6 +16,8 @@ carn_sex_scene_fallback = {
 # Triggers whenever a character has sex via event or decision, in the scope of that character
 # DOES NOT trigger off random passive pregnancy with spouse/consort
 # You can check for specific sex acts with "carn_sex_scene_was_vaginal = yes", etc
+# root = the character receiving the event
+# scope:carn_sex_partner = the other partner in the sex effect
 carn_on_sex = {
 	events = {
 	}
