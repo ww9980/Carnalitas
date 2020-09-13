@@ -48,10 +48,10 @@ jobs:
         name: Carnalitas.${{ github.event.inputs.version }}
         path: |
           ${{ github.workspace }}
-          !${{ github.workspace }}/Carnalitas/.git
-          !${{ github.workspace }}/Carnalitas/.github
+          !${{ github.workspace }}/Carnalitas/.*
           !${{ github.workspace }}/Carnalitas/*.md
           !${{ github.workspace }}/Carnalitas/*.txt
+          !${{ github.workspace }}/Carnalitas/*.py
 
     # Download the artifact for compression
     - name: Download the artifact
