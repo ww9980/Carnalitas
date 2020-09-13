@@ -180,13 +180,63 @@ def updating(output_language: str):
     print('Updating Translation for Language: '+output_language);
     output_dir = os.path.join(localization_dir, output_language);
 
-    print('Copying '+BASE_LANGUAGE+' Translations from '+base_dir+' to '+output_dir);
+    print('Using '+BASE_LANGUAGE+' Translations from '+base_dir+' in '+output_dir);
     copy_base_translations(base_dir, output_dir, BASE_LANGUAGE, output_language);
+
+def get_translation_stats_file(base: str, path: str) -> Tuple[str, int, int]:
+    """Gets the number of translated and not translated string of a file"""
+
+    yaml = get_yaml_from_file(path);
+    translated = sum(1 for x in yaml if x[2]);
+    not_translated = len(yaml) - translated;
+    return (path.replace(base, ''), translated, not_translated);
+
+def get_translation_stats_folder(base: str, folder: str) -> List[Tuple[str, int, int]]:
+    """Gets Translation stats for a folder"""
+
+    result = list();
+
+    items = glob.glob(folder + '\\*');
+    for item in items:
+        if os.path.isdir(item):
+            dir_stats = get_translation_stats_folder(base, item);
+            for stat in dir_stats:
+                result.append(stat);
+        else:
+            file_stats = get_translation_stats_file(base, item);
+            result.append(file_stats);
+
+    return result;
+
+def add(enumerable: List[int]) -> int:
+    """Adds all numbers of a list"""
+
+    i = 0;
+    for x in enumerable:
+        i += x;
+    return i;
 
 def stats():
     """Displays Translation Statistics"""
 
-    print('Displaying Translation Statistics:');
+    print('Translation Statistics:\n');
+    print('%-10s %10s %7s %5s' % ('Language ', 'Translated', 'Missing', 'Ratio'))
+
+    languages = glob.glob(localization_dir+'\\*');
+    for language in languages:
+        name = language.replace(localization_dir+'\\', '');
+        lang_stats = get_translation_stats_folder(language+'\\', language);
+        translated = list(map(lambda x: x[1], lang_stats));
+        missing = list(map(lambda x: x[2], lang_stats));
+        total_translated = add(translated);
+        total_missing = add(missing);
+        total = total_translated+total_missing;
+        ratio = total_translated/total;
+
+        ratio_str = f'{ratio:.2f}';
+
+        print('%-10s %10s %7s %5s' % (name, total_translated, total_missing, ratio_str))
+
 
 def main():
     """Main"""
