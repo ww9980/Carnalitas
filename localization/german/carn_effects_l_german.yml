@@ -1,0 +1,25 @@
+﻿l_german:
+
+carn_i_gain_slave:0 "[TARGET_CHARACTER.GetShortUIName|U] becomes your [slave|E]"
+carn_they_gain_slave:0 "[TARGET_CHARACTER.GetShortUIName|U] becomes [CHARACTER.GetShortUINamePossessive] [slave|E]"
+
+carn_i_got_slave:0 "[TARGET_CHARACTER.GetShortUIName|U] became your [slave|E]"
+carn_they_got_slave:0 "[TARGET_CHARACTER.GetShortUIName|U] became [CHARACTER.GetShortUINamePossessive] [slave|E]"
+
+carn_i_gain_slave_owner:0 "[TARGET_CHARACTER.GetShortUIName|U] becomes your [slave_owner|E]"
+carn_they_gain_slave_owner:0 "[TARGET_CHARACTER.GetShortUIName|U] becomes [CHARACTER.GetShortUINamePossessive] [slave_owner|E]"
+
+carn_i_got_slave_owner:0 "[TARGET_CHARACTER.GetShortUIName|U] became your [slave_owner|E]"
+carn_they_got_slave_owner:0 "[TARGET_CHARACTER.GetShortUIName|U] became [CHARACTER.GetShortUINamePossessive] [slave_owner|E]"
+
+carn_i_lose_slave:0 "[TARGET_CHARACTER.GetShortUIName|U] is no longer your [slave|E]"
+carn_they_lose_slave:0 "[TARGET_CHARACTER.GetShortUIName|U] is no longer [CHARACTER.GetShortUINamePossessive] [slave|E]"
+
+carn_i_lost_slave:0 "[TARGET_CHARACTER.GetShortUIName|U] is no longer your [slave|E]"
+carn_they_lost_slave:0 "[TARGET_CHARACTER.GetShortUIName|U] is no longer [CHARACTER.GetShortUINamePossessive] [slave|E]"
+
+carn_i_lose_slave_owner:0 "[TARGET_CHARACTER.GetShortUIName|U] is no longer your [slave_owner|E]"
+carn_they_lose_slave_owner:0 "[TARGET_CHARACTER.GetShortUIName|U] is no longer [CHARACTER.GetShortUINamePossessive] [slave_owner|E]"
+
+carn_i_lost_slave_owner:0 "[TARGET_CHARACTER.GetShortUIName|U] is no longer your [slave_owner|E]"
+carn_they_lost_slave_owner:0 "[TARGET_CHARACTER.GetShortUIName|U] is no longer [CHARACTER.GetShortUINamePossessive] [slave_owner|E]"
