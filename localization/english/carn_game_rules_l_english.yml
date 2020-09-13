@@ -72,12 +72,6 @@
  setting_carn_slavery_content_consensual_only: "#high Consensual Only#!"
  setting_carn_slavery_content_consensual_only_desc: "Characters can be enslaved, but only if they accept a Character Interaction without any duress or coercion."
 
- rule_carn_slavery_religious_doctrines: "#X Carnalitas:#! Slavery Religious Doctrines"
- setting_carn_slavery_religious_doctrines_off: "Off"
- setting_carn_slavery_religious_doctrines_off_desc: "Religions will not have an opinion on slavery, and if enabled it will always be legal."
- setting_carn_slavery_religious_doctrines_on: "#high On#!"
- setting_carn_slavery_religious_doctrines_on_desc: "Religions may have doctrines dictating what types of slavery, if any, are legal, and if they are shunned."
-
  rule_carn_content_anal: "#X Carnalitas:#! Anal Scenes"
  setting_carn_content_anal_off: "Off"
  setting_carn_content_anal_off_desc: "Sex scenes that have been given the 'anal' flag by their creator will not be displayed."

@@ -11,7 +11,7 @@ carn_religious_interaction.0001 = {
 	opening = {
 		desc = religious_interaction.1.opening
 	}
-	desc = religious_interaction.2002.desc
+	desc = carn_religious_interaction.0001.desc
 	sender = scope:recipient
 
 	immediate = {
@@ -19,22 +19,22 @@ carn_religious_interaction.0001 = {
 	}
 
 	option = {
-		name = religious_interaction.2002.a
+		name = carn_religious_interaction.0001.a
 	}
 }
 
-carn_religious_interaction.2011 = {
+carn_religious_interaction.0002 = {
 	type = letter_event
 	opening = {
 		desc = religious_interaction.1.opening
 	}
-	desc = religious_interaction.2011.desc
+	desc = carn_religious_interaction.0002
 	sender = scope:recipient
 
 	immediate = {
 		scope:recipient = {
 			add_opinion = {
-				modifier = demanded_manumission
+				modifier = carn_demanded_manumission
 				target = root
 				opinion = -10
 			}
@@ -43,13 +43,13 @@ carn_religious_interaction.2011 = {
 
 	#Accept
 	option = {
-		name = religious_interaction.2011.a
+		name = carn_religious_interaction.0002.a
 		pay_short_term_gold = {
 			target = scope:recipient
 			gold = demand_conversion_bribe_size
 		}
 
-		demand_conversion_interaction_effect = yes
+		carn_free_illegal_slaves_effect = yes
 		stress_impact = {
 			greedy = medium_stress_impact_gain
 		}
@@ -68,27 +68,11 @@ carn_religious_interaction.2011 = {
 
 	#Refuse
 	option = {
-		name = religious_interaction.2011.b
-		if = {
-			limit = {
-				refusing_conversion_is_crime_trigger = {
-					CHARACTER = scope:recipient
-				}
-			}
-			add_opinion = {
-				target = scope:recipient
-				modifier = illegal_resisted_conversion_opinion
-				years = 15
-			}
-		}
-		else = {
-			hidden_effect = {
-				add_opinion = {
-					target = scope:recipient
-					modifier = resisted_conversion_opinion
-					years = 15
-				}
-			}
+		name = carn_religious_interaction.0002.b
+		add_opinion = {
+			target = scope:recipient
+			modifier = carn_refused_free_illegal_slaves_opinion
+			years = 15
 		}
 		ai_chance = {
 			base = 25
@@ -101,13 +85,13 @@ carn_religious_interaction.2011 = {
 
 	#Use a Hook to force it through
 	option = {
-		name = religious_interaction.2011.c
+		name = carn_religious_interaction.0002.c
 		trigger = {
 			has_strong_usable_hook = scope:recipient
 		}
 		use_hook = scope:recipient
 
-		demand_conversion_interaction_effect = yes
+		carn_free_illegal_slaves_effect = yes
 		ai_chance = {
 			base = 100
 			ai_value_modifier = {
@@ -118,30 +102,18 @@ carn_religious_interaction.2011 = {
 }
 
 
-carn_religious_interaction.2012 = {
+carn_religious_interaction.0003 = {
 	type = letter_event
 	opening = {
 		desc = religious_interaction.1.opening
 	}
-	desc = religious_interaction.2012.desc
+	desc = carn_religious_interaction.0003.desc
 	sender = scope:recipient
 
 	immediate = {
-		hidden_effect = {
-			if = {
-				limit = {
-					exists = scope:recipient.capital_county
-					scope:recipient.capital_county.faith = scope:recipient.faith
-				}
-				save_scope_value_as = {
-					name = convert_capital
-					value = yes
-				}
-			}
-		}
 		scope:recipient = {
 			add_opinion = {
-				modifier = demanded_my_conversion_opinion
+				modifier = carn_demanded_manumission
 				target = root
 				opinion = -10
 			}
@@ -150,14 +122,14 @@ carn_religious_interaction.2012 = {
 
 	#Accept
 	option = {
-		name = religious_interaction.2012.a
+		name = carn_religious_interaction.0003.a
 		scope:recipient = {
 			add_hook = {
 				target = root
 				type = favor_hook
 			}
 		}
-		demand_conversion_interaction_effect = yes
+		carn_free_illegal_slaves_effect = yes
 
 		stress_impact = {
 			greedy = medium_stress_impact_gain
@@ -169,29 +141,12 @@ carn_religious_interaction.2012 = {
 
 	#Refuse
 	option = {
-		name = religious_interaction.2012.b
-		if = {
-			limit = {
-				refusing_conversion_is_crime_trigger = {
-					CHARACTER = scope:recipient
-				}
-			}
-			add_opinion = {
-				target = scope:recipient
-				modifier = illegal_resisted_conversion_opinion
-				years = 15
-			}
+		name = carn_religious_interaction.0003.b
+		add_opinion = {
+			target = scope:recipient
+			modifier = carn_refused_free_illegal_slaves_opinion
+			years = 15
 		}
-		else = {
-			hidden_effect = {
-				add_opinion = {
-					target = scope:recipient
-					modifier = resisted_conversion_opinion
-					years = 15
-				}
-			}
-		}
-
 		ai_chance = {
 			base = 25
 		}
@@ -199,12 +154,109 @@ carn_religious_interaction.2012 = {
 
 	#Use a Hook to force it through
 	option = {
-		name = religious_interaction.2012.c
+		name = carn_religious_interaction.0003.c
 		trigger = {
 			has_strong_usable_hook = scope:recipient
 		}
 		use_hook = scope:recipient
-		demand_conversion_interaction_effect = yes
+		carn_free_illegal_slaves_effect = yes
+		ai_chance = {
+			base = 100
+			ai_value_modifier = {
+				ai_rationality = 1
+			}
+		}
+	}
+}
+
+carn_religious_interaction.0004 = {
+	type = letter_event
+	opening = {
+		desc = religious_interaction.1.opening
+	}
+	desc = {
+		desc = carn_religious_interaction.0004.desc
+		triggered_desc = {
+			trigger = { exists = scope:hooking_out_of_conversion }
+			desc = carn_religious_interaction.0004.hooking_out
+		}
+	}
+	sender = {
+		character = scope:recipient
+		animation = dismissal
+	}
+
+	immediate = {
+		scope:recipient = {
+			add_opinion = {
+				modifier = carn_demanded_manumission
+				target = root
+				opinion = -10
+			}
+		}
+		if = {
+			limit = {
+				scope:recipient = {
+					has_strong_usable_hook = root
+				}
+			}
+			save_scope_value_as = {
+				name = hooking_out_of_conversion
+				value = yes
+			}
+		}
+	}
+
+	#It's a Crime to refuse
+	option = {
+		name = carn_religious_interaction.0004.b
+		trigger = {
+			NOT = { exists = scope:hooking_out_of_conversion }
+		}
+
+		add_opinion = {
+			target = scope:recipient
+			modifier = carn_refused_free_illegal_slaves_opinion
+			years = 10
+		}
+		ai_chance = {
+			base = 100
+		}
+	}
+
+	#It's a Crime, but the target has a Hook on you
+	option = {
+		name = carn_religious_interaction.0004.c
+		trigger = {
+			exists = scope:hooking_out_of_conversion
+		}
+		exclusive = yes
+		scope:recipient = {
+			use_hook = root
+		}
+		hidden_effect = {
+			add_opinion = {
+				target = scope:recipient
+				modifier = carn_refused_free_illegal_slaves_opinion
+				imprisonment_reason = no
+				years = 20
+			}
+		}
+		ai_chance = {
+			base = 100
+		}
+	}
+
+	#Player uses a Hook to force it through
+	option = {
+		name = carn_religious_interaction.0004.d
+		trigger = {
+			NOT = { exists = scope:hooking_out_of_conversion }
+			has_usable_hook = scope:recipient
+		}
+		use_hook = scope:recipient
+
+		carn_free_illegal_slaves_effect = yes
 		ai_chance = {
 			base = 100
 			ai_value_modifier = {

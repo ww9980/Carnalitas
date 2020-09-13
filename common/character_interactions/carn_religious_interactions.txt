@@ -79,7 +79,7 @@
 
 	on_accept = {
 		scope:actor = {
-			trigger_event = carn_religion.0001
+			trigger_event = carn_religious_interaction.0001
 		}
     carn_free_illegal_slaves_effect = yes
   }
@@ -94,7 +94,7 @@
 						}
 						scope:actor = {
 							trigger_event = {
-								id = religious_interaction.2011
+								id = carn_religious_interaction.0002
 							}
 						}
 					}
@@ -111,26 +111,26 @@
 						}
 						scope:actor = {
 							trigger_event = {
-								id = religious_interaction.2012
+								id = carn_religious_interaction.0003
 							}
 						}
 					}
 					20 = { #Full refuse
 						modifier = {
 							add = 20
-							scope:recipient.demand_conversion_likelihood_calculation < 40
+							scope:recipient.demand_free_illegal_slaves_likelihood_calculation < 40
 						}
 						modifier = {
 							add = 20
-							scope:recipient.demand_conversion_likelihood_calculation < 20
+							scope:recipient.demand_free_illegal_slaves_likelihood_calculation < 20
 						}
 						modifier = {
 							add = 50
-							scope:recipient.demand_conversion_likelihood_calculation < 0
+							scope:recipient.demand_free_illegal_slaves_likelihood_calculation < 0
 						}
 						scope:actor = {
 							trigger_event = {
-								id = religious_interaction.2003
+								id = carn_religious_interaction.0004
 							}
 						}
 					}
@@ -140,7 +140,7 @@
 			show_as_tooltip = {
 				#Negative opinions
 				add_opinion = {
-					modifier = demanded_my_conversion_opinion
+					modifier = demanded_manumission
 					target = scope:actor
 					opinion = -10
 				}
@@ -182,7 +182,7 @@
 
 		modifier = {
 			factor = 0
-			scope:recipient.demand_conversion_likelihood_calculation < 10
+			scope:recipient.demand_free_illegal_slaves_likelihood_calculation < 10
 		}
 	}
 	ai_accept = {

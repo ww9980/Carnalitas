@@ -1,0 +1,11 @@
+﻿carn_refused_free_illegal_slaves_opinion = {
+	opinion = -15
+	years = 10
+	imprisonment_reason = yes
+}
+
+carn_demanded_manumission = {
+	opinion = -20
+	monthly_change = 0.1
+	decaying = yes
+}
