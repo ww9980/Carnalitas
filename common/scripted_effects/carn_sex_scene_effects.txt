@@ -12,6 +12,8 @@
 # Second, call carn_sex_scene_effect with the following arguments:
 # PLAYER is the character who the event will be shown to.
 # TARGET is the character that PLAYER is having sex with.
+# DRAMA is yes or no, whether you want the sex scene to affect stress and trigger adultery and peasant affair storylines. (Note: This doesn't stop a relationship from being adulterous, or a child from being born a bastard. It just affects whether the stress effects and story cycles will happen.)
+# (Cheri recommends setting DRAMA = yes unless you have a really good reason)
 #
 # The sex scene generator triggers an on_action with a list of random_events that match all of the requested tags.
 # The sex scene events themselves will define the triggers for those events to be shown, i.e. a consensual lesbian sex event should check that both participants are female and carn_sex_scene_is_consensual = yes
@@ -34,6 +36,7 @@
 carn_sex_scene_effect = {
 	$PLAYER$ = { save_scope_as = carn_sex_player }
 	$TARGET$ = { save_scope_as = carn_sex_target }
+	$DRAMA$ =  { save_scope_as = carn_sex_drama }
 	scope:carn_sex_player = {
 		trigger_event = {
 			on_action = carn_sex_scene
@@ -54,6 +57,7 @@ carn_sex_scene_effect = {
 # carn_sex_scene_request_anal
 # carn_sex_scene_request_handjob
 # carn_sex_scene_request_masturbation
+# carn_sex_scene_request_orgy
 # carn_sex_scene_request_consensual
 # carn_sex_scene_request_noncon
 # carn_sex_scene_request_dubcon
@@ -99,6 +103,10 @@ carn_sex_scene_request_masturbation = {
 	flag:masturbation = { add_to_list = carn_sex_scene_requested_flags }
 }
 
+carn_sex_scene_request_orgy = {
+	flag:orgy = { add_to_list = carn_sex_scene_requested_flags }
+}
+
 carn_sex_scene_request_consensual = {
 	flag:consensual = { add_to_list = carn_sex_scene_requested_flags }
 }
@@ -129,7 +137,10 @@ carn_sex_scene_request_bdsm = {
 }
 
 carn_sex_scene_request_bestiality = {
-	flag:bestiality = { add_to_list = carn_sex_scene_requested_flags }
+	if = {
+		limit = { has_game_rule = carn_content_bestiality_on }
+		flag:bestiality = { add_to_list = carn_sex_scene_requested_flags }
+	}
 }
 
 carn_sex_scene_request_petplay = {
@@ -175,6 +186,7 @@ carn_sex_scene_request_gore = {
 # carn_sex_scene_is_anal
 # carn_sex_scene_is_handjob
 # carn_sex_scene_is_masturbation
+# carn_sex_scene_is_orgy
 # carn_sex_scene_is_consensual
 # carn_sex_scene_is_noncon
 # carn_sex_scene_is_dubcon
@@ -215,6 +227,10 @@ carn_sex_scene_is_handjob = {
 
 carn_sex_scene_is_masturbation = {
 	flag:masturbation = { add_to_list = carn_sex_scene_flags }
+}
+
+carn_sex_scene_is_orgy = {
+	flag:orgy = { add_to_list = carn_sex_scene_flags }
 }
 
 carn_sex_scene_is_consensual = {

@@ -53,6 +53,14 @@ carn_futa_trait_inheritance = {
 	carn_futa_trait_inheritance_on = {}
 }
 
+carn_slavery_content = {
+	default = carn_slavery_content_disabled
+	carn_slavery_content_disabled = {}
+	carn_slavery_content_enabled = {}
+	carn_slavery_content_require_acceptance = {}
+	carn_slavery_content_consensual_only = {}
+}
+
 carn_content_anal = {
 	default = carn_content_anal_off
 	carn_content_anal_off = {}
@@ -71,6 +79,13 @@ carn_content_painful = {
 	carn_content_painful_off = {}
 	carn_content_painful_on = {}
 }
+
+carn_content_bestiality = {
+	default = carn_content_bestiality_off
+	carn_content_bestiality_off = {}
+	carn_content_bestiality_on = {}
+}
+
 
 carn_content_watersports = {
 	default = carn_content_watersports_off

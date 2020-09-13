@@ -1,0 +1,8 @@
+﻿carn_can_be_granted_titles = {
+	first = carn_i_can_be_granted_titles
+	first_not = carn_not_i_can_be_granted_titles
+	third = carn_they_can_be_granted_titles
+	third_not = carn_not_they_can_be_granted_titles
+	global = carn_can_be_granted_titles
+	global_not = carn_not_can_be_granted_titles
+}

@@ -1,0 +1,91 @@
+﻿on_set_relation_slave = {
+	effect = {
+		if = {
+			limit = {
+				NOT = {
+					has_hook_of_type = {
+						type = carn_slave_hook
+						target = scope:target
+					}
+				}
+			}
+			add_hook_no_toast = {
+				type = carn_slave_hook
+				target = scope:target
+			}
+		}
+	}
+}
+
+on_remove_relation_slave = {
+	effect = {
+		if = {
+			limit = {
+				has_hook_of_type = {
+					type = carn_slave_hook
+					target = scope:target
+				}
+			}
+			remove_hook = {
+				type = carn_slave_hook
+				target = scope:target
+			}
+		}
+	}
+}
+
+on_death_relation_slave = { # when the slave owner dies
+	effect = {
+		# inheritance of slaves
+		remove_relation_slave = scope:target
+		primary_heir = {
+			set_relation_slave = scope:target
+		}
+	}
+}
+
+on_set_relation_slave_owner = {
+	effect = {
+		if = {
+			limit = {
+				scope:target = {
+					NOT = {
+						has_hook_of_type = {
+							type = carn_slave_hook
+							target = root
+						}
+					}
+				}
+			}
+			add_hook_no_toast = {
+				type = carn_slave_hook
+				target = root
+			}
+		}
+	}
+}
+
+on_remove_relation_slave_owner = {
+	effect = {
+		if = {
+			limit = {
+				scope:target = {
+					has_hook_of_type = {
+						type = carn_slave_hook
+						target = root
+					}
+				}
+			}
+			remove_hook = {
+				type = carn_slave_hook
+				target = root
+			}
+		}
+	}
+}
+
+on_death_relation_slave_owner = { # when the slave dies
+	effect = {
+		remove_relation_slave_owner = scope:target
+	}
+}

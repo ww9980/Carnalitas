@@ -14,6 +14,7 @@ carn_sex_interaction = {
                 is_consort_of = scope:recipient
                 has_relation_lover = scope:recipient
                 has_relation_soulmate = scope:recipient
+                has_relation_slave_owner = scope:recipient
             }
         }
     }
@@ -60,10 +61,56 @@ carn_sex_interaction = {
                 }
             }
             hidden_effect = {
-                carn_sex_scene_request_consensual = yes
+                if = {
+                    limit = {
+                        scope:actor = {
+                            OR = {
+                                is_consort_of = scope:recipient
+                                has_relation_lover = scope:recipient
+                                has_relation_soulmate = scope:recipient
+                            }
+                        }
+                    }
+                    carn_sex_scene_request_consensual = yes
+                }
+                else_if = {
+                    limit = {
+                        scope:actor = {
+                            has_relation_slave_owner = scope:recipient
+                        }
+                    }
+                    if = {
+                        limit = {
+                            scope:recipient = {
+                                opinion = {
+                                    target = scope:owner
+                                    value > 50
+                                }
+                                is_attracted_to_gender_of = scope:owner
+                            }
+                        }
+                        carn_sex_scene_request_consensual = yes
+                    }
+                    else_if = {
+                        limit = {
+                            scope:recipient = {
+                                opinion = {
+                                    target = scope:owner
+                                    value > 0
+                                }
+                                is_attracted_to_gender_of = scope:owner
+                            }
+                        }
+                        carn_sex_scene_request_dubcon = yes
+                    }
+                    else = {
+                        carn_sex_scene_request_noncon = yes
+                    }
+                }
                 carn_sex_scene_effect = {
                     PLAYER = scope:actor
                     TARGET = scope:recipient
+                    DRAMA = yes
                 }
             }
         }

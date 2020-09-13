@@ -30,6 +30,7 @@ carn_sex_scene_matches_requested_flags_trigger = {
 # carn_sex_scene_is_anal
 # carn_sex_scene_is_handjob
 # carn_sex_scene_is_masturbation
+# carn_sex_scene_is_orgy
 # carn_sex_scene_is_consensual
 # carn_sex_scene_is_noncon
 # carn_sex_scene_is_dubcon
@@ -61,6 +62,7 @@ carn_sex_scene_is_vaginal = {
 }
 
 carn_sex_scene_is_anal = {
+	has_game_rule = carn_content_anal_on
 	flag:anal = { add_to_temporary_list = carn_sex_scene_flags }
 }
 
@@ -72,19 +74,26 @@ carn_sex_scene_is_masturbation = {
 	flag:masturbation = { add_to_temporary_list = carn_sex_scene_flags }
 }
 
+carn_sex_scene_is_orgy = {
+	flag:orgy = { add_to_temporary_list = carn_sex_scene_flags }
+}
+
 carn_sex_scene_is_consensual = {
 	flag:consensual = { add_to_temporary_list = carn_sex_scene_flags }
 }
 
 carn_sex_scene_is_noncon = {
+	has_game_rule = carn_content_consent_noncon
 	flag:noncon = { add_to_temporary_list = carn_sex_scene_flags }
 }
 
 carn_sex_scene_is_dubcon = {
+ 	NOT = { has_game_rule = carn_content_consent_always }
 	flag:dubcon = { add_to_temporary_list = carn_sex_scene_flags }
 }
 
 carn_sex_scene_is_painful = {
+	has_game_rule = carn_content_painful_on
 	flag:painful = { add_to_temporary_list = carn_sex_scene_flags }
 }
 
@@ -93,6 +102,7 @@ carn_sex_scene_is_bdsm = {
 }
 
 carn_sex_scene_is_bestiality = {
+	has_game_rule = carn_content_bestiality_on
 	flag:bestiality = { add_to_temporary_list = carn_sex_scene_flags }
 }
 
@@ -109,14 +119,17 @@ carn_sex_scene_is_toy = {
 }
 
 carn_sex_scene_is_watersports = {
+	has_game_rule = carn_content_watersports_on
 	flag:watersports = { add_to_temporary_list = carn_sex_scene_flags }
 }
 
 carn_sex_scene_is_scat = {
+	has_game_rule = carn_content_scat_on
 	flag:scat = { add_to_temporary_list = carn_sex_scene_flags }
 }
 
 carn_sex_scene_is_gore = {
+	has_game_rule = carn_content_gore_on
 	flag:gore = { add_to_temporary_list = carn_sex_scene_flags }
 }
 
@@ -130,6 +143,7 @@ carn_sex_scene_is_gore = {
 # carn_sex_scene_was_anal
 # carn_sex_scene_was_handjob
 # carn_sex_scene_was_masturbation
+# carn_sex_scene_was_orgy
 # carn_sex_scene_was_consensual
 # carn_sex_scene_was_noncon
 # carn_sex_scene_was_dubcon
@@ -170,6 +184,10 @@ carn_sex_scene_was_handjob = {
 
 carn_sex_scene_was_masturbation = {
 	flag:masturbation = { is_in_list = carn_sex_scene_flags }
+}
+
+carn_sex_scene_was_orgy = {
+	flag:orgy = { is_in_list = carn_sex_scene_flags }
 }
 
 carn_sex_scene_was_consensual = {

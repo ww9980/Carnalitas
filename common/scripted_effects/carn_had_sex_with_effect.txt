@@ -1,11 +1,18 @@
 ﻿# better version of had_sex_with_effect
+#
 # CHARACTER_1: the character doing the laying with.
 # CHARACTER_2: the character getting laid.
 # PREGNANCY_CHANCE: the pregnancy chance.
 # DRAMA: if yes, enables stress effects, story cycles and adultery suspicion
+#
+# sends scope:carn_sex_char_1 and scope:carn_sex_char_2 to carn_on_sex
+#
+# returns scope:carn_sex_char_1_impregnated, scope:carn_sex_char_2_impregnated
+# these are yes if the character was impregnated through this sex effect, and no otherwise
 
 carn_had_sex_with_effect = {
-
+	$CHARACTER_1$ = { save_scope_as = carn_sex_char_1 }
+	$CHARACTER_2$ = { save_scope_as = carn_sex_char_2 }
 	if = {
 		limit = {
 			has_character_flag = carn_block_next_had_sex_with_effect
@@ -13,9 +20,6 @@ carn_had_sex_with_effect = {
 		remove_character_flag = carn_block_next_had_sex_with_effect
 	}
 	else = {
-		$CHARACTER_1$ = { save_temporary_scope_as = had_sex_root_character }
-		$CHARACTER_2$ = { save_scope_as = had_sex_with_effect_partner }
-
 		if = {
 			limit = { this = $CHARACTER_1$ }
 			custom_tooltip = carn_had_sex_with_effect.first_person.tt
@@ -79,16 +83,26 @@ carn_had_sex_with_effect = {
 					if = {
 						limit = {
 							is_pregnant = no
+							age >= define:NChildbirth|MIN_FEMALE_REPRODUCTION_AGE
 							age < define:NChildbirth|MAX_FEMALE_REPRODUCTION_AGE
+							$CHARACTER_2$ = { age >= define:NChildbirth|MIN_MALE_REPRODUCTION_AGE }
 						}
 						add_to_variable_list = {
 							name = potential_father_variable_list
 							target = $CHARACTER_2$
 						}
+						save_scope_value_as = {
+							name = carn_sex_char_1_impregnated
+							value = no
+						}
 						random = {
 							chance = $PREGNANCY_CHANCE$
 							make_pregnant = {
 								father = $CHARACTER_2$
+							}
+							save_scope_value_as = {
+								name = carn_sex_char_1_impregnated
+								value = yes
 							}
 						}
 						if = {
@@ -161,16 +175,26 @@ carn_had_sex_with_effect = {
 						}
 						else_if = {
 							limit = {
+								age >= define:NChildbirth|MIN_MALE_REPRODUCTION_AGE
 								$CHARACTER_2$ = {
 									is_pregnant = no
+									age >= define:NChildbirth|MIN_FEMALE_REPRODUCTION_AGE
 									age < define:NChildbirth|MAX_FEMALE_REPRODUCTION_AGE
 								}
+							}
+							save_scope_value_as = {
+								name = carn_sex_char_2_impregnated
+								value = no
 							}
 							$CHARACTER_2$ = {
 								random = {
 									chance = $PREGNANCY_CHANCE$
 									make_pregnant = {
 										father = $CHARACTER_1$
+									}
+									save_scope_value_as = {
+										name = carn_sex_char_2_impregnated
+										value = yes
 									}
 								}
 							}
@@ -290,11 +314,13 @@ carn_had_sex_with_effect = {
 
 		# hook into new on_action
 		$CHARACTER_1$ = {
+			$CHARACTER_2$ = { save_scope_as = carn_sex_partner }
 			trigger_event = {
 				on_action = carn_on_sex
 			}
 		}
 		$CHARACTER_2$ = {
+			$CHARACTER_1$ = { save_scope_as = carn_sex_partner }
 			trigger_event = {
 				on_action = carn_on_sex
 			}
