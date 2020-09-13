@@ -32,3 +32,4 @@
 * Fixed tooltip not displaying for `carn_can_grant_titles_trigger`.
 * Fixed sex scenes being possible to display even if their tags are turned off in game rules.
 * Fixed tits_big and dick_big traits being flagged as bad traits.
+* Fixed breast size traits only using bust_clothes
