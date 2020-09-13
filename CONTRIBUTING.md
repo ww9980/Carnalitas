@@ -25,3 +25,13 @@ Once your feature is done, or at least stable and functioning (doesn't cause cra
 - Add a reviewer to the pull request (cherisong and potentially another contributor who already worked on the code you are modifying)
 - Add the label "enhancement" and any other relevant label, like "visual" if you made some graphical modification
 - If your feature or bugfix is supposed to close or fix an existing issue, please link it in the pull request (the option is also in the right-hand column)
+
+## Adding new translations
+
+Translations go into the `localization` folder where each language gets its own sub directory. You can use the localization helper to quickly setup a new language (requires [Python](https://www.python.org/)):
+
+```shell
+python localization_helper.py <language>
+```
+
+Where `<language>` is the name of the language you want to translate to, eg: `german`.
