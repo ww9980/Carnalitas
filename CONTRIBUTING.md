@@ -31,9 +31,11 @@ Once your feature is done, or at least stable and functioning (doesn't cause cra
 Translations go into the `localization` folder where each language gets its own sub directory. You can use the localization helper to quickly setup a new language (requires [Python](https://www.python.org/)):
 
 ```shell
-python localization_helper.py <language>
+python localization_helper.py update --lang <language>
 ```
 
 Where `<language>` is the name of the language you want to translate to, eg: `german`.
 
 Make sure to mark untranslated strings with `key:0 "value"` instead of `key: "value"`. The `:0` means the string is untranslated and helps track progress. This also means you should remove the `:0` after you translated it.
+
+If you want to see translation statistics use `python localization_helper.py stats`.
