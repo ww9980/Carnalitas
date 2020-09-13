@@ -1,0 +1,14 @@
+﻿l_simp_chinese:
+carn_sex_interaction:0 "Lay With Lover"
+carn_sex_interaction_desc:0 "Spend an intimate moment with [recipient.GetShortUINameNoTooltip]"
+carn_sex_send:0 "Lay With [recipient.GetShortUINameNoTooltip]"
+carn_sex_interaction_notification:0 "Lay With Lover"
+carn_sex_interaction_effect_cd_tt:0 "#weak No game effects will happen because you have used this interaction in the last 5 years #!"
+
+carn_enslave_prisoner_interaction:0 "Enslave"
+carn_enslave_prisoner_interaction_desc:0 "Turn [recipient.GetShortUINameNoTooltip] into your [slave|E]"
+carn_msg_enslave_prisoner:0 "Prisoner Enslaved"
+carn_msg_enslave_prisoner_desc:0 "[recipient.GetTitledFirstName] has become your [slave|E]"
+
+carn_is_allowed_to_enslave_desc:0 "[recipient.GetShortUIName|U] is a known [criminal|E] #weak ([recipient.GetExecuteReasons])#!, allowing me to enslave [recipient.GetHerHim] without being viewed as a [tyrant|E]"
+carn_is_allowed_to_enslave_hostile_religion_desc:0 "[recipient.GetShortUINamePossessive|U] faith, [recipient.GetFaith.GetName], is considered to be either #V Hostile#! or #V Evil#! by my faith, allowing me to enslave [recipient.GetHerHim] without being viewed as a [tyrant|E]."

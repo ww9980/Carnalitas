@@ -9,8 +9,10 @@
 ## Misc Features
 
 * Added a game rule to toggle bestiality events (off by default)
+* Added english fallback for all official CK3 languages
 
-# For Modders
+## For Modders
+
 * **IMPORTANT:** `carn_sex_scene_effect` now also requires argument `DRAMA` (boolean). It passes this argument to the requested event, which should check for it and apply it to `carn_had_sex_with_effect` as appropriate.
 * `carn_had_sex_effect` now returns `scope:carn_sex_char_1_impregnated`, `scope:carn_sex_char_2_impregnated`. These are yes if the character was impregnated through the sex effect, and no otherwise.
 ` New sex scene tag: `orgy`

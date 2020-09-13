@@ -1,0 +1,6 @@
+﻿l_russian:
+
+carn_sex_scene.0001.t:1 "Муки страсти"
+carn_sex_scene.0001.desc_opening:1 "[Select_CString(SCOPE.sC('carn_sex_target').IsFemale, 'Моя', 'Мой' )] [ROOT.Char.Custom2('RelationToMeShort', SCOPE.sC('carn_sex_target'))] [carn_sex_target.GetTitledFirstName] ждёт с нетерпением."
+carn_sex_scene.0001.desc_ending:1 "[ROOT.Char.Custom2('sex_scene', SCOPE.sC('carn_sex_target'))]"
+carn_sex_scene.0001.a:1 "Прекрасно."
