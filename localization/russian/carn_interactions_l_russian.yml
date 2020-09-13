@@ -1,6 +1,6 @@
 ﻿l_russian:
  carn_sex_interaction: "Переспать с любовни[Select_CString(recipient.IsFemale, 'цей', 'ком' )]"
- carn_sex_interaction_desc: "Быть близким к [recipient.GetShortUINameNoTooltip]."
+ carn_sex_interaction_desc: "Провести интимный момент с [recipient.GetShortUINameNoTooltip]."
  carn_sex_send: "Переспать с [recipient.GetShortUINameNoTooltip]"
  carn_sex_interaction_notification: "Переспать с любовницей"
  

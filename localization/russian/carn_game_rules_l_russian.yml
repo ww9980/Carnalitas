@@ -12,19 +12,19 @@
  setting_carn_sex_interaction_enabled: "Включено"
  setting_carn_sex_interaction_enabled_desc: "Вы можете переспать с супругой, любовницей, или родственной душой через взаимодействие с персонажем. Это уменьшает уровень стресса и может быть сделано раз в пять лет."
  setting_carn_sex_interaction_no_cd: "Включено без ограничения по времени"
- setting_carn_sex_interaction_no_cd_desc: "Вы можете переспать с супругой, любовницей, или родственной душой через взаимодействие с персонажем. Каждые пять лет, это взаимодействие с персонажем снимает стресс."
+ setting_carn_sex_interaction_no_cd_desc: "Вы можете переспать с супругой, любовницей, или родственной душой через взаимодействие с персонажем. Каждые пять лет, это взаимодействие с персонажем снижает стресс."
 
  rule_carn_arousal_stress: "#X Carnalitas:#! Возбуждение вызывает стресс"
  setting_carn_arousal_stress_disabled: "Выключено"
  setting_carn_arousal_stress_disabled_desc: "Персонажи не будут получать стресс с течением времени. Это может вызвать некоторый дисбаланс, если вы часто спите с вашими любовницами."
  setting_carn_arousal_stress_enabled: "Включено"
- setting_carn_arousal_stress_enabled_desc: "Персонажи получают стресс с течением времени. Скорость увеличения уровня стресса увеличивается если персонаж $trait_lustful$ или $trait_rakish$, и отсутствует если персонаж $trait_chaste$."
+ setting_carn_arousal_stress_enabled_desc: "Персонажи получают стресс с течением времени. Скорость увеличения уровня стресса увеличивается если персонаж имеет черты $trait_lustful$ или $trait_rakish$, и отсутствует если персонаж $trait_chaste$."
 
  rule_carn_dt_enabled: "#X Carnalitas:#! Половые признаки"
  setting_carn_dt_enabled_false: "Выключены"
  setting_carn_dt_enabled_false_desc: "Персонажи не будут появляться с врождёнными чертами груди и пениса."
  setting_carn_dt_enabled_true: "Включены"
- setting_carn_dt_enabled_true_desc: "Персонажи могут появляться с врождёнными чертами груди и пениса, позволяя вам выводить большие или маленькие груди или пенисы в вашу династию."
+ setting_carn_dt_enabled_true_desc: "Персонажи могут появляться с врождёнными чертами груди и пениса, позволяя вам выводить большие или маленькие груди или пенисы в вашей династии."
 
  rule_carn_dt_trait_names: "#X Carnalitas:#! Названия половых признаков"
  setting_carn_dt_trait_names_default: "По-умолчанию"
@@ -40,7 +40,7 @@
 
  rule_carn_futa_content: "#X Carnalitas:#! Контент с футанари"
  setting_carn_futa_content_disabled: "Выключен"
- setting_carn_futa_content_disabled_desc: "Футанари никогда не будут появляться. Ивенты с футанари и особые персонажи футанари так же отключены.\nЗаметка: Другиу моды могут соблюдать это правило а могут и нет."
+ setting_carn_futa_content_disabled_desc: "Футанари никогда не будут появляться. Ивенты с футанари и особые персонажи футанари так же отключены.\nЗаметка: Другие моды могут соблюдать это правило а могут и нет."
  setting_carn_futa_content_very_rare: "#Очень редко"
  setting_carn_futa_content_very_rare_desc: "0.1% случайный шанс что женщина в игре будет футанари."
  setting_carn_futa_content_rare: "#Редко"
