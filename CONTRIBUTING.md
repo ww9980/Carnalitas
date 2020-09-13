@@ -35,3 +35,5 @@ python localization_helper.py <language>
 ```
 
 Where `<language>` is the name of the language you want to translate to, eg: `german`.
+
+Make sure to mark untranslated strings with `key:0 "value"` instead of `key: "value"`. The `:0` means the string is untranslated and helps track progress. This also means you should remove the `:0` after you translated it.
