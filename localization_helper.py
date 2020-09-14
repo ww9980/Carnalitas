@@ -18,7 +18,10 @@ import argparse;
 import sys;
 import glob;
 import shutil;
-from typing import Tuple, List;
+from typing import NamedTuple, Tuple, List;
+
+"""key, value, translated, comment"""
+Yaml = Tuple[str, str, bool, bool];
 
 BASE_LANGUAGE = 'english';
 ENCODING = 'utf-8-sig';
@@ -43,7 +46,7 @@ def get_lang_name(lang: str) -> str:
 
     return 'l_'+lang;
 
-def get_yaml(string: str) -> Tuple[str, str, bool, bool]:
+def get_yaml(string: str) -> Yaml:
     """Gets a YAML Tuple for the current line"""
 
     empty = ('', '', False, False);
@@ -91,7 +94,7 @@ def get_yaml(string: str) -> Tuple[str, str, bool, bool]:
     result = (key, value, translated, False);
     return result;
 
-def get_yaml_from_file(path: str) -> List[Tuple[str, str, bool, bool]]:
+def get_yaml_from_file(path: str) -> List[Yaml]:
     """Reads a file and returns a list of all YAML values"""
 
     yaml = list();
@@ -103,7 +106,7 @@ def get_yaml_from_file(path: str) -> List[Tuple[str, str, bool, bool]]:
 
     return yaml;
 
-def yaml_to_string(yaml: Tuple[str, str, bool], include_translate: bool = True) -> str:
+def yaml_to_string(yaml: Yaml, include_translate: bool = True) -> str:
     """Converst a YAML Tuple to string"""
     translate_str = '' if not include_translate else '1' if yaml[2] else '0';
     return yaml[0]+':'+translate_str+' '+yaml[1]+'\n';
