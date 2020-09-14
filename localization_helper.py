@@ -11,6 +11,10 @@ Viewing statistics:
 
 python localization_helper.py stats
 
+Viewing statistics for a specific language:
+
+python localization_helper.py stats --lang german
+
 """
 
 import os;
@@ -19,6 +23,9 @@ import sys;
 import glob;
 import shutil;
 from typing import Tuple, List;
+
+#key, value, translated, comment
+Yaml = Tuple[str, str, bool, bool];
 
 BASE_LANGUAGE = 'english';
 ENCODING = 'utf-8-sig';
@@ -43,15 +50,24 @@ def get_lang_name(lang: str) -> str:
 
     return 'l_'+lang;
 
-def get_yaml(string: str) -> Tuple[str, str, bool]:
+def get_yaml(string: str) -> Yaml:
     """Gets a YAML Tuple for the current line"""
 
-    empty = ('', '', False);
+    empty = ('', '', False, False);
 
     if is_empty(string):
         return empty;
 
     line = string.strip();
+    comment_index = -1;
+
+    try:
+        comment_index = line.index('#');
+        if comment_index == 0:
+            return ('', '', False, True);
+    except ValueError:
+        pass;
+
     line_len = len(line);
     index = -1;
     key = '';
@@ -67,7 +83,7 @@ def get_yaml(string: str) -> Tuple[str, str, bool]:
     key = line[0:index];
 
     if line_len <= index+1:
-        return (key, value, translated);
+        return (key, value, translated, False);
 
     if not is_empty(line[index+1]):
         translation_value = line[index+1];
@@ -79,10 +95,10 @@ def get_yaml(string: str) -> Tuple[str, str, bool]:
     else:
         value = line[index+1:].strip();
 
-    result = (key, value, translated);
+    result = (key, value, translated, False);
     return result;
 
-def get_yaml_from_file(path: str) -> List[Tuple[str, str, bool]]:
+def get_yaml_from_file(path: str) -> List[Yaml]:
     """Reads a file and returns a list of all YAML values"""
 
     yaml = list();
@@ -94,7 +110,7 @@ def get_yaml_from_file(path: str) -> List[Tuple[str, str, bool]]:
 
     return yaml;
 
-def yaml_to_string(yaml: Tuple[str, str, bool], include_translate: bool = True) -> str:
+def yaml_to_string(yaml: Yaml, include_translate: bool = True) -> str:
     """Converst a YAML Tuple to string"""
     translate_str = '' if not include_translate else '1' if yaml[2] else '0';
     return yaml[0]+':'+translate_str+' '+yaml[1]+'\n';
@@ -122,6 +138,10 @@ def update_translation_file(input_path: str, output_path: str, output_lang: str)
 
     for i in range(input_len):
         cur_input = input_yaml[i];
+        # is comment
+        if cur_input[3]:
+            continue;
+
         if i == 0:
             new_lines[0] = output_lang_name+':\n';
             continue;
@@ -183,15 +203,36 @@ def updating(output_language: str):
     print('Using '+BASE_LANGUAGE+' Translations from '+base_dir+' in '+output_dir);
     copy_base_translations(base_dir, output_dir, BASE_LANGUAGE, output_language);
 
-def get_translation_stats_file(base: str, path: str) -> Tuple[str, int, int]:
+def get_translation_stats_file(base: str, path: str, cur_lang: str, detail: bool) -> Tuple[str, int, int]:
     """Gets the number of translated and not translated string of a file"""
 
     yaml = get_yaml_from_file(path);
-    translated = sum(1 for x in yaml if x[2]);
-    not_translated = len(yaml) - translated;
+
+    total = 0;
+    translated = 0;
+    not_translated = 0;
+
+    lang_name = get_lang_name(cur_lang);
+
+    for x in yaml:
+        if x[3]:
+            continue;
+        if is_empty(x[0]):
+            continue;
+        if x[0] == lang_name:
+            continue;
+
+        total += 1;
+        if x[2]:
+            translated += 1;
+        else:
+            if detail:
+                print(path+' '+x[0]);
+            not_translated += 1;
+
     return (path.replace(base, ''), translated, not_translated);
 
-def get_translation_stats_folder(base: str, folder: str) -> List[Tuple[str, int, int]]:
+def get_translation_stats_folder(base: str, folder: str, cur_lang: str, detail: bool) -> List[Tuple[str, int, int]]:
     """Gets Translation stats for a folder"""
 
     result = list();
@@ -199,11 +240,11 @@ def get_translation_stats_folder(base: str, folder: str) -> List[Tuple[str, int,
     items = glob.glob(folder + '\\*');
     for item in items:
         if os.path.isdir(item):
-            dir_stats = get_translation_stats_folder(base, item);
+            dir_stats = get_translation_stats_folder(base, item, cur_lang, detail);
             for stat in dir_stats:
                 result.append(stat);
         else:
-            file_stats = get_translation_stats_file(base, item);
+            file_stats = get_translation_stats_file(base, item, cur_lang, detail);
             result.append(file_stats);
 
     return result;
@@ -216,26 +257,31 @@ def add(enumerable: List[int]) -> int:
         i += x;
     return i;
 
-def stats():
+def stats(lang: str):
     """Displays Translation Statistics"""
 
     print('Translation Statistics:\n');
-    print('%-10s %10s %7s %5s' % ('Language ', 'Translated', 'Missing', 'Ratio'))
+    print('%-15s %10s %7s %7s' % ('Language ', 'Translated', 'Missing', 'Ratio'))
 
     languages = glob.glob(localization_dir+'\\*');
+    detail = lang != '';
     for language in languages:
         name = language.replace(localization_dir+'\\', '');
-        lang_stats = get_translation_stats_folder(language+'\\', language);
+        if name == BASE_LANGUAGE:
+            continue;
+        if detail and lang != name:
+            continue;
+        lang_stats = get_translation_stats_folder(language+'\\', language, name, detail);
         translated = list(map(lambda x: x[1], lang_stats));
         missing = list(map(lambda x: x[2], lang_stats));
         total_translated = add(translated);
         total_missing = add(missing);
         total = total_translated+total_missing;
-        ratio = total_translated/total;
+        ratio = (total_translated/total)*100;
 
-        ratio_str = f'{ratio:.2f}';
+        ratio_str = f'{ratio:.2f}%';
 
-        print('%-10s %10s %7s %5s' % (name, total_translated, total_missing, ratio_str))
+        print('%-15s %10s %7s %7s' % (name, total_translated, total_missing, ratio_str))
 
 
 def main():
@@ -253,14 +299,17 @@ def main():
         help='Language for Translation Updates');
     args = parser.parse_args();
 
+    lang = args.lang;
     if args.verb == 'update':
-        lang = args.lang;
         if lang is None:
             print('update requires --lang to be set!');
             sys.exit(-1);
         updating(lang);
     else:
-        stats();
+        if lang is None:
+            stats('');
+        else:
+            stats(lang);
 
 if __name__ == '__main__':
     main();
