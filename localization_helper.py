@@ -203,22 +203,36 @@ def updating(output_language: str):
     print('Using '+BASE_LANGUAGE+' Translations from '+base_dir+' in '+output_dir);
     copy_base_translations(base_dir, output_dir, BASE_LANGUAGE, output_language);
 
-def get_translation_stats_file(base: str, path: str, detail: bool) -> Tuple[str, int, int]:
+def get_translation_stats_file(base: str, path: str, cur_lang: str, detail: bool) -> Tuple[str, int, int]:
     """Gets the number of translated and not translated string of a file"""
 
     yaml = get_yaml_from_file(path);
 
-    if detail:
-        for a in yaml:
-            if not a[3]:
-                print(path+' '+a[0]);
+    total = 0;
+    translated = 0;
+    not_translated = 0;
 
-    comments = sum(1 for x in yaml if x[3]);
-    translated = sum(1 for x in yaml if not x[3] and x[2]);
-    not_translated = len(yaml) - translated - comments;
+    lang_name = get_lang_name(cur_lang);
+
+    for x in yaml:
+        if x[3]:
+            continue;
+        if is_empty(x[0]):
+            continue;
+        if x[0] == lang_name:
+            continue;
+
+        total += 1;
+        if x[2]:
+            translated += 1;
+        else:
+            if detail:
+                print(path+' '+x[0]);
+            not_translated += 1;
+
     return (path.replace(base, ''), translated, not_translated);
 
-def get_translation_stats_folder(base: str, folder: str, detail: bool) -> List[Tuple[str, int, int]]:
+def get_translation_stats_folder(base: str, folder: str, cur_lang: str, detail: bool) -> List[Tuple[str, int, int]]:
     """Gets Translation stats for a folder"""
 
     result = list();
@@ -226,11 +240,11 @@ def get_translation_stats_folder(base: str, folder: str, detail: bool) -> List[T
     items = glob.glob(folder + '\\*');
     for item in items:
         if os.path.isdir(item):
-            dir_stats = get_translation_stats_folder(base, item, detail);
+            dir_stats = get_translation_stats_folder(base, item, cur_lang, detail);
             for stat in dir_stats:
                 result.append(stat);
         else:
-            file_stats = get_translation_stats_file(base, item, detail);
+            file_stats = get_translation_stats_file(base, item, cur_lang, detail);
             result.append(file_stats);
 
     return result;
@@ -257,7 +271,7 @@ def stats(lang: str):
             continue;
         if detail and lang != name:
             continue;
-        lang_stats = get_translation_stats_folder(language+'\\', language, detail);
+        lang_stats = get_translation_stats_folder(language+'\\', language, name, detail);
         translated = list(map(lambda x: x[1], lang_stats));
         missing = list(map(lambda x: x[2], lang_stats));
         total_translated = add(translated);
