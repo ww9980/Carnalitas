@@ -43,15 +43,24 @@ def get_lang_name(lang: str) -> str:
 
     return 'l_'+lang;
 
-def get_yaml(string: str) -> Tuple[str, str, bool]:
+def get_yaml(string: str) -> Tuple[str, str, bool, bool]:
     """Gets a YAML Tuple for the current line"""
 
-    empty = ('', '', False);
+    empty = ('', '', False, False);
 
     if is_empty(string):
         return empty;
 
     line = string.strip();
+    comment_index = -1;
+
+    try:
+        comment_index = line.index('#');
+        if comment_index == 0:
+            return ('', '', False, True);
+    except ValueError:
+        pass;
+
     line_len = len(line);
     index = -1;
     key = '';
@@ -67,7 +76,7 @@ def get_yaml(string: str) -> Tuple[str, str, bool]:
     key = line[0:index];
 
     if line_len <= index+1:
-        return (key, value, translated);
+        return (key, value, translated, False);
 
     if not is_empty(line[index+1]):
         translation_value = line[index+1];
@@ -79,10 +88,10 @@ def get_yaml(string: str) -> Tuple[str, str, bool]:
     else:
         value = line[index+1:].strip();
 
-    result = (key, value, translated);
+    result = (key, value, translated, False);
     return result;
 
-def get_yaml_from_file(path: str) -> List[Tuple[str, str, bool]]:
+def get_yaml_from_file(path: str) -> List[Tuple[str, str, bool, bool]]:
     """Reads a file and returns a list of all YAML values"""
 
     yaml = list();
@@ -122,6 +131,10 @@ def update_translation_file(input_path: str, output_path: str, output_lang: str)
 
     for i in range(input_len):
         cur_input = input_yaml[i];
+        # is comment
+        if cur_input[3]:
+            continue;
+
         if i == 0:
             new_lines[0] = output_lang_name+':\n';
             continue;
@@ -187,8 +200,9 @@ def get_translation_stats_file(base: str, path: str) -> Tuple[str, int, int]:
     """Gets the number of translated and not translated string of a file"""
 
     yaml = get_yaml_from_file(path);
-    translated = sum(1 for x in yaml if x[2]);
-    not_translated = len(yaml) - translated;
+    comments = sum(1 for x in yaml if x[3]);
+    translated = sum(1 for x in yaml if not x[3] and x[2]);
+    not_translated = len(yaml) - translated - comments;
     return (path.replace(base, ''), translated, not_translated);
 
 def get_translation_stats_folder(base: str, folder: str) -> List[Tuple[str, int, int]]:
@@ -220,7 +234,7 @@ def stats():
     """Displays Translation Statistics"""
 
     print('Translation Statistics:\n');
-    print('%-10s %10s %7s %5s' % ('Language ', 'Translated', 'Missing', 'Ratio'))
+    print('%-15s %10s %7s %7s' % ('Language ', 'Translated', 'Missing', 'Ratio'))
 
     languages = glob.glob(localization_dir+'\\*');
     for language in languages:
@@ -231,11 +245,11 @@ def stats():
         total_translated = add(translated);
         total_missing = add(missing);
         total = total_translated+total_missing;
-        ratio = total_translated/total;
+        ratio = (total_translated/total)*100;
 
-        ratio_str = f'{ratio:.2f}';
+        ratio_str = f'{ratio:.2f}%';
 
-        print('%-10s %10s %7s %5s' % (name, total_translated, total_missing, ratio_str))
+        print('%-15s %10s %7s %7s' % (name, total_translated, total_missing, ratio_str))
 
 
 def main():
