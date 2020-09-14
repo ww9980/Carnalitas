@@ -11,6 +11,10 @@ Viewing statistics:
 
 python localization_helper.py stats
 
+Viewing statistics for a specific language:
+
+python localization_helper.py stats --lang german
+
 """
 
 import os;
@@ -18,9 +22,9 @@ import argparse;
 import sys;
 import glob;
 import shutil;
-from typing import NamedTuple, Tuple, List;
+from typing import Tuple, List;
 
-"""key, value, translated, comment"""
+#key, value, translated, comment
 Yaml = Tuple[str, str, bool, bool];
 
 BASE_LANGUAGE = 'english';
@@ -199,16 +203,22 @@ def updating(output_language: str):
     print('Using '+BASE_LANGUAGE+' Translations from '+base_dir+' in '+output_dir);
     copy_base_translations(base_dir, output_dir, BASE_LANGUAGE, output_language);
 
-def get_translation_stats_file(base: str, path: str) -> Tuple[str, int, int]:
+def get_translation_stats_file(base: str, path: str, detail: bool) -> Tuple[str, int, int]:
     """Gets the number of translated and not translated string of a file"""
 
     yaml = get_yaml_from_file(path);
+
+    if detail:
+        for a in yaml:
+            if not a[3]:
+                print(path+' '+a[0]);
+
     comments = sum(1 for x in yaml if x[3]);
     translated = sum(1 for x in yaml if not x[3] and x[2]);
     not_translated = len(yaml) - translated - comments;
     return (path.replace(base, ''), translated, not_translated);
 
-def get_translation_stats_folder(base: str, folder: str) -> List[Tuple[str, int, int]]:
+def get_translation_stats_folder(base: str, folder: str, detail: bool) -> List[Tuple[str, int, int]]:
     """Gets Translation stats for a folder"""
 
     result = list();
@@ -216,11 +226,11 @@ def get_translation_stats_folder(base: str, folder: str) -> List[Tuple[str, int,
     items = glob.glob(folder + '\\*');
     for item in items:
         if os.path.isdir(item):
-            dir_stats = get_translation_stats_folder(base, item);
+            dir_stats = get_translation_stats_folder(base, item, detail);
             for stat in dir_stats:
                 result.append(stat);
         else:
-            file_stats = get_translation_stats_file(base, item);
+            file_stats = get_translation_stats_file(base, item, detail);
             result.append(file_stats);
 
     return result;
@@ -233,18 +243,21 @@ def add(enumerable: List[int]) -> int:
         i += x;
     return i;
 
-def stats():
+def stats(lang: str):
     """Displays Translation Statistics"""
 
     print('Translation Statistics:\n');
     print('%-15s %10s %7s %7s' % ('Language ', 'Translated', 'Missing', 'Ratio'))
 
     languages = glob.glob(localization_dir+'\\*');
+    detail = lang != '';
     for language in languages:
         name = language.replace(localization_dir+'\\', '');
         if name == BASE_LANGUAGE:
             continue;
-        lang_stats = get_translation_stats_folder(language+'\\', language);
+        if detail and lang != name:
+            continue;
+        lang_stats = get_translation_stats_folder(language+'\\', language, detail);
         translated = list(map(lambda x: x[1], lang_stats));
         missing = list(map(lambda x: x[2], lang_stats));
         total_translated = add(translated);
@@ -272,14 +285,17 @@ def main():
         help='Language for Translation Updates');
     args = parser.parse_args();
 
+    lang = args.lang;
     if args.verb == 'update':
-        lang = args.lang;
         if lang is None:
             print('update requires --lang to be set!');
             sys.exit(-1);
         updating(lang);
     else:
-        stats();
+        if lang is None:
+            stats('');
+        else:
+            stats(lang);
 
 if __name__ == '__main__':
     main();
