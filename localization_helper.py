@@ -242,6 +242,8 @@ def stats():
     languages = glob.glob(localization_dir+'\\*');
     for language in languages:
         name = language.replace(localization_dir+'\\', '');
+        if name == BASE_LANGUAGE:
+            continue;
         lang_stats = get_translation_stats_folder(language+'\\', language);
         translated = list(map(lambda x: x[1], lang_stats));
         missing = list(map(lambda x: x[2], lang_stats));
