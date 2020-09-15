@@ -1,0 +1,26 @@
+﻿carn_game_rule_religious_doctrines_effect = {
+	every_religion_global = {
+		every_faith = {
+			if = {
+				limit = {
+          NOR = {
+            has_doctrine = carn_doctrine_same_slavery_crime
+            has_doctrine = carn_doctrine_same_slavery_shunned
+            has_doctrine = carn_doctrine_same_slavery_accepted
+          }
+        }
+				add_doctrine = carn_doctrine_same_slavery_crime
+			}
+      if = {
+				limit = {
+          NOR = {
+            has_doctrine = carn_doctrine_other_slavery_crime
+            has_doctrine = carn_doctrine_other_slavery_shunned
+            has_doctrine = carn_doctrine_other_slavery_accepted
+          }
+        }
+				add_doctrine = carn_doctrine_other_slavery_accepted
+			}
+		}
+	}
+}

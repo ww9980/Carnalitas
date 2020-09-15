@@ -1,4 +1,0 @@
-﻿l_russian:
- carn_arousal.0001.t:0 "Увеличение стресса из-за возбуждения"
- # Why won't this work? D:
- carn_arousal.0001.desc:0 "Отсутствие сексуального удовлетворения вызывает рост [stress_gain_i] [stress|E]."
