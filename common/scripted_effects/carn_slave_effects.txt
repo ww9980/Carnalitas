@@ -325,3 +325,25 @@ carn_free_slave_effect = {
 		add_trait = former_slave
 	}
 }
+
+# frees all slaves of this character that are unlawfully enslaved under this character's faith
+carn_free_illegal_slaves_effect = {
+  scope:recipient = {
+    if = {
+      limit = { faith = { has_doctrine = carn_doctrine_same_slavery_crime } }
+      every_relation = {
+        type = slave
+        limit = { faith = scope:recipient.faith }
+        carn_free_slave_effect = yes
+      }
+    }
+    if = {
+      limit = { faith = { has_doctrine = carn_doctrine_other_slavery_crime } }
+      every_relation = {
+        type = slave
+        limit = { NOT = { faith = scope:recipient.faith } }
+        carn_free_slave_effect = yes
+      }
+    }
+  }
+}

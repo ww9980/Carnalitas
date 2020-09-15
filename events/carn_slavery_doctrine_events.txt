@@ -1,4 +1,4 @@
-﻿namespace = carn_religious_interaction
+﻿namespace = carn_slavery_doctrine
 
 # Events related to slavery religious doctrines
 # 0001. A vassal agrees to emancipate illegal slaves they may hold.
@@ -10,12 +10,12 @@
 # 0001. A vassal agrees to emancipate illegal slaves they may hold.
 #
 
-carn_religious_interaction.0001 = {
+carn_slavery_doctrine.0001 = {
 	type = letter_event
 	opening = {
 		desc = religious_interaction.1.opening
 	}
-	desc = carn_religious_interaction.0001.desc
+	desc = carn_slavery_doctrine.0001.desc
 	sender = scope:recipient
 
 	immediate = {
@@ -23,7 +23,7 @@ carn_religious_interaction.0001 = {
 	}
 
 	option = {
-		name = carn_religious_interaction.0001.a
+		name = carn_slavery_doctrine.0001.a
 	}
 }
 
@@ -31,12 +31,12 @@ carn_religious_interaction.0001 = {
 # 0002. A vassal agrees to emancipate illegal slaves they may hold in exchange for gold.
 #
 
-carn_religious_interaction.0002 = {
+carn_slavery_doctrine.0002 = {
 	type = letter_event
 	opening = {
 		desc = religious_interaction.1.opening
 	}
-	desc = carn_religious_interaction.0002
+	desc = carn_slavery_doctrine.0002
 	sender = scope:recipient
 
 	immediate = {
@@ -51,7 +51,7 @@ carn_religious_interaction.0002 = {
 
 	#Accept
 	option = {
-		name = carn_religious_interaction.0002.a
+		name = carn_slavery_doctrine.0002.a
 		pay_short_term_gold = {
 			target = scope:recipient
 			gold = demand_conversion_bribe_size
@@ -76,7 +76,7 @@ carn_religious_interaction.0002 = {
 
 	#Refuse
 	option = {
-		name = carn_religious_interaction.0002.b
+		name = carn_slavery_doctrine.0002.b
 		add_opinion = {
 			target = scope:recipient
 			modifier = carn_refused_free_illegal_slaves_opinion
@@ -93,7 +93,7 @@ carn_religious_interaction.0002 = {
 
 	#Use a Hook to force it through
 	option = {
-		name = carn_religious_interaction.0002.c
+		name = carn_slavery_doctrine.0002.c
 		trigger = {
 			has_strong_usable_hook = scope:recipient
 		}
@@ -113,12 +113,12 @@ carn_religious_interaction.0002 = {
 # 0003. A vassal agrees to emancipate illegal slaves they may hold in exchange for a weak hook.
 #
 
-carn_religious_interaction.0003 = {
+carn_slavery_doctrine.0003 = {
 	type = letter_event
 	opening = {
 		desc = religious_interaction.1.opening
 	}
-	desc = carn_religious_interaction.0003.desc
+	desc = carn_slavery_doctrine.0003.desc
 	sender = scope:recipient
 
 	immediate = {
@@ -133,7 +133,7 @@ carn_religious_interaction.0003 = {
 
 	#Accept
 	option = {
-		name = carn_religious_interaction.0003.a
+		name = carn_slavery_doctrine.0003.a
 		scope:recipient = {
 			add_hook = {
 				target = root
@@ -152,7 +152,7 @@ carn_religious_interaction.0003 = {
 
 	#Refuse
 	option = {
-		name = carn_religious_interaction.0003.b
+		name = carn_slavery_doctrine.0003.b
 		add_opinion = {
 			target = scope:recipient
 			modifier = carn_refused_free_illegal_slaves_opinion
@@ -165,7 +165,7 @@ carn_religious_interaction.0003 = {
 
 	#Use a Hook to force it through
 	option = {
-		name = carn_religious_interaction.0003.c
+		name = carn_slavery_doctrine.0003.c
 		trigger = {
 			has_strong_usable_hook = scope:recipient
 		}
@@ -184,16 +184,16 @@ carn_religious_interaction.0003 = {
 # 0004. A vassal refuses to emancipate illegal slaves.
 #
 
-carn_religious_interaction.0004 = {
+carn_slavery_doctrine.0004 = {
 	type = letter_event
 	opening = {
 		desc = religious_interaction.1.opening
 	}
 	desc = {
-		desc = carn_religious_interaction.0004.desc
+		desc = carn_slavery_doctrine.0004.desc
 		triggered_desc = {
 			trigger = { exists = scope:hooking_out_of_conversion }
-			desc = carn_religious_interaction.0004.hooking_out
+			desc = carn_slavery_doctrine.0004.hooking_out
 		}
 	}
 	sender = {
@@ -224,7 +224,7 @@ carn_religious_interaction.0004 = {
 
 	#It's a Crime to refuse
 	option = {
-		name = carn_religious_interaction.0004.b
+		name = carn_slavery_doctrine.0004.b
 		trigger = {
 			NOT = { exists = scope:hooking_out_of_conversion }
 		}
@@ -241,7 +241,7 @@ carn_religious_interaction.0004 = {
 
 	#It's a Crime, but the target has a Hook on you
 	option = {
-		name = carn_religious_interaction.0004.c
+		name = carn_slavery_doctrine.0004.c
 		trigger = {
 			exists = scope:hooking_out_of_conversion
 		}
@@ -264,7 +264,7 @@ carn_religious_interaction.0004 = {
 
 	#Player uses a Hook to force it through
 	option = {
-		name = carn_religious_interaction.0004.d
+		name = carn_slavery_doctrine.0004.d
 		trigger = {
 			NOT = { exists = scope:hooking_out_of_conversion }
 			has_usable_hook = scope:recipient
