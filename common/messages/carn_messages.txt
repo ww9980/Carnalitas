@@ -1,3 +1,5 @@
+﻿@msg_bad_soundeffect = "event:/SFX/UI/Notifications/Messages/sfx_ui_message_theme_negative"
+
 carn_event_arousal = {
 	icon = "icon_stress_gain.dds"
 	title = carn_msg_arousal

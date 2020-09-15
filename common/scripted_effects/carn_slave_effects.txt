@@ -334,9 +334,11 @@ carn_free_illegal_slaves_effect = {
       every_relation = {
         type = slave
         limit = {
-			faith_hostility_level = {
-				target = scope:recipient.faith
-				value < faith_hostile_level
+			faith = {
+				faith_hostility_level = {
+					target = scope:recipient.faith
+					value < faith_hostile_level
+				}
 			}
 		}
         carn_free_slave_effect = yes
@@ -347,9 +349,11 @@ carn_free_illegal_slaves_effect = {
       every_relation = {
         type = slave
         limit = {
-			faith_hostility_level = {
-				target = scope:recipient.faith
-				value >= faith_hostile_level
+			faith = {
+				faith_hostility_level = {
+					target = scope:recipient.faith
+					value >= faith_hostile_level
+				}
 			}
 		}
         carn_free_slave_effect = yes

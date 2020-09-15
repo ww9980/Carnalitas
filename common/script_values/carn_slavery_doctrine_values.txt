@@ -1,4 +1,4 @@
-demand_free_illegal_slaves_likelihood_calculation = {
+﻿demand_free_illegal_slaves_likelihood_calculation = {
 	# Keep conversion's learning difference; who knows the law better?
 	add = demand_conversion_learning_difference
 
