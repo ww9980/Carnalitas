@@ -7,3 +7,5 @@
  carn_enslaved_guest_opinion: "Enslaved another Guest"
  carn_enslaved_me_opinion: "Enslaved Me"
  carn_enslaved_me_crime_opinion: "Unlawfully Enslaved Me"
+ carn_refused_manumission_demand_opinion: "Refused Manumission"
+ carn_illegal_refused_manumission_demand_opinion: "Refused Manumission"

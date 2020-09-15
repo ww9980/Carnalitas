@@ -42,7 +42,7 @@ carn_slavery_doctrine.0002 = {
 	immediate = {
 		scope:recipient = {
 			add_opinion = {
-				modifier = carn_demanded_manumission
+				modifier = carn_demanded_manumission_opinion
 				target = root
 				opinion = -10
 			}
@@ -79,7 +79,7 @@ carn_slavery_doctrine.0002 = {
 		name = carn_slavery_doctrine.0002.b
 		add_opinion = {
 			target = scope:recipient
-			modifier = carn_refused_free_illegal_slaves_opinion
+			modifier = carn_illegal_refused_manumission_demand_opinion
 			years = 15
 		}
 		ai_chance = {
@@ -124,7 +124,7 @@ carn_slavery_doctrine.0003 = {
 	immediate = {
 		scope:recipient = {
 			add_opinion = {
-				modifier = carn_demanded_manumission
+				modifier = carn_demanded_manumission_opinion
 				target = root
 				opinion = -10
 			}
@@ -155,7 +155,7 @@ carn_slavery_doctrine.0003 = {
 		name = carn_slavery_doctrine.0003.b
 		add_opinion = {
 			target = scope:recipient
-			modifier = carn_refused_free_illegal_slaves_opinion
+			modifier = carn_illegal_refused_manumission_demand_opinion
 			years = 15
 		}
 		ai_chance = {
@@ -204,7 +204,7 @@ carn_slavery_doctrine.0004 = {
 	immediate = {
 		scope:recipient = {
 			add_opinion = {
-				modifier = carn_demanded_manumission
+				modifier = carn_demanded_manumission_opinion
 				target = root
 				opinion = -10
 			}
@@ -231,7 +231,7 @@ carn_slavery_doctrine.0004 = {
 
 		add_opinion = {
 			target = scope:recipient
-			modifier = carn_refused_free_illegal_slaves_opinion
+			modifier = carn_refused_manumission_demand_opinion
 			years = 10
 		}
 		ai_chance = {
@@ -252,8 +252,7 @@ carn_slavery_doctrine.0004 = {
 		hidden_effect = {
 			add_opinion = {
 				target = scope:recipient
-				modifier = carn_refused_free_illegal_slaves_opinion
-				imprisonment_reason = no
+				modifier = carn_illegal_refused_manumission_demand_opinion
 				years = 20
 			}
 		}
