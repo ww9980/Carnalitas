@@ -1,0 +1,61 @@
+﻿namespace = carn_doctrine
+
+# Event chain for seeding default religions with slavery doctrines
+# 0001. Activate the game rule effect for default slavery religious doctrines
+# 0002. Add default slavery religious doctrines to newly created religions if they don't have them
+#
+
+#
+# 0001. Activate the game rule effect for default slavery religious doctrines
+#
+
+carn_doctrine.0001 = {
+	type = empty
+	hidden = yes
+
+	trigger = {
+		NOT = { has_game_rule = carn_slavery_content_disabled }
+	}
+
+	immediate = {
+		carn_game_rule_religious_doctrines_effect = yes
+	}
+}
+
+#
+# 0002. Add default slavery religious doctrines to newly created religions if they don't have them
+#
+
+carn_doctrine.0002 = {
+	type = empty
+	hidden = yes
+
+	trigger = {
+		NOT = { has_game_rule = carn_slavery_content_disabled }
+	}
+
+	immediate = {
+		root.faith = {
+			if = {
+				limit = {
+					NOR = {
+						has_doctrine = carn_doctrine_same_slavery_crime
+						has_doctrine = carn_doctrine_same_slavery_shunned
+						has_doctrine = carn_doctrine_same_slavery_accepted
+					}
+				}
+				add_doctrine = carn_doctrine_same_slavery_crime
+			}
+			if = {
+				limit = {
+					NOR = {
+						has_doctrine = carn_doctrine_other_slavery_crime
+						has_doctrine = carn_doctrine_other_slavery_shunned
+						has_doctrine = carn_doctrine_other_slavery_accepted
+					}
+				}
+				add_doctrine = carn_doctrine_other_slavery_accepted
+			}
+		}
+	}
+}
