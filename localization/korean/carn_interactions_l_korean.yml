@@ -12,3 +12,9 @@ carn_msg_enslave_prisoner_desc:0 "[recipient.GetTitledFirstName] has become your
 
 carn_is_allowed_to_enslave_desc:0 "[recipient.GetShortUIName|U] is a known [criminal|E] #weak ([recipient.GetExecuteReasons])#!, allowing me to enslave [recipient.GetHerHim] without being viewed as a [tyrant|E]"
 carn_is_allowed_to_enslave_hostile_religion_desc:0 "[recipient.GetShortUINamePossessive|U] faith, [recipient.GetFaith.GetName], is considered to be either #V Hostile#! or #V Evil#! by my faith, allowing me to enslave [recipient.GetHerHim] without being viewed as a [tyrant|E]."
+
+carn_demand_free_illegal_slaves_interaction:0 "Demand Manumission"
+carn_demand_free_slaves_interaction_desc:0 "Demand that [recipient.GetShortUINameNoTooltip] free any illegally held slaves they have."
+carn_demand_free_illegal_slaves_is_crime:0 "\nRefusing to free illegal slaves is a [crime|E]"
+carn_demanded_manumission:0 "Demanded Manumission"
+carn_refused_free_illegal_slaves_opinion:0 "Refused Manumission Demand"
