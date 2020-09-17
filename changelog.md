@@ -15,6 +15,7 @@
 
 * **IMPORTANT:** `carn_sex_scene_effect` now also requires argument `DRAMA` (boolean). It passes this argument to the requested event, which should check for it and apply it to `carn_had_sex_with_effect` as appropriate.
 * `carn_had_sex_effect` now returns `scope:carn_sex_char_1_impregnated`, `scope:carn_sex_char_2_impregnated`. These are yes if the character was impregnated through the sex effect, and no otherwise.
+* New scripted effects: `carn_add_tits_big_1_effect`, etc. for all the dick and tit traits. This effect will add the appropriate dick or tit size to a character if the game rule is on, and do nothing if the game rule is off.
 * New sex scene tag: `orgy`
 * `carn_on_sex` now provides `scope:carn_sex_partner`.
 * New scripted effect: `carn_enslave_effect`. This gives the Slave trait to a character, forces them to abdicate, and makes them the Slave (relation) of another character. Takes arguments `SLAVE`, `OWNER`, `DRAMA`

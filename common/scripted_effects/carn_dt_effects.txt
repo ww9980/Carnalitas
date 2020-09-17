@@ -184,3 +184,151 @@ carn_activate_gender_specific_dt_traits_effect = {
 		}
 	}
 }
+
+#
+# this series of scripted effects adds dick/tits if the game rules are enabled, useful for scripted characters you want to be endowed a certain way
+#
+
+carn_add_dick_small_1_effect = {
+	if = {
+		limit = { has_game_rule = carn_dt_enabled_true }
+		add_trait = dick_small_1
+		if = {
+			limit = { age < 16 }
+			make_trait_inactive = dick_small_1
+		}
+	}
+	add_character_flag = carn_dt_traits_seeded
+}
+
+carn_add_dick_small_2_effect = {
+	if = {
+		limit = { has_game_rule = carn_dt_enabled_true }
+		add_trait = dick_small_2
+		if = {
+			limit = { age < 16 }
+			make_trait_inactive = dick_small_2
+		}
+	}
+	add_character_flag = carn_dt_traits_seeded
+}
+
+carn_add_dick_small_3_effect = {
+	if = {
+		limit = { has_game_rule = carn_dt_enabled_true }
+		add_trait = dick_small_3
+		if = {
+			limit = { age < 16 }
+			make_trait_inactive = dick_small_3
+		}
+	}
+	add_character_flag = carn_dt_traits_seeded
+}
+
+carn_add_dick_big_1_effect = {
+	if = {
+		limit = { has_game_rule = carn_dt_enabled_true }
+		add_trait = dick_big_1
+		if = {
+			limit = { age < 16 }
+			make_trait_inactive = dick_big_1
+		}
+	}
+	add_character_flag = carn_dt_traits_seeded
+}
+
+carn_add_dick_big_2_effect = {
+	if = {
+		limit = { has_game_rule = carn_dt_enabled_true }
+		add_trait = dick_big_2
+		if = {
+			limit = { age < 16 }
+			make_trait_inactive = dick_big_2
+		}
+	}
+	add_character_flag = carn_dt_traits_seeded
+}
+
+carn_add_dick_big_3_effect = {
+	if = {
+		limit = { has_game_rule = carn_dt_enabled_true }
+		add_trait = dick_big_3
+		if = {
+			limit = { age < 16 }
+			make_trait_inactive = dick_big_3
+		}
+	}
+	add_character_flag = carn_dt_traits_seeded
+}
+
+carn_add_tits_small_1_effect = {
+	if = {
+		limit = { has_game_rule = carn_dt_enabled_true }
+		add_trait = tits_small_1
+		if = {
+			limit = { age < 16 }
+			make_trait_inactive = tits_small_1
+		}
+	}
+	add_character_flag = carn_dt_traits_seeded
+}
+
+carn_add_tits_small_2_effect = {
+	if = {
+		limit = { has_game_rule = carn_dt_enabled_true }
+		add_trait = tits_small_2
+		if = {
+			limit = { age < 16 }
+			make_trait_inactive = tits_small_2
+		}
+	}
+	add_character_flag = carn_dt_traits_seeded
+}
+
+carn_add_tits_small_3_effect = {
+	if = {
+		limit = { has_game_rule = carn_dt_enabled_true }
+		add_trait = tits_small_3
+		if = {
+			limit = { age < 16 }
+			make_trait_inactive = tits_small_3
+		}
+	}
+	add_character_flag = carn_dt_traits_seeded
+}
+
+carn_add_tits_big_1_effect = {
+	if = {
+		limit = { has_game_rule = carn_dt_enabled_true }
+		add_trait = tits_big_1
+		if = {
+			limit = { age < 16 }
+			make_trait_inactive = tits_big_1
+		}
+	}
+	add_character_flag = carn_dt_traits_seeded
+}
+
+carn_add_tits_big_2_effect = {
+	if = {
+		limit = { has_game_rule = carn_dt_enabled_true }
+		add_trait = tits_big_2
+		if = {
+			limit = { age < 16 }
+			make_trait_inactive = tits_big_2
+		}
+	}
+	add_character_flag = carn_dt_traits_seeded
+}
+
+carn_add_tits_big_3_effect = {
+	if = {
+		limit = { has_game_rule = carn_dt_enabled_true }
+		add_trait = tits_big_3
+		if = {
+			limit = { age < 16 }
+			make_trait_inactive = tits_big_3
+		}
+	}
+	add_character_flag = carn_dt_traits_seeded
+}
