@@ -185,6 +185,24 @@ carn_activate_gender_specific_dt_traits_effect = {
 	}
 }
 
+carn_remove_dick_trait_effect = {
+	remove_trait = dick_small_1
+	remove_trait = dick_small_2
+	remove_trait = dick_small_3
+	remove_trait = dick_big_1
+	remove_trait = dick_big_2
+	remove_trait = dick_big_3
+}
+
+carn_remove_tits_trait_effect = {
+	remove_trait = tits_small_1
+	remove_trait = tits_small_2
+	remove_trait = tits_small_3
+	remove_trait = tits_big_1
+	remove_trait = tits_big_2
+	remove_trait = tits_big_3
+}
+
 #
 # this series of scripted effects adds dick/tits if the game rules are enabled, useful for scripted characters you want to be endowed a certain way
 #
