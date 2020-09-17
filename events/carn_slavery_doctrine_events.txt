@@ -1,6 +1,6 @@
 ﻿namespace = carn_slavery_doctrine
 
-# Events related to slavery religious doctrines
+#
 # 0001. A vassal agrees to emancipate illegal slaves they may hold.
 # 0002. A vassal agrees to emancipate illegal slaves they may hold in exchange for gold.
 # 0003. A vassal agrees to emancipate illegal slaves they may hold in exchange for a weak hook.

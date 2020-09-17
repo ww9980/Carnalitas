@@ -1,4 +1,24 @@
-﻿# randomly seed inactive dick and tits traits, regardless of age or gender
+﻿#
+# carn_seed_dt_traits_effect
+# carn_make_all_dt_traits_inactive_effect
+# carn_activate_gender_specific_dt_traits_effect
+# carn_remove_dick_trait_effect
+# carn_remove_tits_trait_effect
+# carn_add_dick_small_1_effect
+# carn_add_dick_small_2_effect
+# carn_add_dick_small_3_effect
+# carn_add_dick_big_1_effect
+# carn_add_dick_big_2_effect
+# carn_add_dick_big_3_effect
+# carn_add_dick_small_1_effect
+# carn_add_tits_small_2_effect
+# carn_add_tits_small_3_effect
+# carn_add_tits_big_1_effect
+# carn_add_tits_big_2_effect
+# carn_add_tits_big_3_effect
+#
+
+# randomly seed inactive dick and tits traits, regardless of age or gender
 carn_seed_dt_traits_effect = {
 	add_character_flag = carn_dt_traits_seeded
 	if = {

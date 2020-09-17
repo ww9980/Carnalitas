@@ -1,4 +1,11 @@
-﻿# seed futa trait based on selected game rules
+﻿# carn_seed_futa_trait_effect
+# carn_add_futa_effect
+# carn_remove_futa_effect
+# carn_add_futa_transformation_effect
+# carn_remove_futa_transformation_effect
+
+
+# seed futa trait based on selected game rules
 carn_seed_futa_trait_effect = {
 	add_character_flag = carn_futa_trait_seeded
 	if = {
