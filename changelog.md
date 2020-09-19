@@ -47,6 +47,8 @@
 * New scripted effect: `carn_enslave_effect`. This gives the Slave trait to a character, forces them to abdicate, and makes them the Slave (relation) of another character. Takes arguments `SLAVE`, `OWNER`, `DRAMA`
 * New scripted effect: `carn_free_slave_effect`. Changes the Slave trait to Former Slave and removes their Owner (which will also remove the hook their Owner has on them).
 * Added trait and character flags `carn_cannot_be_enslaved`.
+* Added trait and character flags `carn_wants_to_be_a_slave` (which makes them automatically accept offers to be enslaved).
+* Added opinion `carn_wants_to_be_your_slave_opinion`, which makes the character always agree to enslavement by the opinion target.
 
 ### Misc
 

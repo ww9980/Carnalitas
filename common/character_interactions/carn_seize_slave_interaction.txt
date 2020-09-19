@@ -39,6 +39,26 @@ carn_seize_slave_interaction = {
 	ai_accept = {
 		base = 0
 		modifier = {
+			add = -1000
+			desc = carn_wants_to_be_liege_slave
+			scope:recipient = {
+				has_opinion_modifier = {
+					target = scope:recipient.liege
+					modifier = carn_wants_to_be_your_slave_opinion
+				}
+			}
+		}
+		modifier = {
+			add = 1000
+			desc = carn_wants_to_be_your_slave
+			scope:recipient = {
+				has_opinion_modifier = {
+					target = scope:actor
+					modifier = carn_wants_to_be_your_slave_opinion
+				}
+			}
+		}
+		modifier = {
 			desc = carn_enslave_recipient_is_your_prisoner
 			add = 100
 			scope:recipient = {

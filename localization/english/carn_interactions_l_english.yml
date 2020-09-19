@@ -44,3 +44,5 @@
 
  carn_seize_slave_interaction: "Seize Slave"
  carn_seize_slave_interaction_desc: "Take [recipient.GetShortUINameNoTooltip] as your own [slave|E]"
+ carn_wants_to_be_liege_slave: "Wants their current Owner: $VALUE|=+0$"
+ carn_wants_to_be_your_slave: "Wants you as their Owner: $VALUE|=+0$"

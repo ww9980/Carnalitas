@@ -175,6 +175,16 @@
 	send_options_exclusive = no
 
 	auto_accept = {
+		scope:recipient = {
+			NOR = {
+				has_character_flag = carn_wants_to_be_a_slave
+				has_trait_with_flag = carn_wants_to_be_a_slave
+				has_opinion_modifier = {
+					target = scope:actor
+					modifier = carn_wants_to_be_your_slave_opinion
+				}
+			}
+		}
 		scope:gold = no
 		scope:current_gold = no
 		scope:demand_conversion = no
@@ -185,6 +195,18 @@
 	ai_accept = {
 		base = 0
 		modifier = {
+			trigger = {
+				scope:recipient = {
+					NOR = {
+						has_character_flag = carn_wants_to_be_a_slave
+						has_trait_with_flag = carn_wants_to_be_a_slave
+						has_opinion_modifier = {
+							target = scope:actor
+							modifier = carn_wants_to_be_your_slave_opinion
+						}
+					}
+				}
+			}
 			add = 100
 			desc = "WANTS_FREEDOM_REASON"
 		}

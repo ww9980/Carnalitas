@@ -59,3 +59,8 @@ carn_stole_my_slave_opinion = {
 	years = 10
 	decaying = yes
 }
+
+# For modders, this opinion makes the character auto accept enslave interactions from the opinion target
+carn_wants_to_be_your_slave_opinion = {
+	opinion = 10
+}
