@@ -7,6 +7,7 @@
 * Character interaction to free a slave, with various demands you can make similar to releasing a prisoner.
 * Character interaction to demand that a character free their illegal slaves.
 * New religious doctrines regarding religions' views on slavery.
+* New custom GUI showing a character's owned slaves in the character window.
 * Encyclopedia entries for Slaves, Owners, and the Slave Market.
 
 ## Misc Features
