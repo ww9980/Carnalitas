@@ -27,7 +27,7 @@
 * `carn_had_sex_effect` now returns `scope:carn_sex_char_1_could_be_impregnated`, `scope:carn_sex_char_2_could_be_impregnated`. These are yes if the character had a pregnancy chance greater than 0 through the sex effect, and no otherwise.
 * `carn_had_sex_effect` now returns `scope:carn_sex_char_1_impregnated`, `scope:carn_sex_char_2_impregnated`. These are yes if the character was impregnated through the sex effect, and no otherwise.
 
-* New sex scene tag: `orgy`
+* New sex scene tag: `giving_player`, `receiving_player`, `orgy`, `cum_inside`, `cum_outside`
 * `carn_on_sex` now provides `scope:carn_sex_partner`.
 
 ### Arousal
@@ -45,6 +45,10 @@
 * New scripted effect: `carn_enslave_effect`. This gives the Slave trait to a character, forces them to abdicate, and makes them the Slave (relation) of another character. Takes arguments `SLAVE`, `OWNER`, `DRAMA`
 * New scripted effect: `carn_free_slave_effect`. Changes the Slave trait to Former Slave and removes their Owner (which will also remove the hook their Owner has on them).
 * Added trait and character flags `carn_cannot_be_enslaved`.
+
+### Misc
+
+* Added trait and character flags `can_use_abduct_scheme`. This allows a character to use the Kidnapper perk regardless of whether they have the perk unlocked.
 
 ## Tweaks
 

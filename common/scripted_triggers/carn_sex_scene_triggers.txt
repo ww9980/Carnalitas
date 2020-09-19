@@ -23,6 +23,8 @@ carn_sex_scene_matches_requested_flags_trigger = {
 # Here is a list of supported sex scene flags.
 # It is possible for mods to add more flags, but these will not be supported and have no guarantee of working with other mods.
 #
+# carn_sex_scene_is_giving_player
+# carn_sex_scene_is_receiving_player
 # carn_sex_scene_is_dom_player
 # carn_sex_scene_is_sub_player
 # carn_sex_scene_is_oral
@@ -31,6 +33,8 @@ carn_sex_scene_matches_requested_flags_trigger = {
 # carn_sex_scene_is_handjob
 # carn_sex_scene_is_masturbation
 # carn_sex_scene_is_orgy
+# carn_sex_scene_is_cum_inside
+# carn_sex_scene_is_cum_outside
 # carn_sex_scene_is_consensual
 # carn_sex_scene_is_noncon
 # carn_sex_scene_is_dubcon
@@ -44,6 +48,14 @@ carn_sex_scene_matches_requested_flags_trigger = {
 # carn_sex_scene_is_scat
 # carn_sex_scene_is_gore
 #
+
+carn_sex_scene_is_giving_player = {
+	flag:givingplayer = { add_to_temporary_list = carn_sex_scene_flags }
+}
+
+carn_sex_scene_is_receiving_player = {
+	flag:receiving_player = { add_to_temporary_list = carn_sex_scene_flags }
+}
 
 carn_sex_scene_is_dom_player = {
 	flag:dom_player = { add_to_temporary_list = carn_sex_scene_flags }
@@ -76,6 +88,14 @@ carn_sex_scene_is_masturbation = {
 
 carn_sex_scene_is_orgy = {
 	flag:orgy = { add_to_temporary_list = carn_sex_scene_flags }
+}
+
+carn_sex_scene_is_cum_inside = {
+	flag:cum_inside = { add_to_temporary_list = carn_sex_scene_flags }
+}
+
+carn_sex_scene_is_cum_outside = {
+	flag:cum_outside = { add_to_temporary_list = carn_sex_scene_flags }
 }
 
 carn_sex_scene_is_consensual = {
@@ -136,6 +156,8 @@ carn_sex_scene_is_gore = {
 #
 # These triggers are for events in carn_on_sex to check the flags of the sex scene from which it was called.
 #
+# carn_sex_scene_was_giving_player
+# carn_sex_scene_was_receiving_player
 # carn_sex_scene_was_dom_player
 # carn_sex_scene_was_sub_player
 # carn_sex_scene_was_oral
@@ -144,6 +166,8 @@ carn_sex_scene_is_gore = {
 # carn_sex_scene_was_handjob
 # carn_sex_scene_was_masturbation
 # carn_sex_scene_was_orgy
+# carn_sex_scene_was_cum_inside
+# carn_sex_scene_was_cum_outside
 # carn_sex_scene_was_consensual
 # carn_sex_scene_was_noncon
 # carn_sex_scene_was_dubcon
@@ -157,6 +181,14 @@ carn_sex_scene_is_gore = {
 # carn_sex_scene_was_scat
 # carn_sex_scene_was_gore
 #
+
+carn_sex_scene_was_giving_player = {
+	flag:giving_player = { is_in_list = carn_sex_scene_flags }
+}
+
+carn_sex_scene_was_receiving_player = {
+	flag:receiving_player = { is_in_list = carn_sex_scene_flags }
+}
 
 carn_sex_scene_was_dom_player = {
 	flag:dom_player = { is_in_list = carn_sex_scene_flags }
@@ -188,6 +220,14 @@ carn_sex_scene_was_masturbation = {
 
 carn_sex_scene_was_orgy = {
 	flag:orgy = { is_in_list = carn_sex_scene_flags }
+}
+
+carn_sex_scene_was_cum_inside = {
+	flag:cum_inside = { is_in_list = carn_sex_scene_flags }
+}
+
+carn_sex_scene_was_cum_outside = {
+	flag:cum_outside = { is_in_list = carn_sex_scene_flags }
 }
 
 carn_sex_scene_was_consensual = {
