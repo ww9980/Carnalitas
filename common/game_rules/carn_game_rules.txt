@@ -38,13 +38,13 @@ carn_futa_trait_name = {
 carn_futa_content = {
 	default = carn_futa_content_disabled
 	carn_futa_content_disabled = {}
+	carn_futa_content_no_seeding = {}
 	carn_futa_content_very_rare = {}
 	carn_futa_content_rare = {}
 	carn_futa_content_uncommon = {}
 	carn_futa_content_common = {}
 	carn_futa_content_very_common = {}
 	carn_futa_content_always = {}
-	carn_futa_content_no_seeding = {}
 }
 
 carn_futa_trait_inheritance = {
