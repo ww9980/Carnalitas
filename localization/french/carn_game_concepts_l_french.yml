@@ -16,9 +16,10 @@ game_concept_submissive_desc:1 "Souvent racourci par $game_concept_submissive_sh
 
 game_concept_slave:1 "Esclave"
 game_concept_slaves:1 "Esclaves"
+game_concept_slavery:1 "Esclavage"
 game_concept_slave_possessive:1 "de l'Esclave"
 game_concept_slaves_possessive:1 "des Esclaves"
-game_concept_slave_desc:1 "Un $game_concept_slave$ est un [character|El] qui a été asservi et dont les droits lui ont été retirés. Un esclave appartient à un [Concept('slave_owner', 'maître')|El], qui possède un [strong_hook|El] envers lui et peut l'acheter ou le vendre au [slave_market|El]. De plus, les [extramarital_sex|El] entre un esclave et son maître sont légales.\n\nLes esclaves ne peuvent hériter ni détenir des [titles|El], et tout enfant né d'une mêre esclave sera aussi un esclave.\n\nSi un maître d'esclave meurt, la possession de ses esclaves sera passée à son [primary_heir|El].\n\nPour se défaire de l'esclavage, un esclave doit être libéré par leur maître, soit par acte de charité, soit par l'[interaction|El] 'Négocier la libération'."
+game_concept_slave_desc:1 "Un $game_concept_slave$ est un [character|El] qui a été asservi et dont les droits lui ont été retirés. Un esclave appartient à un [Concept('slave_owner', 'maître')|El], qui possède un [strong_hook|El] envers lui et peut l'acheter ou le vendre au [slave_market|El]. De plus, les [extramarital_sex|El] entre un esclave et son maître sont légales.\n\nLes esclaves ne peuvent hériter ni détenir des [titles|El], et tout enfant né d'une mêre esclave sera aussi un esclave.\n\nSi un maître d'esclave meurt, la possession de ses esclaves sera passée à son [primary_heir|El].\n\nPour se défaire de l'esclavage, un esclave doit être libéré par leur maître, via l'[interaction|El] 'Négocier la libération'."
 
 game_concept_slave_owner:1 "Maître d'esclaves"
 game_concept_slave_owners:1 "Maîtres"
