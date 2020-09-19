@@ -70,7 +70,7 @@ carn_seed_futa_trait_effect = {
 carn_add_futa_effect = {
 	if = {
 		limit = {
-			NOT = { has_game_rule = setting_carn_futa_content_disabled }
+			NOT = { has_game_rule = carn_futa_content_disabled }
 			is_female = yes
 			carn_is_futa_trigger = no
 		}

@@ -28,15 +28,15 @@
 
  rule_carn_dt_trait_names: "#X Carnalitas:#! Body Part Trait Names"
  setting_carn_dt_trait_names_default: "Default"
- setting_carn_dt_trait_names_default_desc: "The breast and penis size traits of characters will be named '$trait_tits_big_1$', '$trait_dick_big_1$', and so on."
+ setting_carn_dt_trait_names_default_desc: "The breast and penis size traits of characters will be named '$trait_tits_big_1$,' '$trait_dick_big_1$,' and so on."
  setting_carn_dt_trait_names_immersive: "#high Immersive#!"
- setting_carn_dt_trait_names_immersive_desc: "The breast and penis size traits of characters will be named '$trait_tits_big_1_immersive$', '$trait_dick_big_1_immersive$', and so on."
+ setting_carn_dt_trait_names_immersive_desc: "The breast and penis size traits of characters will be named '$trait_tits_big_1_immersive$,' '$trait_dick_big_1_immersive$,' and so on."
 
  rule_carn_futa_trait_name: "#X Carnalitas:#! Futanari Trait Name"
  setting_carn_futa_trait_name_futa: "Default"
- setting_carn_futa_trait_name_futa_desc: "Women with both male and female sexual organs will be called '$trait_futa$'."
+ setting_carn_futa_trait_name_futa_desc: "A woman with both male and female sexual organs will be called a '$trait_futa$.'"
  setting_carn_futa_trait_name_hermaphrodite: "#high Immersive#!"
- setting_carn_futa_trait_name_hermaphrodite_desc: "Women with both male and female sexual organs will be called '$trait_futa_immersive$'."
+ setting_carn_futa_trait_name_hermaphrodite_desc: "A woman with both male and female sexual organs will be called a '$trait_futa_immersive$.'"
 
  rule_carn_futa_content: "#X Carnalitas:#! Futanari Content"
  setting_carn_futa_content_disabled: "Disabled"
