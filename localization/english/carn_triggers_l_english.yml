@@ -6,4 +6,4 @@
  carn_can_be_granted_titles: "Can be granted titles"
  carn_not_can_be_granted_titles: "Cannot be granted titles"
 
- carn_slavery_is_illegal: "Your faith does not permit the taking of [CHARACTER.GetFaith.GetAdherentNamePlural|U] as slaves"
+ carn_slavery_is_illegal: "Your faith does not permit the taking of [CHARACTER.GetFaith.GetAdherentNamePluralNoTooltip|U] as slaves"
