@@ -1,12 +1,14 @@
 # Carnalitas v1.1
 
-## Slavery System (WIP)
+## Slavery System
 
+* A new game rule to enable or disable the slavery system.
 * New relation: Slave (`slave`) and Owner (`slave_owner`). Owners automatically get hooks on their Slaves, and transfer ownership to their primary heir if they die.
 * Character interaction to enslave characters, incurring tyranny and opinion penalties if the enslavement is unjust.
 * Character interaction to free a slave, with various demands you can make similar to releasing a prisoner.
 * Character interaction to demand that a character free their illegal slaves.
-* New religious doctrines regarding religions' views on slavery.
+* Character interaction to buy a slave from someone else.
+* New religious doctrines regarding religions' views on slavery, as well as a game rule to change their default stance on slavery.
 * New custom GUI showing a character's owned slaves in the character window.
 * Encyclopedia entries for Slaves, Owners, and the Slave Market.
 
@@ -46,7 +48,12 @@
 
 * New scripted effect: `carn_enslave_effect`. This gives the Slave trait to a character, forces them to abdicate, and makes them the Slave (relation) of another character. Takes arguments `SLAVE`, `OWNER`, `DRAMA`
 * New scripted effect: `carn_free_slave_effect`. Changes the Slave trait to Former Slave and removes their Owner (which will also remove the hook their Owner has on them).
+* New scripted effect: `carn_free_illegal_slaves_effect`
+* New scripted effect: `carn_free_slave_interaction_effect`
+* New scripted effect: `carn_buy_slave_effect`
+* New scripted trigger: `carn_slave_can_be_sold_trigger`, which checks that the slave is healthy enough to sell
 * Added trait and character flags `carn_cannot_be_enslaved`.
+* Added trait and character flags `carn_slave_cannot_be_sold`.
 * Added trait and character flags `carn_wants_to_be_a_slave` (which makes them automatically accept offers to be enslaved).
 * Added opinion `carn_wants_to_be_your_slave_opinion`, which makes the character always agree to enslavement by the opinion target.
 

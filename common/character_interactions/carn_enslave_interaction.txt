@@ -240,7 +240,10 @@
 
 		hidden_effect = {
 			scope:recipient = {
-				release_from_prison = yes
+				if = {
+					limit = { is_imprisoned_by = scope:actor }
+					release_from_prison = yes
+				}
 			}
 		}
 

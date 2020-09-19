@@ -60,6 +60,7 @@
 		is_shown = {
 			scope:recipient = {
 				gold >= scope:recipient.carn_slave_price_value
+				carn_slave_can_be_sold_trigger = yes
 			}
 		}
 	}
@@ -72,6 +73,7 @@
 			scope:recipient = {
 				gold < scope:recipient.carn_slave_price_value
 				gold > 0
+				carn_slave_can_be_sold_trigger = yes
 			}
 		}
 	}
@@ -302,24 +304,7 @@
 	ai_frequency = 12
 
 	ai_potential = {
-		scope:actor.faith = {
-			NOR = {
-				AND = {
-					faith_hostility_level = {
-						target = scope:recipient.faith
-						value < faith_hostile_level
-					}
-					has_doctrine = carn_doctrine_same_slavery_accepted
-				}
-				AND = {
-					faith_hostility_level = {
-						target = scope:recipient.faith
-						value >= faith_hostile_level
-					}
-					has_doctrine = carn_doctrine_other_slavery_accepted
-				}
-			}
-		}
+		always = yes
 	}
 
 	ai_will_do = {
@@ -328,13 +313,6 @@
 		modifier = {
 			add = 20
 			scope:demand_conversion = yes
-		}
-		modifier = {
-			add = 100
-			scope:demand_conversion = yes
-			scope:recipient = {
-				is_vassal_of = scope:actor
-			}
 		}
 		modifier = {
 			add = 30

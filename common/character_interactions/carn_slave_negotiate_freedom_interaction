@@ -54,6 +54,7 @@ carn_slave_negotiate_freedom_interaction = {
 		is_valid = {
 			scope:actor = {
 				gold >= carn_slave_price_value
+				carn_slave_can_be_sold_trigger = yes
 			}
 		}
 		flag = gold
@@ -66,6 +67,7 @@ carn_slave_negotiate_freedom_interaction = {
 			scope:actor = {
 				gold < carn_slave_price_value
 				gold > 0
+				carn_slave_can_be_sold_trigger = yes
 			}
 		}
 		flag = current_gold

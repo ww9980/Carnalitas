@@ -2,6 +2,7 @@
 # carn_free_slave_effect
 # carn_free_illegal_slaves_effect
 # carn_free_slave_interaction_effect
+# carn_buy_slave_effect
 
 # enslaves SLAVE to OWNER
 # will also incur opinion, tyranny, piety effects if DRAMA is true
@@ -553,6 +554,42 @@ carn_free_slave_interaction_effect = {
 				title = carn_msg_slave_freed
 				right_icon = scope:slave
 				custom_tooltip = carn_msg_slave_freed_desc
+			}
+		}
+	}
+}
+
+carn_buy_slave_effect = {
+	scope:slave = {
+		hidden_effect = {
+			every_relation = {
+				type = slave_owner
+				remove_relation_slave = prev
+			}
+			if = {
+				limit = { is_imprisoned_by = scope:seller }
+				release_from_prison = yes
+			}
+		}
+	}
+	scope:buyer = {
+		pay_short_term_gold = {
+			gold = scope:slave.carn_slave_price_value
+			target = scope:seller
+		}
+		set_relation_slave = scope:slave
+		hidden_effect = {
+			if = {
+				limit = {
+					scope:slave = { NOT = { is_courtier_of = scope:buyer } } 
+				}
+				add_courtier = scope:slave
+			}
+			send_interface_message = {
+				type = event_generic_neutral
+				title = carn_msg_enslave
+				right_icon = scope:slave
+				custom_tooltip = carn_msg_enslave_desc
 			}
 		}
 	}

@@ -7,7 +7,7 @@
 
  carn_enslave_interaction: "Enslave"
  carn_enslave_interaction_desc: "Turn [recipient.GetShortUINameNoTooltip] into your [slave|E]"
- carn_msg_enslave: "Character Enslaved"
+ carn_msg_enslave: "Slave Taken"
  carn_msg_enslave_desc: "[recipient.GetTitledFirstName] has become your [slave|E]"
  carn_enslave_actor_diplomacy: "Your [diplomacy_skill|E]: $VALUE|=+0$"
  carn_enslave_recipient_is_your_prisoner: "[recipient.GetShortUIName|U] wants to leave [prison|E]: $VALUE|=+0$"
@@ -46,3 +46,18 @@
  carn_seize_slave_interaction_desc: "Take [recipient.GetShortUINameNoTooltip] as your own [slave|E]"
  carn_wants_to_be_liege_slave: "Wants their current Owner: $VALUE|=+0$"
  carn_wants_to_be_your_slave: "Wants you as their Owner: $VALUE|=+0$"
+
+ carn_buy_slave_directly_interaction: "Buy Slave"
+ carn_buy_slave_directly_interaction_desc: "Buy a [slave|E] for [gold|E]"
+ actor_secondary_carn_buy_slave_directly_interaction: "Buyer"
+
+ carn_buy_slave_on_market_interaction: "Browse Slave Market"
+ carn_buy_slave_on_market_interaction_desc: "Browse all available [slaves|E] for sale on the [slave_market|E]"
+ actor_secondary_carn_buy_slave_on_market_interaction: "Buyer"
+
+ carn_slave_is_my_knight_reason: "[secondary_recipient.GetShortUIName|U] is my [recipient.Custom('KnightCulture')]: $VALUE|=+0$"
+ carn_slave_is_my_councillor_reason: "[secondary_recipient.GetShortUIName|U] is my [councillor|E]: $VALUE|=+0$"
+ carn_slave_is_my_friend_reason: "[secondary_recipient.GetShortUIName|U] is my [friend|E]: $VALUE|=+0$"
+ carn_slave_is_my_lover_reason: "[secondary_recipient.GetShortUIName|U] is my [lover|E]: $VALUE|=+0$"
+ carn_slave_is_my_crush_reason: "[secondary_recipient.GetShortUIName|U] is my [crush|E]: $VALUE|=+0$"
+ carn_slave_is_my_soulmate_reason: "[secondary_recipient.GetShortUIName|U] is my [soulmate|E]: $VALUE|=+0$"

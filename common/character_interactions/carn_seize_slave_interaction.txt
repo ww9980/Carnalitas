@@ -121,13 +121,23 @@ carn_seize_slave_interaction = {
 		scope:recipient = {
 			every_relation = {
 				type = slave_owner
-				remove_relation_slave = prev
+				hidden_effect = { remove_relation_slave = prev }
 				add_opinion = {
 					target = scope:actor
 					modifier = carn_stole_my_slave_opinion
 				}
 			}
 			set_relation_slave_owner = scope:actor
+		}
+		scope:actor = {
+			hidden_effect = {
+				send_interface_message = {
+					type = event_generic_neutral
+					title = carn_msg_enslave
+					right_icon = scope:recipient
+					custom_tooltip = carn_msg_enslave_desc
+				}
+			}
 		}
 	}
 

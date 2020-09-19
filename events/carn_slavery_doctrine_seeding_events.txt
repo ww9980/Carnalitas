@@ -18,7 +18,11 @@ carn_slavery_doctrine_seeding.0001 = {
 	}
 
 	immediate = {
-		carn_seed_slavery_doctrines_effect = yes
+		every_religion_global = {
+			every_faith = {
+				carn_seed_slavery_doctrines_effect = yes
+			}
+		}
 	}
 }
 
@@ -36,26 +40,7 @@ carn_slavery_doctrine_seeding.0002 = {
 
 	immediate = {
 		root.faith = {
-			if = {
-				limit = {
-					NOR = {
-						has_doctrine = carn_doctrine_same_slavery_crime
-						has_doctrine = carn_doctrine_same_slavery_shunned
-						has_doctrine = carn_doctrine_same_slavery_accepted
-					}
-				}
-				add_doctrine = carn_doctrine_same_slavery_crime
-			}
-			if = {
-				limit = {
-					NOR = {
-						has_doctrine = carn_doctrine_other_slavery_crime
-						has_doctrine = carn_doctrine_other_slavery_shunned
-						has_doctrine = carn_doctrine_other_slavery_accepted
-					}
-				}
-				add_doctrine = carn_doctrine_other_slavery_accepted
-			}
+			carn_seed_slavery_doctrines_effect = yes
 		}
 	}
 }
