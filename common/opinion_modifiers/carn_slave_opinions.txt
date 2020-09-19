@@ -47,3 +47,15 @@ carn_enslaved_me_crime_opinion = {
 	execute_reason = yes
 	banish_reason = yes
 }
+
+carn_freed_me_from_slavery_opinion = {
+	opinion = 50
+	years = 50
+	decaying = yes
+}
+
+carn_stole_my_slave_opinion = {
+	opinion = -10
+	years = 10
+	decaying = yes
+}

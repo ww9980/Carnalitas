@@ -3,7 +3,8 @@
 ## Slavery System (WIP)
 
 * New relation: Slave (`slave`) and Owner (`slave_owner`). Owners automatically get hooks on their Slaves, and transfer ownership to their primary heir if they die.
-* Character interaction to enslave prisoners, incurring tyranny and opinion penalties if the enslavement is unjust.
+* Character interaction to enslave characters, incurring tyranny and opinion penalties if the enslavement is unjust.
+* Character interaction to free a slave, with various demands you can make similar to releasing a prisoner.
 * Character interaction to demand that a character free their illegal slaves.
 * New religious doctrines regarding religions' views on slavery.
 * Encyclopedia entries for Slaves, Owners, and the Slave Market.

@@ -1,4 +1,9 @@
-﻿# enslaves SLAVE to OWNER
+﻿# carn_enslave_effect
+# carn_free_slave_effect
+# carn_free_illegal_slaves_effect
+# carn_free_slave_interaction_effect
+
+# enslaves SLAVE to OWNER
 # will also incur opinion, tyranny, piety effects if DRAMA is true
 carn_enslave_effect = {
 	$SLAVE$ = { save_temporary_scope_as = new_slave }
@@ -12,6 +17,11 @@ carn_enslave_effect = {
 		hidden_effect = {
 			remove_trait = former_slave
 			add_trait = slave
+			add_gold = {
+				# their gold is removed, representing their treasury being lost, and also to prevent abuse
+				value = gold
+				multiply = -1
+			}
 		}
 	}
 
@@ -27,30 +37,6 @@ carn_enslave_effect = {
 
 	if = {
 		limit = { $DRAMA$ = yes }
-
-		scope:new_owner = {
-			if = {
-				limit = {
-					OR = {
-						faith = {
-							NOT = { has_doctrine = carn_doctrine_same_slavery_accepted }
-							faith_hostility_level = {
-								target = scope:new_slave.faith
-								value < faith_hostile_level
-							}
-						}
-						faith = {
-							NOT = { has_doctrine = carn_doctrine_other_slavery_accepted }
-							faith_hostility_level = {
-								target = scope:new_slave.faith
-								value >= faith_hostile_level
-							}
-						}
-					}
-				}
-				add_piety_level = -1
-			}
-		}
 		
 		scope:new_slave = {
 			# Victim hates slaver
@@ -223,14 +209,29 @@ carn_enslave_effect = {
 				add_dread = minor_dread_gain
 			}
 
-			# Piety loss from slavery
-			#if = {
-			#	limit = {
-			#		faith = scope:new_slave.faith
-			#		NOT = { has_perk = divine_retribution_perk }
-			#	}
-			#	add_piety = medium_piety_loss
-			#}
+			if = {
+				limit = {
+					OR = {
+						faith = {
+							NOT = { has_doctrine = carn_doctrine_same_slavery_accepted }
+							faith_hostility_level = {
+								target = scope:new_slave.faith
+								value < faith_hostile_level
+							}
+						}
+						faith = {
+							NOT = { has_doctrine = carn_doctrine_other_slavery_accepted }
+							faith_hostility_level = {
+								target = scope:new_slave.faith
+								value >= faith_hostile_level
+							}
+						}
+					}
+				}
+				add_piety = medium_piety_loss
+				add_piety_level = -1
+			}
+
 			# Stress loss		
 			if = {
 				limit = {
@@ -398,4 +399,161 @@ carn_free_illegal_slaves_effect = {
       }
     }
   }
+}
+
+# carn_free_slave_interaction_effect
+# scopes: slave and owner
+
+carn_free_slave_interaction_effect = {
+
+	scope:slave = {
+
+		carn_free_slave_effect = yes
+
+		# Demand Gold
+		if = {
+			limit = {
+				scope:gold = yes
+			}
+			pay_short_term_gold = {
+				gold = scope:slave.carn_slave_price_value
+				target = scope:owner
+			}
+		}
+
+		# Demand Gold (not enough to pay)
+		if = {
+			limit = {
+				scope:current_gold = yes
+			}
+			pay_short_term_gold = {
+				gold = scope:slave.current_gold_value
+				target = scope:owner
+			}
+		}
+
+		# Demand Conversion
+		if = {
+			limit = {
+				scope:demand_conversion = yes
+			}
+			set_character_faith = scope:actor.faith
+			add_opinion = {
+				modifier = demanded_conversion
+				target = scope:owner
+			}
+		}
+		
+		# Renounce Claims
+		if = {
+			limit = {
+				scope:renounce_claims = yes
+			}
+			add_opinion = {
+				modifier = demanded_claim_renouncement
+				target = scope:owner
+			}
+			scope:slave = {
+				every_claim = {
+					explicit = yes
+					limit = {
+						save_temporary_scope_as = temp_claim
+						OR = {
+							holder = scope:owner
+							AND = {
+								exists = holder
+								NOT = { prev = { target_is_liege_or_above = scope:owner } }
+								holder = { target_is_liege_or_above = scope:owner }
+							}
+							scope:owner = {
+								any_held_title = {
+									is_de_jure_liege_or_above_target = scope:temp_claim
+								}
+							}
+						}
+					}
+					scope:slave = { remove_claim = prev }
+				}
+			}
+		}
+		
+		# Gain Hook
+		if = {
+			limit = {
+				scope:gain_hook = yes
+			}
+			add_opinion = {
+				modifier = demanded_hook
+				target = scope:owner
+			}
+			scope:owner = {
+				add_hook = { #Hook effect must match gain_hook option condition
+					target = scope:slave
+					type = favor_hook
+				}
+			}
+		}
+		
+		# No Demands Added
+		if = {
+			limit = {
+				scope:gold = no
+				scope:current_gold = no
+				scope:demand_conversion = no
+				scope:renounce_claims = no
+				scope:gain_hook = no
+			}
+			scope:slave = {
+				add_opinion = {
+					modifier = carn_freed_me_from_slavery_opinion
+					target = scope:owner
+				}
+			}
+			scope:owner = {
+				add_dread = minor_dread_loss
+				if = {
+					limit = {
+						faith = {
+							NOR = {
+								AND = {
+									faith_hostility_level = {
+										target = scope:slave.faith
+										value < faith_hostile_level
+									}
+									has_doctrine = carn_doctrine_same_slavery_accepted
+								}
+								AND = {
+									faith_hostility_level = {
+										target = scope:slave.faith
+										value >= faith_hostile_level
+									}
+									has_doctrine = carn_doctrine_other_slavery_accepted
+								}
+							}
+						}
+					}
+					add_piety = medium_piety_gain
+					stress_impact = {
+						zealous = minor_stress_impact_loss
+					}
+				}
+				stress_impact = {
+					compassionate = medium_stress_impact_loss
+					sadistic = medium_stress_impact_gain
+					callous = minor_stress_impact_gain
+				}
+			}
+		}
+	}
+
+	scope:owner = {
+		hidden_effect = {
+			send_interface_message = {
+				type = event_generic_neutral
+				title = carn_msg_slave_freed
+				right_icon = scope:slave
+				custom_tooltip = carn_msg_slave_freed_desc
+			}
+		}
+	}
 }

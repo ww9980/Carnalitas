@@ -46,23 +46,25 @@
 				NOT = { has_character_flag = is_being_tortured }
 			}
 		}
-		custom_description = {
-			text = "carn_slavery_is_illegal"
-			NOT = {
-				scope:actor.faith = {
-					has_doctrine = carn_doctrine_same_slavery_crime
-					faith_hostility_level = {
-						target = scope:recipient.faith
-						value < faith_hostile_level
+		scope:recipient = {
+			custom_description = {
+				text = "carn_slavery_is_illegal"
+				NOT = {
+					scope:actor.faith = {
+						has_doctrine = carn_doctrine_same_slavery_crime
+						faith_hostility_level = {
+							target = scope:recipient.faith
+							value < faith_hostile_level
+						}
 					}
 				}
-			}
-			NOT = {
-				scope:actor.faith = {
-					has_doctrine = carn_doctrine_other_slavery_crime
-					faith_hostility_level = {
-						target = scope:recipient.faith
-						value >= faith_hostile_level
+				NOT = {
+					scope:actor.faith = {
+						has_doctrine = carn_doctrine_other_slavery_crime
+						faith_hostility_level = {
+							target = scope:recipient.faith
+							value >= faith_hostile_level
+						}
 					}
 				}
 			}
@@ -244,9 +246,6 @@
 		base = 0
 		
 		opinion_modifier = {
-			trigger = {
-				NOT = { scope:actor = scope:recipient }
-			}
 			opinion_target = scope:recipient
 			multiplier = -1
 		}

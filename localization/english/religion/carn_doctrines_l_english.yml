@@ -2,7 +2,7 @@
 
  carn_doctrine_same_slavery_name: "Righteous Faith Slavery"
  carn_doctrine_same_slavery_crime_name: "Criminal"
- carn_doctrine_same_slavery_crime_desc: "It is a capital sin to enslave a faithful [ROOT.Faith.GetReligion.GetAdjectiveNoTooltip], for to do so is to claim yourself a higher master than [ROOT.Faith.PantheonTerm]."
+ carn_doctrine_same_slavery_crime_desc: "It is a capital sin to enslave a member of the [ROOT.Faith.GetReligion.GetAdjectiveNoTooltip] faithful, for to do so is to claim yourself a higher master than [ROOT.Faith.PantheonTerm]."
  carn_doctrine_same_slavery_shunned_name: "Shunned"
  carn_doctrine_same_slavery_shunned_desc: "Although our beliefs differ, all [ROOT.Faith.GetReligion.GetAdjectiveNoTooltip] faithful are brothers and sisters. It is deeply unjust for one of us to be treated as less than human."
  carn_doctrine_same_slavery_accepted_name: "Accepted"

@@ -1,5 +1,9 @@
-﻿# Empty list of sex interactions. Modders should add their own scenes to this as random_events.
+﻿##################################################################################
+# carn_sex_scene
+##################################################################################
+# Empty list of sex interactions. Modders should add their own scenes to this as random_events.
 # You can adjust the random chance based on how often you think your event should appear.
+
 carn_sex_scene = {
 	random_events = {
 		100 = carn_sex_scene.0001 # use the PDX sex scene generator
@@ -15,9 +19,9 @@ carn_sex_scene_fallback = {
 
 ##################################################################################
 # carn_on_sex
-# Triggers whenever a character has sex via event or decision,
-# in the scope of that character
 ##################################################################################
+
+# Triggers whenever a character has sex via event or decision, in the scope of that character.
 
 # DOES NOT trigger off random passive pregnancy with spouse/consort
 
