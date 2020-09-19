@@ -3,7 +3,7 @@ carn_slavery_doctrine.0001.desc:1 "Je vais accomplir mon devoir envers la foi [R
 carn_slavery_doctrine.0001.a:1 "Une sage décision."
 
 carn_slavery_doctrine.0002.desc:1 "Je comprends votre préoccupation, mais j'ai aquis ces esclaves à grands frais...\n\nCependant, si vous veniez à compenser cet investissement, je serais plus que disposé[ROOT.Char.Custom('FR_E')] à leur accorder leur liberté."
-carn_slavery_doctrine.0002.a:1 "Pour la foi [ROOT.Char.GetFaith.GetReligion.GetAdjective], c'est la bonne chose à faire."
+carn_slavery_doctrine.0002.a:1 "Au nom de la foi [ROOT.Char.GetFaith.GetReligion.GetAdjectiveNoTooltip], c'est la bonne chose à faire."
 carn_slavery_doctrine.0002.b:1 "Je ne paierais pas pour vos acquisitions pécheresses!"
 carn_slavery_doctrine.0002.c:1 "J'ai bien peur que vous n'ayez pas le choix en la matière."
 

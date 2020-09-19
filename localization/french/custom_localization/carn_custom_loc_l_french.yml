@@ -34,3 +34,6 @@ relation_slave_owner_male:1 "maître"
 relation_slave_owner_female:1 "maîtresse"
 relation_slave_owner_male_possessive:1 "du maître"
 relation_slave_owner_female_possessive:1 "de la maîtresse"
+
+# Religion
+carn_doctrine_same_slavery_name_full:1 "Asservissement de coreligionnaires"
