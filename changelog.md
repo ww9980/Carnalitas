@@ -13,8 +13,12 @@
 
 ## For Modders
 
-* **IMPORTANT:** `carn_sex_scene_effect` now also requires argument `DRAMA` (boolean). It passes this argument to the requested event, which should check for it and apply it to `carn_had_sex_with_effect` as appropriate.
-* `carn_had_sex_effect` now returns `scope:carn_sex_char_1_impregnated`, `scope:carn_sex_char_2_impregnated`. These are yes if the character was impregnated through the sex effect, and no otherwise.
+* **IMPORTANT:** `carn_sex_scene_effect` has been reworked.
+** `PREGNANCY_CHANCE` has been broken up into `C1_PREGNANCY_CHANCE` and `C2_PREGNANCY_CHANCE`, this allows you to fine-tune the pregnancy chances in non-penetrative sex scenes for example.
+** It now also requires argument `DRAMA` (boolean). It passes this argument to the requested event, which should check for it and apply it to `carn_had_sex_with_effect` as appropriate.
+** `carn_had_sex_effect` now returns `scope:carn_sex_char_1_could_be_impregnated`, `scope:carn_sex_char_2_could_be_impregnated`. These are yes if the character had a pregnancy chance greater than 0 through the sex effect, and no otherwise.
+** `carn_had_sex_effect` now returns `scope:carn_sex_char_1_impregnated`, `scope:carn_sex_char_2_impregnated`. These are yes if the character was impregnated through the sex effect, and no otherwise.
+
 * New scripted effects: `carn_remove_dick_trait_effect`, `carn_remove_tits_trait_effect`
 * New scripted effects: `carn_add_tits_big_1_effect`, etc. for all the dick and tit traits. This effect will add the appropriate dick or tit size to a character if the game rule is on, and do nothing if the game rule is off.
 * New sex scene tag: `orgy`

@@ -2,10 +2,14 @@
 #
 # CHARACTER_1: the character doing the laying with.
 # CHARACTER_2: the character getting laid.
-# PREGNANCY_CHANCE: the pregnancy chance.
+# C1_PREGNANCY_CHANCE: the chance for Character 1 to get pregnant.
+# C2_PREGNANCY_CHANCE: the chance for Character 2 to get pregnant.
 # DRAMA: if yes, enables stress effects, story cycles and adultery suspicion
 #
 # sends scope:carn_sex_char_1 and scope:carn_sex_char_2 to carn_on_sex
+#
+# returns scope:carn_sex_char_1_could_be_impregnated, scope:carn_sex_char_2_could_be_impregnated
+# these are yes if the character had a pregnancy chance greater than 0 through this sex effect, and no otherwise
 #
 # returns scope:carn_sex_char_1_impregnated, scope:carn_sex_char_2_impregnated
 # these are yes if the character was impregnated through this sex effect, and no otherwise
@@ -20,6 +24,32 @@ carn_had_sex_with_effect = {
 		remove_character_flag = carn_block_next_had_sex_with_effect
 	}
 	else = {
+		if = {
+			limit = { $C1_PREGNANCY_CHANCE$ > 0 }
+			save_scope_value_as = {
+				name = carn_sex_char_1_could_be_impregnated
+				value = yes
+			}
+		}
+		else = {
+			save_scope_value_as = {
+				name = carn_sex_char_1_could_be_impregnated
+				value = no
+			}
+		}
+		if = {
+			limit = { $C2_PREGNANCY_CHANCE$ > 0 }
+			save_scope_value_as = {
+				name = carn_sex_char_2_could_be_impregnated
+				value = yes
+			}
+		}
+		else = {
+			save_scope_value_as = {
+				name = carn_sex_char_2_could_be_impregnated
+				value = no
+			}
+		}
 		if = {
 			limit = { this = $CHARACTER_1$ }
 			custom_tooltip = carn_had_sex_with_effect.first_person.tt
@@ -96,7 +126,7 @@ carn_had_sex_with_effect = {
 							value = no
 						}
 						random = {
-							chance = $PREGNANCY_CHANCE$
+							chance = $C1_PREGNANCY_CHANCE$
 							make_pregnant = {
 								father = $CHARACTER_2$
 							}
@@ -163,7 +193,7 @@ carn_had_sex_with_effect = {
 										age < define:NChildbirth|MAX_FEMALE_REPRODUCTION_AGE
 									}
 									random = {
-										chance = $PREGNANCY_CHANCE$
+										chance = $C2_PREGNANCY_CHANCE$
 										add_character_flag = {
 											flag = peasant_is_pregnant
 											days = 560
@@ -188,7 +218,7 @@ carn_had_sex_with_effect = {
 							}
 							$CHARACTER_2$ = {
 								random = {
-									chance = $PREGNANCY_CHANCE$
+									chance = $C2_PREGNANCY_CHANCE$
 									make_pregnant = {
 										father = $CHARACTER_1$
 									}
