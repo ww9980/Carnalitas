@@ -6,7 +6,7 @@ carn_enslave_effect = {
 
 	scope:new_slave = {
 		if = {
-			limit = { is_landed = yes }
+			limit = { is_ruler = yes }
 			depose = yes
 		}
 		hidden_effect = {
@@ -17,7 +17,12 @@ carn_enslave_effect = {
 
 	scope:new_owner = {
 		set_relation_slave = scope:new_slave
-		hidden_effect = { add_courtier = scope:new_slave }
+		if = {
+			limit = {
+				scope:new_slave = { NOT = { is_courtier_of = scope:new_owner } }
+			}
+			hidden_effect = { add_courtier = scope:new_slave }
+		}
 	}
 
 	if = {

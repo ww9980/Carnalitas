@@ -16,9 +16,10 @@
  carn_enslave_recipient_is_arrogant: "[recipient.GetShortUIName|U] is [GetTrait('arrogant').GetName( GetPlayer )]: $VALUE|=+0$"
  carn_enslave_recipient_is_noble: "[recipient.GetShortUIName|U] is a [noble|E]: $VALUE|=+0$"
  carn_enslave_recipient_would_lose_titles: "[recipient.GetShortUIName|U] would lose [titles|E]: $VALUE|=+0$"
- carn_enslave_shunned_in_recipient_faith: "The enslavement of [recipient.GetFaith.GetAdherentNamePlural|U] is [shunned|E] in [recipient.GetFaith.GetName|U]: $VALUE|=+0$"
- carn_enslave_crime_in_recipient_faith: "The enslavement of [recipient.GetFaith.GetAdherentNamePlural|U] is [criminal|E] in [recipient.GetFaith.GetName|U]: $VALUE|=+0$"
+ carn_enslave_shunned_in_recipient_faith: "[recipient.GetShortUIName|U]'s [faith|E] considers the enslavement of [recipient.GetFaith.GetAdherentNamePluralNoTooltip|U] to be [shunned|E]: $VALUE|=+0$"
+ carn_enslave_crime_in_recipient_faith: "[recipient.GetShortUIName|U]'s [faith|E] considers Same Religion Slavery a [crime|E]: $VALUE|=+0$"
  carn_enslave_you_have_no_reason: "You do not have an [execute_reason|E]: $VALUE|=+0$"
+ carn_slavery_is_illegal: "Enslaving [CHARACTER.GetFaith.GetAdherentNamePlural|U] is [illegal|E] in [CHARACTER.GetFaith.GetName]"
 
  carn_is_allowed_to_enslave_desc: "[recipient.GetShortUIName|U] is a known [criminal|E] #weak ([recipient.GetExecuteReasons])#!, allowing me to enslave [recipient.GetHerHim] without being viewed as a [tyrant|E]"
  carn_is_allowed_to_enslave_hostile_religion_desc: "[recipient.GetShortUINamePossessive|U] faith, [recipient.GetFaith.GetName], is considered to be either #V Hostile#! or #V Evil#! by my faith, allowing me to enslave [recipient.GetHerHim] without being viewed as a [tyrant|E]."

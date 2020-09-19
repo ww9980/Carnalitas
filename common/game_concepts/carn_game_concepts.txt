@@ -4,6 +4,7 @@
 }
 
 slave = {
+	texture = "gfx/interface/icons/traits/slave.dds"
 	alias = { slaves slave_possessive slaves_possessive }
 	parent = relation
 }

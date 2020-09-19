@@ -17,10 +17,6 @@
 	
 	is_shown = {
 		NOT = { has_game_rule = carn_slavery_content_disabled }
-		NAND = {
-			scope:actor = { is_ai = no }
-			scope:recipient = { is_ai = no }
-		}
 		scope:recipient = {
 			OR = {
 				is_courtier_of = scope:actor
@@ -31,6 +27,13 @@
 				has_character_flag = carn_cannot_be_enslaved
 				has_trait_with_flag = carn_cannot_be_enslaved
 			}
+		}
+		trigger_if = { # never enslave player unless player can't refuse
+			limit = {
+				scope:recipient = { is_ai = no }
+			}
+			has_game_rule = carn_slavery_content_enabled
+			scope:recipient = { is_imprisoned_by = scope:actor }
 		}
 	}
 
@@ -43,21 +46,24 @@
 				NOT = { has_character_flag = is_being_tortured }
 			}
 		}
-		NOT = {
-			faith = {
-				has_doctrine = carn_doctrine_same_slavery_crime
-				faith_hostility_level = {
-					target = scope:recipient.faith
-					value < faith_hostile_level
+		custom_description = {
+			text = "carn_slavery_is_illegal"
+			NOT = {
+				scope:actor.faith = {
+					has_doctrine = carn_doctrine_same_slavery_crime
+					faith_hostility_level = {
+						target = scope:recipient.faith
+						value < faith_hostile_level
+					}
 				}
 			}
-		}
-		NOT = {
-			faith = {
-				has_doctrine = carn_doctrine_other_slavery_crime
-				faith_hostility_level = {
-					target = scope:recipient.faith
-					value >= faith_hostile_level
+			NOT = {
+				scope:actor.faith = {
+					has_doctrine = carn_doctrine_other_slavery_crime
+					faith_hostility_level = {
+						target = scope:recipient.faith
+						value >= faith_hostile_level
+					}
 				}
 			}
 		}
@@ -129,7 +135,7 @@
 		modifier = {
 			desc = carn_enslave_crime_in_recipient_faith
 			add = -50
-			scope:recipient = {
+			scope:recipient.faith = {
 				has_doctrine = carn_doctrine_same_slavery_crime
 			}
 		}
@@ -172,6 +178,7 @@
 	on_accept = {
 		if = {
 			limit = {
+				scope:actor = { is_ai = yes }
 				scope:recipient = { is_ai = no }
 			}
 			scope:recipient = { trigger_event = carn_slave.0001 } # Give players a chance to see what's about to happen
@@ -184,7 +191,7 @@
 			}
 		}
 		else = {
-			scope:recipient = { trigger_event = char_interaction.0001 }
+			scope:recipient = { trigger_event = carn_slave.0001 }
 			carn_enslave_effect = {
 				SLAVE = scope:recipient
 				OWNER = scope:actor

@@ -6,3 +6,8 @@
 	global = carn_can_be_granted_titles
 	global_not = carn_not_can_be_granted_titles
 }
+
+carn_slavery_is_illegal = {
+	first_not = carn_slavery_is_illegal
+	third_not = carn_slavery_is_illegal
+}
