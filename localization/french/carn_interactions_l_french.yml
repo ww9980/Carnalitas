@@ -7,7 +7,7 @@ carn_sex_interaction_effect_cd_tt:1 "#weak Cette action n'aura aucun effet en je
 
 carn_enslave_interaction:1 "Asservir"
 carn_enslave_interaction_desc:1 "Faites de [recipient.GetShortUINameNoTooltip] votre [slave|El]"
-carn_msg_enslave:1 "Personnage asservi"
+carn_msg_enslave:1 "Nouvel esclave"
 carn_msg_enslave_desc:1 "[recipient.Custom('FR_only_le_GetTitledFirstName')][recipient.GetTitledFirstName] est devenu[recipient.Custom('FR_E')] votre [slave|El]"
 carn_enslave_actor_diplomacy:1 "Votre [diplomacy_skill|E]: $VALUE|=+0$"
 carn_enslave_recipient_is_your_prisoner:1 "[recipient.Custom('FR_only_le_GetShortUIName')|U][recipient.GetShortUIName] veut sortir de [prison|E]: $VALUE|=+0$"
@@ -32,7 +32,7 @@ carn_msg_slave_freed_desc:1 "[slave.GetTitledFirstName] n'est plus votre [slave|
 
 carn_slave_negotiate_freedom_interaction:1 "Négocier la libération"
 carn_slave_negotiate_freedom_interaction_desc:1 "Demander [recipient.Custom('FR_only_au_GetShortUIName')][recipient.GetShortUINameNoTooltip] de vous libérer de l'[slavery|El]"
-carn_slave_negotiate_freedom_offer:1 "Je sais que vous êtes un maître indulgent. Consenteriez-vous à me m'affranchir en ces termes ?"
+carn_slave_negotiate_freedom_offer:1 "Je sais que vous êtes un maître indulgent. Consenteriez-vous à m'affranchir en ces termes ?"
 carn_slave_negotiate_freedom_convert_faith:1 "Se convertir à la foi [recipient.GetFaith.GetName]"
 carn_slave_negotiate_freedom_renounce_claims:1 "[recipient.Custom('FR_only_le_GetShortUIName')|U][recipient.GetShortUIName] perd toutes ses [claims|El] sur les titres de son Royaume"
 
@@ -46,3 +46,18 @@ carn_seize_slave_interaction:1 "S'emparer de l'esclave"
 carn_seize_slave_interaction_desc:1 "Faites de [recipient.GetShortUINameNoTooltip] votre propre [slave|El]"
 carn_wants_to_be_liege_slave:1 "Préfère s[recipient.Custom('FR_OnA')] Maître actuel : $VALUE|=+0$"
 carn_wants_to_be_your_slave:1 "Vous préfère en tant que Maître : $VALUE|=+0$"
+
+carn_buy_slave_directly_interaction:1 "Acheter un esclave"
+carn_buy_slave_directly_interaction_desc:1 "Acheter un [slave|El] avec de l'[gold|El]"
+actor_secondary_carn_buy_slave_directly_interaction:1 "Acheteur"
+
+carn_buy_slave_on_market_interaction:1 "Parcourir le marché au esclaves"
+carn_buy_slave_on_market_interaction_desc:1 "Parcourir tout les [slaves|El] disponibles à la vente au [slave_market|El]"
+actor_secondary_carn_buy_slave_on_market_interaction:1 "Acheteur"
+
+carn_slave_is_my_knight_reason:1 "[secondary_recipient.Custom('FR_only_le_GetShortUIName')|U][secondary_recipient.GetShortUIName] est mon [recipient.Custom('KnightCulture')] : $VALUE|=+0$"
+carn_slave_is_my_councillor_reason:1 "[secondary_recipient.Custom('FR_only_le_GetShortUIName')|U][secondary_recipient.GetShortUIName] est mon [councillor|E] : $VALUE|=+0$"
+carn_slave_is_my_friend_reason:1 "[secondary_recipient.Custom('FR_only_le_GetShortUIName')|U][secondary_recipient.GetShortUIName] est mon [friend|El] : $VALUE|=+0$"
+carn_slave_is_my_lover_reason:1 "[secondary_recipient.Custom('FR_only_le_GetShortUIName')|U][secondary_recipient.GetShortUIName] est mon [lover|El] : $VALUE|=+0$"
+carn_slave_is_my_crush_reason:1 "[secondary_recipient.Custom('FR_only_le_GetShortUIName')|U][secondary_recipient.GetShortUIName] est mon[crush|El] : $VALUE|=+0$"
+carn_slave_is_my_soulmate_reason:1 "[secondary_recipient.Custom('FR_only_le_GetShortUIName')|U][secondary_recipient.GetShortUIName] est mon [soulmate|El] : $VALUE|=+0$"
