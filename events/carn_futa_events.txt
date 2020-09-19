@@ -82,6 +82,7 @@ carn_futa.0010 = {
 				#PREGNANCY_CHANCE = carn_sex_pregnancy_chance
 				C1_PREGNANCY_CHANCE = 100
 				C2_PREGNANCY_CHANCE = 100
+				STRESS_EFFECTS = no
 				DRAMA = no
 			}
 		}

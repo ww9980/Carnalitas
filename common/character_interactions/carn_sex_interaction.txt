@@ -43,6 +43,7 @@ carn_sex_interaction = {
                         CHARACTER_2 = scope:recipient
                         C1_PREGNANCY_CHANCE = pregnancy_chance
                         C2_PREGNANCY_CHANCE = pregnancy_chance
+                        STRESS_EFFECTS = yes
                         DRAMA = yes
                     }
                 }
@@ -111,6 +112,7 @@ carn_sex_interaction = {
                 carn_sex_scene_effect = {
                     PLAYER = scope:actor
                     TARGET = scope:recipient
+                    STRESS_EFFECTS = yes
                     DRAMA = yes
                 }
             }

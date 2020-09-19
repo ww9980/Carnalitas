@@ -68,6 +68,7 @@ carn_sex_scene.0001 = {
 				CHARACTER_2 = scope:carn_sex_target
 				C1_PREGNANCY_CHANCE = pregnancy_chance
 				C2_PREGNANCY_CHANCE = pregnancy_chance
+				STRESS_EFFECTS = scope:carn_sex_stress_effects
 				DRAMA = scope:carn_sex_drama
 			}
 		}

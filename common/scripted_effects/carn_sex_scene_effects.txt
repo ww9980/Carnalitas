@@ -12,7 +12,8 @@
 # Second, call carn_sex_scene_effect with the following arguments:
 # PLAYER is the character who the event will be shown to.
 # TARGET is the character that PLAYER is having sex with.
-# DRAMA is yes or no, whether you want the sex scene to affect stress and trigger adultery and peasant affair storylines. (Note: This doesn't stop a relationship from being adulterous, or a child from being born a bastard. It just affects whether the stress effects and story cycles will happen.)
+# STRESS_EFFECTS is yes or no, whether you want the sex scene to affect stress
+# DRAMA is yes or no, whether you want the sex scene to trigger adultery and peasant affair storylines. (Note: This doesn't stop a relationship from being adulterous, or a child from being born a bastard. It just affects whether the stress effects and story cycles will happen.)
 # (Cheri recommends setting DRAMA = yes unless you have a really good reason)
 #
 # The sex scene generator triggers an on_action with a list of random_events that match all of the requested tags.
@@ -29,6 +30,8 @@
 # 	carn_sex_scene_effect = {
 # 		PLAYER = root
 #		TARGET = scope:target
+#		STRESS_EFFECTS = yes
+#		DRAMA = yes
 # 	}
 # }
 #
@@ -36,6 +39,7 @@
 carn_sex_scene_effect = {
 	$PLAYER$ = { save_scope_as = carn_sex_player }
 	$TARGET$ = { save_scope_as = carn_sex_target }
+	$STRESS_EFFECTS$ =  { save_scope_as = carn_sex_stress_effects }
 	$DRAMA$ =  { save_scope_as = carn_sex_drama }
 	scope:carn_sex_player = {
 		trigger_event = {

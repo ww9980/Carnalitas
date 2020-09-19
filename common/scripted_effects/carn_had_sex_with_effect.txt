@@ -4,7 +4,8 @@
 # CHARACTER_2: the character getting laid.
 # C1_PREGNANCY_CHANCE: the chance for Character 1 to get pregnant.
 # C2_PREGNANCY_CHANCE: the chance for Character 2 to get pregnant.
-# DRAMA: if yes, enables stress effects, story cycles and adultery suspicion
+# STRESS_EFFECTS: if yes, enables stress effects
+# DRAMA: if yes, enables adultery suspicion and story cycles
 #
 # sends scope:carn_sex_char_1 and scope:carn_sex_char_2 to carn_on_sex
 #
@@ -63,7 +64,7 @@ carn_had_sex_with_effect = {
 		}
 
 		if = {
-			limit = { $DRAMA$ = yes }
+			limit = { $STRESS_EFFECTS$ = yes }
 			#Stress
 			$CHARACTER_1$ = {
 				if = {
