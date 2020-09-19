@@ -23,11 +23,11 @@
 
 * **IMPORTANT:** `carn_sex_scene_effect` and `carn_had_sex_with_effect` have been reworked.
 
-** `carn_sex_scene_effect` and `carn_had_sex_with_effect` now require argument `STRESS_EFFECTS` (boolean). This is now separate from `DRAMA`.
+  * `carn_sex_scene_effect` and `carn_had_sex_with_effect` now require argument `STRESS_EFFECTS` (boolean). This is now separate from `DRAMA`.
 
-** `carn_sex_scene_effect` now requires argument `DRAMA` (boolean). It passes this argument to the requested event, which should check for it and apply it to `carn_had_sex_with_effect` as appropriate.
+  * `carn_sex_scene_effect` now requires argument `DRAMA` (boolean). It passes this argument to the requested event, which should check for it and apply it to `carn_had_sex_with_effect` as appropriate.
 
-** `carn_had_sex_with_effect`'s `PREGNANCY_CHANCE` has been broken up into `C1_PREGNANCY_CHANCE` and `C2_PREGNANCY_CHANCE`, this allows you to fine-tune the pregnancy chances in non-penetrative sex scenes for example.
+  * `carn_had_sex_with_effect`'s `PREGNANCY_CHANCE` has been broken up into `C1_PREGNANCY_CHANCE` and `C2_PREGNANCY_CHANCE`, this allows you to fine-tune the pregnancy chances in non-penetrative sex scenes for example.
 * `carn_had_sex_effect` now returns `scope:carn_sex_char_1_could_be_impregnated`, `scope:carn_sex_char_2_could_be_impregnated`. These are yes if the character had a pregnancy chance greater than 0 through the sex effect, and no otherwise.
 * `carn_had_sex_effect` now returns `scope:carn_sex_char_1_impregnated`, `scope:carn_sex_char_2_impregnated`. These are yes if the character was impregnated through the sex effect, and no otherwise.
 
