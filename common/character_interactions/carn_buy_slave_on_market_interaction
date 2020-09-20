@@ -81,7 +81,9 @@ carn_buy_slave_on_market_interaction = {
 		scope:actor = { save_scope_as = buyer }
 		scope:recipient = { save_scope_as = seller }
 		scope:secondary_recipient = { save_scope_as = slave }
-		carn_buy_slave_effect = yes
+		carn_buy_slave_effect = { 
+				SLAVE_PRICE = scope:secondary_recipient.carn_slave_price_value
+		}
 	}
 	
 	ai_accept = {
