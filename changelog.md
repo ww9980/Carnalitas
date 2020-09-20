@@ -53,6 +53,7 @@
 * New scripted effect: `carn_free_slave_interaction_effect`
 * New scripted effect: `carn_buy_slave_effect`
 * New scripted trigger: `carn_slave_can_be_sold_trigger`, which checks that the slave is healthy enough to sell
+* New scripted trigger: `carn_candidate_to_sell_slave_to_trigger`
 * Added trait and character flags `carn_cannot_be_enslaved`.
 * Added trait and character flags `carn_slave_cannot_be_sold`.
 * Added trait and character flags `carn_wants_to_be_a_slave` (which makes them automatically accept offers to be enslaved).
@@ -65,7 +66,7 @@
 ## Tweaks
 
 * Removed fertility bonuses and penalties from dick and tit traits.
-* Updated dick trait icons.
+* New dick trait icons inspired by Selestra's dick trait icons.
 * Made arousal event message more visible.
 
 ## Bug Fixes
