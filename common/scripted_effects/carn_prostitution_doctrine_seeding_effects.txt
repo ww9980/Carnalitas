@@ -1,0 +1,28 @@
+﻿# carn_seed_prostitution_doctrines_effect
+# seeds a faith's religious doctrines for prostitution
+carn_seed_prostitution_doctrines_effect = {
+	if = {
+		limit = {
+			NOR = {
+				has_doctrine = carn_doctrine_prostitution_crime
+				has_doctrine = carn_doctrine_prostitution_shunned
+				has_doctrine = carn_doctrine_prostitution_accepted
+			}
+		}
+		if = {
+			limit = {
+				has_game_rule = carn_prostitution_default_religious_doctrine_shunned
+			}
+			add_doctrine = carn_doctrine_prostitution_shunned
+		}
+		else_if = {
+			limit = {
+				has_game_rule = carn_prostitution_default_religious_doctrine_accepted
+			}
+			add_doctrine = carn_doctrine_prostitution_accepted
+		}
+		else = {
+			add_doctrine = carn_doctrine_prostitution_crime
+		}
+	}
+}

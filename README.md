@@ -12,6 +12,10 @@ When forking Carnalitas, please create new files rather than writing into existi
 
 [Credits](https://github.com/cherisong/Carnalitas/wiki/Credits)
 
+## Official Submods
+
+[Carnalitas - Historical Slavery Doctrines](https://github.com/cherisong/Carnalitas-Historical-Slavery-Doctrines)
+
 ## Load Order
 
 * total conversion mods

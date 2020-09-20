@@ -1,0 +1,42 @@
+﻿carn_can_become_same_sex_concubine_of_actor_trigger = {
+	trigger_if = {
+		limit = {
+			NOT = { is_imprisoned_by = scope:actor }
+		}
+		is_married = no
+		is_betrothed = no
+	}
+	trigger_if = {
+		limit = {
+			is_imprisoned_by = scope:actor
+			is_married = yes
+		}
+		NOT = { is_spouse_of = scope:actor }
+	}
+	is_concubine = no
+	is_ruler = no
+	is_landed = no
+	is_adult = yes
+	sex_same_as = scope:actor
+
+	save_temporary_scope_as = recipient_scope
+	scope:actor.faith = { # My faith allows this level of consanguinity
+		OR = {
+			NOT = { scope:actor = { is_close_or_extended_family_of = scope:recipient_scope } }
+			AND = {
+				scope:actor = { is_cousin_of = scope:recipient_scope }
+				has_doctrine_parameter = allows_cousin_marriage
+			}
+			AND = {
+				scope:actor = {
+					OR = {
+						is_uncle_or_aunt_of = scope:recipient_scope
+						is_nibling_of = scope:recipient_scope
+					}
+				}
+				has_doctrine_parameter = allows_aunt_nephew_and_uncle_niece_marriage
+			}
+			has_doctrine_parameter = allows_unrestricted_marriage
+		}
+	}
+}

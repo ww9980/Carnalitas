@@ -1,0 +1,118 @@
+﻿carn_find_same_sex_concubine_interaction = {
+	category = interaction_category_diplomacy
+
+	desc = carn_find_same_sex_concubine_interaction_desc
+
+	interface = concubine_list
+
+	needs_recipient_to_open = no
+
+	redirect = {
+		scope:actor = { # The UI will open to the already filled left first if we don't tell it we've got "our side" actor which is always ourselves
+			save_scope_as = secondary_actor
+		}
+	}
+
+	populate_recipient_list = {
+		scope:actor = {
+			every_courtier = {
+				limit = {
+					is_at_home = yes
+					carn_can_become_same_sex_concubine_of_actor_trigger = yes
+				}
+				add_to_list = characters
+			}
+			every_prisoner = {
+				limit = {
+					NOT = { is_in_list = characters }
+					carn_can_become_same_sex_concubine_of_actor_trigger = yes
+				}
+				add_to_list = characters
+			}
+		}
+	}
+
+	is_shown = {
+		scope:actor = {
+			allowed_concubines = yes
+			is_adult = yes
+			faith = { has_doctrine = doctrine_homosexuality_accepted }
+			trigger_if = { #So that we show the recipient list, but can also only use this on ourselves, we have to do this check in the beginning
+				limit = {
+					NOT = { exists = scope:secondary_recipient }
+				}
+				scope:actor = scope:recipient
+			}
+		}
+		trigger_if = {
+			limit = {
+				NOT = { scope:actor = scope:recipient }
+			}
+			#scope:actor = {
+			#	sex_opposite_of = scope:recipient
+			#}
+			scope:recipient = {
+				carn_can_become_same_sex_concubine_of_actor_trigger = yes
+				is_adult = yes
+				OR = {
+					is_imprisoned_by = scope:actor
+					AND = {
+						is_courtier_of = scope:actor
+						is_at_home = yes
+					}
+				}
+			}
+			scope:actor.faith = { # My faith allows this level of consanguinity
+				OR = {
+					NOT = { scope:actor = { is_close_or_extended_family_of = scope:recipient } }
+					AND = {
+						scope:actor = { is_cousin_of = scope:recipient }
+						has_doctrine_parameter = allows_cousin_marriage
+					}
+					AND = {
+						scope:actor = {
+							OR = {
+								is_uncle_or_aunt_of = scope:recipient
+								is_nibling_of = scope:recipient
+							}
+						}
+						has_doctrine_parameter = allows_aunt_nephew_and_uncle_niece_marriage
+					}
+					has_doctrine_parameter = allows_unrestricted_marriage
+				}
+			}
+		}
+	}
+
+	is_valid_showing_failures_only = {
+		custom_description = {
+			text = take_concubine_allowed_more
+			object = scope:recipient
+			scope:actor = {
+				allowed_more_concubines = yes
+			}
+		}
+		trigger_if = {
+			limit = {
+				NOT = { scope:actor = scope:recipient }
+			}
+			scope:recipient = {
+				carn_can_become_same_sex_concubine_of_actor_trigger = yes
+			}
+		}
+	}
+
+	can_be_picked = {
+		is_adult = yes
+	}
+
+	auto_accept = yes
+
+	ai_will_do = {
+		base = 0
+	}
+	
+	on_accept = {
+		concubine_on_accept_effect = yes
+	}
+}

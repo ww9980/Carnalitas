@@ -10,6 +10,9 @@
 # 6911-6913: tits_big_1 to tits_big_3
 # 6914: slave
 # 6915: former_slave
+# 6916: prostitute_1
+# 6917: prostitute_2
+# 6918: prostitute_3
 #
 
 futa = {
@@ -669,5 +672,170 @@ former_slave = { # Freedman/Freedwoman
 	compatibility = {
 		slave = @pos_compat_medium
 		former_slave = @pos_compat_medium
+	}
+}
+
+prostitute_1 = {
+	index = 6916
+	lifestyle = yes
+
+	diplomacy = 1
+	intrigue = 1
+	attraction_opinion = 5
+	seduce_scheme_power_add = 5
+
+	group = lifestyle_prostitute
+	level = 1
+
+	triggered_opinion = {
+		parameter = carn_prostitution_illegal
+		opinion_modifier = carn_prostitution_crime_opinion
+		ignore_opinion_value_if_same_trait = yes
+	}
+
+	triggered_opinion = {
+		parameter = carn_prostitution_shunned
+		opinion_modifier = carn_prostitution_intolerant_opinion
+		ignore_opinion_value_if_same_trait = yes
+	}
+	
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_prostitute_1_desc
+			}
+			desc = trait_prostitute_1_character_desc
+		}
+	}
+
+	ai_greed = medium_positive_ai_value
+	ai_sociability = medium_positive_ai_value
+
+	compatibility = {
+		lustful = @pos_compat_high
+		prostitute_1 = @pos_compat_medium
+		prostitute_2 = @pos_compat_medium
+		prostitute_3 = @pos_compat_medium
+		reveler_1 = @pos_compat_low
+		reveler_2 = @pos_compat_low
+		reveler_3 = @pos_compat_low
+		seducer = @pos_compat_medium
+		gregarious = @pos_compat_low
+		shy = @neg_compat_low
+		chaste = @neg_compat_high
+		celibate = @neg_compat_high
+	}
+}
+
+prostitute_2 = {
+	index = 6917
+	lifestyle = yes
+
+	diplomacy = 2
+	intrigue = 2
+	attraction_opinion = 10
+	seduce_scheme_power_add = 10
+
+	group = lifestyle_prostitute
+	level = 2
+
+	triggered_opinion = {
+		parameter = carn_prostitution_illegal
+		opinion_modifier = carn_prostitution_crime_opinion
+		ignore_opinion_value_if_same_trait = yes
+	}
+
+	triggered_opinion = {
+		parameter = carn_prostitution_shunned
+		opinion_modifier = carn_prostitution_intolerant_opinion
+		ignore_opinion_value_if_same_trait = yes
+	}
+	
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_prostitute_2_desc
+			}
+			desc = trait_prostitute_2_character_desc
+		}
+	}
+
+	ai_greed = medium_positive_ai_value
+	ai_sociability = medium_positive_ai_value
+
+	compatibility = {
+		lustful = @pos_compat_high
+		prostitute_1 = @pos_compat_medium
+		prostitute_2 = @pos_compat_medium
+		prostitute_3 = @pos_compat_medium
+		reveler_1 = @pos_compat_low
+		reveler_2 = @pos_compat_low
+		reveler_3 = @pos_compat_low
+		seducer = @pos_compat_medium
+		gregarious = @pos_compat_low
+		shy = @neg_compat_low
+		chaste = @neg_compat_high
+		celibate = @neg_compat_high
+	}
+}
+
+prostitute_3 = {
+	index = 6918
+	lifestyle = yes
+
+	diplomacy = 3
+	intrigue = 3
+	attraction_opinion = 15
+	seduce_scheme_power_add = 15
+
+	group = lifestyle_prostitute
+	level = 3
+
+	triggered_opinion = {
+		parameter = carn_prostitution_illegal
+		opinion_modifier = carn_prostitution_crime_opinion
+		ignore_opinion_value_if_same_trait = yes
+	}
+
+	triggered_opinion = {
+		parameter = carn_prostitution_shunned
+		opinion_modifier = carn_prostitution_intolerant_opinion
+		ignore_opinion_value_if_same_trait = yes
+	}
+	
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_prostitute_3_desc
+			}
+			desc = trait_prostitute_3_character_desc
+		}
+	}
+
+	ai_greed = medium_positive_ai_value
+	ai_sociability = medium_positive_ai_value
+
+	compatibility = {
+		lustful = @pos_compat_high
+		prostitute_1 = @pos_compat_medium
+		prostitute_2 = @pos_compat_medium
+		prostitute_3 = @pos_compat_medium
+		reveler_1 = @pos_compat_low
+		reveler_2 = @pos_compat_low
+		reveler_3 = @pos_compat_low
+		seducer = @pos_compat_medium
+		gregarious = @pos_compat_low
+		shy = @neg_compat_low
+		chaste = @neg_compat_high
+		celibate = @neg_compat_high
 	}
 }

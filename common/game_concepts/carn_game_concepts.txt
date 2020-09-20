@@ -3,6 +3,11 @@
 	parent = relation
 }
 
+prostitute = {
+	texture = "gfx/interface/icons/traits/prostitute.dds"
+	alias = { prostitutes prostitution prostitute_possessive prostitutes_possessive }
+}
+
 slave = {
 	texture = "gfx/interface/icons/traits/slave.dds"
 	alias = { slaves slavery slave_possessive slaves_possessive }
