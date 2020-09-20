@@ -75,7 +75,7 @@ carn_buy_slave_directly_interaction = {
 		}
 	}
 	
-	ai_frequency = 12
+	ai_frequency = 240
 	
 	ai_targets = {
 		ai_recipients = realm_characters
