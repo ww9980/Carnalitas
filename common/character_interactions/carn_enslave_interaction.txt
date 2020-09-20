@@ -253,7 +253,7 @@
 					type = event_generic_neutral
 					title = carn_msg_enslave
 					right_icon = scope:recipient
-					custom_tooltip = carn_msg_enslave_desc
+					custom_tooltip = carn_msg_scope_recipient_becomes_your_slave_desc
 				}
 			}
 		}
