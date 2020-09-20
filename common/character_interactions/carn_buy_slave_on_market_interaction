@@ -1,24 +1,33 @@
-﻿# interaction to buy a slave directly off the targeted slave owner
-# actor is you
+﻿# THIS IS COMPLETE CANCER. banged my head against this for hours but can't redirect to make the UI work in a satisfying way
+# players can use character finder until paradox makes their complex character interactions not hardcoded
+# -cheri
+
+# interaction to buy a slave off the general "slave market" of all slaves available
+# actor and secondary_actor are you
 # recipient is the slave owner
 # secondary_recipient is the slave
-carn_buy_slave_directly_interaction = {
-	category = interaction_category_prison
-	desc = carn_buy_slave_directly_interaction_desc
-	interface_priority = 31
+carn_buy_slave_on_market_interaction = {
+	category = interaction_category_diplomacy
+	desc = carn_buy_slave_on_market_interaction_desc
+	interface_priority = 9
 	common_interaction = yes
-	needs_recipient_to_open = yes
+	needs_recipient_to_open = no
 
 	greeting = positive
 	notification_text = carn_buy_slave_offer
+	send_name = carn_buy_slave_directly_interaction
 	
 	ai_min_reply_days = 0
 	ai_max_reply_days = 0
 
 	redirect = {
-		scope:recipient = { # if we clicked on the slave, get their owner on the phone instead
-			if = {
-				limit = { has_trait = slave }
+		if = {
+			limit = { scope:actor = scope:recipient }
+			scope:actor = { save_scope_as = secondary_actor }
+			clear_saved_scope = recipient
+		}
+		else = {
+			scope:recipient = {
 				save_scope_as = secondary_recipient
 				random_relation = {
 					type = slave_owner
@@ -29,7 +38,12 @@ carn_buy_slave_directly_interaction = {
 	}
 
 	populate_recipient_list = {
-		scope:recipient = {
+		every_ruler = {
+			limit = {
+				is_diplomatically_available = yes
+				in_diplomatic_range = scope:actor
+				NOT = { this = scope:actor }
+			}
 			every_relation = {
 				type = slave
 				limit = {
@@ -42,18 +56,16 @@ carn_buy_slave_directly_interaction = {
 	}
 
 	is_shown = {
-		scope:recipient = {
-			NOT = { this = scope:actor }
-			any_relation = {
-				type = slave
-				exists = this
-			}
-		}
+		NOT = { has_game_rule = carn_slavery_content_disabled }
+		scope:actor = scope:secondary_actor
 	}
 
 	is_valid_showing_failures_only = {
-		scope:actor = {
-			NOT = { is_at_war_with = scope:recipient }
+		trigger_if = {
+			limit = { exists = scope:recipient }
+			scope:actor = {
+				NOT = { is_at_war_with = scope:recipient }
+			}
 		}
 		trigger_if = {
 			limit = { exists = scope:secondary_recipient }
@@ -66,112 +78,12 @@ carn_buy_slave_directly_interaction = {
 	}
 	
 	on_accept = {
-		if = {
-			limit = { scope:recipient = { has_relation_slave = scope:secondary_recipient } }
-			scope:actor = { save_scope_as = buyer }
-			scope:recipient = { save_scope_as = seller }
-			scope:secondary_recipient = { save_scope_as = slave }
-			carn_buy_slave_effect = yes
-		}
+		scope:actor = { save_scope_as = buyer }
+		scope:recipient = { save_scope_as = seller }
+		scope:secondary_recipient = { save_scope_as = slave }
+		carn_buy_slave_effect = yes
 	}
 	
-	ai_frequency = 12
-	
-	ai_targets = {
-		ai_recipients = realm_characters
-		chance = 0.25
-	}
-	ai_targets = {
-		ai_recipients = neighboring_rulers
-		chance = 0.25
-	}
-
-	ai_potential = {
-		gold >= 50
-		any_courtier_or_guest = {
-			is_alive = yes
-			count <= 30
-		}
-	}
-
-	ai_will_do = {
-		base = 0
-		ai_value_modifier = {
-			ai_compassion = -1
-		}
-
-		#Lacking councillors
-		compare_modifier = {
-			trigger = { scope:actor = { NOT = { exists = cp:councillor_chancellor } } }
-			target = scope:recipient
-			value = diplomacy
-			offset = {
-				value = 0
-				subtract = decent_skill_rating
-			}
-		}
-		compare_modifier = {
-			trigger = { scope:actor = { NOT = { exists = cp:councillor_marshal } } }
-			target = scope:recipient
-			value = martial
-			offset = {
-				value = 0
-				subtract = decent_skill_rating
-			}
-		}
-		compare_modifier = {
-			trigger = { scope:actor = { NOT = { exists = cp:councillor_steward } } }
-			target = scope:recipient
-			value = stewardship
-			offset = {
-				value = 0
-				subtract = decent_skill_rating
-			}
-		}
-		compare_modifier = {
-			trigger = { scope:actor = { NOT = { exists = cp:councillor_spymaster } } }
-			target = scope:recipient
-			value = intrigue
-			offset = {
-				value = 0
-				subtract = decent_skill_rating
-			}
-		}
-
-		#Lacking court physician
-		compare_modifier = {
-			trigger = { scope:actor = { court_physician_available_trigger = no } }
-			target = scope:recipient
-			value = learning
-			offset = {
-				value = 0
-				subtract = decent_skill_rating
-			}
-		}
-
-		#Lacking knights
-		compare_modifier = {
-			trigger = {
-				prowess >= decent_skill_rating
-				can_be_knight_trigger = { ARMY_OWNER = scope:actor }
-				scope:actor = {
-					OR = {
-						number_of_knights < max_number_of_knights
-						any_knight = {
-							prowess < decent_skill_rating
-						}
-					}
-				}
-			}
-			target = scope:recipient
-			value = prowess
-			offset = {
-				value = 0
-				subtract = decent_skill_rating
-			}
-		}
-	}
-
 	ai_accept = {
 		base = 0
 		modifier = {

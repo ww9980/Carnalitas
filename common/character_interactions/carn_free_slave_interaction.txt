@@ -4,6 +4,9 @@
 	category = interaction_category_prison
 
 	desc = carn_free_slave_interaction_desc
+	
+	ai_min_reply_days = 0
+	ai_max_reply_days = 0
 
 	notification_text = {
 		first_valid = {

@@ -6,6 +6,9 @@ carn_seize_slave_interaction = {
 
 	desc = carn_seize_slave_interaction_desc
 	
+	ai_min_reply_days = 0
+	ai_max_reply_days = 0
+	
 	ai_targets = {
 		ai_recipients = prisoners
 	}
@@ -135,7 +138,7 @@ carn_seize_slave_interaction = {
 					type = event_generic_neutral
 					title = carn_msg_enslave
 					right_icon = scope:recipient
-					custom_tooltip = carn_msg_enslave_desc
+					custom_tooltip = carn_msg_scope_recipient_becomes_your_slave_desc
 				}
 			}
 		}
