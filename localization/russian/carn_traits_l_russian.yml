@@ -1,0 +1,85 @@
+﻿l_russian:
+
+trait_futa:1 "Футанари"
+trait_futa_immersive:1 "Гермафродит"
+trait_futa_desc:1 "Этот персонаж имеет и мужские и женские половые органы.\n\nИз-за ограничений игры, этот персонаж не может быть отцом своих детей или жениться на других женщинах в текущей версии Carnalitas. Она всё равно может жениться на мужчинах и беременеть."
+trait_futa_character_desc:1 "[ROOT.GetCharacter.GetFirstNameNoTooltip] имеет и мужские и женские половые органы.\n\nИз-за ограничений игры, этот персонаж не может быть отцом своих детей или жениться на других женщинах в текущей версии Carnalitas. Она всё равно может выходить замуж за мужчинах и беременеть."
+
+trait_dick_small:1 "Маленькие члены"
+
+trait_dick_small_1:1 "Маленький член"
+trait_dick_small_1_immersive:1 "Недоросток"
+trait_dick_small_1_desc:1 "Этот персонаж не был благословлен большим достоинством."
+trait_dick_small_1_character_desc:1 "[ROOT.GetCharacter.GetFirstNameNoTooltip] не был благословлен большим достоинством."
+
+trait_dick_small_2:1 "Крошечный член"
+trait_dick_small_2_immersive:1 "Коротышка"
+trait_dick_small_2_desc:1 "Пенис этого персонажа достаточно мал, чтобы вызывать смущение."
+trait_dick_small_2_character_desc:1 "Пенис [ROOT.GetCharacter.GetFirstNameNoTooltip] мал, чтобы вызывать смущение."
+
+trait_dick_small_3:1 "Микро член"
+trait_dick_small_3_immersive:1 "Карлик"
+trait_dick_small_3_desc:1 "У этого персонажа настолько маленький член что его едва можно найти."
+trait_dick_small_3_character_desc:1 "У [ROOT.GetCharacter.GetFirstNameNoTooltip] настолько маленький член что его едва можно найти."
+
+trait_dick_big:1 "Большие члены"
+
+trait_dick_big_1:1 "Большой член"
+trait_dick_big_1_immersive:1 "Не обделённый"
+trait_dick_big_1_desc:1 "...Орудие этого персонажа больше чем у большинства."
+trait_dick_big_1_character_desc:1 "...Орудие [ROOT.GetCharacter.GetFirstNameNoTooltip] больше чем у большинства."
+
+trait_dick_big_2:1 "Огромный член"
+trait_dick_big_2_immersive:1 "Конский размер"
+trait_dick_big_2_desc:1 "Только самые большие гульфики достаточно велики для этого персонажа."
+trait_dick_big_2_character_desc:1 "Только самые большие гульфики достаточно велики для [ROOT.GetCharacter.GetFirstNameNoTooltip]."
+
+trait_dick_big_3:1 "Гигантский член"
+trait_dick_big_3_immersive:1 "Жеребец"
+trait_dick_big_3_desc:1 "У этого персонажа настолько большое достоинство, что его невозможно скрыть под одеждой."
+trait_dick_big_3_character_desc:1 "У [ROOT.GetCharacter.GetFirstNameNoTooltip] настолько большое достоинство, что его невозможно скрыть под одеждой."
+
+trait_tits_small:1 "Маленькая грудь"
+
+trait_tits_small_1:1 "Маленькая грудь"
+trait_tits_small_1_immersive:1 "Маленькие"
+trait_tits_small_1_desc:1 "У этого персонажа грудь меньше, чем у большинства."
+trait_tits_small_1_character_desc:1 "У [ROOT.GetCharacter.GetFirstNameNoTooltip] грудь меньше, чем у большинтва."
+
+trait_tits_small_2:1 "Крошечная грудь"
+trait_tits_small_2_immersive:1 "Скромные"
+trait_tits_small_2_desc:1 "У этого персонажа девичья грудь, которая едва заметна."
+trait_tits_small_2_character_desc:1 "У [ROOT.GetCharacter.GetFirstNameNoTooltip] девичья грудь, которая едва заметна."
+
+trait_tits_small_3:1 "Плоская грудь"
+trait_tits_small_3_immersive:1 "Плоскогрудка"
+trait_tits_small_3_desc:1 "Грудь этого персонажа плоская как доска."
+trait_tits_small_3_character_desc:1 "Грудь [ROOT.GetCharacter.GetFirstNameNoTooltip] плоская как доска."
+
+trait_tits_big:1 "Большая грудь"
+
+trait_tits_big_1:1 "Большая грудь"
+trait_tits_big_1_immersive:1 "C хорошей грудью"
+trait_tits_big_1_desc:1 "Этот персонаж имеет большую грудь чем большинство."
+trait_tits_big_1_character_desc:1 "[ROOT.GetCharacter.GetFirstNameNoTooltip] имеет большую грудь чем большинство."
+
+trait_tits_big_2:1 "Огромная грудь"
+trait_tits_big_2_immersive:1 "В теле"
+trait_tits_big_2_desc:1 "Этот персонаж имеет внушительные дополнения."
+trait_tits_big_2_character_desc:1 "[ROOT.GetCharacter.GetFirstNameNoTooltip] имеет внушительные дополнения."
+
+trait_tits_big_3:1 "Гигантская грудь"
+trait_tits_big_3_immersive:1 "Грудастая"
+trait_tits_big_3_desc:1 "О огромной груди этого персонажа ходят легенды."
+trait_tits_big_3_character_desc:1 "О огромной груди [ROOT.GetCharacter.GetFirstNameNoTooltip] ходят легенды."
+
+trait_slave:1 "Личный раб"
+trait_slave_desc:1 "Этот персонаж - легальная собственность другого человека, не имеющая никаких прав."
+trait_slave_character_desc:1 "[ROOT.GetCharacter.GetFirstNameNoTooltip] - легальная собственность другого человека, не имеющая никаких прав."
+
+trait_former_slave:1 "Бывший раб"
+trait_former_slave_neutral:1 "Бывший раб"
+trait_former_slave_female:1 "Вольноотпущенница"
+trait_former_slave_male:1 "Вольноотпущенник"
+trait_former_slave_desc:1 "Этот персонаж - бывший раб, что избежал заключения и стал свободным человеком."
+trait_former_slave_character_desc:1 "[ROOT.GetCharacter.GetFirstNameNoTooltip] - бывший раб, что избежал заключения и стал свободным человеком."

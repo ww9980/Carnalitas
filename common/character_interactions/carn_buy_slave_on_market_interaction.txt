@@ -1,0 +1,91 @@
+﻿# interaction to buy a slave off the general "slave market" of all slaves available
+# actor is you
+# secondary_actor is the slave
+# recipient is the slave owner
+# secondary_recipient is the slave
+carn_buy_slave_on_market_interaction = {
+	category = interaction_category_diplomacy
+	desc = carn_buy_slave_on_market_interaction_desc
+	# interface = concubine_list
+	interface_priority = 9
+	common_interaction = yes
+	needs_recipient_to_open = no
+
+	greeting = positive
+	notification_text = carn_buy_slave_offer
+
+	redirect = {
+		scope:actor = { # The UI will open to the already filled left first if we don't tell it we've got "our side" actor which is always ourselves
+			save_scope_as = secondary_actor
+		}
+		scope:recipient = {
+			if = {
+				limit = {
+					exists = scope:secondary_recipient
+				}
+				scope:secondary_recipient = {
+					random_relation = {
+						type = slave_owner
+						save_scope_as = recipient
+					}
+				}
+			}
+		}
+	}
+
+	populate_recipient_list = {
+		every_ruler = {
+			limit = {
+				is_diplomatically_available = yes
+				in_diplomatic_range = scope:actor
+				NOT = { this = scope:actor }
+			}
+			every_relation = {
+				type = slave
+				limit = {
+					is_diplomatically_available = yes
+					carn_slave_can_be_sold_trigger = yes
+				}
+				add_to_list = characters
+			}
+		}
+	}
+
+	is_shown = {
+		NOT = { has_game_rule = carn_slavery_content_disabled }
+		scope:actor = {
+			trigger_if = { #So that we show the recipient list, but can also only use this on ourselves, we have to do this check in the beginning
+				limit = {
+					NOT = { exists = scope:secondary_recipient }
+				}
+				scope:actor = scope:recipient
+			}
+		}
+	}
+
+	is_valid_showing_failures_only = {
+		scope:actor = {
+			NOT = { is_at_war_with = scope:recipient }
+		}
+		trigger_if = {
+			limit = { exists = scope:secondary_recipient }
+			scope:secondary_recipient = {
+				is_diplomatically_available = yes
+				carn_slave_can_be_sold_trigger = yes
+				carn_slave_price_value <= scope:actor.gold
+			}
+		}
+	}
+	
+	on_accept = {
+		scope:actor = { save_scope_as = buyer }
+		scope:recipient = { save_scope_as = seller }
+		scope:secondary_recipient = { save_scope_as = slave }
+		carn_buy_slave_effect = yes
+	}
+	
+	ai_accept = {
+		base = 0
+		carn_buy_slave_acceptance_modifier = yes
+	}
+}

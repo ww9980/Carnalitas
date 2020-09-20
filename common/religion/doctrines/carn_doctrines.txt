@@ -1,0 +1,105 @@
+﻿carn_doctrine_same_slavery = {
+	group = "crimes"
+
+	is_available_on_create = {
+		NOT = { has_game_rule = carn_slavery_content_disabled }
+	}
+
+	carn_doctrine_same_slavery_crime = {
+		piety_cost = {
+			value = faith_doctrine_cost_mid
+			if = {
+				limit = { has_doctrine = carn_doctrine_same_slavery_crime }
+				multiply = faith_unchanged_doctrine_cost_mult
+			}
+			else_if = {
+				limit = { has_doctrine = carn_doctrine_same_slavery_accepted }
+				multiply = faith_changed_doctrine_cost_mult_two_step
+			}
+		}
+		parameters = {
+			same_slavery_illegal = yes
+		}
+	}
+	carn_doctrine_same_slavery_shunned = {
+		piety_cost = {
+			value = faith_doctrine_cost_mid
+			if = {
+				limit = { has_doctrine = carn_doctrine_same_slavery_shunned }
+				multiply = faith_unchanged_doctrine_cost_mult
+			}
+		}
+		parameters = {
+			same_slavery_shunned = yes
+		}
+	}
+	carn_doctrine_same_slavery_accepted = {
+		piety_cost = {
+			value = faith_doctrine_cost_mid
+			if = {
+				limit = { has_doctrine = carn_doctrine_same_slavery_accepted }
+				multiply = faith_unchanged_doctrine_cost_mult
+			}
+			else_if = {
+				limit = { has_doctrine = carn_doctrine_same_slavery_crime }
+				multiply = faith_changed_doctrine_cost_mult_two_step
+			}
+		}
+		parameters = {
+			same_slavery_accepted = yes
+		}
+	}
+}
+
+carn_doctrine_other_slavery = {
+	group = "crimes"
+
+	is_available_on_create = {
+		NOT = { has_game_rule = carn_slavery_content_disabled }
+	}
+
+	carn_doctrine_other_slavery_crime = {
+		piety_cost = {
+			value = faith_doctrine_cost_mid
+			if = {
+				limit = { has_doctrine = carn_doctrine_other_slavery_crime }
+				multiply = faith_unchanged_doctrine_cost_mult
+			}
+			else_if = {
+				limit = { has_doctrine = carn_doctrine_other_slavery_accepted }
+				multiply = faith_changed_doctrine_cost_mult_two_step
+			}
+		}
+		parameters = {
+			other_slavery_illegal = yes
+		}
+	}
+	carn_doctrine_other_slavery_shunned = {
+		piety_cost = {
+			value = faith_doctrine_cost_mid
+			if = {
+				limit = { has_doctrine = carn_doctrine_other_slavery_shunned }
+				multiply = faith_unchanged_doctrine_cost_mult
+			}
+		}
+		parameters = {
+			other_slavery_shunned = yes
+		}
+	}
+	carn_doctrine_other_slavery_accepted = {
+		piety_cost = {
+			value = faith_doctrine_cost_mid
+			if = {
+				limit = { has_doctrine = carn_doctrine_other_slavery_accepted }
+				multiply = faith_unchanged_doctrine_cost_mult
+			}
+			else_if = {
+				limit = { has_doctrine = carn_doctrine_other_slavery_crime }
+				multiply = faith_changed_doctrine_cost_mult_two_step
+			}
+		}
+		parameters = {
+			other_slavery_accepted = yes
+		}
+	}
+}

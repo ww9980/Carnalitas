@@ -8,7 +8,7 @@ name: Build and draft release
 # Environment variables
 env:
   # Paths are relative to the root folder of the repository
-  changelog_path: changelog.txt
+  changelog_path: changelog.md
   install_instructions_path: .github/install-instructions-template.md
   
 
@@ -48,10 +48,10 @@ jobs:
         name: Carnalitas.${{ github.event.inputs.version }}
         path: |
           ${{ github.workspace }}
-          !${{ github.workspace }}/Carnalitas/.git
-          !${{ github.workspace }}/Carnalitas/.github
+          !${{ github.workspace }}/Carnalitas/.*
           !${{ github.workspace }}/Carnalitas/*.md
           !${{ github.workspace }}/Carnalitas/*.txt
+          !${{ github.workspace }}/Carnalitas/*.py
 
     # Download the artifact for compression
     - name: Download the artifact

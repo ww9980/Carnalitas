@@ -1,0 +1,19 @@
+﻿# The two triggers below are intended as an extensible means of checking for libido-altering traits, either
+# originating in the base game or introduced by submods (something like "insatiable" in CK2)
+carn_has_high_arousal_trigger = {
+	OR = {
+		has_trait = lustful
+		has_trait = rakish
+		has_character_flag = carn_has_high_arousal
+		has_trait_with_flag = carn_has_high_arousal
+	}
+}
+
+carn_has_low_arousal_trigger = {
+	OR = {
+		has_trait = chaste
+		has_trait = celibate
+		has_character_flag = carn_has_low_arousal
+		has_trait_with_flag = carn_has_low_arousal
+	}
+}

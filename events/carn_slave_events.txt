@@ -1,0 +1,44 @@
+﻿namespace = carn_slave
+
+#
+# 0001. You have been enslaved
+#
+
+#
+# 0001. You have been enslaved
+#
+
+carn_slave.0001 = {
+	type = character_event
+	title = carn_slave.0001.t
+	desc = carn_slave.0001.desc
+	theme = death
+	override_background = {
+		event_background = gallows
+	}
+	immediate = {
+		play_music_cue = mx_cue_stress
+	}
+	option = {
+		name = carn_slave.0001.a
+		if = {
+			limit = {
+				scope:actor = { is_ai = yes }
+			}
+			carn_enslave_effect = {
+				SLAVE = scope:recipient
+				OWNER = scope:actor
+				DRAMA = yes
+			}
+		}
+		else = {
+			show_as_tooltip = {
+				carn_enslave_effect = {
+					SLAVE = scope:recipient
+					OWNER = scope:actor
+					DRAMA = yes
+				}
+			}
+		}
+	}
+}

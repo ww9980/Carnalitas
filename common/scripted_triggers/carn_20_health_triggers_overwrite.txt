@@ -8,6 +8,11 @@ can_contract_disease_trigger = {
 	#Doesn't already have the trait
 	NOT = { has_trait = $DISEASE$ }
 
+	save_temporary_scope_value_as = {
+		name = disease_type_for_trigger
+		value = flag:$DISEASE$
+	}
+
 	#Carnalitas: Can't contract STDs if STD Transmission game rule is Never
 	trigger_if = {
 		limit = {
@@ -20,11 +25,6 @@ can_contract_disease_trigger = {
 			scope:disease_type_for_trigger = flag:lovers_pox
 			scope:disease_type_for_trigger = flag:great_pox
 		}
-	}
-
-	save_temporary_scope_value_as = {
-		name = disease_type_for_trigger
-		value = flag:$DISEASE$
 	}
 
 	trigger_if = { #Lover's pox can only be contracted if you are sexually active

@@ -1,0 +1,9 @@
+﻿l_french:
+carn_i_can_be_granted_titles:1 "Vous pouvez vous voir attribuer des titres"
+carn_not_i_can_be_granted_titles:1 "Vous ne pouvez pas vous voir attribuer de titres"
+carn_they_can_be_granted_titles:1 "[CHARACTER.Custom('FR_only_le_GetShortUIName')|U][CHARACTER.GetShortUIName|V] peut se voir attribuer des titres"
+carn_not_they_can_be_granted_titles:1 "[CHARACTER.Custom('FR_only_le_GetShortUIName')|U][CHARACTER.GetShortUIName|V] ne peut pas se voir attribuer de titres"
+carn_can_be_granted_titles:1 "Peut se voir attribuer des titres"
+carn_not_can_be_granted_titles:1 "Ne peut pas se voir attribuer de titres"
+
+carn_slavery_is_illegal:1 "Votre foi ne vous permet pas d'asservir des [CHARACTER.GetFaith.GetAdherentNamePluralNoTooltip|U]"

@@ -1,0 +1,179 @@
+﻿# interaction to buy a slave directly off the targeted slave owner
+# actor is you
+# secondary_actor is also you
+# recipient is the slave owner
+# secondary_recipient is the slave
+carn_buy_slave_directly_interaction = {
+	category = interaction_category_diplomacy
+	desc = carn_buy_slave_directly_interaction_desc
+	# interface = concubine_list
+	interface_priority = 10
+	common_interaction = yes
+	needs_recipient_to_open = yes
+
+	greeting = positive
+	notification_text = carn_buy_slave_offer
+	send_name = carn_buy_slave_directly_interaction
+
+	redirect = {
+		scope:actor = { # The UI will open to the already filled left first if we don't tell it we've got "our side" actor which is always ourselves
+			save_scope_as = secondary_actor
+		}
+		scope:recipient = { # if we clicked on the slave, get their owner on the phone instead
+			if = {
+				limit = { has_trait = slave }
+				save_scope_as = secondary_recipient
+				random_relation = {
+					type = slave_owner
+					save_scope_as = recipient
+				}
+			}
+		}
+	}
+
+	populate_recipient_list = {
+		scope:recipient = {
+			every_relation = {
+				type = slave
+				limit = {
+					is_diplomatically_available = yes
+					carn_slave_can_be_sold_trigger = yes
+				}
+				add_to_list = characters
+			}
+		}
+	}
+
+	is_shown = {
+		scope:recipient = {
+			NOT = { this = scope:actor }
+			any_relation = {
+				type = slave
+				exists = this
+			}
+		}
+	}
+
+	is_valid_showing_failures_only = {
+		scope:actor = {
+			NOT = { is_at_war_with = scope:recipient }
+		}
+		trigger_if = {
+			limit = { exists = scope:secondary_recipient }
+			scope:secondary_recipient = {
+				is_diplomatically_available = yes
+				carn_slave_can_be_sold_trigger = yes
+				carn_slave_price_value <= scope:actor.gold
+			}
+		}
+	}
+	
+	on_accept = {
+		scope:actor = { save_scope_as = buyer }
+		scope:recipient = { save_scope_as = seller }
+		scope:secondary_recipient = { save_scope_as = slave }
+		carn_buy_slave_effect = yes
+	}
+	
+	ai_frequency = 12
+	
+	ai_targets = {
+		ai_recipients = realm_characters
+		chance = 0.25
+	}
+	ai_targets = {
+		ai_recipients = neighboring_rulers
+		chance = 0.25
+	}
+
+	ai_potential = {
+		gold >= 50
+		any_courtier_or_guest = {
+			is_alive = yes
+			count <= 30
+		}
+	}
+
+	ai_will_do = {
+		base = 0
+		ai_value_modifier = {
+			ai_compassion = -1
+		}
+
+		#Lacking councillors
+		compare_modifier = {
+			trigger = { scope:actor = { NOT = { exists = cp:councillor_chancellor } } }
+			target = scope:recipient
+			value = diplomacy
+			offset = {
+				value = 0
+				subtract = decent_skill_rating
+			}
+		}
+		compare_modifier = {
+			trigger = { scope:actor = { NOT = { exists = cp:councillor_marshal } } }
+			target = scope:recipient
+			value = martial
+			offset = {
+				value = 0
+				subtract = decent_skill_rating
+			}
+		}
+		compare_modifier = {
+			trigger = { scope:actor = { NOT = { exists = cp:councillor_steward } } }
+			target = scope:recipient
+			value = stewardship
+			offset = {
+				value = 0
+				subtract = decent_skill_rating
+			}
+		}
+		compare_modifier = {
+			trigger = { scope:actor = { NOT = { exists = cp:councillor_spymaster } } }
+			target = scope:recipient
+			value = intrigue
+			offset = {
+				value = 0
+				subtract = decent_skill_rating
+			}
+		}
+
+		#Lacking court physician
+		compare_modifier = {
+			trigger = { scope:actor = { court_physician_available_trigger = no } }
+			target = scope:recipient
+			value = learning
+			offset = {
+				value = 0
+				subtract = decent_skill_rating
+			}
+		}
+
+		#Lacking knights
+		compare_modifier = {
+			trigger = {
+				prowess >= decent_skill_rating
+				can_be_knight_trigger = { ARMY_OWNER = scope:actor }
+				scope:actor = {
+					OR = {
+						number_of_knights < max_number_of_knights
+						any_knight = {
+							prowess < decent_skill_rating
+						}
+					}
+				}
+			}
+			target = scope:recipient
+			value = prowess
+			offset = {
+				value = 0
+				subtract = decent_skill_rating
+			}
+		}
+	}
+
+	ai_accept = {
+		base = 0
+		carn_buy_slave_acceptance_modifier = yes
+	}
+}

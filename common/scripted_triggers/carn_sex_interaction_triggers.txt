@@ -1,5 +1,15 @@
 ﻿# checks that a character is a valid target to spend time with
 carn_can_have_sex_trigger = {
-	is_available_adult_or_is_commanding = yes
-	NOT = { has_trait = celibate }
+	OR = {
+		has_trait_with_flag = carn_can_always_have_sex
+		has_character_flag = carn_can_always_have_sex
+		AND = {
+			is_available_adult_or_is_commanding = yes
+			NOR = {
+				has_trait = celibate
+				has_trait_with_flag = carn_cannot_have_sex
+				has_character_flag = carn_cannot_have_sex
+			}
+		}
+	}
 }

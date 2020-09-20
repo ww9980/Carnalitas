@@ -1,0 +1,9 @@
+﻿l_german:
+carn_i_can_be_granted_titles:0 "You can be granted titles"
+carn_not_i_can_be_granted_titles:0 "You cannot be granted titles"
+carn_they_can_be_granted_titles:0 "[CHARACTER.GetShortUIName|U] can be granted titles"
+carn_not_they_can_be_granted_titles:0 "[CHARACTER.GetShortUIName|U] cannot be granted titles"
+carn_can_be_granted_titles:0 "Can be granted titles"
+carn_not_can_be_granted_titles:0 "Cannot be granted titles"
+
+carn_slavery_is_illegal:0 "Your faith does not permit the taking of [CHARACTER.GetFaith.GetAdherentNamePluralNoTooltip|U] as slaves"

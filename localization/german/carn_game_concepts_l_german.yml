@@ -1,0 +1,31 @@
+﻿l_german:
+
+game_concept_dominant:0 "Dominant"
+game_concept_dominant_short:0 "Dom"
+game_concept_dominants:0 "Dominants"
+game_concept_dominant_possessive:0 "Dominant's"
+game_concept_dominants_possessive:0 "Dominants'"
+game_concept_dominant_desc:0 "Often shortened to $game_concept_dominant_short$, a $game_concept_dominant$ is a [character|E] with a [relation|E] to a corresponding [submissive|E]. While specifics vary, the role of $game_concept_dominant$ typically involves in some way commanding or assuming control over the $game_concept_submissive$."
+
+game_concept_submissive:0 "Submissive"
+game_concept_submissive_short:0 "Sub"
+game_concept_submissives:0 "Submissives"
+game_concept_submissive_possessive:0 "Submissive's"
+game_concept_submissives_possessive:0 "Submissives'"
+game_concept_submissive_desc:0 "Often shortened to $game_concept_submissive_short$, a $game_concept_submissive$ is a [character|E] with a [relation|E] to a corresponding [dominant|E]. While specifics vary, the role of $game_concept_submissive$ typically involves in some way obeying or surrendering control to the $game_concept_dominant$."
+
+game_concept_slave:0 "Slave"
+game_concept_slaves:0 "Slaves"
+game_concept_slavery:0 "Slavery"
+game_concept_slave_possessive:0 "Slave's"
+game_concept_slaves_possessive:0 "Slaves'"
+game_concept_slave_desc:0 "A $game_concept_slave$ is a [character|E] that has been stripped of their rights and enslaved. They belong to an [slave_owner|E], who has a [strong_hook|E] on them and can buy or sell them on the [slave_market|E]. Additionally, [extramarital_sex|E] between a slave and their owner is legal.\n\nSlaves may not hold or inherit [titles|E], and any children born to a slave mother will also be slaves.\n\nIf a slave owner dies, ownership of slaves will pass to their [primary_heir|E].\n\nTo escape slavery, a slave must be freed by their owner through the Free Slave [character_interaction|E]."
+
+game_concept_slave_owner:0 "Owner"
+game_concept_slave_owners:0 "Owners"
+game_concept_slave_owner_possessive:0 "Owner's"
+game_concept_slave_owners_possessive:0 "Owners'"
+game_concept_slave_owner_desc:0 "A [character|E] can be a legally recognized $game_concept_slave_owner$ of one or more [slaves|E]. Slave owners always have a [strong_hook|E] on their slaves and can buy or sell them on the [slave_market|E]. Additionally, [extramarital_sex|E] between a slave and their owner is legal.\n\nIf a slave owner dies, ownership of slaves will pass to their [primary_heir|E]."
+
+game_concept_slave_market:0 "Slave Market"
+game_concept_slave_market_desc:0 "[slaves|E], being property, can be bought and sold by other [characters|E] through the Buy Slave or Sell Slave [interactions|E]. A character who buys a slave will become their [slave_owner|E]."
