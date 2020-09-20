@@ -1,0 +1,23 @@
+﻿l_german:
+
+carn_doctrine_same_slavery_name:0 "Righteous Faith Slavery"
+carn_doctrine_same_slavery_crime_name:0 "Criminal"
+carn_doctrine_same_slavery_crime_desc:0 "It is a capital sin to enslave a member of the [ROOT.Faith.GetReligion.GetAdjectiveNoTooltip] faithful, for to do so is to claim yourself a higher master than [ROOT.Faith.PantheonTerm]."
+carn_doctrine_same_slavery_shunned_name:0 "Shunned"
+carn_doctrine_same_slavery_shunned_desc:0 "Although our beliefs differ, all [ROOT.Faith.GetReligion.GetAdjectiveNoTooltip] faithful are brothers and sisters. It is deeply unjust for one of us to be treated as less than human."
+carn_doctrine_same_slavery_accepted_name:0 "Accepted"
+carn_doctrine_same_slavery_accepted_desc:0 "Slavery is a just and fitting punishment for [ROOT.Faith.GetAdherentNamePluralNoTooltip] who have erred. A lifetime of servitude shall be their penance for their crimes."
+doctrine_parameter_same_slavery_illegal:0 "Owning [slaves|E] of [faith_righteous|E] or [faith_astray|E] [faiths|E] is a [crime|E]"
+doctrine_parameter_same_slavery_shunned:0 "Owning [slaves|E] of [faith_righteous|E] or [faith_astray|E] [faiths|E] is [shunned|E]"
+doctrine_parameter_same_slavery_accepted:0 "Owning [slaves|E] of [faith_righteous|E] or [faith_astray|E] [faiths|E] is fully accepted"
+
+carn_doctrine_other_slavery_name:0 "Hostile Faith Slavery"
+carn_doctrine_other_slavery_crime_name:0 "Criminal"
+carn_doctrine_other_slavery_crime_desc:0 "All people possess dignity regardless of their creed. It is a crime to enslave a person simply because they do not believe in [ROOT.Faith.PantheonTerm]."
+carn_doctrine_other_slavery_shunned_name:0 "Shunned"
+carn_doctrine_other_slavery_shunned_desc:0 "It is cruel and distasteful to claim ownership of an infidel's life, even if they are errant in their beliefs."
+carn_doctrine_other_slavery_accepted_name:0 "Accepted"
+carn_doctrine_other_slavery_accepted_desc:0 "All [ROOT.Faith.GetAdherentNamePluralNoTooltip] have the right to save those who have not embraced the true faith, even from themselves."
+doctrine_parameter_other_slavery_illegal:0 "Owning [slaves|E] of [faith_hostile|E] or [faith_evil|E] [faiths|E] is a [crime|E]"
+doctrine_parameter_other_slavery_shunned:0 "Owning [slaves|E] of [faith_hostile|E] or [faith_evil|E] [faiths|E] is [shunned|E]"
+doctrine_parameter_other_slavery_accepted:0 "Owning [slaves|E] of [faith_hostile|E] or [faith_evil|E] [faiths|E] is fully accepted"

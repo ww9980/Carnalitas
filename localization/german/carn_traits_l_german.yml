@@ -1,0 +1,85 @@
+﻿l_german:
+
+trait_futa:0 "Futanari"
+trait_futa_immersive:0 "Hermaphrodite"
+trait_futa_desc:0 "This character has the sexual organs of both a woman and a man.\n\nDue to game engine restrictions, this character cannot father children or marry other women in the current version of Carnalitas. She can still marry men and get pregnant."
+trait_futa_character_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip] has the sexual organs of both a woman and a man.\n\nDue to game engine restrictions, this character cannot father children or marry other women in the current version of Carnalitas. She can still marry men and get pregnant."
+
+trait_dick_small:0 "Small Dicks"
+
+trait_dick_small_1:0 "Small Dick"
+trait_dick_small_1_immersive:0 "Stripling"
+trait_dick_small_1_desc:0 "This character has not been blessed with a sizable manhood."
+trait_dick_small_1_character_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip] has not been blessed with a sizable manhood."
+
+trait_dick_small_2:0 "Tiny Dick"
+trait_dick_small_2_immersive:0 "Gelding"
+trait_dick_small_2_desc:0 "This character's penis is small enough to be a source of embarrassment."
+trait_dick_small_2_character_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip]'s penis is small enough to be a source of embarrassment."
+
+trait_dick_small_3:0 "Micro Dick"
+trait_dick_small_3_immersive:0 "Emasculated"
+trait_dick_small_3_desc:0 "This character has such a small penis that it can scarcely be found."
+trait_dick_small_3_character_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip] has such a small penis that it can scarcely be found."
+
+trait_dick_big:0 "Big Dicks"
+
+trait_dick_big_1:0 "Big Dick"
+trait_dick_big_1_immersive:0 "Well-Endowed"
+trait_dick_big_1_desc:0 "This character is reputed to have a larger... sword... than most."
+trait_dick_big_1_character_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip] is reputed to have a larger... sword... than most."
+
+trait_dick_big_2:0 "Huge Dick"
+trait_dick_big_2_immersive:0 "Horse-Hung"
+trait_dick_big_2_desc:0 "Only the biggest codpieces are large enough for this character."
+trait_dick_big_2_character_desc:0 "Only the biggest codpieces are large enough for [ROOT.GetCharacter.GetFirstNameNoTooltip]."
+
+trait_dick_big_3:0 "Gigantic Dick"
+trait_dick_big_3_immersive:0 "Stallion"
+trait_dick_big_3_desc:0 "This character has such an impressive manhood that it is impossible to conceal beneath clothing."
+trait_dick_big_3_character_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip] has such an impressive manhood that it is impossible to conceal beneath clothing."
+
+trait_tits_small:0 "Small Tits"
+
+trait_tits_small_1:0 "Small Tits"
+trait_tits_small_1_immersive:0 "Petite"
+trait_tits_small_1_desc:0 "This character has a smaller bust than most."
+trait_tits_small_1_character_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip] has a smaller bust than most."
+
+trait_tits_small_2:0 "Tiny Tits"
+trait_tits_small_2_immersive:0 "Budding"
+trait_tits_small_2_desc:0 "This character has girlish breasts that are hardly noticeable."
+trait_tits_small_2_character_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip] has girlish breasts that are hardly noticeable."
+
+trait_tits_small_3:0 "Flat Tits"
+trait_tits_small_3_immersive:0 "Flat-Chested"
+trait_tits_small_3_desc:0 "This character's bosom is as flat as a board."
+trait_tits_small_3_character_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip]'s bosom is as flat as a board."
+
+trait_tits_big:0 "Big Tits"
+
+trait_tits_big_1:0 "Big Tits"
+trait_tits_big_1_immersive:0 "Bosomy"
+trait_tits_big_1_desc:0 "This character has a larger bust than most."
+trait_tits_big_1_character_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip] has a larger bust than most."
+
+trait_tits_big_2:0 "Huge Tits"
+trait_tits_big_2_immersive:0 "Buxom"
+trait_tits_big_2_desc:0 "This character has huge... tracts of land."
+trait_tits_big_2_character_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip] has huge... tracts of land."
+
+trait_tits_big_3:0 "Gigantic Tits"
+trait_tits_big_3_immersive:0 "Voluptuous"
+trait_tits_big_3_desc:0 "This character's enormous bosom is the stuff of legends."
+trait_tits_big_3_character_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip]'s enormous bosom is the stuff of legends."
+
+trait_slave:0 "Slave"
+trait_slave_desc:0 "This character is the property of another person, recognized by law to be less than a human being."
+trait_slave_character_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip] is the property of another person, recognized by law to be less than a human being."
+
+trait_former_slave:0 "Former Slave"
+trait_former_slave_neutral:0 "Former Slave"
+trait_former_slave_female:0 "Freedwoman"
+trait_former_slave_male:0 "Freedman"
+trait_former_slave_desc:0 "This character is a former slave who has escaped bondage and become a free person."
+trait_former_slave_character_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip] is a former slave who has escaped bondage and become a free person."

@@ -105,8 +105,6 @@ dick_small_1 = {
 		dick_big
 	}
 
-	fertility = -0.01
-
 	group = dick_small
 	level = 1
 
@@ -148,8 +146,6 @@ dick_small_2 = {
 	opposites = {
 		dick_big
 	}
-
-	fertility = -0.025
 
 	group = dick_small
 	level = 2
@@ -193,8 +189,6 @@ dick_small_3 = {
 		dick_big
 	}
 
-	fertility = -0.05
-
 	group = dick_small
 	level = 3
 
@@ -237,13 +231,12 @@ dick_big_1 = {
 		dick_small
 	}
 
-	fertility = 0.01
-
 	group = dick_big
 	level = 1
 
 	genetic = yes
 	physical = yes
+	good = yes
 
 	birth = 0 # handled through script
 	random_creation = 0
@@ -281,13 +274,12 @@ dick_big_2 = {
 		dick_small
 	}
 
-	fertility = 0.025
-
 	group = dick_big
 	level = 2
 
 	genetic = yes
 	physical = yes
+	good = yes
 
 	birth = 0 # handled through script
 	random_creation = 0
@@ -325,13 +317,12 @@ dick_big_3 = {
 		dick_small
 	}
 
-	fertility = 0.05
-
 	group = dick_big
 	level = 3
 
 	genetic = yes
 	physical = yes
+	good = yes
 
 	birth = 0 # handled through script
 	random_creation = 0
@@ -368,8 +359,6 @@ tits_small_1 = {
 	opposites = {
 		tits_big
 	}
-
-	fertility = -0.01
 
 	group = tits_small
 	level = 1
@@ -411,8 +400,6 @@ tits_small_2 = {
 	opposites = {
 		tits_big
 	}
-
-	fertility = -0.025
 
 	group = tits_small
 	level = 2
@@ -456,8 +443,6 @@ tits_small_3 = {
 		tits_big
 	}
 
-	fertility = -0.05
-
 	group = tits_small
 	level = 3
 
@@ -500,13 +485,12 @@ tits_big_1 = {
 		tits_small
 	}
 
-	fertility = 0.01
-
 	group = tits_big
 	level = 1
 
 	genetic = yes
 	physical = yes
+	good = yes
 
 	birth = 0 # handled through script
 	random_creation = 0
@@ -544,13 +528,12 @@ tits_big_2 = {
 		tits_small
 	}
 
-	fertility = 0.025
-
 	group = tits_big
 	level = 2
 
 	genetic = yes
 	physical = yes
+	good = yes
 
 	birth = 0 # handled through script
 	random_creation = 0
@@ -588,13 +571,12 @@ tits_big_3 = {
 		tits_small
 	}
 
-	fertility = 0.05
-
 	group = tits_big
 	level = 3
 
 	genetic = yes
 	physical = yes
+	good = yes
 
 	birth = 0 # handled through script
 	random_creation = 0

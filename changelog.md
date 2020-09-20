@@ -1,30 +1,79 @@
-# Carnalitas v1.0.2
+# Carnalitas v1.1
 
-## Slavery System (WIP)
+## Slavery System
 
-* Added new traits: Chattel Slave (`slave`), Freedman/Freedwoman (`former_slave`)
-* New overwrites prevent Chattel Slaves from being granted titles, or from leaving court.
+* A new game rule to enable or disable the slavery system.
+* New relation: Slave (`slave`) and Owner (`slave_owner`). Owners automatically get hooks on their Slaves, and transfer ownership to their primary heir if they die.
+* Character interaction to enslave characters, incurring tyranny and opinion penalties if the enslavement is unjust.
+* Character interaction to free a slave, with various demands you can make similar to releasing a prisoner.
+* Character interaction to demand that a character free their illegal slaves.
+* Character interaction to buy a slave from someone else.
+* Character interaction to sell a slave to someone else.
+* New religious doctrines regarding religions' views on slavery, as well as a game rule to change their default stance on slavery.
+* New custom GUI showing a character's owned slaves in the character window.
+* Encyclopedia entries for Slaves, Owners, and the Slave Market.
 
-## Stress From Arousal
+## Misc Features
 
-* Added a game rule for characters to passively gain stress over time. Stress gain is increased if Lustful or Rakish and absent if Chaste.
+* Added a game rule to toggle bestiality events (off by default).
+* Added english fallback for all official CK3 languages.
 
-## Dominant/Submissive Relation
+## For Modders
 
-* Added two new scripted_relations, `dominant` and `submissive`. Every dominant has a submissive and vice versa. These presently do nothing and are meant for modders to hook into.
+### Sex Scene System
 
-## Sex Scene Flag Triggers
+* **IMPORTANT:** `carn_sex_scene_effect` and `carn_had_sex_with_effect` have been reworked.
 
-* Sex scene flags are now re-asserted in the immediate block of sex scene events and persistent through the carn_on_sex on_action, allowing modders to reference them in followup events. The syntax is `carn_sex_scene_was_vaginal = yes`, where `vaginal` can be replaced with any of the supported flags. This means that you can, for example, add an event to carn_on_sex that only triggers when the player has `bdsm` sex.
-* `carn_on_vaginal_sex`, `carn_on_anal_sex`, and `carn_on_oral_sex` are now depreciated and no longer function.
+  * `carn_sex_scene_effect` and `carn_had_sex_with_effect` now require argument `STRESS_EFFECTS` (boolean). This is now separate from `DRAMA`.
 
-## New Sex Scene Tags
+  * `carn_sex_scene_effect` now requires argument `DRAMA` (boolean). It passes this argument to the requested event, which should check for it and apply it to `carn_had_sex_with_effect` as appropriate.
 
-`bestiality`
-`petplay`
+  * `carn_had_sex_with_effect`'s `PREGNANCY_CHANCE` has been broken up into `C1_PREGNANCY_CHANCE` and `C2_PREGNANCY_CHANCE`, this allows you to fine-tune the pregnancy chances in non-penetrative sex scenes for example.
+* `carn_had_sex_effect` now returns `scope:carn_sex_char_1_could_be_impregnated`, `scope:carn_sex_char_2_could_be_impregnated`. These are yes if the character had a pregnancy chance greater than 0 through the sex effect, and no otherwise.
+* `carn_had_sex_effect` now returns `scope:carn_sex_char_1_impregnated`, `scope:carn_sex_char_2_impregnated`. These are yes if the character was impregnated through the sex effect, and no otherwise.
+
+* New sex scene tag: `giving_player`, `receiving_player`, `orgy`, `cum_inside`, `cum_outside`
+* `carn_on_sex` now provides `scope:carn_sex_partner`.
+
+### Arousal
+
+* Added trait and character flags `carn_has_high_arousal` and `carn_has_low_arousal`, influencing a character's stress gain from arousal.
+* Added trait and character flags `carn_can_always_have_sex` and `carn_cannot_have_sex`, influencing whether a character is available for sex interactions.
+
+### Body Part Traits
+
+* New scripted effects: `carn_remove_dick_trait_effect`, `carn_remove_tits_trait_effect`
+* New scripted effects: `carn_add_tits_big_1_effect`, etc. for all the dick and tit traits. This effect will add the appropriate dick or tit size to a character if the game rule is on, and do nothing if the game rule is off.
+
+### Slavery
+
+* New scripted effect: `carn_enslave_effect`. This gives the Slave trait to a character, forces them to abdicate, and makes them the Slave (relation) of another character. Takes arguments `SLAVE`, `OWNER`, `DRAMA`
+* New scripted effect: `carn_free_slave_effect`. Changes the Slave trait to Former Slave and removes their Owner (which will also remove the hook their Owner has on them).
+* New scripted effect: `carn_free_illegal_slaves_effect`
+* New scripted effect: `carn_free_slave_interaction_effect`
+* New scripted effect: `carn_buy_slave_effect`
+* New scripted trigger: `carn_slave_can_be_sold_trigger`, which checks that the slave is healthy enough to sell
+* New scripted trigger: `carn_candidate_to_sell_slave_to_trigger`
+* Added trait and character flags `carn_cannot_be_enslaved`.
+* Added trait and character flags `carn_slave_cannot_be_sold`.
+* Added trait and character flags `carn_wants_to_be_a_slave` (which makes them automatically accept offers to be enslaved).
+* Added opinion `carn_wants_to_be_your_slave_opinion`, which makes the character always agree to enslavement by the opinion target.
+
+### Misc
+
+* Added trait and character flags `can_use_abduct_scheme`. This allows a character to use the Kidnapper perk regardless of whether they have the perk unlocked.
+
+## Tweaks
+
+* Removed fertility bonuses and penalties from dick and tit traits.
+* New dick trait icons inspired by Selestra's dick trait icons.
+* Made arousal event message more visible.
 
 ## Bug Fixes
 
-* Fixed every single child inheriting small dicks and tits, regardless of genetics.
-* Fixed male characters being generated with the futa trait when futa inheritance is off.
-* Fixed some errors in French localization.
+* Fixed arousal event not triggering properly.
+* Fixed tooltip not displaying for `carn_can_grant_titles_trigger`.
+* Fixed sex scenes being possible to display even if their tags are turned off in game rules.
+* Fixed tits_big and dick_big traits being flagged as bad traits.
+* Fixed breast size traits forcing all characters to use the bust_clothes blendshape.
+* Fixed STDs being transmitted even when disabled by game rule.

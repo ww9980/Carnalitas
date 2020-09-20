@@ -1,0 +1,23 @@
+﻿l_french:
+
+carn_doctrine_same_slavery_name:1 "Asserv. de coreligionnaires"
+carn_doctrine_same_slavery_crime_name:1 "Criminel"
+carn_doctrine_same_slavery_crime_desc:1 "C'est un péché capital que d'asservir un fidèle de la religion [ROOT.Faith.GetReligion.GetAdjectiveNoTooltip]. Faire ainsi serait se déclarer au dessus de [ROOT.Faith.PantheonTerm]."
+carn_doctrine_same_slavery_shunned_name:1 "Mal vu"
+carn_doctrine_same_slavery_shunned_desc:1 "Bien que nos croyances puissent varier, tous les fidèles de la religion [ROOT.Faith.GetReligion.GetAdjectiveNoTooltip]s sont frères et soeurs. Il serait profondement injuste que l'un d'entre nous puisse être traité comme un sous-humain."
+carn_doctrine_same_slavery_accepted_name:1 "Accepté"
+carn_doctrine_same_slavery_accepted_desc:1 "L'esclavage est une punition juste et adéquate pour les [ROOT.Faith.GetAdherentNamePluralNoTooltip] qui se sont ecarté du droit chemin. Une vie de servitude sera leur pénitence pour leurs crimes."
+doctrine_parameter_same_slavery_illegal:1 "Posséder des [slaves|El] de [faiths|El] [faith_righteous|El] ou [faith_astray|El] est un [crime|El]"
+doctrine_parameter_same_slavery_shunned:1 "Posséder des [slaves|El] de [faiths|El] [faith_righteous|El] ou [faith_astray|El] est [shunned|El]"
+doctrine_parameter_same_slavery_accepted:1 "Posséder des [slaves|El] de [faiths|El] [faith_righteous|El] ou [faith_astray|El] est complétement accepté"
+
+carn_doctrine_other_slavery_name:1 "Asservissement d'infidèles"
+carn_doctrine_other_slavery_crime_name:1 "Criminel"
+carn_doctrine_other_slavery_crime_desc:1 "Toute personne possède sa propre dignité, peu importe ses croyances. C'est un crime que d'asservir une personne juste parcequ'elle ne croit pas en [ROOT.Faith.PantheonTerm]."
+carn_doctrine_other_slavery_shunned_name:1 "Mal vu"
+carn_doctrine_other_slavery_shunned_desc:1 "Il est cruel et indigne de revendiquer la propriété sur la vie d'un infidèle, même s'il se fourvoie dans ses croyances."
+carn_doctrine_other_slavery_accepted_name:1 "Accepté"
+carn_doctrine_other_slavery_accepted_desc:1 "Tout [ROOT.Faith.GetAdherentNameNoTooltip] a le droit de sauver ceux qui n'ont pas embrasser la vraie foi, même d'eux même."
+doctrine_parameter_other_slavery_illegal:1 "Posséder des [slaves|El] de [faiths|El] [faith_hostile|El] ou [faith_evil|El] est un [crime|El]"
+doctrine_parameter_other_slavery_shunned:1 "Posséder des [slaves|El] de [faiths|El] [faith_hostile|El] ou [faith_evil|El] est [shunned|El]"
+doctrine_parameter_other_slavery_accepted:1 "Posséder des [slaves|El] de [faiths|El] [faith_hostile|El] ou [faith_evil|El] est complétement accepté"

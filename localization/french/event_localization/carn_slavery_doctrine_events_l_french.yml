@@ -1,0 +1,19 @@
+﻿l_french:
+carn_slavery_doctrine.0001.desc:1 "Je vais accomplir mon devoir envers la foi [ROOT.Char.GetFaith.GetReligion.GetAdjective] et libérer de leur chaînes mes serviteurs illégalement asservis."
+carn_slavery_doctrine.0001.a:1 "Une sage décision."
+
+carn_slavery_doctrine.0002.desc:1 "Je comprends votre préoccupation, mais j'ai aquis ces esclaves à grands frais...\n\nCependant, si vous veniez à compenser cet investissement, je serais plus que disposé[ROOT.Char.Custom('FR_E')] à leur accorder leur liberté."
+carn_slavery_doctrine.0002.a:1 "Au nom de la foi [ROOT.Char.GetFaith.GetReligion.GetAdjectiveNoTooltip], c'est la bonne chose à faire."
+carn_slavery_doctrine.0002.b:1 "Je ne paierais pas pour vos acquisitions pécheresses!"
+carn_slavery_doctrine.0002.c:1 "J'ai bien peur que vous n'ayez pas le choix en la matière."
+
+carn_slavery_doctrine.0003.desc:1 "Je vois la sagesse de votre requête, mais ces esclaves me sont indispensables...\n\nPeut-être que si vous promettiez de me soutenir dans mes autres affaires, je serais en mesure de m'affranchir de leur services."
+carn_slavery_doctrine.0003.a:1 "Je vous aiderai à régler ce problème."
+carn_slavery_doctrine.0003.b:1 "Vos erreurs ne sont pas de mon ressort !"
+carn_slavery_doctrine.0003.c:1 "Vous avez des dettes à me rembourser, d’abord."
+
+carn_slavery_doctrine.0004.desc:1 "Vos demandes sont déraisonnables et sans fondement. [recipient.GetFaith.PantheonTerm|U] n'a que faire de mes esclaves."
+carn_slavery_doctrine.0004.hooking_out:1 "\n\nJe tiens également à vous rappeler ce que vous me devez et que vous feriez mieux de ne pas approfondir la question."
+carn_slavery_doctrine.0004.b:1 "Eh bien, vous allez payer le prix dans ce monde !"
+carn_slavery_doctrine.0004.c:1 "Ne pensez pas que je vous laisserai vous en tirer !"
+carn_slavery_doctrine.0004.d:1 "Oh, je pense que vous allez faire exactement ce que je vous dis."

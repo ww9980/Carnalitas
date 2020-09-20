@@ -1,0 +1,17 @@
+﻿l_french:
+
+dominant:1 "[dominant|El]"
+relation_dominant:1 "dominant"
+relation_dominant_possessive:1 "du dominant"
+
+submissive:1 "[soumis|El]"
+relation_submissive:1 "soumis"
+relation_submissive_possessive:1 "du soumis"
+
+slave:1 "[slave|El]"
+relation_slave:1 "esclave"
+relation_slave_possessive:1 "de l'esclave"
+
+slave_owner:1 "[Concept('slave_owner', 'maître')|El]"
+relation_slave_owner:1 "maître"
+relation_slave_owner_possessive:1 "du maître"

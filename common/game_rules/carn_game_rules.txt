@@ -38,19 +38,36 @@ carn_futa_trait_name = {
 carn_futa_content = {
 	default = carn_futa_content_disabled
 	carn_futa_content_disabled = {}
+	carn_futa_content_no_seeding = {}
 	carn_futa_content_very_rare = {}
 	carn_futa_content_rare = {}
 	carn_futa_content_uncommon = {}
 	carn_futa_content_common = {}
 	carn_futa_content_very_common = {}
 	carn_futa_content_always = {}
-	carn_futa_content_no_seeding = {}
 }
 
 carn_futa_trait_inheritance = {
 	default = carn_futa_trait_inheritance_off
 	carn_futa_trait_inheritance_off = {}
 	carn_futa_trait_inheritance_on = {}
+}
+
+carn_slavery_content = {
+	default = carn_slavery_content_disabled
+	carn_slavery_content_disabled = {}
+	carn_slavery_content_enabled = {}
+	carn_slavery_content_require_acceptance = {}
+	carn_slavery_content_consensual_only = {}
+}
+
+carn_slavery_default_religious_doctrine = {
+	default = carn_slavery_default_religious_doctrine_historical
+	carn_slavery_default_religious_doctrine_historical = {}
+	carn_slavery_default_religious_doctrine_accepted = {}
+	carn_slavery_default_religious_doctrine_shunned = {}
+	carn_slavery_default_religious_doctrine_criminal = {}
+	carn_slavery_default_religious_doctrine_inverted = {}
 }
 
 carn_content_anal = {
@@ -71,6 +88,13 @@ carn_content_painful = {
 	carn_content_painful_off = {}
 	carn_content_painful_on = {}
 }
+
+carn_content_bestiality = {
+	default = carn_content_bestiality_off
+	carn_content_bestiality_off = {}
+	carn_content_bestiality_on = {}
+}
+
 
 carn_content_watersports = {
 	default = carn_content_watersports_off

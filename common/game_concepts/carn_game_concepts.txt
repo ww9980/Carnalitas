@@ -3,6 +3,21 @@
 	parent = relation
 }
 
+slave = {
+	texture = "gfx/interface/icons/traits/slave.dds"
+	alias = { slaves slavery slave_possessive slaves_possessive }
+	parent = relation
+}
+
+slave_market = {
+}
+
+slave_owner = {
+	texture = "gfx/interface/icons/slave_owner_icon.dds"
+	alias = { slave_owners slave_owner_possessive slave_owners_possessive }
+	parent = relation
+}
+
 submissive = {
 	alias = { submissive_short submissives submissive_possessive submissives_possessive }
 	parent = relation

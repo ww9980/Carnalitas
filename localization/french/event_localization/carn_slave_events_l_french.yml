@@ -1,0 +1,4 @@
+﻿l_french:
+carn_slave.0001.t:1 "Asservi[recipient.Custom('FR_E')]"
+carn_slave.0001.desc:1 "Je suis conduit[recipient.Custom('FR_E')] dans la cour, où l'on me retire mes chaussures tandis que des menottes sont placées autour de mes poignets. Je me résigne à mon terrible sort lorsque [acteur.GetShortUIName], ricannant, me déclarent esclave."
+carn_slave.0001.a:1 "À partir de ce jour, je ne suis guère plus qu'une propriété."

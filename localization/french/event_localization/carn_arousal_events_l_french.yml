@@ -1,0 +1,3 @@
+﻿l_french:
+carn_msg_arousal:1 "Stress gagné dû à l'excitation"
+carn_msg_arousal_desc:1 "Le manque de satisfaction sexuelle fait augmenter votre [stress_gain_i] [stress|E]."

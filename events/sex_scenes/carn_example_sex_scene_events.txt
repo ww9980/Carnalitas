@@ -8,6 +8,7 @@
 #
 # scope:carn_sex_player ------ The PLAYER (the one receiving the event)
 # scope:carn_sex_target ------ The TARGET (the one the player is having sex with)
+# scope:carn_sex_drama ------- whether the effect requested drama (stress effects and story cycles) or not
 #
 # Remember to add your sex scene to the carn_sex_scene on_action, or it won't appear!
 #################################################################################
@@ -57,14 +58,18 @@ carn_sex_scene.0001 = {
 
 		##########################################################################
 		# Don't forget to include carn_had_sex_with_effect
+		# pregnancy_chance can be changed to any value between 0 and 100
+		# DO NOT CHANGE THE OTHER VARIABLES
 		##########################################################################
 		
 		scope:carn_sex_player  = {
 			carn_had_sex_with_effect = {
 				CHARACTER_1 = scope:carn_sex_player
 				CHARACTER_2 = scope:carn_sex_target
-				PREGNANCY_CHANCE = pregnancy_chance
-				DRAMA = yes
+				C1_PREGNANCY_CHANCE = pregnancy_chance
+				C2_PREGNANCY_CHANCE = pregnancy_chance
+				STRESS_EFFECTS = scope:carn_sex_stress_effects
+				DRAMA = scope:carn_sex_drama
 			}
 		}
 

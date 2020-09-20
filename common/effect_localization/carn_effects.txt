@@ -1,0 +1,35 @@
+﻿set_relation_slave = {
+	first = carn_i_gain_slave
+	third = carn_they_gain_slave
+	global = carn_they_gain_slave
+	first_past = carn_i_got_slave
+	third_past = carn_they_got_slave
+	global_past = carn_they_got_slave
+}
+
+set_relation_slave_owner = {
+	first = carn_i_gain_slave_owner
+	third = carn_they_gain_slave_owner
+	global = carn_they_gain_slave_owner
+	first_past = carn_i_got_slave_owner
+	third_past = carn_they_got_slave_owner
+	global_past = carn_they_got_slave_owner
+}
+
+remove_relation_slave = {
+	first = carn_i_lose_slave
+	third = carn_they_lose_slave
+	global = carn_they_lose_slave
+	first_past = carn_i_lost_slave
+	third_past = carn_they_lost_slave
+	global_past = carn_they_lost_slave
+}
+
+remove_relation_slave_owner = {
+	first = carn_i_lose_slave_owner
+	third = carn_they_lose_slave_owner
+	global = carn_they_lose_slave_owner
+	first_past = carn_i_lost_slave_owner
+	third_past = carn_they_lost_slave_owner
+	global_past = carn_they_lost_slave_owner
+}
