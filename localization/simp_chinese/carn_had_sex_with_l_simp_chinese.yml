@@ -1,4 +1,4 @@
 ﻿l_simp_chinese:
-carn_had_sex_with_effect.first_person.tt:0 "You lay with [had_sex_with_effect_partner.GetShortUIName]"
-carn_had_sex_with_effect.third_person.tt:0 "[had_sex_root_character.GetShortUIName|U] lays with [had_sex_with_effect_partner.GetShortUIName]"
-had_sex_with_effect.other_person.tt:0 "Lays with [had_sex_with_effect_partner.GetShortUIName]"
+ carn_had_sex_with_effect.first_person.tt: "你和[carn_sex_char_2.GetShortUIName]一起共赴巫山"
+ carn_had_sex_with_effect.third_person.tt: "[carn_sex_char_1.GetShortUIName|U]与[carn_sex_char_2.GetShortUIName]一起共赴巫山"
+ carn_had_sex_with_effect.other_person.tt: "与[carn_sex_char_1.GetShortUIName]一起共赴巫山"
