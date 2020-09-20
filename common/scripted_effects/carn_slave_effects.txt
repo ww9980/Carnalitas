@@ -574,7 +574,7 @@ carn_buy_slave_effect = {
 	}
 	scope:buyer = {
 		pay_short_term_gold = {
-			gold = scope:slave.carn_slave_price_value
+			gold = $SLAVE_PRICE$
 			target = scope:seller
 		}
 		set_relation_slave = scope:slave
