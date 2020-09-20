@@ -77,3 +77,4 @@
 * Fixed tits_big and dick_big traits being flagged as bad traits.
 * Fixed breast size traits forcing all characters to use the bust_clothes blendshape.
 * Fixed STDs being transmitted even when disabled by game rule.
+* Fixed wrong scope name being used in localization files.
