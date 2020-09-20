@@ -1,0 +1,11 @@
+﻿on_game_start_after_lobby = {
+  events = {
+    carn_prostitution_doctrine_seeding.0001
+  }
+}
+
+on_faith_created = {
+  events = {
+    carn_prostitution_doctrine_seeding.0002
+  }
+}

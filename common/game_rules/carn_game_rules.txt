@@ -1,10 +1,4 @@
-﻿carn_std = {
-	default = carn_std_enabled
-	carn_std_enabled = {}
-	carn_std_disabled = {}
-}
-
-carn_sex_interaction = {
+﻿carn_sex_interaction = {
 	default = carn_sex_interaction_disabled
 	carn_sex_interaction_disabled = {}
 	carn_sex_interaction_enabled = {}
@@ -15,6 +9,12 @@ carn_arousal_stress = {
 	default = carn_arousal_stress_disabled
 	carn_arousal_stress_disabled = {}
 	carn_arousal_stress_enabled = {}
+}
+
+carn_std = {
+	default = carn_std_enabled
+	carn_std_enabled = {}
+	carn_std_disabled = {}
 }
 
 carn_dt_enabled = {
@@ -29,12 +29,6 @@ carn_dt_trait_names = {
 	carn_dt_trait_names_immersive = {}
 }
 
-carn_futa_trait_name = {
-	default = carn_futa_trait_name_futa
-	carn_futa_trait_name_futa = {}
-	carn_futa_trait_name_hermaphrodite = {}
-}
-
 carn_futa_content = {
 	default = carn_futa_content_disabled
 	carn_futa_content_disabled = {}
@@ -45,6 +39,12 @@ carn_futa_content = {
 	carn_futa_content_common = {}
 	carn_futa_content_very_common = {}
 	carn_futa_content_always = {}
+}
+
+carn_futa_trait_name = {
+	default = carn_futa_trait_name_futa
+	carn_futa_trait_name_futa = {}
+	carn_futa_trait_name_hermaphrodite = {}
 }
 
 carn_futa_trait_inheritance = {
@@ -68,6 +68,21 @@ carn_slavery_default_religious_doctrine = {
 	carn_slavery_default_religious_doctrine_shunned = {}
 	carn_slavery_default_religious_doctrine_criminal = {}
 	carn_slavery_default_religious_doctrine_inverted = {}
+}
+
+carn_prostitution_content = {
+	default = carn_prostitution_content_disabled
+	carn_prostitution_content_disabled = {}
+	carn_prostitution_content_any_gender = {}
+	carn_prostitution_content_female_only = {}
+	carn_prostitution_content_male_only = {}
+}
+
+carn_prostitution_default_religious_doctrine = {
+	default = carn_prostitution_default_religious_doctrine_shunned
+	carn_prostitution_default_religious_doctrine_shunned = {}
+	carn_prostitution_default_religious_doctrine_accepted = {}
+	carn_prostitution_default_religious_doctrine_criminal = {}
 }
 
 carn_content_anal = {
