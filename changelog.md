@@ -1,4 +1,3 @@
-# Carnalitas v1.1.1
+# Carnalitas v1.2
 
-* Fixed wrong scope name being used in localization files.
-* Added Simplified Chinese translation by lonelyneet.
+* AI no longer asks to buy your slaves.

@@ -49,6 +49,10 @@ carn_buy_slave_directly_interaction = {
 				exists = this
 			}
 		}
+		NAND = { # to prevent ai spamming you with buy slave requests
+			scope:actor = { is_ai = yes }
+			scope:recipient = { is_ai = no }
+		}
 	}
 
 	is_valid_showing_failures_only = {
@@ -75,7 +79,7 @@ carn_buy_slave_directly_interaction = {
 		}
 	}
 	
-	ai_frequency = 240
+	ai_frequency = 120
 	
 	ai_targets = {
 		ai_recipients = realm_characters
