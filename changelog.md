@@ -7,3 +7,7 @@
 ## Tweaks
 
 * AI no longer asks to buy your slaves.
+
+## Bug Fixes
+
+* Fixed not being able to Lay With Lover targeting your slaves.

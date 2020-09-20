@@ -14,7 +14,7 @@ carn_sex_interaction = {
                 is_consort_of = scope:recipient
                 has_relation_lover = scope:recipient
                 has_relation_soulmate = scope:recipient
-                has_relation_slave_owner = scope:recipient
+                has_relation_slave = scope:recipient
             }
         }
     }
