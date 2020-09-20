@@ -70,7 +70,7 @@
  carn_msg_scope_slave_is_no_longer_your_slave_desc: "[slave.GetTitledFirstName] is no longer your [slave|E]"
 
  carn_make_same_sex_concubine_interaction: "Make [RECIPIENT.Custom('ConcubineConsort')|U]"
- actor_secondary_make_same_sex_concubine_interaction: "Sender"
+ actor_secondary_carn_make_same_sex_concubine_interaction: "Sender"
  carn_find_same_sex_concubine_interaction: "Find [ACTOR.Custom('ConcubineConsort')|U]"
  carn_find_same_sex_concubine_interaction_desc: "Find a same-sex [actor.Custom('ConcubineConsort')|U] in your court"
- actor_secondary_find_same_sex_concubine_interaction: "Sender"
+ actor_secondary_carn_find_same_sex_concubine_interaction: "Sender"
