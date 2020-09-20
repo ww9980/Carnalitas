@@ -53,6 +53,7 @@
 
  carn_sell_slave_interaction: "Sell Slave"
  carn_sell_slave_interaction_desc: "Sell [recipient.GetShortUINameNoTooltip] on the [slave_market|E] for [gold|E]"
+ recipient_secondary_carn_sell_slave_interaction: "Buyer"
 
  carn_secondary_recipient_is_my_knight_reason: "[secondary_recipient.GetShortUIName|U] is my [recipient.Custom('KnightCulture')]: $VALUE|=+0$"
  carn_secondary_recipient_is_my_councillor_reason: "[secondary_recipient.GetShortUIName|U] is my [councillor|E]: $VALUE|=+0$"

@@ -8,6 +8,7 @@
 * Character interaction to free a slave, with various demands you can make similar to releasing a prisoner.
 * Character interaction to demand that a character free their illegal slaves.
 * Character interaction to buy a slave from someone else.
+* Character interaction to sell a slave to someone else.
 * New religious doctrines regarding religions' views on slavery, as well as a game rule to change their default stance on slavery.
 * New custom GUI showing a character's owned slaves in the character window.
 * Encyclopedia entries for Slaves, Owners, and the Slave Market.
