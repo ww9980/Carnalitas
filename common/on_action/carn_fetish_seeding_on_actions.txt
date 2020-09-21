@@ -1,0 +1,17 @@
+﻿on_game_start_after_lobby = {
+    events = {
+		carn_fetish.0001 # initialize all age >= 16 characters with fetishes
+	}
+}
+
+on_join_court = {
+	events = {
+		carn_fetish.0002 # initialize this character with fetishes if age >= 16
+	}
+}
+
+on_16th_birthday = {
+	events = {
+		carn_fetish.0002 # set fetishes for characers coming of age
+	}
+}
