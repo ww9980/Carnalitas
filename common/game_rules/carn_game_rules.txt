@@ -53,6 +53,12 @@ carn_futa_trait_inheritance = {
 	carn_futa_trait_inheritance_on = {}
 }
 
+carn_fetishes_enabled = {
+	default = carn_fetishes_enabled_false
+	carn_fetishes_enabled_false = {}
+	carn_fetishes_enabled_true = {}
+}
+
 carn_slavery_content = {
 	default = carn_slavery_content_disabled
 	carn_slavery_content_disabled = {}

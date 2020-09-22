@@ -1,0 +1,191 @@
+﻿# randomly seed 1-2 fetishes based on game rules
+carn_seed_fetishes_effect = {
+	add_character_flag = carn_fetishes_seeded
+
+	set_while_counter_variable_effect = yes
+	while = {
+		limit = { var:while_counter < 2 }
+		random_list = {
+			100 = { # rolled nothing
+			}
+
+			# fetishes with game rule toggle
+			0 = {
+				modifier = {
+					add = 10
+					has_game_rule = carn_content_anal_on
+					NOT = {
+						is_target_in_variable_list = {
+							name = carn_active_fetishes
+							target = flag:carn_fetish_anal
+						}
+					}
+				}
+				add_to_variable_list = {
+					name = carn_active_fetishes
+					target = flag:carn_fetish_anal
+				}
+			}
+			0 = {
+				modifier = {
+					add = 10
+					has_game_rule = carn_content_painful_on
+					NOT = {
+						is_target_in_variable_list = {
+							name = carn_active_fetishes
+							target = flag:carn_fetish_sadism
+						}
+					}
+				}
+				add_to_variable_list = {
+					name = carn_active_fetishes
+					target = flag:carn_fetish_sadism
+				}
+			}
+			0 = {
+				modifier = {
+					add = 10
+					has_game_rule = carn_content_painful_on
+					NOT = {
+						is_target_in_variable_list = {
+							name = carn_active_fetishes
+							target = flag:carn_fetish_masochism
+						}
+					}
+				}
+				add_to_variable_list = {
+					name = carn_active_fetishes
+					target = flag:carn_fetish_masochism
+				}
+			}
+			0 = {
+				modifier = {
+					add = 10
+					has_game_rule = carn_content_bestiality_on
+					NOT = {
+						is_target_in_variable_list = {
+							name = carn_active_fetishes
+							target = flag:carn_fetish_bestiality
+						}
+					}
+				}
+				add_to_variable_list = {
+					name = carn_active_fetishes
+					target = flag:carn_fetish_bestiality
+				}
+			}
+			0 = {
+				modifier = {
+					add = 10
+					has_game_rule = carn_content_watersports_on
+					NOT = {
+						is_target_in_variable_list = {
+							name = carn_active_fetishes
+							target = flag:carn_fetish_watersports
+						}
+					}
+				}
+				add_to_variable_list = {
+					name = carn_active_fetishes
+					target = flag:carn_fetish_watersports
+				}
+			}
+			0 = {
+				modifier = {
+					add = 10
+					has_game_rule = carn_content_scat_on
+					NOT = {
+						is_target_in_variable_list = {
+							name = carn_active_fetishes
+							target = flag:carn_fetish_scat
+						}
+					}
+				}
+				add_to_variable_list = {
+					name = carn_active_fetishes
+					target = flag:carn_fetish_scat
+				}
+			}
+			0 = {
+				modifier = {
+					add = 10
+					has_game_rule = carn_content_gore_on
+					NOT = {
+						is_target_in_variable_list = {
+							name = carn_active_fetishes
+							target = flag:carn_fetish_gore
+						}
+					}
+				}
+				add_to_variable_list = {
+					name = carn_active_fetishes
+					target = flag:carn_fetish_gore
+				}
+			}
+
+			# fetishes without game rule toggle
+			0 = {
+				modifier = {
+					add = 10
+					NOT = {
+						is_target_in_variable_list = {
+							name = carn_active_fetishes
+							target = flag:carn_fetish_foot_play
+						}
+					}
+				}
+				add_to_variable_list = {
+					name = carn_active_fetishes
+					target = flag:carn_fetish_foot_play
+				}
+			}
+			0 = {
+				modifier = {
+					add = 10
+					NOT = {
+						is_target_in_variable_list = {
+							name = carn_active_fetishes
+							target = flag:carn_fetish_bondage
+						}
+					}
+				}
+				add_to_variable_list = {
+					name = carn_active_fetishes
+					target = flag:carn_fetish_bondage
+				}
+			}
+			0 = {
+				modifier = {
+					add = 10
+					NOT = {
+						is_target_in_variable_list = {
+							name = carn_active_fetishes
+							target = flag:carn_fetish_domination
+						}
+					}
+				}
+				add_to_variable_list = {
+					name = carn_active_fetishes
+					target = flag:carn_fetish_domination
+				}
+			}
+			0 = {
+				modifier = {
+					add = 10
+					NOT = {
+						is_target_in_variable_list = {
+							name = carn_active_fetishes
+							target = flag:carn_fetish_submission
+						}
+					}
+				}
+				add_to_variable_list = {
+					name = carn_active_fetishes
+					target = flag:carn_fetish_submission
+				}
+			}
+		}
+		increase_while_counter_variable_effect = yes
+	}
+	remove_while_counter_variable_effect = yes
+}

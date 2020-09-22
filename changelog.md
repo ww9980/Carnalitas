@@ -10,6 +10,11 @@
 
 * Added some basic interactions to take same-sex concubines. These can be used as long as your faith accepts same-sex relations.
 
+## Fetish System
+
+* Added the option to seed the game world with various fetishes. Fetishes associated with content disabled by game rules will not spawn.
+* Fetishes are stored as a `variable_list` attached to characters and do not spawn until they are 16 years old.
+
 ## Tweaks
 
 * AI no longer asks to buy your slaves.

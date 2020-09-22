@@ -62,6 +62,12 @@
  setting_carn_futa_trait_inheritance_on: "#high On#!"
  setting_carn_futa_trait_inheritance_on_desc: "The futanari trait is congenital, so children of futanari have a high chance of being futanari."
 
+ rule_carn_fetishes_enabled: "#X Carnalitas:#! Fetishes"
+ setting_carn_fetishes_enabled_false: "Disabled"
+ setting_carn_fetishes_enabled_false_desc: "Characters will not spawn with fetishes."
+ setting_carn_fetishes_enabled_true: "#high Enabled#!"
+ setting_carn_fetishes_enabled_true_desc: "Characters may spawn with fetishes. Disabling some scene types will prevent their associated fetishes from appearing."
+
  rule_carn_slavery_content: "#X Carnalitas:#! Slavery System"
  setting_carn_slavery_content_disabled: "Disabled"
  setting_carn_slavery_content_disabled_desc: "Carnalitas's Character Interactions related to slavery will not be available."
