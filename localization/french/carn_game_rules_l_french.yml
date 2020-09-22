@@ -62,6 +62,12 @@ setting_carn_futa_trait_inheritance_off_desc:1 "Les enfants de $trait_futa$ n'on
 setting_carn_futa_trait_inheritance_on:1 "#high Activé#!"
 setting_carn_futa_trait_inheritance_on_desc:1 "Le trait $trait_futa$ est congénital, les enfant de $trait_futa$ ont donc plus de chance d'être eux-mêmes des $trait_futa$."
 
+rule_carn_fetishes_enabled:1 "#X Carnalitas:#! Fétiches"
+setting_carn_fetishes_enabled_false:1 "Désactivé"
+setting_carn_fetishes_enabled_false_desc:1 "Aucun personnage n'apparaitra avec des fétiches."
+setting_carn_fetishes_enabled_true:1 "#high Activé#!"
+setting_carn_fetishes_enabled_true_desc:1 "Certains personnages pourrait apparaitre avec des fétiches. Désactiver certains types de scène empêchera leur fétiche associé d'apparaitre."
+
 rule_carn_slavery_content:1 "#X Carnalitas:#! Système d'esclavage"
 setting_carn_slavery_content_disabled:1 "Désactivé"
 setting_carn_slavery_content_disabled_desc:1 "Les $game_concept_character_interaction$ de Carnalitas liées à l'esclavage ne seront pas utilisable."
@@ -83,6 +89,24 @@ setting_carn_slavery_default_religious_doctrine_criminal:1 "#high Toujours crimi
 setting_carn_slavery_default_religious_doctrine_criminal_desc:1 "Au début de la partie, toute forme d'esclavage sera criminelle, et ce dans toutes les fois."
 setting_carn_slavery_default_religious_doctrine_inverted:1 "#high Inversé#!"
 setting_carn_slavery_default_religious_doctrine_inverted_desc:1 "Au début de la partie, l'$carn_doctrine_same_slavery_name_full$ sera accepté et l'$carn_doctrine_other_slavery_name$ sera criminel dans toutes les fois."
+
+rule_carn_prostitution_content:1 "#X Carnalitas:#! Système de prostitution"
+setting_carn_prostitution_content_disabled:1 "Désactivé"
+setting_carn_prostitution_content_disabled_desc:1 "Les décisions de Carnalitas liées à la prostitution ne seront pas disponibles."
+setting_carn_prostitution_content_any_gender:1 "#high N'importe quel genre#!"
+setting_carn_prostitution_content_any_gender_desc:1 "Hommes et femmes pourront utiliser une décision pour devenir prostituée."
+setting_carn_prostitution_content_female_only:1 "#high Femmes seulement#!"
+setting_carn_prostitution_content_female_only_desc:1 "Seules les femmes pourront utiliser une décision pour devenir prostituée."
+setting_carn_prostitution_content_male_only:1 "#high Homme seulement#!"
+setting_carn_prostitution_content_male_only_desc:1 "Seuls les hommes pourront utiliser une décision pour devenir prostitué."
+
+rule_carn_prostitution_default_religious_doctrine:1 "#X Carnalitas:#! Doctrine de prostitution par défaut"
+setting_carn_prostitution_default_religious_doctrine_shunned:1 "Mal vue"
+setting_carn_prostitution_default_religious_doctrine_shunned_desc:1 "Au début de la partie, la prostitution sera mal vue par toutes les fois."
+setting_carn_prostitution_default_religious_doctrine_accepted:1 "#high Acceptée#!"
+setting_carn_prostitution_default_religious_doctrine_accepted_desc:1 "Au début de la partie, la prostitution sera acceptée par toutes les fois."
+setting_carn_prostitution_default_religious_doctrine_criminal:1 "#high Criminelle#!"
+setting_carn_prostitution_default_religious_doctrine_criminal_desc:1 "Au début de la partie, la prostitution sera criminelle pour toutes les fois."
 
 rule_carn_content_anal:1 "#X Carnalitas:#! Scènes anales"
 setting_carn_content_anal_off:1 "Off"
