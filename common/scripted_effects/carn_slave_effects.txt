@@ -23,6 +23,16 @@ carn_enslave_effect = {
 				value = gold
 				multiply = -1
 			}
+			if = {
+				limit = { is_married = yes }
+				every_spouse = {
+					divorce = scope:new_slave
+				}
+			}
+			if = {
+				limit = { exists = betrothed }
+				break_betrothal = betrothed
+			}
 		}
 	}
 

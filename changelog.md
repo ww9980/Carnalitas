@@ -18,6 +18,7 @@
 ## Tweaks
 
 * AI no longer asks to buy your slaves.
+* Taking a slave now breaks their marriages and/or betrothal.
 
 ## Bug Fixes
 
