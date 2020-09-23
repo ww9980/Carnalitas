@@ -679,6 +679,20 @@ prostitute_1 = {
 	index = 6916
 	lifestyle = yes
 
+	name = {
+		first_valid = {
+			triggered_desc = {
+				trigger = { NOT = { exists = this } }
+				desc = trait_prostitute_1_neutral
+			}
+			triggered_desc = {
+				trigger = { is_female = yes }
+				desc = trait_prostitute_1_female
+			}
+			desc = trait_prostitute_1_male
+		}
+	}
+
 	diplomacy = 1
 	intrigue = 1
 	attraction_opinion = 5
@@ -734,6 +748,20 @@ prostitute_2 = {
 	index = 6917
 	lifestyle = yes
 
+	name = {
+		first_valid = {
+			triggered_desc = {
+				trigger = { NOT = { exists = this } }
+				desc = trait_prostitute_2_neutral
+			}
+			triggered_desc = {
+				trigger = { is_female = yes }
+				desc = trait_prostitute_2_female
+			}
+			desc = trait_prostitute_2_male
+		}
+	}
+
 	diplomacy = 2
 	intrigue = 2
 	attraction_opinion = 10
@@ -788,6 +816,20 @@ prostitute_2 = {
 prostitute_3 = {
 	index = 6918
 	lifestyle = yes
+
+	name = {
+		first_valid = {
+			triggered_desc = {
+				trigger = { NOT = { exists = this } }
+				desc = trait_prostitute_3_neutral
+			}
+			triggered_desc = {
+				trigger = { is_female = yes }
+				desc = trait_prostitute_3_female
+			}
+			desc = trait_prostitute_3_male
+		}
+	}
 
 	diplomacy = 3
 	intrigue = 3

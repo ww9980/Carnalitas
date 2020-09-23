@@ -29,3 +29,10 @@ game_concept_slave_owner_desc:1 "Un [character|El] peut être légalement reconn
 
 game_concept_slave_market:1 "Marché aux esclaves"
 game_concept_slave_market_desc:1 "Les [slaves|El], n'étant que des propriétés, peuvent être acheté et vendu par d'autre [characters|El] à partir de l'[interactions|El] 'Acheter l'esclave' ou 'Vendre l'esclave'. Un personnage qui achète un esclave deviendra son [slave_owner|El]."
+
+game_concept_prostitute:1 "Prostituée"
+game_concept_prostitutes:1 "Prostituées"
+game_concept_prostitution:1 "Prostitution"
+game_concept_prostitute_possessive:1 "de la prostituée"
+game_concept_prostitutes_possessive:1 "des prostituées"
+game_concept_prostitute_desc:1 "Une prostituée est un [character|El] offrant des services sexuels contre paiement. Tout personnage peut devenir un ou une prostituée avec la [decision|El] '$carn_work_as_prostitute_decision$'\n\nSelon votre [faith|El], la prostitution pourrait être mal vue, voir criminelle."

@@ -37,3 +37,8 @@ relation_slave_owner_female_possessive:1 "de la maîtresse"
 
 # Religion
 carn_doctrine_same_slavery_name_full:1 "Asservissement de coreligionnaires"
+
+# Traits
+trait_prostitute_1_lowercase:1 "prostituée débutante"
+trait_prostitute_2_lowercase:1 "prostituée expérimentée"
+trait_prostitute_3_lowercase:1 "prostituée de renom"
