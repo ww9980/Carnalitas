@@ -175,15 +175,32 @@ carn_prostitution_random_events.0010 = {
 					has_trait = deviant
 				}
 			}
-			alternative_limit = {
-				carn_possible_prostitute_random_events_0010_client_trigger = yes
-				might_cheat_on_every_partner_trigger = yes
-				freely_accepts_sodomy_with_trigger = { CHARACTER = root }
-				NOT = { has_trait = chaste }
-			}
-			alternative_limit = {
-				carn_possible_prostitute_random_events_0010_client_trigger = yes
-				NOT = { has_trait = chaste }
+			weight = {
+				base = 30
+				modifier = {
+					add = 30
+					has_trait = lustful
+				}
+				modifier = {
+					add = 30
+					has_trait = seducer
+				}
+				modifier = {
+					add = 30
+					has_trait = rakish
+				}
+				modifier = {
+					add = -30
+					might_cheat_on_every_partner_trigger = no
+				}
+				modifier = {
+					add = -30
+					NOT = { freely_accepts_sodomy_with_trigger = { CHARACTER = root } }
+				}
+				modifier = {
+					add = -30
+					has_trait = chaste
+				}
 			}
 			save_scope_as = client
 		}
@@ -246,10 +263,7 @@ carn_prostitution_random_events.0011 = {
 	option = { # oho, let's ruin their reputation
 		name = carn_prostitution_random_events.0011.c
 		trigger = {
-			opinion = {
-				target = scope:client
-				value < 0
-			}
+			NOT = { has_relation_friend = scope:client }
 			scope:client = {
 				OR = {
 					# this is cheating on their spouse
