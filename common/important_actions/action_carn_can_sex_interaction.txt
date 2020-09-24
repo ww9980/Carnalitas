@@ -1,0 +1,30 @@
+﻿action_carn_can_sex_interaction = {
+	check_create_action = {
+		if = {
+			limit = {
+        		NOR = {
+					has_game_rule = carn_sex_interaction_disabled
+					has_character_flag = carn_sex_interaction_effect_cd
+				}
+            	carn_can_have_sex_trigger = yes
+				exists = primary_spouse
+				primary_spouse = {
+            		carn_can_have_sex_trigger = yes
+				}
+			}
+			try_create_important_action = {
+				important_action_type = action_carn_can_sex_interaction
+				actor = root
+				recipient = primary_spouse
+			}
+		}
+	}
+
+	effect = {
+		open_interaction_window = {
+			interaction = carn_sex_interaction
+			actor = scope:actor
+			recipient = scope:recipient
+		}
+	}
+}

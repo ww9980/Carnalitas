@@ -1,10 +1,26 @@
-﻿@msg_bad_soundeffect = "event:/SFX/UI/Notifications/Messages/sfx_ui_message_theme_negative"
+﻿@msg_good_soundeffect = "event:/SFX/UI/Notifications/Messages/sfx_ui_message_theme_positive"
+@msg_bad_soundeffect = "event:/SFX/UI/Notifications/Messages/sfx_ui_message_theme_negative"
 
 carn_event_arousal = {
 	icon = "icon_stress_gain.dds"
 	title = carn_msg_arousal
 	desc = event_message_effect
-	# desc = carn_msg_arousal_desc
+	style = bad
+	soundeffect = @msg_bad_soundeffect
+}
+
+carn_prostitute_random_event_good = {
+	icon = "generic_good_effect.dds"
+	title = event_message_title
+	desc = event_message_effect
+	style = good
+	soundeffect = @msg_good_soundeffect
+}
+
+carn_prostitute_random_event_bad = {
+	icon = "generic_bad_effect.dds"
+	title = event_message_title
+	desc = event_message_effect
 	style = bad
 	soundeffect = @msg_bad_soundeffect
 }

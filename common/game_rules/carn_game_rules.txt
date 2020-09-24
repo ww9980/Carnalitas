@@ -17,6 +17,12 @@ carn_std = {
 	carn_std_disabled = {}
 }
 
+carn_pregnancy_complications = {
+	default = carn_pregnancy_complications_default
+	carn_pregnancy_complications_default = {}
+	carn_pregnancy_complications_never = {}
+}
+
 carn_dt_enabled = {
 	default = carn_dt_enabled_false
 	carn_dt_enabled_false = {}

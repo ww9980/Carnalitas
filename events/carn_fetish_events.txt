@@ -24,7 +24,7 @@ carn_fetish.0002 = {
 
 	trigger = {
 		has_game_rule = carn_fetishes_enabled_true
-		NOT = { has_character_flag = carn_dt_traits_seeded }
+		NOT = { has_character_flag = carn_fetishes_seeded }
 		age >= 16
 	}
 

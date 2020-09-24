@@ -1,0 +1,59 @@
+﻿random_yearly_everyone_pulse = {
+	on_actions = {
+		carn_prostitution_yearly_maintenance_pulse
+	}
+}
+
+carn_prostitution_yearly_maintenance_pulse = {
+	trigger = {
+		carn_is_working_as_prostitute_trigger = yes
+	}
+	effect = {
+		if = {
+			limit = {
+				OR = {
+					carn_can_have_sex_trigger = no
+					age >= carn_prostitution_age_cutoff
+					faith = { has_doctrine = carn_doctrine_prostitution_crime }
+					has_character_flag = carn_cannot_be_prostitute
+					has_trait_with_flag = carn_cannot_be_prostitute
+				}
+			}
+			send_interface_message = {
+				type = event_generic_neutral
+				title = msg_carn_stopped_working_as_prostitute
+				left_icon = root
+				custom_tooltip = carn_can_no_longer_work_as_prostitute_tooltip
+			}
+			carn_stop_working_as_prostitute_effect = yes
+		}
+		else = {
+			random_list = {
+				40 = {
+					# nothing
+				}
+				10 = {
+					carn_prostitution_rank_up_chance_modifier = yes
+					trigger_event = {
+						id = carn_prostitute_random_events.0001
+					}
+				}
+				50 = {
+					trigger_event = { on_action = carn_prostitution_random_events_pulse }
+				}
+			}
+		}
+	}
+}
+
+carn_prostitution_random_events_pulse = {
+	random_events = {
+		100 = carn_prostitute_random_events.0001 # Leveled up prostitute trait
+		100 = carn_prostitute_random_events.0002 # Lost prestige
+		100 = carn_prostitute_random_events.0003 # Lost piety (shunned)
+		100 = carn_prostitute_random_events.0004 # Got STD
+		100 = carn_prostitute_random_events.0005 # Big tipper
+
+		100 = carn_prostitute_random_events.0010 # Someone notable lays with you
+	}
+}

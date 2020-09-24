@@ -692,11 +692,8 @@ prostitute_1 = {
 			desc = trait_prostitute_1_male
 		}
 	}
-
-	diplomacy = 1
+	
 	intrigue = 1
-	attraction_opinion = 5
-	seduce_scheme_power_add = 5
 
 	group = lifestyle_prostitute
 	level = 1
@@ -762,7 +759,7 @@ prostitute_2 = {
 		}
 	}
 
-	diplomacy = 2
+	diplomacy = 1
 	intrigue = 2
 	attraction_opinion = 10
 	seduce_scheme_power_add = 10
@@ -831,10 +828,10 @@ prostitute_3 = {
 		}
 	}
 
-	diplomacy = 3
+	diplomacy = 2
 	intrigue = 3
-	attraction_opinion = 15
-	seduce_scheme_power_add = 15
+	attraction_opinion = 20
+	seduce_scheme_power_add = 20
 
 	group = lifestyle_prostitute
 	level = 3

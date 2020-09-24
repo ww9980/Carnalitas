@@ -1,0 +1,92 @@
+﻿# carn_start_working_as_prostitute_effect
+# carn_stop_working_as_prostitute_effect
+# carn_update_working_as_prostitute_modifier_effect
+# carn_upgrade_lifestyle_prostitute_effect
+
+carn_start_working_as_prostitute_effect = {
+	if = {
+		limit = { has_trait = celibate }
+		remove_trait = celibate
+	}
+	if = {
+		limit = { NOT = { has_trait = lifestyle_prostitute } }
+		add_trait = prostitute_1
+	}
+	if = {
+		limit = { has_trait = prostitute_3 }
+		add_character_modifier = {
+			modifier = carn_working_as_prostitute_3_modifier
+		}
+	}
+	else_if = {
+		limit = { has_trait = prostitute_2 }
+		add_character_modifier = {
+			modifier = carn_working_as_prostitute_2_modifier
+		}
+	}
+	else = {
+		add_character_modifier = {
+			modifier = carn_working_as_prostitute_1_modifier
+		}
+	}
+}
+
+carn_stop_working_as_prostitute_effect = {
+	if = {
+		limit = { has_character_modifier = carn_working_as_prostitute_1_modifier }
+		remove_character_modifier = carn_working_as_prostitute_1_modifier
+	}
+	if = {
+		limit = { has_character_modifier = carn_working_as_prostitute_2_modifier }
+		remove_character_modifier = carn_working_as_prostitute_2_modifier
+	}
+	if = {
+		limit = { has_character_modifier = carn_working_as_prostitute_3_modifier }
+		remove_character_modifier = carn_working_as_prostitute_3_modifier
+	}
+}
+
+carn_update_working_as_prostitute_modifier_effect = {
+	carn_stop_working_as_prostitute_effect = yes
+	carn_start_working_as_prostitute_effect = yes
+}
+
+carn_upgrade_lifestyle_prostitute_effect = {
+	if = {
+		limit = { has_trait = prostitute_3 }
+		# nothing
+	}
+	else_if = {
+		limit = { has_trait = prostitute_2 }
+		remove_trait = prostitute_2
+		add_trait = prostitute_3
+		hidden_effect = {
+			if = {
+				limit = { carn_is_working_as_prostitute_trigger = yes }
+				carn_update_working_as_prostitute_modifier_effect = yes
+			}
+		}
+	}
+	else_if = {
+		limit = { has_trait = prostitute_1 }
+		remove_trait = prostitute_1
+		add_trait = prostitute_2
+		hidden_effect = {
+			if = {
+				limit = { carn_is_working_as_prostitute_trigger = yes }
+				carn_update_working_as_prostitute_modifier_effect = yes
+			}
+		}
+	}
+	else = {
+		add_trait = prostitute_1
+	}
+	if = {
+		limit = {
+			faith = {
+				NOT = { has_doctrine = carn_doctrine_prostitution_accepted }
+			}
+		}
+		add_piety_level = -1
+	}
+}

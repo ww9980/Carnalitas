@@ -1,0 +1,126 @@
+﻿@carn_prostitution_cooldown_time = 0
+
+carn_work_as_prostitute_decision = {
+	picture = "gfx/interface/illustrations/decisions/decision_recruitment.dds"
+
+	desc = carn_work_as_prostitute_decision_desc
+
+	selection_tooltip = carn_work_as_prostitute_decision_tooltip
+
+	cooldown = { days = @carn_prostitution_cooldown_time }
+
+	is_shown = {
+		OR = {
+			has_game_rule = carn_prostitution_content_any_gender
+			AND = {
+				is_male = yes
+				has_game_rule = carn_prostitution_content_male_only
+			}
+			AND = {
+				is_female = yes
+				has_game_rule = carn_prostitution_content_female_only
+			}
+		}
+		carn_is_working_as_prostitute_trigger = no
+		NOR = {
+			faith = { has_doctrine = carn_doctrine_prostitution_crime }
+			has_character_flag = carn_cannot_be_prostitute
+			has_trait_with_flag = carn_cannot_be_prostitute
+		}
+	}
+
+	is_valid_showing_failures_only = {
+		carn_can_have_sex_trigger = yes
+	}
+
+	is_valid = {
+		age < carn_prostitution_age_cutoff
+	}
+
+	effect = {
+
+		send_interface_toast = {
+			title = msg_carn_started_working_as_prostitute
+			left_icon = root
+
+			carn_start_working_as_prostitute_effect = yes
+		}
+
+		if = {
+			limit = {
+				faith = {
+					NOT = { has_doctrine = carn_doctrine_prostitution_accepted }
+				}
+			}
+			add_piety_level = -1
+		}
+
+		stress_impact = {
+			arrogant = medium_stress_impact_gain
+			chaste = major_stress_impact_gain
+		}
+	}
+
+	ai_check_interval = 60
+	
+	ai_potential = {
+		faith = { has_doctrine = carn_doctrine_prostitution_accepted }
+		OR = {
+			has_trait = greedy
+			has_trait = lustful
+		}
+		NOR = {
+			has_trait = arrogant
+			has_trait = chaste
+		}
+	}
+
+	ai_will_do = {
+		base = 0
+		ai_value_modifier = {
+			ai_greed = 5
+		}
+	}
+}
+
+carn_stop_work_as_prostitute_decision = {
+	ai_check_interval = 0
+	picture = "gfx/interface/illustrations/decisions/decision_recruitment.dds"
+
+	desc = carn_stop_work_as_prostitute_decision_desc
+
+	selection_tooltip = carn_stop_work_as_prostitute_decision_tooltip
+
+	cooldown = { days = @carn_prostitution_cooldown_time }
+
+	is_shown = {
+		carn_is_working_as_prostitute_trigger = yes
+	}
+
+	is_valid_showing_failures_only = {
+		is_available_adult = yes
+	}
+
+	effect = {
+
+		send_interface_toast = {
+			title = msg_carn_stopped_working_as_prostitute
+			left_icon = root
+
+			carn_stop_working_as_prostitute_effect = yes
+		}
+
+		stress_impact = {
+			arrogant = medium_stress_impact_loss
+			chaste = major_stress_impact_loss
+		}
+	}
+	
+	ai_potential = {
+		always = no
+	}
+
+	ai_will_do = {
+		base = 0
+	}
+}

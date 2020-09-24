@@ -20,6 +20,12 @@
  setting_carn_arousal_stress_enabled: "#high Enabled#!"
  setting_carn_arousal_stress_enabled_desc: "Characters naturally gain stress over time. The stress gain is increased if $trait_lustful$ or $trait_rakish$, and absent if $trait_chaste$."
 
+ rule_carn_pregnancy_complications: "#X Carnalitas:#! Pregnancy Complications"
+ setting_carn_pregnancy_complications_default: "Default"
+ setting_carn_pregnancy_complications_default_desc: "No changes will be made to the risk of illness or death in pregnancy and childbirth."
+ setting_carn_pregnancy_complications_never: "#high Never#!"
+ setting_carn_pregnancy_complications_never_desc: "Characters will always have smooth pregnancy and childbirth without any illness, death, or other complications."
+
  rule_carn_dt_enabled: "#X Carnalitas:#! Body Part Traits"
  setting_carn_dt_enabled_false: "Disabled"
  setting_carn_dt_enabled_false_desc: "Characters will not spawn with congenital breast and penis size traits."
