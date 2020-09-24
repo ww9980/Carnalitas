@@ -1,4 +1,4 @@
-﻿namespace = carn_prostitute_random_events
+﻿namespace = carn_prostitution_random_events
 
 #
 # we don't need to check that the character is a prostitute/able to have sex, because it's already checked in the on_action
@@ -13,7 +13,7 @@
 #
 
 # 0001. Leveled up prostitute trait
-carn_prostitute_random_events.0001 = {
+carn_prostitution_random_events.0001 = {
 	hidden = yes
 
 	trigger = {
@@ -33,7 +33,7 @@ carn_prostitute_random_events.0001 = {
 	
 	immediate = {
 		send_interface_message = {
-			title = carn_prostitute_random_events.0001.notification
+			title = carn_prostitution_random_events.0001.notification
 			type = carn_prostitute_random_event_good
 			right_icon = this
 			carn_upgrade_lifestyle_prostitute_effect = yes
@@ -42,7 +42,7 @@ carn_prostitute_random_events.0001 = {
 }
 
 # 0002. Lost prestige
-carn_prostitute_random_events.0002 = {
+carn_prostitution_random_events.0002 = {
 	hidden = yes
 
 	weight_multiplier = {
@@ -52,7 +52,7 @@ carn_prostitute_random_events.0002 = {
 	
 	immediate = {
 		send_interface_message = {
-			title = carn_prostitute_random_events.0002.notification
+			title = carn_prostitution_random_events.0002.notification
 			type = carn_prostitute_random_event_bad
 			right_icon = this
 			add_prestige = minor_prestige_loss
@@ -61,7 +61,7 @@ carn_prostitute_random_events.0002 = {
 }
 
 # 0003. Lost piety (shunned)
-carn_prostitute_random_events.0003 = {
+carn_prostitution_random_events.0003 = {
 	hidden = yes
 
 	trigger = {
@@ -75,7 +75,7 @@ carn_prostitute_random_events.0003 = {
 	
 	immediate = {
 		send_interface_message = {
-			title = carn_prostitute_random_events.0003.notification
+			title = carn_prostitution_random_events.0003.notification
 			type = carn_prostitute_random_event_bad
 			right_icon = this
 			add_piety = medium_piety_loss
@@ -84,7 +84,7 @@ carn_prostitute_random_events.0003 = {
 }
 
 # 0004. Got STD
-carn_prostitute_random_events.0004 = {
+carn_prostitution_random_events.0004 = {
 	hidden = yes
 
 	weight_multiplier = {
@@ -105,7 +105,7 @@ carn_prostitute_random_events.0004 = {
 }
 
 # 0005. Big tipper
-carn_prostitute_random_events.0005 = {
+carn_prostitution_random_events.0005 = {
 	hidden = yes
 
 	weight_multiplier = {
@@ -115,7 +115,7 @@ carn_prostitute_random_events.0005 = {
 	
 	immediate = {
 		send_interface_message = {
-			title = carn_prostitute_random_events.0005.notification
+			title = carn_prostitution_random_events.0005.notification
 			type = carn_prostitute_random_event_good
 			right_icon = this
 			add_gold = tiny_gold_value
@@ -142,7 +142,7 @@ scripted_trigger carn_possible_prostitute_random_events_0006_client_trigger = {
 }
 
 # 0010. Someone notable lays with you - setup event
-carn_prostitute_random_events.0010 = {
+carn_prostitution_random_events.0010 = {
 	hidden = yes
 
 	weight_multiplier = {
@@ -192,16 +192,16 @@ carn_prostitute_random_events.0010 = {
 
 		if = {
 			limit = { exists = scope:client }
-			trigger_event = { id = carn_prostitute_random_events.0011 }
+			trigger_event = { id = carn_prostitution_random_events.0011 }
 		}
 	}
 }
 
 # 0011. Someone notable lays with you - displayed event
-carn_prostitute_random_events.0011 = {
+carn_prostitution_random_events.0011 = {
 	type = character_event
-	title = carn_prostitute_random_events.0011.t
-	desc = carn_prostitute_random_events.0011.desc
+	title = carn_prostitution_random_events.0011.t
+	desc = carn_prostitution_random_events.0011.desc
 
 	theme = seduce_scheme
 
@@ -211,7 +211,7 @@ carn_prostitute_random_events.0011 = {
 	}
 
 	option = { # let's fuck
-		name = carn_prostitute_random_events.0011.a
+		name = carn_prostitution_random_events.0011.a
 		scope:client = {
 			pay_short_term_gold = {
 				target = root
@@ -233,7 +233,7 @@ carn_prostitute_random_events.0011 = {
 	}
 
 	option = { # decline
-		name = carn_prostitute_random_events.0011.b
+		name = carn_prostitution_random_events.0011.b
 		add_prestige = minor_prestige_loss
 		reverse_add_opinion = {
 			target = scope:client
@@ -246,7 +246,7 @@ carn_prostitute_random_events.0011 = {
 	}
 
 	option = { # oho, let's ruin their reputation
-		name = carn_prostitute_random_events.0011.c
+		name = carn_prostitution_random_events.0011.c
 		trigger = {
 			opinion = {
 				target = scope:client

@@ -35,7 +35,7 @@ carn_prostitution_yearly_maintenance_pulse = {
 				10 = {
 					carn_prostitution_rank_up_chance_modifier = yes
 					trigger_event = {
-						id = carn_prostitute_random_events.0001
+						id = carn_prostitution_random_events.0001
 					}
 				}
 				50 = {
@@ -48,12 +48,11 @@ carn_prostitution_yearly_maintenance_pulse = {
 
 carn_prostitution_random_events_pulse = {
 	random_events = {
-		100 = carn_prostitute_random_events.0001 # Leveled up prostitute trait
-		100 = carn_prostitute_random_events.0002 # Lost prestige
-		100 = carn_prostitute_random_events.0003 # Lost piety (shunned)
-		100 = carn_prostitute_random_events.0004 # Got STD
-		100 = carn_prostitute_random_events.0005 # Big tipper
+		100 = carn_prostitution_random_events.0002 # Lost prestige
+		100 = carn_prostitution_random_events.0003 # Lost piety (shunned)
+		100 = carn_prostitution_random_events.0004 # Got STD
+		100 = carn_prostitution_random_events.0005 # Big tipper
 
-		100 = carn_prostitute_random_events.0010 # Someone notable lays with you
+		100 = carn_prostitution_random_events.0010 # Someone notable lays with you
 	}
 }

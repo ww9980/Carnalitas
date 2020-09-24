@@ -87,7 +87,7 @@
 		is_landed = yes
 		is_adult = yes
 		allowed_more_concubines = yes
-		any_child = { is_primary_heir_of = scope:actor } # ai won't take same sex concubines unless they already have an heir secured
+		any_child = { is_primary_heir_of = prev } # ai won't take same sex concubines unless they already have an heir secured
 		NOR = {
 			has_trait = chaste
 			has_trait = celibate
