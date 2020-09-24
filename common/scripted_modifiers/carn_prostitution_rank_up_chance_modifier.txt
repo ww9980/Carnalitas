@@ -75,7 +75,7 @@
 	}
 
 	modifier = {
-		factor = 1.5
+		factor = 2
 		age <= 21
 	}
 

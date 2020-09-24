@@ -118,7 +118,7 @@ carn_prostitution_random_events.0005 = {
 			title = carn_prostitution_random_events.0005.notification
 			type = carn_prostitute_random_event_good
 			right_icon = this
-			add_gold = tiny_gold_value
+			add_gold = minor_gold_value
 		}
 	}
 }
@@ -129,7 +129,7 @@ scripted_trigger carn_possible_prostitute_random_events_0010_client_trigger = {
 	is_diplomatically_available = yes
 	possibly_interested_in_character_trigger = { CHARACTER = root }
 	root = { possibly_interested_in_character_trigger = { CHARACTER = prev } }
-	gold >= tiny_gold_value
+	gold >= minor_gold_value
 	NOR = {
 		this = root
 		is_consort_of = root
@@ -230,7 +230,7 @@ carn_prostitution_random_events.0011 = {
 		scope:client = {
 			pay_short_term_gold = {
 				target = root
-				gold = tiny_gold_value
+				gold = minor_gold_value
 			}
 		}
 		carn_sex_scene_request_consensual = yes

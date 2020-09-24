@@ -6,11 +6,8 @@
 	}
 
 	#APPLY TRAITS & REMOVE PIETY LEVELS
-	if = {
-		limit = { carn_should_have_no_consequences_for_extramarital_sex_trigger = no }
-		add_adulterer_fornicator_trait_or_nothing_effect = yes
-		remove_piety_level_for_shunned_or_criminal_trait_effect = { TRAIT = adulterer } #Fornicator falls under same doctrine
-	}
+	add_adulterer_fornicator_trait_or_nothing_effect = yes
+	remove_piety_level_for_shunned_or_criminal_trait_effect = { TRAIT = adulterer } #Fornicator falls under same doctrine
 	if = {
 		limit = {
 			OR = {
@@ -75,7 +72,7 @@
 				limit = {
 					NOR = {
 						scope:sex_character = {
-							carn_should_have_no_spouse_opinion_penalties_for_extramarital_sex_trigger = yes
+							carn_should_have_no_consequences_for_extramarital_sex_trigger = yes
 						}
 						faith = { has_doctrine_parameter = no_unfaithfulness_penalty_active }
 					}
@@ -110,7 +107,7 @@
 					limit = {
 						NOR = {
 							scope:sex_character = {
-								carn_should_have_no_spouse_opinion_penalties_for_extramarital_sex_trigger = yes
+								carn_should_have_no_consequences_for_extramarital_sex_trigger = yes
 							}
 							faith = { has_doctrine_parameter = no_unfaithfulness_penalty_active }
 						}
@@ -146,7 +143,7 @@
 				scope:spouse_event = yes
 				NOR = {
 					scope:sex_character = {
-						carn_should_have_no_spouse_opinion_penalties_for_extramarital_sex_trigger = yes
+						carn_should_have_no_consequences_for_extramarital_sex_trigger = yes
 					}
 					faith = { has_doctrine_parameter = no_unfaithfulness_penalty_active }
 				}
