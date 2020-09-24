@@ -1,5 +1,6 @@
 ﻿carn_tits = {
 	usage = game
+	selection_behavior = max
 	tits_average = {
 		dna_modifiers = {
 			morph = {
@@ -12,7 +13,6 @@
 			base = 0
 			modifier = {
 				add = 1
-				# because this has a lower weight, it will only appear if none of the others do.
 				has_game_rule = carn_dt_enabled_true
 			}
 		}
