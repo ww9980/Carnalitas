@@ -1,7 +1,7 @@
 ﻿l_english:
 
  carn_work_as_prostitute_decision: "Moonlight as a Prostitute"
- carn_work_as_prostitute_decision_desc: "If I desire money or carnal satisfaction, I can let everyone know that I am offering my sexual services to the highest bidder."
+ carn_work_as_prostitute_decision_desc: "If I desire money -- or an excuse to sleep around -- I can let everyone know that I am offering my sexual services to the highest bidder."
  carn_work_as_prostitute_decision_tooltip:0 "Start working as a prostitute, trading your [prestige|E] and chastity for [gold|E]"
  carn_work_as_prostitute_decision_confirm: "Lay out the incense and candles..."
  msg_carn_started_working_as_prostitute: "Started Prostitution"

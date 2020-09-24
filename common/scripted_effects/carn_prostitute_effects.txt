@@ -10,7 +10,7 @@ carn_start_working_as_prostitute_effect = {
 	}
 	if = {
 		limit = { NOT = { has_trait = lifestyle_prostitute } }
-		add_trait = prostitute_1
+		hidden_effect = { add_trait = prostitute_1 }
 	}
 	if = {
 		limit = { has_trait = prostitute_3 }

@@ -53,6 +53,7 @@ List of fetishes:
 New scripted triggers:
 * `carn_should_have_no_consequences_for_extramarital_sex_trigger`
 * `carn_should_have_no_consequences_for_extramarital_sex_with_partner_trigger` (requires `PARTNER`)
+* `carn_should_have_no_consequences_for_extramarital_sex_with_no_partner_trigger`
 
 New character and trait flags for modders:
 * `carn_no_pregnancy_complications`

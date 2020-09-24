@@ -178,19 +178,19 @@ carn_prostitution_random_events.0010 = {
 			weight = {
 				base = 30
 				modifier = {
-					add = 30
+					add = 10
 					has_trait = lustful
 				}
 				modifier = {
-					add = 30
+					add = 10
 					has_trait = seducer
 				}
 				modifier = {
-					add = 30
+					add = 10
 					has_trait = rakish
 				}
 				modifier = {
-					add = -30
+					add = -10
 					might_cheat_on_every_partner_trigger = no
 				}
 				modifier = {
