@@ -77,6 +77,9 @@ carn_sex_scene.0001 = {
 		# carn_had_sex_with_effect will trigger the on_action "carn_on_sex," where you can add events to fire.
 		# To check the flags of the sex scene, you can use triggers such as "carn_sex_scene_was_vaginal = yes"
 		##########################################################################
+
+		# And of course you can add other fun stuff
+		play_music_cue = "mx_cue_seduction"
 	}
 
 	option = {
