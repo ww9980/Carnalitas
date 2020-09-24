@@ -1,28 +1,6 @@
 ﻿carn_tits = {
 	usage = game
 	selection_behavior = weighted_random
-	tits_average_bust_clothes = {
-		dna_modifiers = {
-			morph = {
-				mode = replace
-				gene = gene_bs_bust
-				template = bust_clothes
-				value = 0.5
-			}
-		}
-		weight = {
-			base = 0
-			modifier = {
-				add = 2
-				has_game_rule = carn_dt_enabled_true
-				NOR = {
-					has_trait = tits_small
-					has_trait = tits_big
-				}
-				should_be_naked_trigger = no
-			}
-		}
-	}
 	tits_average_bust_default = {
 		dna_modifiers = {
 			morph = {
@@ -212,25 +190,6 @@
 			}
 		}
 	}
-	tits_small_3_bust_clothes = {
-		dna_modifiers = {
-			morph = {
-				mode = replace
-				gene = gene_bs_bust
-				template = bust_clothes
-				value = 0.0
-			}
-		}
-		weight = {
-			base = 0
-			modifier = {
-				add = 4
-				has_game_rule = carn_dt_enabled_true
-				has_trait = tits_small_3
-				should_be_naked_trigger = no
-			}
-		}
-	}
 	tits_small_3_bust_default = {
 		dna_modifiers = {
 			morph = {
@@ -381,25 +340,6 @@
 			modifier = {
 				add = 3
 				has_trait = tits_small_3
-			}
-		}
-	}
-	tits_small_2_bust_clothes = {
-		dna_modifiers = {
-			morph = {
-				mode = replace
-				gene = gene_bs_bust
-				template = bust_clothes
-				value = 0.15
-			}
-		}
-		weight = {
-			base = 0
-			modifier = {
-				add = 4
-				has_game_rule = carn_dt_enabled_true
-				has_trait = tits_small_2
-				should_be_naked_trigger = no
 			}
 		}
 	}
@@ -556,25 +496,6 @@
 			}
 		}
 	}
-	tits_small_1_bust_clothes = {
-		dna_modifiers = {
-			morph = {
-				mode = replace
-				gene = gene_bs_bust
-				template = bust_clothes
-				value = 0.35
-			}
-		}
-		weight = {
-			base = 0
-			modifier = {
-				add = 4
-				has_game_rule = carn_dt_enabled_true
-				has_trait = tits_small_1
-				should_be_naked_trigger = no
-			}
-		}
-	}
 	tits_small_1_bust_default = {
 		dna_modifiers = {
 			morph = {
@@ -725,25 +646,6 @@
 			modifier = {
 				add = 3
 				has_trait = tits_small_1
-			}
-		}
-	}
-	tits_big_1_bust_clothes = {
-		dna_modifiers = {
-			morph = {
-				mode = replace
-				gene = gene_bs_bust
-				template = bust_clothes
-				value = 0.65
-			}
-		}
-		weight = {
-			base = 0
-			modifier = {
-				add = 4
-				has_game_rule = carn_dt_enabled_true
-				has_trait = tits_big_1
-				should_be_naked_trigger = no
 			}
 		}
 	}
@@ -900,25 +802,6 @@
 			}
 		}
 	}
-	tits_big_2_bust_clothes = {
-		dna_modifiers = {
-			morph = {
-				mode = replace
-				gene = gene_bs_bust
-				template = bust_clothes
-				value = 0.85
-			}
-		}
-		weight = {
-			base = 0
-			modifier = {
-				add = 4
-				has_game_rule = carn_dt_enabled_true
-				has_trait = tits_big_2
-				should_be_naked_trigger = no
-			}
-		}
-	}
 	tits_big_2_bust_default = {
 		dna_modifiers = {
 			morph = {
@@ -1069,25 +952,6 @@
 			modifier = {
 				add = 3
 				has_trait = tits_big_2
-			}
-		}
-	}
-	tits_big_3_bust_clothes = {
-		dna_modifiers = {
-			morph = {
-				mode = replace
-				gene = gene_bs_bust
-				template = bust_clothes
-				value = 1.00
-			}
-		}
-		weight = {
-			base = 0
-			modifier = {
-				add = 4
-				has_game_rule = carn_dt_enabled_true
-				has_trait = tits_big_3
-				should_be_naked_trigger = no
 			}
 		}
 	}
