@@ -1,4 +1,15 @@
-﻿# returns true if this character has any congenital dick trait, active or inactive
+﻿# carn_has_any_dick_gene_trigger
+# carn_has_any_tits_gene_trigger
+# carn_has_small_dick_trigger
+# carn_has_big_dick_trigger
+# carn_has_small_tits_trigger
+# carn_has_big_tits_trigger
+# carn_has_bigger_dick_than_character_trigger
+# carn_has_smaller_dick_than_character_trigger
+# carn_has_bigger_tits_than_character_trigger
+# carn_has_smaller_tits_than_character_trigger
+
+# returns true if this character has any congenital dick trait, active or inactive
 carn_has_any_dick_gene_trigger = {
 	OR = {
 		has_trait = dick_small_1
@@ -14,16 +25,6 @@ carn_has_any_dick_gene_trigger = {
 		has_inactive_trait = dick_big_2
 		has_inactive_trait = dick_big_3
 	}
-}
-
-# returns true if this character has any active small dick trait
-carn_has_small_dick_trigger = {
-	has_trait = dick_small
-}
-
-# returns true if this character has any active big dick trait
-carn_has_big_dick_trigger = {
-	has_trait = dick_big
 }
 
 # returns true if this character has any congenital tits trait, active or inactive
@@ -44,6 +45,16 @@ carn_has_any_tits_gene_trigger = {
 	}
 }
 
+# returns true if this character has any active small dick trait
+carn_has_small_dick_trigger = {
+	has_trait = dick_small
+}
+
+# returns true if this character has any active big dick trait
+carn_has_big_dick_trigger = {
+	has_trait = dick_big
+}
+
 # returns true if this character has any active small tits trait
 carn_has_small_tits_trigger = {
 	has_trait = tits_small
@@ -52,4 +63,28 @@ carn_has_small_tits_trigger = {
 # returns true if this character has any active big tits trait
 carn_has_big_tits_trigger = {
 	has_trait = tits_big
+}
+
+# requires CHARACTER
+carn_has_bigger_dick_than_character_trigger = {
+	$CHARACTER$ = { save_temporary_scope_as = compared_character }
+	carn_dick_size_value > scope:compared_character.carn_dick_size_value
+}
+
+# requires CHARACTER
+carn_has_smaller_dick_than_character_trigger = {
+	$CHARACTER$ = { save_temporary_scope_as = compared_character }
+	carn_dick_size_value < scope:compared_character.carn_dick_size_value
+}
+
+# requires CHARACTER
+carn_has_bigger_tits_than_character_trigger = {
+	$CHARACTER$ = { save_temporary_scope_as = compared_character }
+	carn_tits_size_value > scope:compared_character.carn_tits_size_value
+}
+
+# requires CHARACTER
+carn_has_smaller_tits_than_character_trigger = {
+	$CHARACTER$ = { save_temporary_scope_as = compared_character }
+	carn_tits_size_value < scope:compared_character.carn_tits_size_value
 }

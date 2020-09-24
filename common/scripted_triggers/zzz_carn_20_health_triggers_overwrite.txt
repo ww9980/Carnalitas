@@ -3,7 +3,10 @@ can_contract_disease_trigger = {
 	save_temporary_scope_as = sick_character_check
 
 	# Is not immune to disease
-	NOT = { has_character_flag = immune_to_disease }
+	NOR = {
+		has_character_flag = immune_to_disease
+		has_trait_with_flag = immune_to_disease
+	}
 
 	#Doesn't already have the trait
 	NOT = { has_trait = $DISEASE$ }
@@ -19,6 +22,7 @@ can_contract_disease_trigger = {
 			OR = {
 				has_game_rule = carn_std_disabled
 				has_character_flag = immune_to_std
+				has_trait_with_flag = immune_to_std
 			}
 		}
 		NOR = {

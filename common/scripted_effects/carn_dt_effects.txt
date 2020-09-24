@@ -4,6 +4,10 @@
 # carn_activate_gender_specific_dt_traits_effect
 # carn_remove_dick_trait_effect
 # carn_remove_tits_trait_effect
+# carn_increase_dick_size_one_step_effect
+# carn_decrease_dick_size_one_step_effect
+# carn_increase_tits_size_one_step_effect
+# carn_decrease_tits_size_one_step_effect
 # carn_add_dick_small_1_effect
 # carn_add_dick_small_2_effect
 # carn_add_dick_small_3_effect
@@ -223,6 +227,154 @@ carn_remove_tits_trait_effect = {
 	remove_trait = tits_big_3
 }
 
+carn_increase_dick_size_one_step_effect = {
+	if = {
+		limit = {
+			has_game_rule = carn_dt_enabled_true
+			age >= 16
+			carn_gender_can_impregnate_trigger = yes
+		}
+		if = {
+			limit = { has_trait = dick_big_2 }
+			remove_trait = dick_big_2
+			add_trait = dick_big_3
+		}
+		else_if = {
+			limit = { has_trait = dick_big_1 }
+			remove_trait = dick_big_1
+			add_trait = dick_big_2
+		}
+		else_if = {
+			limit = { has_trait = dick_small_3 }
+			remove_trait = dick_small_3
+			add_trait = dick_small_2
+		}
+		else_if = {
+			limit = { has_trait = dick_small_2 }
+			remove_trait = dick_small_2
+			add_trait = dick_small_1
+		}
+		else_if = {
+			limit = { has_trait = dick_small_1 }
+			remove_trait = dick_small_1
+		}
+		else = {
+			add_trait = dick_big_1
+		}
+	}
+}
+
+carn_decrease_dick_size_one_step_effect = {
+	if = {
+		limit = {
+			has_game_rule = carn_dt_enabled_true
+			age >= 16
+			carn_gender_can_impregnate_trigger = yes
+		}
+		if = {
+			limit = { has_trait = dick_big_3 }
+			remove_trait = dick_big_3
+			add_trait = dick_big_2
+		}
+		else_if = {
+			limit = { has_trait = dick_big_2 }
+			remove_trait = dick_big_2
+			add_trait = dick_big_1
+		}
+		else_if = {
+			limit = { has_trait = dick_big_1 }
+			remove_trait = dick_big_1
+		}
+		else_if = {
+			limit = { has_trait = dick_small_1 }
+			remove_trait = dick_small_1
+			add_trait = dick_small_2
+		}
+		else_if = {
+			limit = { has_trait = dick_small_2 }
+			remove_trait = dick_small_2
+			add_trait = dick_small_3
+		}
+		else = {
+			add_trait = dick_small_1
+		}
+	}
+}
+
+carn_increase_tits_size_one_step_effect = {
+	if = {
+		limit = {
+			has_game_rule = carn_dt_enabled_true
+			age >= 16
+			is_female = yes
+		}
+		if = {
+			limit = { has_trait = tits_big_2 }
+			remove_trait = tits_big_2
+			add_trait = tits_big_3
+		}
+		else_if = {
+			limit = { has_trait = tits_big_1 }
+			remove_trait = tits_big_1
+			add_trait = tits_big_2
+		}
+		else_if = {
+			limit = { has_trait = tits_small_3 }
+			remove_trait = tits_small_3
+			add_trait = tits_small_2
+		}
+		else_if = {
+			limit = { has_trait = tits_small_2 }
+			remove_trait = tits_small_2
+			add_trait = tits_small_1
+		}
+		else_if = {
+			limit = { has_trait = tits_small_1 }
+			remove_trait = tits_small_1
+		}
+		else = {
+			add_trait = tits_big_1
+		}
+	}
+}
+
+carn_decrease_tits_size_one_step_effect = {
+	if = {
+		limit = {
+			has_game_rule = carn_dt_enabled_true
+			age >= 16
+			is_female = yes
+		}
+		if = {
+			limit = { has_trait = tits_big_3 }
+			remove_trait = tits_big_3
+			add_trait = tits_big_2
+		}
+		else_if = {
+			limit = { has_trait = tits_big_2 }
+			remove_trait = tits_big_2
+			add_trait = tits_big_1
+		}
+		else_if = {
+			limit = { has_trait = tits_big_1 }
+			remove_trait = tits_big_1
+		}
+		else_if = {
+			limit = { has_trait = tits_small_1 }
+			remove_trait = tits_small_1
+			add_trait = tits_small_2
+		}
+		else_if = {
+			limit = { has_trait = tits_small_2 }
+			remove_trait = tits_small_2
+			add_trait = tits_small_3
+		}
+		else = {
+			add_trait = tits_small_1
+		}
+	}
+}
+
 #
 # this series of scripted effects adds dick/tits if the game rules are enabled, useful for scripted characters you want to be endowed a certain way
 #
@@ -369,4 +521,7 @@ carn_add_tits_big_3_effect = {
 		}
 	}
 	add_character_flag = carn_dt_traits_seeded
+}
+
+carn_increase_dick_size_one_step_effect = {
 }

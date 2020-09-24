@@ -1,0 +1,44 @@
+﻿# carn_has_any_negative_congenital_trait_trigger
+# carn_has_any_minor_disfigurement_trigger
+# carn_has_any_major_disfigurement_trigger
+
+# we use this to check the specific traits
+# since the game will count small dicks/tits as "negative"
+carn_has_any_negative_congenital_trait_trigger = {
+	OR = {
+		has_trait = beauty_bad
+		has_trait = intellect_bad
+		has_trait = physique_bad
+		has_trait = clubfooted
+		has_trait = hunchbacked
+		has_trait = lisping
+		has_trait = stuttering
+		has_trait = dwarf
+		has_trait = giant
+		has_trait = inbred
+		has_trait = spindly
+		has_trait = scaly
+		has_trait = wheezing
+		has_trait = bleeder
+		has_trait = infertile
+		has_trait = possessed_genetic
+		has_trait = depressed_genetic
+	}
+}
+
+carn_has_any_minor_disfigurement_trigger = {
+	OR = {
+		has_trait = one_eyed
+		has_trait = scarred
+	}
+}
+
+carn_has_any_major_disfigurement_trigger = {
+	OR = {
+		has_trait = maimed
+		has_trait = one_legged
+		has_trait = disfigured
+		has_trait = eunuch
+		has_trait = blind
+	}
+}

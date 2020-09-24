@@ -30,8 +30,9 @@ New character and trait flags for modders:
 
 ### Fetish System
 
-* Added the option to seed the game world with various fetishes. Fetishes associated with content disabled by game rules will not spawn.
+* Added the option to seed the game world with various fetishes. This currently doesn't do anything, but can be used as a hook for various mods.
 * Fetishes are stored as a `variable_list` attached to characters and do not spawn until they are 16 years old.
+* Fetishes associated with content disabled by game rules will not spawn.
 
 List of fetishes:
 * `flag:carn_fetish_anal`
@@ -46,6 +47,48 @@ List of fetishes:
 * `flag:carn_fetish_domination`
 * `flag:carn_fetish_submission`
 
+### Body Part Traits Update for Modders
+
+New scripted effects:
+* `carn_increase_dick_size_one_step_effect`
+* `carn_decrease_dick_size_one_step_effect`
+* `carn_increase_tits_size_one_step_effect`
+* `carn_decrease_tits_size_one_step_effect`
+
+New scripted triggers:
+* `carn_has_bigger_dick_than_character_trigger` (requires `CHARACTER`)
+* `carn_has_smaller_dick_than_character_trigger` (requires `CHARACTER`)
+* `carn_has_bigger_tits_than_character_trigger` (requires `CHARACTER`)
+* `carn_has_smaller_tits_than_character_trigger` (requires `CHARACTER`)
+
+### Health and Transformation Library for Modders
+
+New scripted effects:
+* `carn_increase_beauty_one_step_effect`
+* `carn_decrease_beauty_one_step_effect`
+* `carn_increase_intellect_one_step_effect`
+* `carn_decrease_intellect_one_step_effect`
+* `carn_increase_physique_one_step_effect`
+* `carn_decrease_physique_one_step_effect`
+* `carn_remove_random_negative_congenital_trait_effect`
+* `carn_remove_all_negative_congenital_traits_effect`
+* `carn_heal_wounds_one_step_effect`
+* `carn_remove_all_wounds_effect`
+* `carn_remove_random_minor_disfigurement_effect`
+* `carn_remove_all_minor_disfigurements_effect`
+* `carn_remove_random_major_disfigurement_effect`
+* `carn_remove_all_major_disfigurements_effect`
+* `carn_recover_from_all_diseases_effect`
+
+New scripted triggers:
+* `carn_has_any_negative_congenital_trait_trigger`
+* `carn_has_any_minor_disfigurement_trigger`
+* `carn_has_any_major_disfigurement_trigger`
+
+New character and trait flags:
+* `immune_to_disease` (as a trait flag)
+* `immune_to_std` (as a trait flag)
+
 ### Miscellaneous
 
 * Added a game rule to prevent pregnancy complications from happening.
@@ -55,7 +98,7 @@ New scripted triggers:
 * `carn_should_have_no_consequences_for_extramarital_sex_with_partner_trigger` (requires `PARTNER`)
 * `carn_should_have_no_consequences_for_extramarital_sex_with_no_partner_trigger`
 
-New character and trait flags for modders:
+New character and trait flags:
 * `carn_no_pregnancy_complications`
 * `carn_no_consequences_for_extramarital_sex_with_others`
 * `carn_no_consequences_for_extramarital_sex_with_me`
