@@ -1,6 +1,8 @@
 # Carnalitas v1.2
 
-## Prostitution System
+## New Features
+
+### Prostitution System
 
 * Added a game rule to enable or disable prostitution content.
 * Added a religious doctrine about the criminality of prostitution, and a game rule to set its default setting for all religions.
@@ -22,11 +24,11 @@ New character and trait flags for modders:
 * `carn_is_prostitute`
 * `carn_cannot_be_prostitute`
 
-## Same-Sex Concubinage
+### Same-Sex Concubinage
 
 * Added some basic interactions to take same-sex concubines. These can be used as long as your faith accepts same-sex relations.
 
-## Fetish System
+### Fetish System
 
 * Added the option to seed the game world with various fetishes. Fetishes associated with content disabled by game rules will not spawn.
 * Fetishes are stored as a `variable_list` attached to characters and do not spawn until they are 16 years old.
@@ -44,7 +46,7 @@ List of fetishes:
 * `flag:carn_fetish_domination`
 * `flag:carn_fetish_submission`
 
-## Miscellaneous
+### Miscellaneous
 
 * Added a game rule to prevent pregnancy complications from happening.
 
@@ -55,6 +57,7 @@ New character and trait flags for modders:
 
 * AI no longer asks to buy your slaves.
 * Taking a slave now breaks their marriages and/or betrothal.
+* You now get a notification in the Issues tab when you can Lay With Lover.
 * `carn_can_have_sex_trigger` now requires that you are not wounded and you don't have any disease more serious than lover's pox.
 
 ## Bug Fixes
