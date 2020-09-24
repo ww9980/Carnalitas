@@ -50,6 +50,10 @@ List of fetishes:
 
 * Added a game rule to prevent pregnancy complications from happening.
 
+New scripted triggers:
+* `carn_should_have_no_consequences_for_extramarital_sex_trigger`
+* `carn_should_have_no_spouse_opinion_penalties_for_extramarital_sex_trigger`
+
 New character and trait flags for modders:
 * `carn_no_pregnancy_complications`
 * `carn_no_consequences_for_extramarital_sex_with_others`
