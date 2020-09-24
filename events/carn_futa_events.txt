@@ -1,38 +1,15 @@
 ﻿namespace = carn_futa
 
 #
-# 0001. Seed futa traits for all characters
-# 0002. Seed futa trait for this character
+# 0001. Seed futa trait for this character
 # 0010. Yearly pulse for futas to impregnate wives, concubines, lovers (WIP, NOT TRIGGERED, UNTESTED)
 #
 
 #
-# 0001. Seed futa traits for all characters
+# 0001. Seed futa trait for this character
 #
 
 carn_futa.0001 = {
-	type = empty
-	hidden = yes
-
-	trigger = {
-		NOR = {
-			has_game_rule = carn_futa_content_disabled
-			has_game_rule = carn_futa_content_no_seeding
-		}
-	}
-
-	immediate = {
-		every_living_character = {
-			trigger_event = { id = carn_futa.0002 }
-		}
-	}
-}
-
-#
-# 0002. Seed futa trait for this character
-#
-
-carn_futa.0002 = {
 	hidden = yes
 
 	trigger = {

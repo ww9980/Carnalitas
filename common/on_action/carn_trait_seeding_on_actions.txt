@@ -1,26 +1,18 @@
-﻿on_game_start_after_lobby = {
-    events = {
-		carn_futa.0001 # initialize all characters with futa trait
-		carn_dt.0001 # initialize all characters with dt traits
-	}
-}
-
-on_join_court = {
+﻿carn_character_initialization_pulse = {
 	events = {
-		carn_futa.0002 # initialize this character with futa trait
-		carn_dt.0002 # initialize this character with dt traits
+		carn_futa.0001 # initialize this character with futa trait
+		carn_dt.0001 # initialize this character with dt traits
 	}
 }
 
 on_birth_child = {
 	events = {
-		carn_futa.0002 # initialize this character with futa trait
-		carn_dt.0003 # initialize children with dt traits and make them inactive
+		carn_dt.0002 # turn off dt traits for newborns
 	}
 }
 
 on_16th_birthday = {
 	events = {
-		carn_dt.0004 # activate dt traits for children coming of age
+		carn_dt.0003 # activate dt traits for children coming of age
 	}
 }

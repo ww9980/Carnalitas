@@ -1,25 +1,9 @@
 ﻿namespace = carn_fetish
 
 # Seeding Events
-# 0001: seed fetish variable_list for all characters
-# 0002: seed fetish variable_list for this character
+# 0001: seed fetish variable_list for this character
 
 carn_fetish.0001 = {
-	type = empty
-	hidden = yes
-
-	trigger = {
-		has_game_rule = carn_fetishes_enabled_true
-	}
-
-	immediate = {
-		every_living_character = {
-			trigger_event = { id = carn_fetish.0002 }
-		}
-	}
-}
-
-carn_fetish.0002 = {
 	hidden = yes
 
 	trigger = {

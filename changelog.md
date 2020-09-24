@@ -92,6 +92,7 @@ New character and trait flags:
 ### Miscellaneous
 
 * Added a game rule to prevent pregnancy complications from happening.
+* Added the on_action `carn_character_initialization_pulse`, this is meant for streamlining things like trait seeding that need to be initialized on EVERY character
 
 New scripted triggers:
 * `carn_should_have_no_consequences_for_extramarital_sex_trigger`
