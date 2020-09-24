@@ -1,0 +1,13 @@
+﻿l_simp_chinese:
+carn_can_no_longer_work_as_prostitute_tooltip:1 "你无法再从事风尘业了"
+carn_prostitution_random_events.0001.notification:1 "风尘业: 技巧提升"
+carn_prostitution_random_events.0002.notification:1 "风尘业: 对手诋毁你"
+carn_prostitution_random_events.0003.notification:1 "风尘业: [ROOT.Char.GetFaith.PriestNeuterPlural|U]谴责你
+carn_prostitution_random_events.0005.notification:1 "风尘业: 客户的慷慨小费"
+
+carn_prostitution_random_events.0011.t:1 "风尘业: 风情万种"
+carn_prostitution_random_events.0011.desc:1 "正当我缓缓卧下展示柔美身姿时，我却惊奇地发现我的新客户不是别人正是 [client.Custom2('MyCharacterIntroduction', ROOT.Char)]。\n\n满身贪欲又两眼放光，[client.GetSheHe]贪婪地说道：让我来好好享受，钱少不了的"
+
+carn_prostitution_random_events.0011.a:1 "妾身哪有拒绝客人的道理呢？"
+carn_prostitution_random_events.0011.b:1 "不行，我必须拒绝"
+carn_prostitution_random_events.0011.c:1 "嗯...若是让人知道了那不对我来说将是个很好的把柄嘛？"

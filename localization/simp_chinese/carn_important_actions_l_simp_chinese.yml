@@ -1,0 +1,6 @@
+﻿l_simp_chinese:
+
+action_carn_can_sex_interaction:1 "你可以$carn_sex_interaction$"
+action_carn_can_sex_interaction_label:1 "$action_carn_can_sex_interaction$"
+action_carn_can_sex_interaction_desc:1 "你可使用$carn_sex_interaction$ [character_interaction|E]来缓解[stress|E]或者求得贵子或者别的。"
+action_carn_can_sex_interaction_click:1 "#点下去，$carn_sex_interaction$#!"
