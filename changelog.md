@@ -52,6 +52,8 @@ List of fetishes:
 
 New character and trait flags for modders:
 * `carn_no_pregnancy_complications`
+* `carn_no_consequences_for_extramarital_sex_with_others`
+* `carn_no_consequences_for_extramarital_sex_with_me`
 
 ## Tweaks
 
@@ -63,3 +65,4 @@ New character and trait flags for modders:
 ## Bug Fixes
 
 * Fixed not being able to Lay With Lover targeting your slaves.
+* Fixed extramarital sex being illegal between slaves and slave owners.

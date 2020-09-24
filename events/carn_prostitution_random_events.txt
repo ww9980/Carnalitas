@@ -123,14 +123,12 @@ carn_prostitution_random_events.0005 = {
 	}
 }
 
-scripted_trigger carn_possible_prostitute_random_events_0006_client_trigger = {
+scripted_trigger carn_possible_prostitute_random_events_0010_client_trigger = {
 	is_ai = yes
 	carn_can_have_sex_trigger = yes
 	is_diplomatically_available = yes
-	possible_mutual_interest_trigger = {
-		CHARACTER_1 = this
-		CHARACTER_2 = root
-	}
+	possibly_interested_in_character_trigger = { CHARACTER = root }
+	root = { possibly_interested_in_character_trigger = { CHARACTER = prev } }
 	gold >= tiny_gold_value
 	NOR = {
 		this = root
@@ -169,7 +167,7 @@ carn_prostitution_random_events.0010 = {
 		random_in_list = {
 			list = potential_clients
 			limit = {
-				carn_possible_prostitute_random_events_0006_client_trigger = yes
+				carn_possible_prostitute_random_events_0010_client_trigger = yes
 				OR = {
 					has_trait = lustful
 					has_trait = seducer
@@ -178,13 +176,13 @@ carn_prostitution_random_events.0010 = {
 				}
 			}
 			alternative_limit = {
-				carn_possible_prostitute_random_events_0006_client_trigger = yes
+				carn_possible_prostitute_random_events_0010_client_trigger = yes
 				might_cheat_on_every_partner_trigger = yes
 				freely_accepts_sodomy_with_trigger = { CHARACTER = root }
 				NOT = { has_trait = chaste }
 			}
 			alternative_limit = {
-				carn_possible_prostitute_random_events_0006_client_trigger = yes
+				carn_possible_prostitute_random_events_0010_client_trigger = yes
 				NOT = { has_trait = chaste }
 			}
 			save_scope_as = client
