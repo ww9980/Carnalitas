@@ -4,10 +4,10 @@
  carn_work_as_prostitute_decision_desc: "If I desire money or carnal satisfaction, I can let everyone know that I am offering my sexual services to the highest bidder."
  carn_work_as_prostitute_decision_tooltip:0 "Start working as a prostitute, trading your [prestige|E] and chastity for [gold|E]"
  carn_work_as_prostitute_decision_confirm: "Lay out the incense and candles..."
- msg_carn_started_working_as_prostitute: "Started Working as a Prostitute"
+ msg_carn_started_working_as_prostitute: "Started Prostitution"
 
  carn_stop_work_as_prostitute_decision: "Stop Moonlighting as a Prostitute"
  carn_stop_work_as_prostitute_decision_desc: "My journey as a prostitute has ended, and it is time for me to focus on my duties to the realm."
  carn_stop_work_as_prostitute_decision_tooltip:0 "Stop working as a prostitute, reducing your [income|E] but improving your [prestige|E]"
  carn_stop_work_as_prostitute_decision_confirm: "Put away the incense and candles"
- msg_carn_stopped_working_as_prostitute: "Stopped Working as a Prostitute"
+ msg_carn_stopped_working_as_prostitute: "Stopped Prostitution"
