@@ -1,3 +1,13 @@
 ﻿l_simp_chinese:
 
-carn_work_as_prostitute_decision:0 "Work as a Prostitute"
+carn_work_as_prostitute_decision:1 "从事风尘工作"
+carn_work_as_prostitute_decision_desc:1 "为了金钱或为了满足性欲，我可以进入风尘业，让大家都知道我可以为金钱出卖我的春宵。"
+carn_work_as_prostitute_decision_tooltip:1 "从事风尘工作，牺牲[prestige|E]和贞操换取[gold|E]"
+carn_work_as_prostitute_decision_confirm:1 "摆好香烛..."
+msg_carn_started_working_as_prostitute:1 "开始风尘事业"
+
+carn_stop_work_as_prostitute_decision:1 "不再从事风尘工作"
+carn_stop_work_as_prostitute_decision_desc:1 "我对于风尘工作已经厌倦了，是时候该回到治国理政上面了。"
+carn_stop_work_as_prostitute_decision_tooltip:1 "不再从事风尘工作，[income|E]会减少但是[prestige|E]会增加。"
+carn_stop_work_as_prostitute_decision_confirm:1 "收起香烛"
+msg_carn_stopped_working_as_prostitute:1 "停止风尘事业"
