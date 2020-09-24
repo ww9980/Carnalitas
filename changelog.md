@@ -93,7 +93,7 @@ New character and trait flags:
 
 Added the on_action `carn_character_initialization_pulse` for modders. This is meant for streamlining things like trait seeding that need to be initialized on EVERY character.
 
-Ideally we would have a simple native `on_create_character` on_action, but it doesn't exist for some fucking reason, so we have to use this horribly inefficient workaround instead.
+Ideally we would have a simple native `on_new_character` on_action, but it doesn't exist for some fucking reason, so we have to use this horribly inefficient workaround instead.
 
 `carn_character_initialization_pulse` fires whenever a character is born, whenever a character joins a court, when a character gains a title, and on a character's birthday as a last-ditch fallback. It will should work for every character except for new characters who are added as guests, like the knights from the invite knights decision -- those will be caught by the birthday pulse instead.
 
