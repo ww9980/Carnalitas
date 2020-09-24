@@ -1,117 +1,114 @@
-﻿flat_tits = {
+﻿carn_tits = {
 	usage = game
-	flat_tits = {
+	tits_average = {
 		dna_modifiers = {
 			morph = {
-				mode = modify
+				mode = replace
 				gene = gene_bs_bust
-				value = -1.0
+				value = 0.5
 			}
 		}
 		weight = {
 			base = 0
 			modifier = {
-				add = 100
+				add = 1
+				# because this has a lower weight, it will only appear if none of the others do.
+				has_game_rule = carn_dt_enabled_true
+			}
+		}
+	}
+	tits_small_3 = {
+		dna_modifiers = {
+			morph = {
+				mode = replace
+				gene = gene_bs_bust
+				value = 0.0
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 2
 				has_trait = tits_small_3
 			}
 		}
 	}
-}
-
-tiny_tits = {
-	usage = game
-	tiny_tits = {
+	tits_small_2 = {
 		dna_modifiers = {
 			morph = {
-				mode = modify
+				mode = replace
 				gene = gene_bs_bust
-				value = -0.4
+				value = 0.15
 			}
 		}
 		weight = {
 			base = 0
 			modifier = {
-				add = 100
+				add = 2
 				has_trait = tits_small_2
 			}
 		}
 	}
-}
-
-small_tits = {
-	usage = game
-	small_tits = {
+	tits_small_1 = {
 		dna_modifiers = {
 			morph = {
-				mode = modify
+				mode = replace
 				gene = gene_bs_bust
-				value = -0.2
+				value = 0.35
 			}
 		}
 		weight = {
 			base = 0
 			modifier = {
-				add = 100
+				add = 2
 				has_trait = tits_small_1
 			}
 		}
 	}
-}
-
-big_tits = {
-	usage = game
-	big_tits = {
+	tits_big_1 = {
 		dna_modifiers = {
 			morph = {
-				mode = modify
+				mode = replace
 				gene = gene_bs_bust
-				value = 0.2
+				value = 0.65
 			}
 		}
 		weight = {
 			base = 0
 			modifier = {
-				add = 100
+				add = 2
 				has_trait = tits_big_1
 			}
 		}
 	}
-}
-
-huge_tits = {
-	usage = game
-	huge_tits = {
+	tits_big_2 = {
 		dna_modifiers = {
 			morph = {
-				mode = modify
+				mode = replace
 				gene = gene_bs_bust
-				value = 0.4
+				value = 0.85
 			}
 		}
 		weight = {
 			base = 0
 			modifier = {
-				add = 100
+				add = 2
 				has_trait = tits_big_2
 			}
 		}
 	}
-}
-
-gigantic_tits = {
-	usage = game
-	gigantic_tits = {
+	tits_big_3 = {
 		dna_modifiers = {
 			morph = {
-				mode = modify
+				mode = replace
 				gene = gene_bs_bust
-				value = 1
+				value = 1.0
 			}
 		}
 		weight = {
 			base = 0
 			modifier = {
-				add = 100
+				add = 2
 				has_trait = tits_big_3
 			}
 		}
